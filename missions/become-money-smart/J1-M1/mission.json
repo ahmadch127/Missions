@@ -1,0 +1,379 @@
+{
+  "id": "J1-M1",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "What Is Money?",
+  "concept": "Money is a commonly accepted medium of exchange that makes trading goods and services easier.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand why money exists and how it makes exchanging goods and services easier.",
+  "primaryMisconception": "Money automatically creates wealth.",
+  "secondaryMisconceptions": [
+    "Bartering always results in a fair and successful trade.",
+    "Money is useful only because coins and banknotes have physical value."
+  ],
+  "keyTakeaway": "Money makes exchange easier because people agree to accept it.",
+  "screens": [
+    {
+      "id": "J1-M1-S01",
+      "type": "hook",
+      "title": "A Trade That Will Not Work",
+      "content": "You want Aisha’s bicycle, but she does not want your cricket bat. How can you make a trade you both accept?",
+      "illustration": "Two children face each other. One holds a cricket bat; the other stands beside a bicycle. A thought bubble shows a question mark between them.",
+      "primaryAction": {
+        "label": "Find a Way",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M1-S02",
+      "type": "story",
+      "title": "The Offer",
+      "content": "You offer Aisha your cricket bat for her bicycle. The bat is in good condition, so the swap seems possible.",
+      "illustration": "The learner holds out the cricket bat while pointing hopefully toward Aisha’s bicycle.",
+      "primaryAction": {
+        "label": "See What Happens",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M1-S03",
+      "type": "story",
+      "title": "No Match",
+      "content": "Aisha already has a bat. She would rather have money for art supplies. Your useful bat is not useful to her right now.",
+      "illustration": "Aisha gestures toward a bat she already owns and imagines paintbrushes and a sketchbook.",
+      "primaryAction": {
+        "label": "Solve the Trade",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M1-S04",
+      "type": "pre_interaction",
+      "title": "What Would You Try?",
+      "question": "Which idea is most likely to help both people agree?",
+      "options": [
+        {
+          "id": "J1-M1-PQ-O1",
+          "text": "Swap the bat for the bicycle anyway",
+          "isRecommended": false,
+          "response": "The bat may be valuable, but Aisha still does not want it."
+        },
+        {
+          "id": "J1-M1-PQ-O2",
+          "text": "Use money that both people accept",
+          "isRecommended": true,
+          "response": "Good thinking. A shared way to pay could connect two different wants."
+        },
+        {
+          "id": "J1-M1-PQ-O3",
+          "text": "Say the bat and bicycle are equal",
+          "isRecommended": false,
+          "response": "Calling them equal does not make Aisha want the bat or agree to the swap."
+        }
+      ],
+      "recommendedAnswerId": "J1-M1-PQ-O2",
+      "primaryAction": {
+        "label": "Check My Idea",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M1-S05",
+      "type": "interaction",
+      "interactionType": "cause_and_effect",
+      "title": "Build the Trade Chain",
+      "instruction": "Arrange the four events from the problem to the result.",
+      "config": {
+        "events": [
+          {
+            "id": "event_trade_desire",
+            "text": "People want to trade."
+          },
+          {
+            "id": "event_trade_stuck",
+            "text": "They cannot agree on what to exchange."
+          },
+          {
+            "id": "event_use_money",
+            "text": "They use money."
+          },
+          {
+            "id": "event_trade_easier",
+            "text": "Trading becomes easier."
+          }
+        ],
+        "relationships": [
+          {
+            "causeId": "event_trade_desire",
+            "effectId": "event_trade_stuck",
+            "explanation": "Wanting to trade is not enough when each person wants something different."
+          },
+          {
+            "causeId": "event_trade_stuck",
+            "effectId": "event_use_money",
+            "explanation": "Money gives them something commonly accepted to exchange."
+          },
+          {
+            "causeId": "event_use_money",
+            "effectId": "event_trade_easier",
+            "explanation": "Each person can accept money and then use it in another trade."
+          }
+        ],
+        "correctSequence": [
+          "event_trade_desire",
+          "event_trade_stuck",
+          "event_use_money",
+          "event_trade_easier"
+        ],
+        "alternativeContributingFactors": [
+          "Both people still need to agree on the amount.",
+          "They need to trust that other people will also accept the money.",
+          "The item or service must still be available."
+        ],
+        "simplification": "Money usually makes exchange easier, but it does not guarantee a fair price or a successful deal.",
+        "validationMethod": "Check the full order after the learner submits. Accept only the defined sequence.",
+        "retryBehavior": "Keep correctly placed events in position, gently highlight the first misplaced event, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Provide numbered selection controls and Move Up or Move Down buttons instead of requiring drag gestures.",
+          "screenReaderInstruction": "Choose an event, assign its position from 1 to 4, then submit the sequence."
+        }
+      },
+      "feedback": {
+        "success": "That chain works. Money connects people who want different things, so the exchange is easier.",
+        "incorrect": "Almost. Start with the reason people need a trade, then find what solves the stuck exchange.",
+        "incomplete": "Place all four events before checking the chain."
+      },
+      "primaryAction": {
+        "label": "Check the Chain",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M1-S06",
+      "type": "reveal",
+      "title": "Money Connects Different Wants",
+      "content": "You arranged a chain: people wanted to trade, the direct swap failed, they used money, and trading became easier. Money is a commonly accepted medium of exchange. People accept it when buying and selling, even when they do not want each other’s items. A £20 note is useful mainly because people trust others will accept it—not because its paper is worth £20. Money helps exchange value; it does not automatically create wealth or guarantee a fair price.",
+      "simpleSummary": "Money works because people agree to accept it for exchange.",
+      "illustration": "A £20 note forms a bridge between a cricket bat and a bicycle, with arrows showing two separate exchanges.",
+      "primaryAction": {
+        "label": "Try Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M1-S07",
+      "type": "real_life_example",
+      "title": "At the School Fair",
+      "content": "One child sells a book for £3 and uses the £3 to buy a snack from another stall. The snack seller did not need the book; accepting money lets both exchanges happen.",
+      "illustration": "A child sells a book at one school-fair stall, then uses three £1 coins at a snack stall.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M1-S08",
+      "type": "quiz",
+      "title": "Money Check",
+      "questions": [
+        {
+          "id": "J1-M1-Q1",
+          "category": "recognition",
+          "text": "Mia sells a puzzle for £4, then uses the £4 to buy pencils. What made both exchanges easier?",
+          "options": [
+            {
+              "id": "J1-M1-Q1-O1",
+              "text": "Both sellers accepted the £4",
+              "isCorrect": true,
+              "feedback": "Correct. The same money could be accepted in two different exchanges."
+            },
+            {
+              "id": "J1-M1-Q1-O2",
+              "text": "The puzzle became money",
+              "isCorrect": false,
+              "feedback": "The puzzle stayed a puzzle. Mia exchanged it for money that another seller accepted."
+            },
+            {
+              "id": "J1-M1-Q1-O3",
+              "text": "The pencils were free",
+              "isCorrect": false,
+              "feedback": "Mia paid £4 for the pencils, so they were not free."
+            },
+            {
+              "id": "J1-M1-Q1-O4",
+              "text": "Mia became automatically wealthy",
+              "isCorrect": false,
+              "feedback": "Money helped Mia exchange value, but one trade did not automatically make her wealthy."
+            }
+          ],
+          "correctAnswerId": "J1-M1-Q1-O1",
+          "correctExplanation": "Money worked as a shared way to pay. The puzzle buyer and pencil seller both accepted £4, even though they wanted different items.",
+          "misconceptionTested": "Money is useful only because coins and banknotes have physical value."
+        },
+        {
+          "id": "J1-M1-Q2",
+          "category": "misconception",
+          "text": "A pretend town prints twice as much money but makes no extra food, bicycles, or services. Is it automatically twice as wealthy?",
+          "options": [
+            {
+              "id": "J1-M1-Q2-O1",
+              "text": "Yes, twice as wealthy",
+              "isCorrect": false,
+              "feedback": "More money by itself does not create extra useful goods or services."
+            },
+            {
+              "id": "J1-M1-Q2-O2",
+              "text": "No, extra money alone adds no goods or services",
+              "isCorrect": true,
+              "feedback": "Correct. Real wealth depends on useful goods, services, skills, and resources—not just having more money."
+            },
+            {
+              "id": "J1-M1-Q2-O3",
+              "text": "Yes, because notes have physical value",
+              "isCorrect": false,
+              "feedback": "The paper itself is not what makes a note worth its printed amount. Shared acceptance gives it its main use."
+            }
+          ],
+          "correctAnswerId": "J1-M1-Q2-O2",
+          "correctExplanation": "Money helps people exchange and measure value. Simply creating more money does not automatically create more useful goods, services, skills, or resources.",
+          "misconceptionTested": "Money automatically creates wealth."
+        },
+        {
+          "id": "J1-M1-Q3",
+          "category": "application",
+          "text": "Zara wants Noah’s comic. Noah does not want Zara’s stickers, but he will accept £3. What could Zara do?",
+          "options": [
+            {
+              "id": "J1-M1-Q3-O1",
+              "text": "Find a sticker buyer, receive £3, then buy the comic",
+              "isCorrect": true,
+              "feedback": "Correct. Money can connect two separate exchanges when a direct swap does not work."
+            },
+            {
+              "id": "J1-M1-Q3-O2",
+              "text": "Force Noah to swap",
+              "isCorrect": false,
+              "feedback": "A trade needs agreement. Money can help, but it cannot replace consent."
+            },
+            {
+              "id": "J1-M1-Q3-O3",
+              "text": "Say the stickers and £3 are identical",
+              "isCorrect": false,
+              "feedback": "They are different things. The useful point is that Noah agrees to accept the £3."
+            },
+            {
+              "id": "J1-M1-Q3-O4",
+              "text": "Take the comic without agreement",
+              "isCorrect": false,
+              "feedback": "That is not a trade. Both people must agree before an exchange happens."
+            }
+          ],
+          "correctAnswerId": "J1-M1-Q3-O1",
+          "correctExplanation": "Zara can exchange the stickers with someone who wants them, then use commonly accepted money to buy the comic from Noah.",
+          "misconceptionTested": "Bartering always results in a fair and successful trade."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M1-S09",
+      "type": "completion",
+      "headline": "Exchange Explorer!",
+      "message": "You discovered how money helps people trade even when they want different things.",
+      "xpReward": 50,
+      "progressMessage": "Mission 1 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, discover the different jobs money can do.",
+      "animation": "A cricket bat and bicycle slide apart as a trail of coins forms a bridge between them, followed by a small star burst.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M1-S10",
+      "type": "real_life_challenge",
+      "title": "Spot Money’s Job",
+      "instruction": "Find two things at home that came from different sellers. Ask yourself: would both sellers have wanted the same item in a barter swap?",
+      "buttonLabel": "I Spotted It",
+      "primaryAction": {
+        "label": "I Spotted It",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "Every screen focuses on money as a commonly accepted medium of exchange."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission explains exchange, acceptance, and the difference between money and real wealth."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "It uses a bicycle, cricket bat, art supplies, a school fair, and simple language."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "No investment guidance is included."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "No returns or guarantees are discussed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "No stocks or market predictions are included."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Incorrect choices receive calm, instructional feedback."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission states that money does not guarantee a fair price or successful trade."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The UK setting uses pounds and familiar child-friendly objects, including a cricket bat."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The cause-and-effect sequence shows how money resolves a difficult direct swap."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses acceptance, wealth creation, physical value, and failed barter."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission is designed for approximately four minutes with one short ordering interaction and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "Sentences are short, concrete, and suitable for ages 8–12."
+    }
+  ]
+}
