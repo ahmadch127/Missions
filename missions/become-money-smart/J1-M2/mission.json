@@ -1,0 +1,417 @@
+{
+  "id": "J1-M2",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "Needs vs Wants",
+  "concept": "Needs are essential for health, safety, education, and daily living, while wants are optional purchases that make life more enjoyable.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "language": "English",
+  "learningObjective": "Distinguish essential expenses from optional purchases and understand why needs usually come first.",
+  "primaryMisconception": "Every item a person strongly desires is a need.",
+  "secondaryMisconceptions": [
+    "Wants are always bad or wasteful.",
+    "An expensive item must be more important than a cheaper one."
+  ],
+  "keyTakeaway": "Needs usually come first, but wants are not automatically bad.",
+  "screens": [
+    {
+      "id": "J1-M2-S01",
+      "type": "hook",
+      "title": "Too Much for One Wallet",
+      "content": "You have Rs. 5,000, but your list costs more. Which items should come first—and which can wait?",
+      "illustration": "A child holds Rs. 5,000 beside a list showing medicine, a school van, premium shoes, snacks, and a game controller.",
+      "primaryAction": {
+        "label": "Make a Choice",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M2-S02",
+      "type": "story",
+      "title": "The Five-Item List",
+      "content": "Your family gives you Rs. 5,000 to cover several things this week. Your list includes medicine, school transport, premium shoes, snacks, and a game subscription.",
+      "illustration": "Five item cards appear beside a wallet marked Rs. 5,000.",
+      "primaryAction": {
+        "label": "Check the List",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M2-S03",
+      "type": "story",
+      "title": "Something Must Wait",
+      "content": "The money will not cover everything. Choosing the shoes first could leave no money for medicine or your ride to school.",
+      "illustration": "The premium shoes move toward the wallet while the medicine and school van cards fade slightly.",
+      "primaryAction": {
+        "label": "Think Again",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M2-S04",
+      "type": "story",
+      "title": "Fun Is Not Forbidden",
+      "content": "You do not have to remove every fun item forever. First, decide which items protect health, safety, education, or daily living.",
+      "illustration": "Two empty baskets labelled Need and Want appear, with the five item cards waiting to be sorted.",
+      "primaryAction": {
+        "label": "Start Sorting",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M2-S05",
+      "type": "pre_interaction",
+      "title": "What Should Guide You?",
+      "question": "Which plan should guide your first choices?",
+      "options": [
+        {
+          "id": "J1-M2-PQ-O1",
+          "text": "Cover medicine and school transport first",
+          "isRecommended": true,
+          "response": "Good thinking. In this situation, those items support health and education."
+        },
+        {
+          "id": "J1-M2-PQ-O2",
+          "text": "Buy the most expensive item first",
+          "isRecommended": false,
+          "response": "Price does not tell you how essential an item is."
+        },
+        {
+          "id": "J1-M2-PQ-O3",
+          "text": "Buy whatever you want most",
+          "isRecommended": false,
+          "response": "Strong feelings can make something seem urgent, but they do not automatically make it essential."
+        },
+        {
+          "id": "J1-M2-PQ-O4",
+          "text": "Split the money equally across everything",
+          "isRecommended": false,
+          "response": "An equal split may still leave important needs uncovered."
+        }
+      ],
+      "recommendedAnswerId": "J1-M2-PQ-O1",
+      "primaryAction": {
+        "label": "Check My Plan",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M2-S06",
+      "type": "interaction",
+      "interactionType": "sort_categories",
+      "title": "Sort the Spending List",
+      "instruction": "Place each item under Need or Want for this situation.",
+      "config": {
+        "scenarioAssumptions": [
+          "The medicine is required for the person's health.",
+          "School transport is the available way to attend school.",
+          "The child already has safe, usable everyday shoes and food at home."
+        ],
+        "categories": [
+          {
+            "id": "category_need",
+            "label": "Need",
+            "description": "Essential for health, safety, education, or daily living."
+          },
+          {
+            "id": "category_want",
+            "label": "Want",
+            "description": "Optional in this situation and can wait."
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "item_medicine",
+            "label": "Medicine",
+            "correctCategoryId": "category_need",
+            "explanation": "The medicine is required for health in this story."
+          },
+          {
+            "id": "item_school_transport",
+            "label": "School transport",
+            "correctCategoryId": "category_need",
+            "explanation": "The transport allows the child to attend school in this story."
+          },
+          {
+            "id": "item_premium_shoes",
+            "label": "Premium shoes",
+            "correctCategoryId": "category_want",
+            "explanation": "The child already has safe, usable shoes, so the premium pair is optional."
+          },
+          {
+            "id": "item_snacks",
+            "label": "Snacks",
+            "correctCategoryId": "category_want",
+            "explanation": "These extra snacks are optional because regular food is already available."
+          },
+          {
+            "id": "item_game_subscription",
+            "label": "Game subscription",
+            "correctCategoryId": "category_want",
+            "explanation": "The subscription provides entertainment but is not essential for daily living."
+          }
+        ],
+        "correctCompletionState": {
+          "category_need": [
+            "item_medicine",
+            "item_school_transport"
+          ],
+          "category_want": [
+            "item_premium_shoes",
+            "item_snacks",
+            "item_game_subscription"
+          ]
+        },
+        "placementRules": [
+          "Each item must be placed in exactly one category.",
+          "Use the stated scenario assumptions when deciding.",
+          "There is one intended arrangement for this simplified story."
+        ],
+        "contextDependentItems": [
+          {
+            "item": "Shoes",
+            "explanation": "Basic shoes may be a need if a child has no safe pair. A premium upgrade can be a want."
+          },
+          {
+            "item": "Food",
+            "explanation": "Nutritious food is a need. Extra treats or snacks may be wants when regular food is available."
+          },
+          {
+            "item": "Transport",
+            "explanation": "Transport may be a need when it is necessary for school, safety, or essential daily activities."
+          }
+        ],
+        "ambiguityExplanation": "Needs and wants can change with the situation. This activity uses the details provided, not a rule that applies to every person.",
+        "validationMethod": "Check every item after submission. Mark each placement as correct or needs another look.",
+        "retryBehavior": "Keep correctly sorted items in place, return misplaced items to the centre, show their short explanation, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Let the learner select an item and choose Need or Want using buttons or a dropdown.",
+          "screenReaderInstruction": "Select an item, choose Need or Want, and submit after all five items have a category."
+        }
+      },
+      "feedback": {
+        "success": "Well sorted. You protected health and education first while recognising that fun choices can still matter later.",
+        "incorrect": "A few items need another look. Ask whether each one is essential in this situation or can safely wait.",
+        "incomplete": "Sort all five items before checking your answer."
+      },
+      "primaryAction": {
+        "label": "Check My Sort",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M2-S07",
+      "type": "reveal",
+      "title": "Important First, Enjoyable Later",
+      "content": "You sorted medicine and school transport as needs because, in this story, they support health and education. Premium shoes, snacks, and a game subscription are wants because they can be delayed without stopping essential daily activities. A need is something essential for health, safety, education, or daily living. A want is optional and adds enjoyment. Wants are not bad. The useful habit is to cover important needs first, then choose wants with the money left.",
+      "simpleSummary": "Cover important needs first, then choose wants with what remains.",
+      "illustration": "Medicine and school transport sit safely in a First basket. The three want items wait beside a saving jar.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M2-S08",
+      "type": "real_life_example",
+      "title": "Birthday-Money Choice",
+      "content": "Hassan has Rs. 1,000 of birthday money. He needs a notebook for school and wants a toy car. He buys the notebook first, then saves the remaining money toward the toy. The toy is not bad; it simply comes after the school need.",
+      "illustration": "Hassan places a notebook in his school bag and drops the remaining money into a toy-car saving jar.",
+      "primaryAction": {
+        "label": "Test My Thinking",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M2-S09",
+      "type": "quiz",
+      "title": "Need or Want?",
+      "questions": [
+        {
+          "id": "J1-M2-Q1",
+          "category": "recognition",
+          "text": "Sana's school shoes no longer fit. She also wants a second toy. Which should usually come first?",
+          "options": [
+            {
+              "id": "J1-M2-Q1-O1",
+              "text": "Safe school shoes",
+              "isCorrect": true,
+              "feedback": "Correct. Shoes that fit are needed for safety and school."
+            },
+            {
+              "id": "J1-M2-Q1-O2",
+              "text": "A second toy",
+              "isCorrect": false,
+              "feedback": "A toy can be enjoyable, but safe shoes are more essential in this situation."
+            },
+            {
+              "id": "J1-M2-Q1-O3",
+              "text": "Whichever costs more",
+              "isCorrect": false,
+              "feedback": "A higher price does not automatically make an item more important."
+            }
+          ],
+          "correctAnswerId": "J1-M2-Q1-O1",
+          "correctExplanation": "Sana needs safe shoes that fit for school and daily use. A second toy is optional and can wait.",
+          "misconceptionTested": "An expensive item must be more important than a cheaper one."
+        },
+        {
+          "id": "J1-M2-Q2",
+          "category": "misconception",
+          "text": "Bilal really wants a game pass and thinks about it all day. Does that make it a need?",
+          "options": [
+            {
+              "id": "J1-M2-Q2-O1",
+              "text": "No, wanting it strongly does not make it essential",
+              "isCorrect": true,
+              "feedback": "Correct. A strong desire can still be a want."
+            },
+            {
+              "id": "J1-M2-Q2-O2",
+              "text": "Yes, because he wants it badly",
+              "isCorrect": false,
+              "feedback": "Wanting something strongly does not make it essential for health, safety, education, or daily living."
+            },
+            {
+              "id": "J1-M2-Q2-O3",
+              "text": "Yes, if it is expensive",
+              "isCorrect": false,
+              "feedback": "Price does not decide whether something is a need."
+            }
+          ],
+          "correctAnswerId": "J1-M2-Q2-O1",
+          "correctExplanation": "The game pass may be enjoyable, but it remains optional. Feelings can be strong without changing a want into a need.",
+          "misconceptionTested": "Every item a person strongly desires is a need."
+        },
+        {
+          "id": "J1-M2-Q3",
+          "category": "application",
+          "text": "You forgot your lunch and have enough pocket money for either lunch or decorative stickers. What should usually come first?",
+          "options": [
+            {
+              "id": "J1-M2-Q3-O1",
+              "text": "Lunch",
+              "isCorrect": true,
+              "feedback": "Correct. Food for the school day is the immediate need in this situation."
+            },
+            {
+              "id": "J1-M2-Q3-O2",
+              "text": "Decorative stickers",
+              "isCorrect": false,
+              "feedback": "The stickers can be fun, but they can wait until the immediate food need is covered."
+            },
+            {
+              "id": "J1-M2-Q3-O3",
+              "text": "Neither, because wants are bad",
+              "isCorrect": false,
+              "feedback": "Wants are not bad. The goal is to cover the need first, then choose wants when possible."
+            }
+          ],
+          "correctAnswerId": "J1-M2-Q3-O1",
+          "correctExplanation": "Lunch supports health during the school day, while decorative stickers are optional. The stickers can be considered after the need is covered.",
+          "misconceptionTested": "Wants are always bad or wasteful."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M2-S10",
+      "type": "completion",
+      "headline": "Smart Sorter!",
+      "message": "You learned to put essential items first without treating every enjoyable choice as bad.",
+      "xpReward": 50,
+      "progressMessage": "Mission 2 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, discover how a simple spending plan gives every rupee a job.",
+      "animation": "The Need and Want baskets click into place, then a small coin badge appears with a gentle sparkle.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M2-S11",
+      "type": "real_life_challenge",
+      "title": "Home Item Detective",
+      "instruction": "Find one need and one want at home. Explain to someone why each item belongs in that group today.",
+      "buttonLabel": "I Found Both",
+      "primaryAction": {
+        "label": "I Found Both",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on distinguishing needs from wants and deciding which usually comes first."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "It explains that needs and wants depend on context and that price or desire alone does not determine importance."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses school, shoes, snacks, games, pocket money, and clear consequences."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss financial returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or market prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Wants are presented as valid sources of enjoyment, and incorrect answers receive supportive feedback."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "Scenario assumptions and context-dependent examples explain why the same item can be a need or want in different situations."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses Pakistani rupees, school transport, medicine, snacks, shoes, and familiar family decisions."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner sorts each expense by whether it is essential or optional under stated conditions."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The questions address strong desire, price, priority, and the belief that wants are bad."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission is designed for approximately four minutes with one five-item sort and three short quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
