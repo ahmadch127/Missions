@@ -1,0 +1,492 @@
+{
+  "id": "J2-M10",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "Inflation",
+  "concept": "Inflation means prices increase over time, which can reduce how much a person can buy with the same amount of money.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "language": "English",
+  "learningObjective": "Understand how rising prices affect purchasing power, even when income also increases.",
+  "primaryMisconception": "A higher salary always means a person is becoming richer.",
+  "secondaryMisconceptions": [
+    "Having more money always means being able to buy more things.",
+    "A small increase in income is enough to protect against any increase in prices."
+  ],
+  "keyTakeaway": "More money does not always mean more buying power.",
+  "screens": [
+    {
+      "id": "J2-M10-S01",
+      "type": "hook",
+      "title": "More Money, Fewer Burgers?",
+      "content": "Your income rises, but your favourite burger gets much more expensive. Can you now buy more—or fewer—burgers?",
+      "illustration": "Two money cards show Rs. 20,000 and Rs. 21,000. A burger price tag jumps from Rs. 500 to Rs. 700.",
+      "primaryAction": {
+        "label": "Compare the Numbers",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M10-S02",
+      "type": "story",
+      "title": "The Old Price",
+      "content": "Last year, your family’s monthly income was Rs. 20,000. Your favourite burger cost Rs. 500.",
+      "illustration": "A Rs. 20,000 wallet appears beside a burger with a Rs. 500 price tag.",
+      "primaryAction": {
+        "label": "See What You Could Buy",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M10-S03",
+      "type": "story",
+      "title": "More Income Arrives",
+      "content": "This year, the monthly income rises to Rs. 21,000. That sounds like good news.",
+      "illustration": "The wallet increases from Rs. 20,000 to Rs. 21,000 with a small upward arrow.",
+      "primaryAction": {
+        "label": "Check the New Price",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M10-S04",
+      "type": "story",
+      "title": "The Burger Jumps Too",
+      "content": "The burger now costs Rs. 700. Your income is higher, but the item you want has become much more expensive.",
+      "illustration": "The burger price tag changes from Rs. 500 to Rs. 700 with a larger upward arrow.",
+      "primaryAction": {
+        "label": "Predict the Result",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M10-S05",
+      "type": "pre_interaction",
+      "title": "Can You Buy More?",
+      "question": "After both changes, how many burgers do you think Rs. 21,000 can buy?",
+      "options": [
+        {
+          "id": "J2-M10-PQ-O1",
+          "text": "More than 40",
+          "isRecommended": false,
+          "response": "The income increased, but the higher burger price may change the result."
+        },
+        {
+          "id": "J2-M10-PQ-O2",
+          "text": "Exactly 40",
+          "isRecommended": false,
+          "response": "That would require the income and burger price to rise in matching amounts."
+        },
+        {
+          "id": "J2-M10-PQ-O3",
+          "text": "30",
+          "isRecommended": true,
+          "response": "Good prediction. Dividing Rs. 21,000 by Rs. 700 gives 30 burgers."
+        },
+        {
+          "id": "J2-M10-PQ-O4",
+          "text": "It is impossible to compare",
+          "isRecommended": false,
+          "response": "We can compare by calculating how many burgers each income amount could buy."
+        }
+      ],
+      "recommendedAnswerId": "J2-M10-PQ-O3",
+      "primaryAction": {
+        "label": "Check My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J2-M10-S06",
+      "type": "interaction",
+      "interactionType": "before_vs_after",
+      "title": "What Can the Money Buy?",
+      "instruction": "Complete the before-and-after comparison. Then decide whether buying power increased or decreased.",
+      "config": {
+        "educationalAssumptions": [
+          "This is a simple learning example.",
+          "All monthly income is compared with the price of one burger only.",
+          "The activity does not suggest spending all income on burgers.",
+          "The burger size and quality remain the same.",
+          "No discounts, taxes, or other costs are included.",
+          "One product becoming more expensive does not prove economy-wide inflation by itself.",
+          "Inflation describes a general rise in prices across many goods and services over time."
+        ],
+        "beforeState": {
+          "monthlyIncome": 20000,
+          "itemName": "Burger",
+          "itemPrice": 500,
+          "learnerQuestion": "How many Rs. 500 burgers could Rs. 20,000 buy?",
+          "options": [
+            {
+              "id": "before_o1",
+              "value": 20,
+              "label": "20 burgers",
+              "isCorrect": false
+            },
+            {
+              "id": "before_o2",
+              "value": 30,
+              "label": "30 burgers",
+              "isCorrect": false
+            },
+            {
+              "id": "before_o3",
+              "value": 40,
+              "label": "40 burgers",
+              "isCorrect": true
+            },
+            {
+              "id": "before_o4",
+              "value": 50,
+              "label": "50 burgers",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "before_o3",
+          "calculation": "Rs. 20,000 ÷ Rs. 500 = 40 burgers",
+          "buyingPower": 40
+        },
+        "afterState": {
+          "monthlyIncome": 21000,
+          "itemName": "Burger",
+          "itemPrice": 700,
+          "learnerQuestion": "How many Rs. 700 burgers could Rs. 21,000 buy?",
+          "options": [
+            {
+              "id": "after_o1",
+              "value": 21,
+              "label": "21 burgers",
+              "isCorrect": false
+            },
+            {
+              "id": "after_o2",
+              "value": 30,
+              "label": "30 burgers",
+              "isCorrect": true
+            },
+            {
+              "id": "after_o3",
+              "value": 40,
+              "label": "40 burgers",
+              "isCorrect": false
+            },
+            {
+              "id": "after_o4",
+              "value": 42,
+              "label": "42 burgers",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "after_o2",
+          "calculation": "Rs. 21,000 ÷ Rs. 700 = 30 burgers",
+          "buyingPower": 30
+        },
+        "comparisonData": [
+          {
+            "label": "Monthly income",
+            "beforeValue": 20000,
+            "afterValue": 21000
+          },
+          {
+            "label": "Burger price",
+            "beforeValue": 500,
+            "afterValue": 700
+          },
+          {
+            "label": "Burgers affordable",
+            "beforeValue": 40,
+            "afterValue": 30
+          }
+        ],
+        "finalLearnerQuestion": {
+          "text": "Can the higher income buy more burgers than before?",
+          "options": [
+            {
+              "id": "final_o1",
+              "text": "Yes, because Rs. 21,000 is more money",
+              "isCorrect": false
+            },
+            {
+              "id": "final_o2",
+              "text": "No, because the burger price rose faster",
+              "isCorrect": true
+            },
+            {
+              "id": "final_o3",
+              "text": "Yes, because every income increase creates wealth",
+              "isCorrect": false
+            },
+            {
+              "id": "final_o4",
+              "text": "No, because income increases are always bad",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "final_o2"
+        },
+        "importantHiddenDifference": "The amount of money increased by Rs. 1,000, but the number of burgers it could buy fell by 10. Income increased by 5%, while the burger price increased by 40% in this example.",
+        "purchasingPowerChange": {
+          "before": 40,
+          "after": 30,
+          "difference": -10,
+          "result": "decreased"
+        },
+        "correctCompletionState": {
+          "beforeBuyingPower": 40,
+          "afterBuyingPower": 30,
+          "changeInUnits": -10,
+          "incomeAmount": "higher",
+          "purchasingPower": "lower",
+          "reason": "the_burger_price_rose_faster_than_income"
+        },
+        "validationMethod": "Check the before calculation, after calculation, and final purchasing-power answer. Complete the interaction when all three are correct.",
+        "retryBehavior": "Keep correct calculations marked. Show the division needed for an incorrect answer and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present each state as a linear card with the income, price, and radio-button answers. Read each calculation aloud.",
+          "screenReaderInstruction": "Listen to the income and burger price. Choose how many burgers can be bought, then compare the two results."
+        }
+      },
+      "feedback": {
+        "success": "Excellent comparison. The money amount increased, but it could buy 10 fewer burgers because the price rose faster.",
+        "incorrect": "Do not compare only the income numbers. Divide each income amount by the burger price for that time.",
+        "incomplete": "Calculate both burger totals and decide what happened to buying power."
+      },
+      "primaryAction": {
+        "label": "Check My Comparison",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J2-M10-S07",
+      "type": "reveal",
+      "title": "When Prices Outrun Money",
+      "content": "Your income rose from Rs. 20,000 to Rs. 21,000, but your burger buying power fell from 40 to 30. Purchasing power means how much your money can buy. Inflation is a general rise in prices across many goods and services over time. When prices rise faster than income, money may buy less even when the income number is higher. A bigger amount of money matters only when compared with what things cost.",
+      "simpleSummary": "If prices rise faster than income, your money buys less.",
+      "illustration": "A larger Rs. 21,000 wallet sits on one side, while the burger stack shrinks from 40 to 30 on the other.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M10-S08",
+      "type": "real_life_example",
+      "title": "The School-Supply Basket",
+      "content": "Last year, Rs. 1,000 bought five notebooks at Rs. 200 each. This year, you receive Rs. 1,100, but each notebook costs Rs. 275. You can now buy only four. Your money increased, but your notebook buying power decreased.",
+      "illustration": "Five notebooks appear beside last year’s Rs. 1,000, while four notebooks appear beside this year’s Rs. 1,100.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M10-S09",
+      "type": "quiz",
+      "title": "Buying-Power Check",
+      "questions": [
+        {
+          "id": "J2-M10-Q1",
+          "category": "recognition",
+          "text": "Last year, Rs. 600 bought three toys at Rs. 200 each. Now each toy costs Rs. 300. How many can Rs. 600 buy?",
+          "options": [
+            {
+              "id": "J2-M10-Q1-O1",
+              "text": "One toy",
+              "isCorrect": false,
+              "feedback": "One toy costs Rs. 300, so Rs. 600 can buy two."
+            },
+            {
+              "id": "J2-M10-Q1-O2",
+              "text": "Two toys",
+              "isCorrect": true,
+              "feedback": "Correct. Rs. 600 divided by Rs. 300 equals two toys."
+            },
+            {
+              "id": "J2-M10-Q1-O3",
+              "text": "Three toys",
+              "isCorrect": false,
+              "feedback": "Three toys would cost Rs. 900 at the new price."
+            },
+            {
+              "id": "J2-M10-Q1-O4",
+              "text": "Four toys",
+              "isCorrect": false,
+              "feedback": "Four toys would cost Rs. 1,200 at the new price."
+            }
+          ],
+          "correctAnswerId": "J2-M10-Q1-O2",
+          "correctExplanation": "Rs. 600 divided by Rs. 300 equals two. The same money now buys one fewer toy.",
+          "misconceptionTested": "Having the same amount of money always means being able to buy the same number of things."
+        },
+        {
+          "id": "J2-M10-Q2",
+          "category": "misconception",
+          "text": "A person’s income rises from Rs. 30,000 to Rs. 31,000, but their usual costs rise from Rs. 25,000 to Rs. 28,000. Are they automatically better off?",
+          "options": [
+            {
+              "id": "J2-M10-Q2-O1",
+              "text": "No, their costs rose by more than their income",
+              "isCorrect": true,
+              "feedback": "Correct. Income rose by Rs. 1,000, while usual costs rose by Rs. 3,000."
+            },
+            {
+              "id": "J2-M10-Q2-O2",
+              "text": "Yes, because any income increase creates wealth",
+              "isCorrect": false,
+              "feedback": "An income increase helps only when compared with how much prices and costs also changed."
+            },
+            {
+              "id": "J2-M10-Q2-O3",
+              "text": "Yes, because Rs. 31,000 is a larger number",
+              "isCorrect": false,
+              "feedback": "The income number is larger, but buying power may still fall when costs rise faster."
+            },
+            {
+              "id": "J2-M10-Q2-O4",
+              "text": "No, because higher income is always harmful",
+              "isCorrect": false,
+              "feedback": "Higher income can help. The important question is how it compares with changing prices."
+            }
+          ],
+          "correctAnswerId": "J2-M10-Q2-O1",
+          "correctExplanation": "Income rose by Rs. 1,000, while usual costs rose by Rs. 3,000. The person has less money remaining after those costs.",
+          "misconceptionTested": "A higher salary always means a person is becoming richer."
+        },
+        {
+          "id": "J2-M10-Q3",
+          "category": "application",
+          "text": "Your pocket money rises from Rs. 1,000 to Rs. 1,100. A game rises from Rs. 500 to Rs. 600. What happens to your buying power?",
+          "options": [
+            {
+              "id": "J2-M10-Q3-O1",
+              "text": "It falls from two games to one",
+              "isCorrect": true,
+              "feedback": "Correct. Rs. 1,100 can buy only one full Rs. 600 game."
+            },
+            {
+              "id": "J2-M10-Q3-O2",
+              "text": "It rises from two games to three",
+              "isCorrect": false,
+              "feedback": "Three games would cost Rs. 1,800 at the new price."
+            },
+            {
+              "id": "J2-M10-Q3-O3",
+              "text": "It stays at two games",
+              "isCorrect": false,
+              "feedback": "Two games now cost Rs. 1,200, which is more than Rs. 1,100."
+            },
+            {
+              "id": "J2-M10-Q3-O4",
+              "text": "It cannot be calculated",
+              "isCorrect": false,
+              "feedback": "Divide each pocket-money amount by the game price for that time."
+            }
+          ],
+          "correctAnswerId": "J2-M10-Q3-O1",
+          "correctExplanation": "Before, Rs. 1,000 bought two games. After, Rs. 1,100 can buy only one full Rs. 600 game.",
+          "misconceptionTested": "A small increase in income is enough to protect against any increase in prices."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J2-M10-S10",
+      "type": "completion",
+      "headline": "Buying-Power Tracker!",
+      "message": "You discovered why a larger income number can still buy less when prices rise faster.",
+      "xpReward": 50,
+      "progressMessage": "Mission 10 complete in Make Money Grow.",
+      "nextMissionTeaser": "Next, discover how time can make steady saving more powerful.",
+      "animation": "The income card rises slightly while the burger price rises faster. The burger stack changes from 40 to 30, then a purchasing-power badge appears.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J2-M10-S11",
+      "type": "real_life_challenge",
+      "title": "Compare Old and New",
+      "instruction": "Choose one familiar item. Ask an adult whether its price has changed over time, then discuss how that could affect what the same money buys.",
+      "buttonLabel": "I Compared a Price",
+      "primaryAction": {
+        "label": "I Compared a Price",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on how rising prices can reduce purchasing power."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The before-and-after calculations are correct: 20,000 divided by 500 equals 40, and 21,000 divided by 700 equals 30."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses burgers, toys, notebooks, games, pocket money, and simple division."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss financial returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or market prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "The mission explains changing buying power without judging income, spending, or family circumstances."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission clarifies that one burger price alone does not prove inflation and that inflation involves prices across many goods and services."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses Pakistani rupees and familiar items such as burgers, notebooks, toys, and games."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner calculates what each income amount can buy and compares the change in purchasing power."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The questions address higher income, changing prices, affordability, and the belief that more money always buys more."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, two simple calculations, one comparison question, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
