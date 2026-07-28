@@ -1,0 +1,507 @@
+{
+  "id": "J1-M6",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "Build a Budget",
+  "concept": "A budget is a plan that helps divide limited money between essential expenses, savings, emergencies, and enjoyable activities.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "language": "English",
+  "learningObjective": "Learn how to divide a limited amount of money across different priorities so it lasts for the entire month.",
+  "primaryMisconception": "Budgeting means removing all fun and spending only on essential needs.",
+  "secondaryMisconceptions": [
+    "A budget is useful only when someone has very little money.",
+    "Emergency money and savings are unnecessary when all current expenses are covered."
+  ],
+  "keyTakeaway": "A budget is a plan for using money, not a punishment.",
+  "screens": [
+    {
+      "id": "J1-M6-S01",
+      "type": "hook",
+      "title": "Thirty Days, One Money Pot",
+      "content": "You have Rs. 20,000 for 30 days. Can you cover important costs, prepare for surprises, and still leave room for fun?",
+      "illustration": "A calendar marked 30 Days sits behind a Rs. 20,000 money pot. Six empty envelopes wait beside it.",
+      "primaryAction": {
+        "label": "Take the Challenge",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M6-S02",
+      "type": "story",
+      "title": "Six Money Jobs",
+      "content": "The money must cover food, transport, mobile data, savings, entertainment, and unexpected costs for the whole month.",
+      "illustration": "Six labelled cards surround the Rs. 20,000 money pot.",
+      "primaryAction": {
+        "label": "Check the Priorities",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M6-S03",
+      "type": "story",
+      "title": "Spend Too Fast?",
+      "content": "If too much goes to entertainment early, there may not be enough for food, travel, or a surprise expense later.",
+      "illustration": "Entertainment coins pile up while food and transport envelopes flash low-balance warnings.",
+      "primaryAction": {
+        "label": "Protect the Month",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M6-S04",
+      "type": "story",
+      "title": "Fun Can Still Fit",
+      "content": "A strong plan does not ban fun. It gives important costs, future goals, surprises, and enjoyable activities sensible amounts.",
+      "illustration": "All six envelopes receive coins, including a smaller but cheerful entertainment envelope.",
+      "primaryAction": {
+        "label": "Build the Budget",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M6-S05",
+      "type": "pre_interaction",
+      "title": "What Makes a Strong Plan?",
+      "question": "Which approach is most likely to make the money last for 30 days?",
+      "options": [
+        {
+          "id": "J1-M6-PQ-O1",
+          "text": "Plan every category before spending",
+          "isRecommended": true,
+          "response": "Good thinking. Planning shows whether the full amount can cover every priority."
+        },
+        {
+          "id": "J1-M6-PQ-O2",
+          "text": "Spend on fun first",
+          "isRecommended": false,
+          "response": "Fun can belong in a budget, but spending on it first may leave important costs uncovered."
+        },
+        {
+          "id": "J1-M6-PQ-O3",
+          "text": "Ignore savings and emergencies",
+          "isRecommended": false,
+          "response": "Current costs may be covered, but future goals and surprises would have no money prepared."
+        },
+        {
+          "id": "J1-M6-PQ-O4",
+          "text": "Keep all the money unused",
+          "isRecommended": false,
+          "response": "A budget is not about avoiding every purchase. It helps money do useful jobs."
+        }
+      ],
+      "recommendedAnswerId": "J1-M6-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Plan",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M6-S06",
+      "type": "interaction",
+      "interactionType": "budget_builder",
+      "title": "Build a 30-Day Budget",
+      "instruction": "Divide Rs. 20,000 across all six categories. Cover the essentials, prepare for later, and avoid spending more than you have.",
+      "config": {
+        "educationalAssumptions": [
+          "The Rs. 20,000 must last for 30 days.",
+          "Food, transport, and mobile data are required in this situation.",
+          "The listed minimums are simplified learning amounts, not real prices for every family.",
+          "Savings are for a future goal.",
+          "Emergency money is kept available for an unexpected need.",
+          "Entertainment is optional, but including affordable fun is allowed."
+        ],
+        "totalAvailableAmount": 20000,
+        "allocationStep": 500,
+        "categories": [
+          {
+            "id": "category_food",
+            "label": "Food",
+            "purpose": "Meals and basic groceries",
+            "minimumAmount": 7000,
+            "maximumAmount": 10000,
+            "requiredExpense": true,
+            "minimumForCompletion": 7000
+          },
+          {
+            "id": "category_transport",
+            "label": "Transport",
+            "purpose": "Necessary travel during the month",
+            "minimumAmount": 2500,
+            "maximumAmount": 5000,
+            "requiredExpense": true,
+            "minimumForCompletion": 2500
+          },
+          {
+            "id": "category_mobile_data",
+            "label": "Mobile data",
+            "purpose": "Required calls, messages, and online access",
+            "minimumAmount": 1000,
+            "maximumAmount": 2500,
+            "requiredExpense": true,
+            "minimumForCompletion": 1000
+          },
+          {
+            "id": "category_savings",
+            "label": "Savings",
+            "purpose": "Money kept for a future goal",
+            "minimumAmount": 0,
+            "maximumAmount": 5000,
+            "requiredExpense": false,
+            "minimumForCompletion": 1000
+          },
+          {
+            "id": "category_entertainment",
+            "label": "Entertainment",
+            "purpose": "Games, outings, or other enjoyable activities",
+            "minimumAmount": 0,
+            "maximumAmount": 4000,
+            "requiredExpense": false,
+            "minimumForCompletion": 0
+          },
+          {
+            "id": "category_emergency_money",
+            "label": "Emergency money",
+            "purpose": "Money available for an unexpected need",
+            "minimumAmount": 0,
+            "maximumAmount": 4000,
+            "requiredExpense": false,
+            "minimumForCompletion": 1000
+          }
+        ],
+        "remainingBalanceRule": "The remaining balance equals Rs. 20,000 minus all six allocations. A completed budget must have a remaining balance of Rs. 0. The learner cannot allocate more than Rs. 20,000.",
+        "immediateFeedbackRules": [
+          {
+            "condition": "Food is below Rs. 7,000",
+            "message": "Food needs at least Rs. 7,000 in this activity."
+          },
+          {
+            "condition": "Transport is below Rs. 2,500",
+            "message": "Transport is not fully covered yet."
+          },
+          {
+            "condition": "Mobile data is below Rs. 1,000",
+            "message": "Set aside enough for the required mobile data."
+          },
+          {
+            "condition": "Savings is below Rs. 1,000",
+            "message": "Your current costs are covered, but your future goal needs a place too."
+          },
+          {
+            "condition": "Emergency money is below Rs. 1,000",
+            "message": "A surprise expense could disrupt this plan. Add some emergency money."
+          },
+          {
+            "condition": "Total allocation is above Rs. 20,000",
+            "message": "This plan spends more money than is available. Reduce one or more categories."
+          },
+          {
+            "condition": "Entertainment is above Rs. 0",
+            "message": "You included affordable fun while staying within the plan."
+          },
+          {
+            "condition": "Entertainment is Rs. 0",
+            "message": "This plan can work, but remember that a budget may include affordable fun if you choose."
+          }
+        ],
+        "validCompletionRules": [
+          "Food receives at least Rs. 7,000.",
+          "Transport receives at least Rs. 2,500.",
+          "Mobile data receives at least Rs. 1,000.",
+          "Savings receives at least Rs. 1,000.",
+          "Emergency money receives at least Rs. 1,000.",
+          "Every category stays within its allowed range.",
+          "The allocations total exactly Rs. 20,000.",
+          "The remaining balance is Rs. 0."
+        ],
+        "recommendedExampleCompletion": {
+          "food": 8000,
+          "transport": 3000,
+          "mobileData": 1500,
+          "savings": 3000,
+          "entertainment": 2000,
+          "emergencyMoney": 2500,
+          "remainingBalance": 0,
+          "note": "This is one balanced example, not the only correct plan."
+        },
+        "multipleValidBudgets": true,
+        "multipleValidBudgetsExplanation": "Many budgets can succeed. Learners may move money between categories within the allowed limits. There is no single perfect entertainment amount. A learner may choose more affordable fun or place more money in savings or emergencies.",
+        "scoringRules": [
+          {
+            "criterion": "Essentials covered",
+            "points": 40,
+            "requirement": "Food, transport, and mobile data meet their minimums."
+          },
+          {
+            "criterion": "Future goal included",
+            "points": 20,
+            "requirement": "Savings receives at least Rs. 1,000."
+          },
+          {
+            "criterion": "Surprise protection included",
+            "points": 20,
+            "requirement": "Emergency money receives at least Rs. 1,000."
+          },
+          {
+            "criterion": "No overspending",
+            "points": 20,
+            "requirement": "The allocations total exactly Rs. 20,000."
+          }
+        ],
+        "missionSuccessScore": 100,
+        "entertainmentScoringNote": "Entertainment does not reduce the score when it remains within the allowed budget.",
+        "correctCompletionState": "Any valid 100-point budget is accepted. The recommended example demonstrates that essentials, saving, emergency preparation, and entertainment can all fit in one plan.",
+        "validationMethod": "Check category limits, required minimums, total allocation, remaining balance, and score when the learner submits.",
+        "dynamicSuccessMessages": {
+          "entertainmentIncluded": "You also made room for Rs. [entertainment amount] of affordable fun.",
+          "entertainmentNotIncluded": "Your plan works. You could also include affordable fun by adjusting another flexible category."
+        },
+        "retryBehavior": "Keep valid amounts in place. Highlight only unmet conditions and allow unlimited adjustments.",
+        "accessibilityAlternative": {
+          "method": "Provide plus and minus buttons, number inputs, or selectable amounts for every category. Do not require sliders or dragging.",
+          "screenReaderInstruction": "Choose an amount for each category. Listen to the remaining balance and status messages, then submit when all Rs. 20,000 has been allocated."
+        }
+      },
+      "feedback": {
+        "success": "Budget balanced! You covered important costs, prepared for the future and surprises, and stayed within Rs. 20,000.",
+        "incorrect": "Your budget needs another look. Check the highlighted category and make sure the full plan stays within Rs. 20,000.",
+        "incomplete": "Some money still needs a job. Allocate the full Rs. 20,000 before checking your budget."
+      },
+      "primaryAction": {
+        "label": "Check My Budget",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M6-S07",
+      "type": "reveal",
+      "title": "A Plan With Room to Live",
+      "content": "You divided limited money between today’s needs, future goals, surprises, and fun. That plan is called a budget. A budget helps you decide where money should go before it disappears. It is useful whether someone has a little money or a lot. Savings prepare for future goals, while emergency money helps with unexpected needs. Entertainment can also belong in a budget when important costs are covered and the total stays affordable.",
+      "simpleSummary": "A budget gives every part of your money a job.",
+      "illustration": "A completed budget wheel shows sections for essentials, savings, emergency money, and entertainment, all fitting inside Rs. 20,000.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M6-S08",
+      "type": "real_life_example",
+      "title": "Planning Birthday Money",
+      "content": "Sara receives Rs. 4,000 for her birthday. She plans Rs. 1,500 for school supplies, Rs. 1,000 for saving, Rs. 500 for emergencies, and Rs. 1,000 for a family outing. Her budget protects important priorities and still includes something enjoyable.",
+      "illustration": "Sara divides Rs. 4,000 between four labelled envelopes, including a colourful family-outing envelope.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M6-S09",
+      "type": "quiz",
+      "title": "Budget Check",
+      "questions": [
+        {
+          "id": "J1-M6-Q1",
+          "category": "recognition",
+          "text": "Which plan is a complete budget for Rs. 5,000?",
+          "options": [
+            {
+              "id": "J1-M6-Q1-O1",
+              "text": "Plan needs, saving, emergency money, and affordable fun",
+              "isCorrect": true,
+              "feedback": "Correct. The plan gives different priorities amounts while staying within the available money."
+            },
+            {
+              "id": "J1-M6-Q1-O2",
+              "text": "Spend until the money runs out",
+              "isCorrect": false,
+              "feedback": "Spending without a plan may leave important costs uncovered before the money period ends."
+            },
+            {
+              "id": "J1-M6-Q1-O3",
+              "text": "Buy fun items and ignore the total",
+              "isCorrect": false,
+              "feedback": "Fun can be included, but the full plan still needs to stay within the available amount."
+            },
+            {
+              "id": "J1-M6-Q1-O4",
+              "text": "Keep every rupee unused",
+              "isCorrect": false,
+              "feedback": "A budget helps money cover useful priorities. It does not require avoiding all spending."
+            }
+          ],
+          "correctAnswerId": "J1-M6-Q1-O1",
+          "correctExplanation": "A complete budget gives different priorities planned amounts while keeping total spending within Rs. 5,000.",
+          "misconceptionTested": "A budget is only about restricting spending."
+        },
+        {
+          "id": "J1-M6-Q2",
+          "category": "misconception",
+          "text": "Which Rs. 10,000 plan shows that budgeting can include fun?",
+          "options": [
+            {
+              "id": "J1-M6-Q2-O1",
+              "text": "Rs. 6,500 needs, Rs. 1,500 saving, Rs. 1,000 emergency, Rs. 1,000 fun",
+              "isCorrect": true,
+              "feedback": "Correct. This plan covers priorities, includes enjoyment, and totals Rs. 10,000."
+            },
+            {
+              "id": "J1-M6-Q2-O2",
+              "text": "Rs. 10,000 entertainment",
+              "isCorrect": false,
+              "feedback": "Entertainment can belong in a budget, but using the full amount would leave other priorities uncovered."
+            },
+            {
+              "id": "J1-M6-Q2-O3",
+              "text": "Rs. 10,000 needs and nothing else",
+              "isCorrect": false,
+              "feedback": "Needs matter, but budgeting can also prepare for future goals, surprises, and affordable enjoyment."
+            },
+            {
+              "id": "J1-M6-Q2-O4",
+              "text": "Spend without choosing amounts",
+              "isCorrect": false,
+              "feedback": "Without planned amounts, it is harder to know whether the money will cover every priority."
+            }
+          ],
+          "correctAnswerId": "J1-M6-Q2-O1",
+          "correctExplanation": "This plan covers important costs, prepares for later, includes enjoyable spending, and stays within Rs. 10,000.",
+          "misconceptionTested": "Budgeting means removing all fun."
+        },
+        {
+          "id": "J1-M6-Q3",
+          "category": "application",
+          "text": "Ali has Rs. 6,000. His required costs are Rs. 4,000. Which plan is strongest?",
+          "options": [
+            {
+              "id": "J1-M6-Q3-O1",
+              "text": "Cover Rs. 4,000, save Rs. 1,000, keep Rs. 500 for emergencies, and use Rs. 500 for fun",
+              "isCorrect": true,
+              "feedback": "Correct. The plan covers current costs, prepares for later, includes fun, and totals Rs. 6,000."
+            },
+            {
+              "id": "J1-M6-Q3-O2",
+              "text": "Spend Rs. 2,000 on games first",
+              "isCorrect": false,
+              "feedback": "That may leave too little for the Rs. 4,000 of required costs."
+            },
+            {
+              "id": "J1-M6-Q3-O3",
+              "text": "Use all Rs. 6,000 on current costs",
+              "isCorrect": false,
+              "feedback": "Current costs would be covered, but no money would be prepared for future goals or surprises."
+            },
+            {
+              "id": "J1-M6-Q3-O4",
+              "text": "Ignore emergencies because nothing is wrong today",
+              "isCorrect": false,
+              "feedback": "Emergency money is prepared before something unexpected happens."
+            }
+          ],
+          "correctAnswerId": "J1-M6-Q3-O1",
+          "correctExplanation": "The plan covers current costs, prepares for a future goal and unexpected needs, includes fun, and uses exactly Rs. 6,000.",
+          "misconceptionTested": "Emergency money and savings are unnecessary when current expenses are covered."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M6-S10",
+      "type": "completion",
+      "headline": "Budget Builder!",
+      "message": "You created a plan that covers important costs, prepares for later, and can still include affordable fun.",
+      "xpReward": 50,
+      "progressMessage": "Mission 6 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, discover how small unexpected costs can test even a strong money plan.",
+      "animation": "Six budget envelopes lock into place. A 30-day calendar fills with check marks, followed by a small coin badge.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M6-S11",
+      "type": "real_life_challenge",
+      "title": "Plan an Imaginary Rs. 2,000",
+      "instruction": "Divide an imaginary Rs. 2,000 between one need, saving, emergency money, and fun. Check that your four amounts total exactly Rs. 2,000.",
+      "buttonLabel": "My Budget Balances",
+      "primaryAction": {
+        "label": "My Budget Balances",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on using a budget to divide limited money between different priorities."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The allocations, remaining balance, example budgets, and scoring rules are mathematically consistent."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses a guided family-style simulation, mobile data, transport, entertainment, saving, and simple envelopes."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investment returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Entertainment is presented as a valid budget category rather than irresponsible spending."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The activity states that its minimum amounts are simplified examples and not real prices for every family."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses Pakistani rupees and familiar categories such as food, transport, mobile data, savings, and entertainment."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner must divide a fixed amount across six priorities without overspending."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses fun spending, emergency preparation, savings, overspending, and the purpose of a budget."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, one six-category budget builder, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
