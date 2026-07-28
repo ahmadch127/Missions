@@ -1,0 +1,468 @@
+{
+  "id": "J1-M5",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "Spending Wisely",
+  "concept": "Thoughtful spending involves pausing, checking your budget, and deciding whether a purchase is useful and affordable.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Recognise the difference between thoughtful spending decisions and impulsive purchases.",
+  "primaryMisconception": "Buying something on sale always saves money.",
+  "secondaryMisconceptions": [
+    "A limited-time offer must be accepted immediately.",
+    "A discounted item is a good purchase even when it was not planned or needed."
+  ],
+  "keyTakeaway": "A discount does not make an unnecessary purchase a good decision.",
+  "screens": [
+    {
+      "id": "J1-M5-S01",
+      "type": "hook",
+      "title": "Ten-Minute Temptation",
+      "content": "A flash sale ends in ten minutes. The item looks cheap, but you never planned to buy it. What should you do?",
+      "illustration": "A colourful art set appears beside a flashing ten-minute timer and a large SALE label. Maya holds her birthday-money wallet and looks unsure.",
+      "primaryAction": {
+        "label": "Face the Flash Sale",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M5-S02",
+      "type": "story",
+      "title": "Birthday-Money Plan",
+      "content": "Maya has £25 of birthday money. She is saving £15 for school supplies and has £10 available for fun.",
+      "illustration": "Maya divides £25 between a school-supplies envelope marked £15 and a fun-money envelope marked £10.",
+      "primaryAction": {
+        "label": "See What Appears",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M5-S03",
+      "type": "story",
+      "title": "The Flash Sale",
+      "content": "A colourful art set appears online for £12, reduced from £20. The timer says only ten minutes remain.",
+      "illustration": "An art set appears on a tablet screen with £20 crossed out, £12 displayed, and a countdown timer.",
+      "primaryAction": {
+        "label": "Check the Deal",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M5-S04",
+      "type": "story",
+      "title": "A Tiny Problem",
+      "content": "Maya likes the set, but it was not on her list. Buying it would use more than her £10 fun budget.",
+      "illustration": "The £12 art set sits beside Maya’s £10 fun envelope. A £2 gap appears between them.",
+      "primaryAction": {
+        "label": "Decide Carefully",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M5-S05",
+      "type": "pre_interaction",
+      "title": "Before the Timer Ends",
+      "question": "What should Maya do first?",
+      "options": [
+        {
+          "id": "J1-M5-PQ-O1",
+          "text": "Check her budget",
+          "isRecommended": true,
+          "response": "Good thinking. Maya can see whether the purchase fits without taking money from something already planned."
+        },
+        {
+          "id": "J1-M5-PQ-O2",
+          "text": "Buy it immediately",
+          "isRecommended": false,
+          "response": "She may get the art set, but the timer could push her into spending before thinking."
+        },
+        {
+          "id": "J1-M5-PQ-O3",
+          "text": "Trust the sale label",
+          "isRecommended": false,
+          "response": "A sale label shows a lower advertised price, but it does not prove the item is useful, affordable, or the cheapest available."
+        },
+        {
+          "id": "J1-M5-PQ-O4",
+          "text": "Ignore all sales forever",
+          "isRecommended": false,
+          "response": "Sales are not automatically bad. A discounted purchase can make sense when it is useful, planned, and affordable."
+        }
+      ],
+      "recommendedAnswerId": "J1-M5-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Choice",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M5-S06",
+      "type": "interaction",
+      "interactionType": "predict_outcome",
+      "title": "What Happens Next?",
+      "instruction": "Explore each action and predict its likely outcome. Then choose Maya’s best first step.",
+      "config": {
+        "scenario": {
+          "totalBirthdayMoney": 25,
+          "schoolSuppliesAmount": 15,
+          "funMoneyAmount": 10,
+          "itemName": "Art set",
+          "itemPrice": 12,
+          "advertisedPreviousPrice": 20,
+          "saleTimeRemainingMinutes": 10
+        },
+        "educationalAssumptions": [
+          "Maya still needs the full £15 for school supplies.",
+          "She has not compared the art set with prices at other shops.",
+          "The sale might end, but the item might also remain available later.",
+          "The activity shows possible outcomes, not guaranteed results."
+        ],
+        "predictions": [
+          {
+            "id": "prediction_buy_immediately",
+            "action": "Buy immediately",
+            "outcomeOptions": [
+              {
+                "id": "prediction_buy_immediately_o1",
+                "text": "She gets the set but uses £2 planned for school supplies.",
+                "isLikelyOutcome": true
+              },
+              {
+                "id": "prediction_buy_immediately_o2",
+                "text": "Buying the sale item adds £8 to her money.",
+                "isLikelyOutcome": false
+              }
+            ],
+            "likelyOutcomeId": "prediction_buy_immediately_o1",
+            "explanation": "The art set costs £12, but Maya has only £10 available for fun. Buying it would change her school-supplies plan."
+          },
+          {
+            "id": "prediction_wait_one_day",
+            "action": "Wait one day",
+            "outcomeOptions": [
+              {
+                "id": "prediction_wait_one_day_o1",
+                "text": "The sale may end, but she gets time to decide without the countdown pressure.",
+                "isLikelyOutcome": true
+              },
+              {
+                "id": "prediction_wait_one_day_o2",
+                "text": "The shop must keep the discount for her.",
+                "isLikelyOutcome": false
+              }
+            ],
+            "likelyOutcomeId": "prediction_wait_one_day_o1",
+            "explanation": "Waiting does not guarantee that the price will remain. It can help Maya discover whether she still wants the item after the urgency fades."
+          },
+          {
+            "id": "prediction_compare_prices",
+            "action": "Compare prices",
+            "outcomeOptions": [
+              {
+                "id": "prediction_compare_prices_o1",
+                "text": "She may find a better price or learn that the discount is not unusual.",
+                "isLikelyOutcome": true
+              },
+              {
+                "id": "prediction_compare_prices_o2",
+                "text": "The original sale label proves it is the cheapest option.",
+                "isLikelyOutcome": false
+              }
+            ],
+            "likelyOutcomeId": "prediction_compare_prices_o1",
+            "explanation": "Comparing prices gives Maya more information. A crossed-out price alone does not show whether the current offer is the best available."
+          },
+          {
+            "id": "prediction_check_budget",
+            "action": "Check the budget",
+            "outcomeOptions": [
+              {
+                "id": "prediction_check_budget_o1",
+                "text": "She sees that £12 does not fit her £10 fun budget without changing another plan.",
+                "isLikelyOutcome": true
+              },
+              {
+                "id": "prediction_check_budget_o2",
+                "text": "The discount automatically makes the purchase affordable.",
+                "isLikelyOutcome": false
+              }
+            ],
+            "likelyOutcomeId": "prediction_check_budget_o1",
+            "explanation": "A lower price can still be unaffordable. Checking the budget shows the effect of the purchase on Maya’s other goals."
+          }
+        ],
+        "confidenceSelection": {
+          "enabled": true,
+          "affectsScore": false,
+          "options": [
+            "Not sure",
+            "Fairly sure",
+            "Very sure"
+          ]
+        },
+        "recommendedCompletionState": {
+          "requiredPredictionIds": [
+            "prediction_buy_immediately",
+            "prediction_wait_one_day",
+            "prediction_compare_prices",
+            "prediction_check_budget"
+          ],
+          "bestFirstStep": "Check the budget",
+          "helpfulFollowUpActions": [
+            "Compare prices",
+            "Wait if still unsure"
+          ],
+          "notRecommendedInScenario": "Buy immediately because of the timer"
+        },
+        "bestFirstStepExplanation": "Checking the budget quickly reveals that the art set costs £2 more than Maya’s available fun money. She can then compare prices or wait without risking money already planned for school supplies.",
+        "validationMethod": "Check each predicted outcome after submission. Accept only the stated likely outcome for each action. Complete the interaction after all four outcomes are explored and the best first step is selected.",
+        "retryBehavior": "Keep correct predictions marked. Return only the incorrect prediction for another attempt and provide one short hint.",
+        "accessibilityAlternative": {
+          "method": "Present each action and its two possible outcomes as numbered radio-button choices. Do not require dragging, timed input, or animations.",
+          "screenReaderInstruction": "Choose an action, select its likely outcome, and submit. Repeat until all four actions have been explored."
+        }
+      },
+      "feedback": {
+        "success": "Great prediction. You looked past the timer and checked what each choice could do to Maya’s money plan.",
+        "incorrect": "Take another look at Maya’s numbers. Ask what the choice could change, not just what the sale promises.",
+        "incomplete": "Explore all four actions and choose Maya’s best first step before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Predictions",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M5-S07",
+      "type": "reveal",
+      "title": "Pause Before You Purchase",
+      "content": "You predicted what could happen after each choice. Thoughtful spending means pausing, checking your budget, and deciding whether a purchase is useful and affordable. A sale lowers the price, but spending £12 still costs £12. Checking the budget protects money already planned for school supplies. Comparing prices tests whether the deal is truly good. Waiting can reduce pressure and show whether you still want the item later. A discount helps only when the purchase already makes sense.",
+      "simpleSummary": "Pause, check your plan, and then decide.",
+      "illustration": "A pause button stands between the sale timer and Maya’s wallet. Three question cards read: Is it useful?, Can I afford it?, and Is this a good price?",
+      "primaryAction": {
+        "label": "Try Another Situation",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M5-S08",
+      "type": "real_life_example",
+      "title": "The Discounted Football",
+      "content": "Noah sees a football marked down to £9. He already owns one and is saving for a class trip. He checks his plan and skips the sale. He did not “lose” £6; he kept £9 for a goal he values more.",
+      "illustration": "Noah looks at a £9 football, then places £9 into an envelope labelled Class Trip.",
+      "primaryAction": {
+        "label": "Test My Thinking",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M5-S09",
+      "type": "quiz",
+      "title": "Smart Spending Check",
+      "questions": [
+        {
+          "id": "J1-M5-Q1",
+          "category": "recognition",
+          "text": "Ella sees a £6 notebook on sale. She already has two unused notebooks. Which choice is most thoughtful?",
+          "options": [
+            {
+              "id": "J1-M5-Q1-O1",
+              "text": "Pause and keep the money for her planned goal",
+              "isCorrect": true,
+              "feedback": "Correct. Ella does not currently need another notebook, so she can keep the £6 for her plan."
+            },
+            {
+              "id": "J1-M5-Q1-O2",
+              "text": "Buy it because the price is lower",
+              "isCorrect": false,
+              "feedback": "The notebook costs less than before, but Ella would still spend £6 on something she does not currently need."
+            },
+            {
+              "id": "J1-M5-Q1-O3",
+              "text": "Buy two to save even more",
+              "isCorrect": false,
+              "feedback": "Buying more increases the total amount spent. It does not create savings when the notebooks were not needed."
+            },
+            {
+              "id": "J1-M5-Q1-O4",
+              "text": "Assume the sale ends forever",
+              "isCorrect": false,
+              "feedback": "The offer may end, but urgency alone does not make buying the notebook a thoughtful choice."
+            }
+          ],
+          "correctAnswerId": "J1-M5-Q1-O1",
+          "correctExplanation": "Ella does not currently need another notebook. Skipping an unnecessary purchase keeps the full £6 available for something she has planned.",
+          "misconceptionTested": "A discounted item is a good purchase even when it was not planned or needed."
+        },
+        {
+          "id": "J1-M5-Q2",
+          "category": "misconception",
+          "text": "A toy drops from £20 to £12. You did not plan to buy it and have only £5 available. Does buying it save you money?",
+          "options": [
+            {
+              "id": "J1-M5-Q2-O1",
+              "text": "No, it makes you spend £12 you had not planned",
+              "isCorrect": true,
+              "feedback": "Correct. The price is lower, but you would still spend £12 and exceed the £5 available."
+            },
+            {
+              "id": "J1-M5-Q2-O2",
+              "text": "Yes, it always saves £8",
+              "isCorrect": false,
+              "feedback": "The price reduction is £8, but you only keep that £8 by not buying at the original price. You still spend £12."
+            },
+            {
+              "id": "J1-M5-Q2-O3",
+              "text": "Yes, because every sale is a bargain",
+              "isCorrect": false,
+              "feedback": "A sale can be useful, but only when the item makes sense for your needs and budget."
+            },
+            {
+              "id": "J1-M5-Q2-O4",
+              "text": "Yes, if the timer is nearly finished",
+              "isCorrect": false,
+              "feedback": "A countdown creates urgency. It does not make the item affordable or necessary."
+            }
+          ],
+          "correctAnswerId": "J1-M5-Q2-O1",
+          "correctExplanation": "The price is £8 lower, but buying the toy still requires spending £12. It also does not fit the £5 available.",
+          "misconceptionTested": "Buying something on sale always saves money."
+        },
+        {
+          "id": "J1-M5-Q3",
+          "category": "application",
+          "text": "Sam has £18. He needs £10 for a school trip and has £8 for fun. A £7 game appears in a flash sale. What should he do first?",
+          "options": [
+            {
+              "id": "J1-M5-Q3-O1",
+              "text": "Check his budget and decide whether the game is useful",
+              "isCorrect": true,
+              "feedback": "Correct. Sam can confirm that the game fits his fun money and decide whether he genuinely wants it."
+            },
+            {
+              "id": "J1-M5-Q3-O2",
+              "text": "Buy immediately because time is short",
+              "isCorrect": false,
+              "feedback": "The countdown should not make the decision. Sam can pause long enough to check his plan."
+            },
+            {
+              "id": "J1-M5-Q3-O3",
+              "text": "Spend the school-trip money",
+              "isCorrect": false,
+              "feedback": "The school-trip money already has an important job and does not need to be used for the game."
+            },
+            {
+              "id": "J1-M5-Q3-O4",
+              "text": "Assume the sale price is the cheapest",
+              "isCorrect": false,
+              "feedback": "The sale might be good, but Sam would need to compare prices to know whether it is the best offer."
+            }
+          ],
+          "correctAnswerId": "J1-M5-Q3-O1",
+          "correctExplanation": "The game fits Sam’s fun-money amount, but he should still check that he wants it and that the purchase will not affect his school-trip money.",
+          "misconceptionTested": "A limited-time offer must be accepted immediately."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M5-S10",
+      "type": "completion",
+      "headline": "Spending Detective!",
+      "message": "You learned to look beyond sale labels and check whether a purchase is useful, affordable, and planned.",
+      "xpReward": 50,
+      "progressMessage": "Mission 5 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, discover how small choices can change the amount of money you keep.",
+      "animation": "The flashing sale timer slows and becomes a pause symbol. Maya’s school-supplies and fun-money envelopes lock safely into place.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M5-S11",
+      "type": "real_life_challenge",
+      "title": "Question the Sale",
+      "instruction": "Find one sale sign or advertisement. Without buying anything, ask: Do I need it? Is it in my budget? Have I compared the price?",
+      "buttonLabel": "I Checked the Deal",
+      "primaryAction": {
+        "label": "I Checked the Deal",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on thoughtful spending versus impulsive purchasing."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "It distinguishes a price reduction from actual money kept and explains that a lower price can still be unaffordable."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses birthday money, school supplies, art sets, games, a class trip, and simple budgets."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss financial returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Buying enjoyable items is not presented as wrong. The mission encourages checking usefulness and affordability first."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The interaction states that sale availability and comparison outcomes are uncertain and presents them as possible rather than guaranteed."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, birthday money, school supplies, online sales, games, and familiar child-friendly goals."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner predicts how immediate buying, waiting, comparing, and checking a budget can affect a spending decision."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses sale labels, urgency, unplanned purchases, affordability, and price comparison."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, four brief predictions, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The sentences are short, concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
