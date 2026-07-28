@@ -1,0 +1,493 @@
+{
+  "id": "J1-M3",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "How Money Is Earned",
+  "concept": "People usually earn money by doing work, selling useful products, or providing services that create value for others.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand the different ways people can earn money by creating value for someone else.",
+  "primaryMisconception": "Money only comes from salaries or parents.",
+  "secondaryMisconceptions": [
+    "A person must have a formal job to earn money.",
+    "Waiting for someone to give you money is the same as earning it."
+  ],
+  "keyTakeaway": "Money is usually earned by creating value for someone.",
+  "screens": [
+    {
+      "id": "J1-M3-S01",
+      "type": "hook",
+      "title": "An Empty Saving Jar",
+      "content": "You want a £12 sketchbook, but your saving jar is empty. Which choice would help you earn the money?",
+      "illustration": "A student looks at a £12 sketchbook beside an empty saving jar. Four mystery-path icons appear behind them.",
+      "primaryAction": {
+        "label": "Explore the Choices",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M3-S02",
+      "type": "story",
+      "title": "Four Possible Paths",
+      "content": "Ayaan could help at his family’s shop, sell his drawings, tutor another student, or wait for his next pocket-money day.",
+      "illustration": "Four path cards show a shop shelf, a drawing, two students studying, and a calendar beside a pocket-money jar.",
+      "primaryAction": {
+        "label": "Compare the Paths",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M3-S03",
+      "type": "story",
+      "title": "Money Arrives Differently",
+      "content": "Some choices require effort, skills, or something useful to offer. One choice only requires waiting. Will every path count as earning?",
+      "illustration": "Three paths show an exchange symbol between Ayaan and another person. The waiting path shows only a clock.",
+      "primaryAction": {
+        "label": "Make a Prediction",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M3-S04",
+      "type": "pre_interaction",
+      "title": "What Makes It Earning?",
+      "question": "Which clue best shows that money was earned?",
+      "options": [
+        {
+          "id": "J1-M3-PQ-O1",
+          "text": "Someone received useful value in return",
+          "isRecommended": true,
+          "response": "Good thinking. Earning usually involves providing work, a product, or a service that someone values."
+        },
+        {
+          "id": "J1-M3-PQ-O2",
+          "text": "The money came from an adult",
+          "isRecommended": false,
+          "response": "Adults can pay for work, but they can also give gifts or pocket money."
+        },
+        {
+          "id": "J1-M3-PQ-O3",
+          "text": "The money was given as coins",
+          "isRecommended": false,
+          "response": "The form of the money does not show whether it was earned."
+        },
+        {
+          "id": "J1-M3-PQ-O4",
+          "text": "The person waited long enough",
+          "isRecommended": false,
+          "response": "Waiting may lead to receiving money, but it does not automatically mean the money was earned."
+        }
+      ],
+      "recommendedAnswerId": "J1-M3-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Idea",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M3-S05",
+      "type": "interaction",
+      "interactionType": "decision_tree",
+      "title": "Choose Ayaan’s Money Path",
+      "instruction": "Explore all four choices. Follow each path and decide whether Ayaan earns money or simply receives it.",
+      "config": {
+        "startingNode": {
+          "id": "node_start",
+          "content": "Ayaan wants to collect £12 for a sketchbook. An adult has approved three safe, age-appropriate ways he could try to earn part of the money.",
+          "choiceIds": [
+            "choice_family_shop",
+            "choice_sell_drawings",
+            "choice_tutor_student",
+            "choice_wait_pocket_money"
+          ]
+        },
+        "choices": [
+          {
+            "id": "choice_family_shop",
+            "label": "Help at the family shop",
+            "description": "Help organise greeting cards at the family shop.",
+            "consequence": "Ayaan spends one hour sorting the cards. The organised display saves the shopkeeper time. The family agrees to pay him £4.",
+            "followUpNodeId": "node_family_shop"
+          },
+          {
+            "id": "choice_sell_drawings",
+            "label": "Sell drawings",
+            "description": "Offer two original drawings for sale with an adult’s permission.",
+            "consequence": "Two people enjoy the drawings and agree to buy them for £3 each. Ayaan receives £6.",
+            "followUpNodeId": "node_sell_drawings"
+          },
+          {
+            "id": "choice_tutor_student",
+            "label": "Tutor another student",
+            "description": "Help a younger student practise multiplication with both families’ permission.",
+            "consequence": "Ayaan explains the questions clearly for 30 minutes. The other student improves, and the family pays Ayaan £5.",
+            "followUpNodeId": "node_tutor_student"
+          },
+          {
+            "id": "choice_wait_pocket_money",
+            "label": "Wait for pocket money",
+            "description": "Wait until his family’s next pocket-money day.",
+            "consequence": "Ayaan receives £3 from his family. In this path, he did not complete an agreed task, sell a product, or provide a service.",
+            "followUpNodeId": "node_wait_pocket_money"
+          }
+        ],
+        "followUpNodes": [
+          {
+            "id": "node_family_shop",
+            "question": "What did Ayaan provide?",
+            "options": [
+              {
+                "id": "node_family_shop_o1",
+                "text": "Useful work",
+                "isRecommended": true
+              },
+              {
+                "id": "node_family_shop_o2",
+                "text": "Nothing except waiting",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_family_shop_o1",
+            "terminalOutcomeId": "outcome_family_shop"
+          },
+          {
+            "id": "node_sell_drawings",
+            "question": "What did Ayaan offer?",
+            "options": [
+              {
+                "id": "node_sell_drawings_o1",
+                "text": "A product people wanted",
+                "isRecommended": true
+              },
+              {
+                "id": "node_sell_drawings_o2",
+                "text": "A monthly salary",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_sell_drawings_o1",
+            "terminalOutcomeId": "outcome_sell_drawings"
+          },
+          {
+            "id": "node_tutor_student",
+            "question": "What did Ayaan provide?",
+            "options": [
+              {
+                "id": "node_tutor_student_o1",
+                "text": "A helpful service",
+                "isRecommended": true
+              },
+              {
+                "id": "node_tutor_student_o2",
+                "text": "A physical product",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_tutor_student_o1",
+            "terminalOutcomeId": "outcome_tutor_student"
+          },
+          {
+            "id": "node_wait_pocket_money",
+            "question": "Did Ayaan directly earn this £3?",
+            "options": [
+              {
+                "id": "node_wait_pocket_money_o1",
+                "text": "Yes, because he received money",
+                "isRecommended": false
+              },
+              {
+                "id": "node_wait_pocket_money_o2",
+                "text": "No, it was received rather than directly earned",
+                "isRecommended": true
+              }
+            ],
+            "recommendedAnswerId": "node_wait_pocket_money_o2",
+            "terminalOutcomeId": "outcome_wait_pocket_money"
+          }
+        ],
+        "terminalOutcomes": [
+          {
+            "id": "outcome_family_shop",
+            "title": "Earned through work",
+            "content": "Ayaan created value by completing a useful task and earned £4."
+          },
+          {
+            "id": "outcome_sell_drawings",
+            "title": "Earned by selling a product",
+            "content": "Ayaan created something people valued and earned £6."
+          },
+          {
+            "id": "outcome_tutor_student",
+            "title": "Earned by providing a service",
+            "content": "Ayaan used his time and skill to help someone and earned £5."
+          },
+          {
+            "id": "outcome_wait_pocket_money",
+            "title": "Money received",
+            "content": "The £3 still helps Ayaan, but this particular payment was given rather than directly earned."
+          }
+        ],
+        "correctCompletionState": {
+          "choice_family_shop": "earned_through_work",
+          "choice_sell_drawings": "earned_through_product",
+          "choice_tutor_student": "earned_through_service",
+          "choice_wait_pocket_money": "received_not_directly_earned"
+        },
+        "validationMethod": "Check each branch after its follow-up choice. Complete the interaction when all four paths have been explored and correctly identified.",
+        "retryBehavior": "Keep completed branches marked. Return the learner to the current follow-up node, provide one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present the tree as a numbered list of four choices. Each branch opens as a linear text sequence with selectable buttons.",
+          "screenReaderInstruction": "Choose a path, listen to its consequence, identify how the money arrived, and return to explore the remaining paths."
+        },
+        "tradeOffSummary": [
+          "Work requires time and effort, and the task must be safe and useful.",
+          "A product requires something another person wants and may require materials.",
+          "A service requires time, skill, and someone who needs the help.",
+          "Pocket money depends on the giver and may be received without creating value in return.",
+          "There is no single best earning path. Available choices depend on skills, permission, safety, time, and what other people value."
+        ]
+      },
+      "feedback": {
+        "success": "Great exploring. Ayaan can earn money through work, products, or services. Pocket money can be useful, but receiving it is not always the same as earning it.",
+        "incorrect": "Look for the exchange. Did Ayaan provide useful work, a product, or a service in return for the money?",
+        "incomplete": "Explore every path before finishing the decision tree."
+      },
+      "primaryAction": {
+        "label": "Finish the Tree",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M3-S06",
+      "type": "reveal",
+      "title": "Creating Value Can Earn Money",
+      "content": "You explored four paths. Shop work created value through a useful task. Drawings created value as products. Tutoring created value as a service. These are ways of earning money: receiving payment because someone values what you did or provided. Waiting for pocket money may still bring money, but it is received rather than directly earned. A salary is one way to earn, not the only way. Children’s activities should always be safe and approved by an adult.",
+      "simpleSummary": "You earn by offering work, products, or services people value.",
+      "illustration": "Three arrows labelled Work, Product, and Service lead toward an earning jar. A separate Money Received arrow leads from a gift box.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M3-S07",
+      "type": "real_life_example",
+      "title": "The Plant-Watering Helper",
+      "content": "With a parent’s permission, Lily waters a neighbour’s plants while the neighbour is away. The neighbour agrees to pay her £5. Lily does not have a formal job or salary, but she earns money by providing a useful service.",
+      "illustration": "Lily waters several plants while a parent watches nearby. A neighbour thanks her and places £5 in her saving jar.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M3-S08",
+      "type": "quiz",
+      "title": "How Was It Earned?",
+      "questions": [
+        {
+          "id": "J1-M3-Q1",
+          "category": "recognition",
+          "text": "Theo helps organise books for a school fair and receives an agreed payment of £4. How did he earn it?",
+          "options": [
+            {
+              "id": "J1-M3-Q1-O1",
+              "text": "By doing useful work",
+              "isCorrect": true,
+              "feedback": "Correct. Theo completed a useful task in return for the agreed payment."
+            },
+            {
+              "id": "J1-M3-Q1-O2",
+              "text": "By waiting for money",
+              "isCorrect": false,
+              "feedback": "Theo did more than wait. He completed a useful task in return for the payment."
+            },
+            {
+              "id": "J1-M3-Q1-O3",
+              "text": "By receiving a birthday gift",
+              "isCorrect": false,
+              "feedback": "The £4 was connected to the work he completed, so it was not a birthday gift."
+            },
+            {
+              "id": "J1-M3-Q1-O4",
+              "text": "By borrowing it",
+              "isCorrect": false,
+              "feedback": "Borrowed money must usually be returned. Theo received payment for his work."
+            }
+          ],
+          "correctAnswerId": "J1-M3-Q1-O1",
+          "correctExplanation": "Theo completed a useful task that helped prepare the school fair. The agreed payment was earned through work.",
+          "misconceptionTested": "Waiting for someone to give you money is the same as earning it."
+        },
+        {
+          "id": "J1-M3-Q2",
+          "category": "misconception",
+          "text": "Which statement about earning money is correct?",
+          "options": [
+            {
+              "id": "J1-M3-Q2-O1",
+              "text": "People can earn through work, products, or services",
+              "isCorrect": true,
+              "feedback": "Correct. Salaries are only one of several ways people can earn money."
+            },
+            {
+              "id": "J1-M3-Q2-O2",
+              "text": "Only people with salaries can earn money",
+              "isCorrect": false,
+              "feedback": "A formal salary is not required. A person may earn from a useful task, product, or service."
+            },
+            {
+              "id": "J1-M3-Q2-O3",
+              "text": "Money only comes from parents",
+              "isCorrect": false,
+              "feedback": "Parents may give money, but people can also earn it by creating value for others."
+            },
+            {
+              "id": "J1-M3-Q2-O4",
+              "text": "Every gift is earned money",
+              "isCorrect": false,
+              "feedback": "A gift can be received without work, a product, or a service being provided in return."
+            }
+          ],
+          "correctAnswerId": "J1-M3-Q2-O1",
+          "correctExplanation": "A salary is one form of earning, but people can also earn by completing useful work, selling products, or providing services.",
+          "misconceptionTested": "Money only comes from salaries or parents."
+        },
+        {
+          "id": "J1-M3-Q3",
+          "category": "application",
+          "text": "Amelia wants to earn £8. Which choice directly creates value for someone else?",
+          "options": [
+            {
+              "id": "J1-M3-Q3-O1",
+              "text": "Offer to organise craft supplies for an agreed payment",
+              "isCorrect": true,
+              "feedback": "Correct. Organising the supplies is useful work that creates value."
+            },
+            {
+              "id": "J1-M3-Q3-O2",
+              "text": "Wait for birthday money",
+              "isCorrect": false,
+              "feedback": "Birthday money may be received, but waiting for it is not directly earning it."
+            },
+            {
+              "id": "J1-M3-Q3-O3",
+              "text": "Ask to be given £8",
+              "isCorrect": false,
+              "feedback": "Receiving money after asking is different from earning it through work, a product, or a service."
+            },
+            {
+              "id": "J1-M3-Q3-O4",
+              "text": "Look at the saving jar each day",
+              "isCorrect": false,
+              "feedback": "Watching the jar does not create value or increase the money inside it."
+            }
+          ],
+          "correctAnswerId": "J1-M3-Q3-O1",
+          "correctExplanation": "Organising the supplies is useful work. If an adult agrees to pay for the task, Amelia earns money by creating value.",
+          "misconceptionTested": "A person must have a formal job to earn money."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M3-S09",
+      "type": "completion",
+      "headline": "Value Creator!",
+      "message": "You discovered that money can be earned through useful work, products, and services—not only salaries.",
+      "xpReward": 50,
+      "progressMessage": "Mission 3 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, explore what happens when money is spent, saved, or shared.",
+      "animation": "Work, drawing, and tutoring icons drop coins into a saving jar. The jar fills to £12 and gives a gentle sparkle.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M3-S10",
+      "type": "real_life_challenge",
+      "title": "Find the Value",
+      "instruction": "Think of three people you know. Identify one useful task, product, or service each person provides. No selling or payment is required.",
+      "buttonLabel": "I Found Three",
+      "primaryAction": {
+        "label": "I Found Three",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on how money is earned by creating value through work, products, or services."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes earned money from gifts or pocket money received without an agreed exchange."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The examples use drawings, tutoring, pocket money, school fairs, saving jars, and safe family situations."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss financial returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or market prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Receiving pocket money is not described as wrong or less valuable. It is simply distinguished from directly earning money."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that payment depends on agreement, usefulness, safety, permission, and what another person values."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, pocket money, a family shop, drawings, tutoring, and school-related activities familiar to UK learners."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner explores work, product, service, and received-money paths and identifies how money arrives in each case."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The questions address salaries, parents, formal jobs, gifts, waiting, and value creation."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses two short story screens, four concise decision branches, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is concrete, encouraging, and suitable for children aged 8–12."
+    }
+  ]
+}
