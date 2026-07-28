@@ -1,0 +1,509 @@
+{
+  "id": "J1-M7",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "Emergency Fund",
+  "concept": "An emergency fund is money saved specifically for unexpected and necessary expenses.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "language": "English",
+  "learningObjective": "Understand why setting aside money for unexpected expenses helps protect regular spending plans and important financial priorities.",
+  "primaryMisconception": "Emergencies are too rare or unpredictable to prepare for.",
+  "secondaryMisconceptions": [
+    "Borrowing money should always be the first response to an emergency.",
+    "Emergency savings can be used for planned or optional purchases."
+  ],
+  "keyTakeaway": "Emergency funds protect normal plans from unexpected costs.",
+  "screens": [
+    {
+      "id": "J1-M7-S01",
+      "type": "hook",
+      "title": "A Surprise Before the Exam",
+      "content": "Your phone breaks one week before an important exam. The repair costs Rs. 8,000. How can you protect your other plans?",
+      "illustration": "A student holds a phone with a cracked screen. An exam calendar shows seven days remaining, and a repair tag displays Rs. 8,000.",
+      "primaryAction": {
+        "label": "Handle the Surprise",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M7-S02",
+      "type": "story",
+      "title": "More Than Entertainment",
+      "content": "You use the phone for study messages, practice questions, and contacting your family. Waiting until after the exam would make the week difficult.",
+      "illustration": "The damaged phone sits beside study notes, a class group message, and a family contact icon.",
+      "primaryAction": {
+        "label": "Check the Cost",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M7-S03",
+      "type": "story",
+      "title": "Money Already Has Jobs",
+      "content": "This month’s money is already planned for food, transport, school supplies, and saving. The unexpected repair was not included.",
+      "illustration": "Four labelled envelopes surround an unexpected Rs. 8,000 repair bill.",
+      "primaryAction": {
+        "label": "Explore the Choices",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M7-S04",
+      "type": "story",
+      "title": "Four Possible Paths",
+      "content": "You could use emergency savings, borrow money, skip important expenses, or sell something. Each choice solves one problem but may create another.",
+      "illustration": "Four paths lead from the broken phone toward a saving jar, a borrowing note, essential-expense envelopes, and a sale box.",
+      "primaryAction": {
+        "label": "Choose a Path",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M7-S05",
+      "type": "pre_interaction",
+      "title": "What Should Protect the Plan?",
+      "question": "Which option is designed for an unexpected and necessary repair?",
+      "options": [
+        {
+          "id": "J1-M7-PQ-O1",
+          "text": "Use emergency savings",
+          "isRecommended": true,
+          "response": "Good thinking. Emergency money is kept for necessary costs that were not part of the normal plan."
+        },
+        {
+          "id": "J1-M7-PQ-O2",
+          "text": "Borrow immediately",
+          "isRecommended": false,
+          "response": "Borrowing may solve the repair problem, but the money must still be repaid later."
+        },
+        {
+          "id": "J1-M7-PQ-O3",
+          "text": "Skip food or transport",
+          "isRecommended": false,
+          "response": "That pays for the repair by creating another serious problem."
+        },
+        {
+          "id": "J1-M7-PQ-O4",
+          "text": "Use money saved for a planned treat",
+          "isRecommended": false,
+          "response": "That may be possible, but a separate emergency fund protects other goals more effectively."
+        }
+      ],
+      "recommendedAnswerId": "J1-M7-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Choice",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M7-S06",
+      "type": "interaction",
+      "interactionType": "decision_tree",
+      "title": "Protect the Monthly Plan",
+      "instruction": "Explore all four choices. Follow each consequence and decide which option best handles this emergency.",
+      "config": {
+        "startingNode": {
+          "id": "node_start",
+          "content": "Your phone breaks seven days before an important exam. The repair costs Rs. 8,000, and the phone is needed for studying and family communication.",
+          "choiceIds": [
+            "choice_use_emergency_savings",
+            "choice_borrow_immediately",
+            "choice_skip_important_expenses",
+            "choice_sell_something"
+          ]
+        },
+        "educationalAssumptions": [
+          "The repair is necessary and cannot safely wait until after the exam.",
+          "The regular monthly money is already assigned to food, transport, school costs, and saving.",
+          "A trusted adult is involved in the repair, borrowing, or selling decision.",
+          "The emergency saving jar contains at least Rs. 8,000.",
+          "The outcomes are simplified for learning and may differ in real situations."
+        ],
+        "choices": [
+          {
+            "id": "choice_use_emergency_savings",
+            "label": "Use emergency savings",
+            "consequence": "The phone is repaired. Food, transport, school costs, and normal savings remain unchanged. The emergency jar becomes Rs. 8,000 lower and will need to be rebuilt.",
+            "followUpNodeId": "node_use_emergency_savings"
+          },
+          {
+            "id": "choice_borrow_immediately",
+            "label": "Borrow immediately",
+            "consequence": "The phone can be repaired, but the borrowed money must be repaid from future money. This may reduce what is available for future goals or enjoyable spending.",
+            "followUpNodeId": "node_borrow_immediately"
+          },
+          {
+            "id": "choice_skip_important_expenses",
+            "label": "Skip important expenses",
+            "consequence": "The phone is repaired, but an essential part of the monthly plan is no longer covered. A second problem may appear before the month ends.",
+            "followUpNodeId": "node_skip_important_expenses"
+          },
+          {
+            "id": "choice_sell_something",
+            "label": "Sell something",
+            "consequence": "A sale may provide some or all of the repair money. However, finding a buyer may take time, and you may lose an item you still use or value.",
+            "followUpNodeId": "node_sell_something"
+          }
+        ],
+        "followUpNodes": [
+          {
+            "id": "node_use_emergency_savings",
+            "question": "What did the emergency fund protect?",
+            "options": [
+              {
+                "id": "node_use_emergency_savings_o1",
+                "text": "The regular monthly plan",
+                "isRecommended": true
+              },
+              {
+                "id": "node_use_emergency_savings_o2",
+                "text": "A planned entertainment purchase",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_use_emergency_savings_o1",
+            "terminalOutcomeId": "outcome_use_emergency_savings"
+          },
+          {
+            "id": "node_borrow_immediately",
+            "question": "What new responsibility appears?",
+            "options": [
+              {
+                "id": "node_borrow_immediately_o1",
+                "text": "Repaying the borrowed money",
+                "isRecommended": true
+              },
+              {
+                "id": "node_borrow_immediately_o2",
+                "text": "Receiving an extra Rs. 8,000 permanently",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_borrow_immediately_o1",
+            "terminalOutcomeId": "outcome_borrow_immediately"
+          },
+          {
+            "id": "node_skip_important_expenses",
+            "question": "What is the hidden cost?",
+            "options": [
+              {
+                "id": "node_skip_important_expenses_o1",
+                "text": "An important need becomes underfunded",
+                "isRecommended": true
+              },
+              {
+                "id": "node_skip_important_expenses_o2",
+                "text": "The repair becomes free",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_skip_important_expenses_o1",
+            "terminalOutcomeId": "outcome_skip_important_expenses"
+          },
+          {
+            "id": "node_sell_something",
+            "question": "What is uncertain?",
+            "options": [
+              {
+                "id": "node_sell_something_o1",
+                "text": "Whether the item sells in time for enough money",
+                "isRecommended": true
+              },
+              {
+                "id": "node_sell_something_o2",
+                "text": "Whether the phone needs repair",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "node_sell_something_o1",
+            "terminalOutcomeId": "outcome_sell_something"
+          }
+        ],
+        "terminalOutcomes": [
+          {
+            "id": "outcome_use_emergency_savings",
+            "title": "Emergency handled with prepared money",
+            "content": "The necessary repair is paid without skipping essentials or creating repayment."
+          },
+          {
+            "id": "outcome_borrow_immediately",
+            "title": "Emergency handled with future pressure",
+            "content": "Borrowing may help when no emergency fund is available, but it moves part of the cost into the future."
+          },
+          {
+            "id": "outcome_skip_important_expenses",
+            "title": "One emergency creates another problem",
+            "content": "The phone is repaired, but essential spending is disrupted."
+          },
+          {
+            "id": "outcome_sell_something",
+            "title": "Emergency may be handled with a trade-off",
+            "content": "Selling can help in some situations, but the result is not guaranteed and the item is given up."
+          }
+        ],
+        "correctCompletionState": {
+          "choice_use_emergency_savings": "recommended",
+          "choice_borrow_immediately": "possible_with_repayment",
+          "choice_skip_important_expenses": "disrupts_essential_spending",
+          "choice_sell_something": "possible_with_uncertainty_and_loss"
+        },
+        "recommendedPathId": "choice_use_emergency_savings",
+        "recommendedPathExplanation": "This option handles the necessary repair while protecting food, transport, school costs, and the normal saving plan.",
+        "tradeOffSummary": [
+          "Emergency savings protect the regular plan but reduce the emergency fund until it is rebuilt.",
+          "Borrowing provides money now but creates repayment later.",
+          "Skipping essentials pays the repair cost but leaves another important need uncovered.",
+          "Selling something may provide money but can take time and requires giving up an item.",
+          "The best response can depend on the situation. In this activity, emergency savings are available and are designed for this type of cost."
+        ],
+        "validationMethod": "Check each follow-up response after submission, keep correctly completed branches marked, complete the interaction after all four paths are explored, and accept Use emergency savings as the recommended final choice.",
+        "retryBehavior": "Keep completed branches visible. Return the learner only to the incorrect follow-up node, show one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present the decision tree as four numbered, linear paths. Each path includes the choice, consequence, follow-up question, and return button.",
+          "screenReaderInstruction": "Choose a path, listen to its consequence, answer the follow-up question, and return to explore the other paths."
+        }
+      },
+      "feedback": {
+        "success": "Strong decision. The emergency fund handles the surprise while protecting the money already planned for important needs.",
+        "incorrect": "Look at what happens after the repair. Does the choice protect the regular plan, create repayment, or leave another need uncovered?",
+        "incomplete": "Explore all four paths before choosing the best response."
+      },
+      "primaryAction": {
+        "label": "Finish the Decision",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M7-S07",
+      "type": "reveal",
+      "title": "A Cushion for Real Surprises",
+      "content": "You explored four ways to handle an unexpected repair. An emergency fund is money saved specifically for necessary costs you did not plan. Using it can protect food, transport, school costs, and saving goals from disruption. Borrowing or selling something may sometimes help, but both have trade-offs. Skipping essentials can create another problem. Emergency money is not for planned treats or upgrades. It is a safety cushion for genuine surprises, built a little at a time.",
+      "simpleSummary": "Emergency money protects your normal plan when necessary surprises happen.",
+      "illustration": "An emergency saving jar becomes a protective shield around food, transport, school, and saving envelopes while the phone is repaired.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M7-S08",
+      "type": "real_life_example",
+      "title": "The Broken School Bag",
+      "content": "Hiba’s school bag strap suddenly breaks. She needs a safe bag for carrying books, so her family uses emergency money for the repair. They do not need to take money from transport or the grocery plan.",
+      "illustration": "A torn school-bag strap is repaired while transport and grocery envelopes remain closed and protected.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M7-S09",
+      "type": "quiz",
+      "title": "Emergency Fund Check",
+      "questions": [
+        {
+          "id": "J1-M7-Q1",
+          "category": "recognition",
+          "text": "Which situation is the best use of emergency savings?",
+          "options": [
+            {
+              "id": "J1-M7-Q1-O1",
+              "text": "Repairing glasses that suddenly break",
+              "isCorrect": true,
+              "feedback": "Correct. The broken glasses are unexpected and necessary."
+            },
+            {
+              "id": "J1-M7-Q1-O2",
+              "text": "Buying a planned birthday gift",
+              "isCorrect": false,
+              "feedback": "A planned gift should usually have its own spending plan rather than using emergency money."
+            },
+            {
+              "id": "J1-M7-Q1-O3",
+              "text": "Upgrading to a newer game",
+              "isCorrect": false,
+              "feedback": "A game upgrade is optional and can be planned separately."
+            },
+            {
+              "id": "J1-M7-Q1-O4",
+              "text": "Purchasing extra snacks",
+              "isCorrect": false,
+              "feedback": "Extra snacks are optional and are not an unexpected necessary expense."
+            }
+          ],
+          "correctAnswerId": "J1-M7-Q1-O1",
+          "correctExplanation": "The broken glasses are unexpected and necessary. Repairing them helps the person see properly and continue normal daily activities.",
+          "misconceptionTested": "Emergency savings can be used for planned or optional purchases."
+        },
+        {
+          "id": "J1-M7-Q2",
+          "category": "misconception",
+          "text": "Nothing unexpected has happened for several months. Does that mean emergency savings are useless?",
+          "options": [
+            {
+              "id": "J1-M7-Q2-O1",
+              "text": "No, the money is ready if a necessary surprise happens",
+              "isCorrect": true,
+              "feedback": "Correct. The fund is useful because it is ready before an unexpected necessary cost appears."
+            },
+            {
+              "id": "J1-M7-Q2-O2",
+              "text": "Yes, because emergencies happen every month",
+              "isCorrect": false,
+              "feedback": "Emergencies may be rare and unpredictable. They do not need to happen every month for preparation to be useful."
+            },
+            {
+              "id": "J1-M7-Q2-O3",
+              "text": "Yes, so it should all be spent on wants",
+              "isCorrect": false,
+              "feedback": "Using the full fund for wants removes the protection it was created to provide."
+            },
+            {
+              "id": "J1-M7-Q2-O4",
+              "text": "No, because it guarantees nothing will break",
+              "isCorrect": false,
+              "feedback": "An emergency fund cannot prevent problems. It helps handle their financial effect."
+            }
+          ],
+          "correctAnswerId": "J1-M7-Q2-O1",
+          "correctExplanation": "Emergencies do not follow a schedule. The fund is useful because it is available before an unexpected necessary cost appears.",
+          "misconceptionTested": "Emergencies are too rare or unpredictable to prepare for."
+        },
+        {
+          "id": "J1-M7-Q3",
+          "category": "application",
+          "text": "Ayesha has Rs. 3,000 in emergency savings. Her necessary school shoes suddenly tear and cost Rs. 2,000 to replace. A toy is also on sale. What is the strongest plan?",
+          "options": [
+            {
+              "id": "J1-M7-Q3-O1",
+              "text": "Use Rs. 2,000 for the shoes and keep Rs. 1,000 for future emergencies",
+              "isCorrect": true,
+              "feedback": "Correct. The shoes are necessary, and the unused emergency money remains available."
+            },
+            {
+              "id": "J1-M7-Q3-O2",
+              "text": "Buy the toy and ignore the shoes",
+              "isCorrect": false,
+              "feedback": "The toy is optional, while safe school shoes are necessary in this situation."
+            },
+            {
+              "id": "J1-M7-Q3-O3",
+              "text": "Borrow first without checking the emergency fund",
+              "isCorrect": false,
+              "feedback": "Borrowing creates repayment. Ayesha already has money saved for this type of necessary surprise."
+            },
+            {
+              "id": "J1-M7-Q3-O4",
+              "text": "Spend all Rs. 3,000 because an emergency happened",
+              "isCorrect": false,
+              "feedback": "An emergency fund should cover the necessary cost. The unused amount can remain ready for another surprise."
+            }
+          ],
+          "correctAnswerId": "J1-M7-Q3-O1",
+          "correctExplanation": "The shoes are an unexpected and necessary expense. Only the required amount needs to be used, leaving some protection for another surprise.",
+          "misconceptionTested": "Borrowing money should always be the first response to an emergency."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M7-S10",
+      "type": "completion",
+      "headline": "Surprise Shield!",
+      "message": "You learned how emergency savings can handle necessary surprises without breaking the rest of a money plan.",
+      "xpReward": 50,
+      "progressMessage": "Mission 7 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, discover how small regular savings can rebuild a money cushion after it is used.",
+      "animation": "A cracked phone is repaired as an emergency saving jar becomes a shield around the monthly expense envelopes.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M7-S11",
+      "type": "real_life_challenge",
+      "title": "Spot a Possible Surprise",
+      "instruction": "Think of one unexpected but necessary cost a family might face. Draw or write how an emergency fund could protect the normal plan.",
+      "buttonLabel": "My Emergency Example Is Ready",
+      "primaryAction": {
+        "label": "My Emergency Example Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on the purpose and use of an emergency fund."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "It distinguishes emergency savings from planned spending and explains the trade-offs of borrowing, skipping essentials, and selling possessions."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses school, family communication, saving jars, school bags, glasses, and simple spending plans."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss financial returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or financial markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Borrowing and selling are presented as possible options with trade-offs, not as personal failures."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission states its assumptions and explains that the best response can depend on available money, safety, timing, and adult support."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses Pakistani rupees, school expenses, transport, family communication, and common household decisions."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner compares four responses and sees how emergency savings protect the regular monthly plan."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses rare emergencies, optional purchases, borrowing, and using only the amount needed."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, four concise decision paths, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
