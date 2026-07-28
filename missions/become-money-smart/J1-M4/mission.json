@@ -1,0 +1,470 @@
+{
+  "id": "J1-M4",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "Saving First",
+  "concept": "Saving is more effective when a specific amount is set aside before money is spent on optional items.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "language": "English",
+  "learningObjective": "Understand why saving should be planned and included in a budget before other spending.",
+  "primaryMisconception": "Saving means keeping whatever money remains at the end of the month.",
+  "secondaryMisconceptions": [
+    "You can only save when you receive a large amount of money.",
+    "Spending on wants first will not affect a savings goal."
+  ],
+  "keyTakeaway": "Saving works better when it is planned before spending.",
+  "screens": [
+    {
+      "id": "J1-M4-S01",
+      "type": "hook",
+      "title": "The Moving Finish Line",
+      "content": "You want Rs. 12,000 headphones. You receive Rs. 3,000 monthly, but snacks and games keep calling. How will you reach your goal?",
+      "illustration": "A child looks between Rs. 12,000 headphones, a wallet marked Rs. 3,000, and colourful snack and entertainment icons.",
+      "primaryAction": {
+        "label": "Build a Plan",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M4-S02",
+      "type": "story",
+      "title": "One Month, Four Jobs",
+      "content": "Each month, you receive Rs. 3,000. You need transport, enjoy snacks and entertainment, and hope to buy Rs. 12,000 headphones.",
+      "illustration": "A Rs. 3,000 wallet sits beside four cards: saving jar, school transport, snacks, and entertainment.",
+      "primaryAction": {
+        "label": "See the Challenge",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M4-S03",
+      "type": "story",
+      "title": "What Will Be Left?",
+      "content": "If you choose every treat first, your saving jar may get only a little—or nothing at all.",
+      "illustration": "Coins move toward snacks and a game controller while an empty saving jar waits at the end.",
+      "primaryAction": {
+        "label": "Try Another Order",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M4-S04",
+      "type": "story",
+      "title": "The Date Can Move",
+      "content": "The headphones will not disappear, but the finish date can move. Build a plan before the money is spent.",
+      "illustration": "A calendar beside the headphones stretches from a nearby month to a much later month.",
+      "primaryAction": {
+        "label": "Make My Budget",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M4-S05",
+      "type": "pre_interaction",
+      "title": "Which Comes First?",
+      "question": "Which plan gives your headphones goal the best chance of moving forward every month?",
+      "options": [
+        {
+          "id": "J1-M4-PQ-O1",
+          "text": "Set aside savings first, then plan the rest",
+          "isRecommended": true,
+          "response": "Good plan. Your goal receives money before optional spending begins."
+        },
+        {
+          "id": "J1-M4-PQ-O2",
+          "text": "Buy snacks and entertainment first",
+          "isRecommended": false,
+          "response": "That may leave less money—or no money—for the headphones."
+        },
+        {
+          "id": "J1-M4-PQ-O3",
+          "text": "Save only when a large amount arrives",
+          "isRecommended": false,
+          "response": "Large amounts can help, but smaller regular amounts can also move a goal forward."
+        },
+        {
+          "id": "J1-M4-PQ-O4",
+          "text": "Spend normally and save whatever remains",
+          "isRecommended": false,
+          "response": "Sometimes money remains. Sometimes it does not. The budget builder will show the difference."
+        }
+      ],
+      "recommendedAnswerId": "J1-M4-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Plan",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J1-M4-S06",
+      "type": "interaction",
+      "interactionType": "budget_builder",
+      "title": "Give Every Rupee a Job",
+      "instruction": "Divide Rs. 3,000 between saving, transport, snacks, and entertainment. Watch how your saving choice changes the headphones finish date.",
+      "config": {
+        "educationalAssumptions": [
+          "You receive Rs. 3,000 at the start of each month.",
+          "School transport costs at least Rs. 800 each month.",
+          "The headphones continue to cost Rs. 12,000.",
+          "You begin with Rs. 0 saved.",
+          "You save the same selected amount every month.",
+          "No extra money is added and no money is removed from the saving jar.",
+          "These amounts and limits apply only to this learning activity."
+        ],
+        "totalAvailableAmount": 3000,
+        "goal": {
+          "name": "Headphones",
+          "targetAmount": 12000,
+          "startingSavedAmount": 0
+        },
+        "allocationStep": 100,
+        "categories": [
+          {
+            "id": "category_saving",
+            "label": "Saving",
+            "purpose": "Money set aside for the headphones goal",
+            "minimumAmount": 0,
+            "maximumAmount": 2200,
+            "requiredExpense": false,
+            "minimumForCompletion": 100
+          },
+          {
+            "id": "category_transport",
+            "label": "Transport",
+            "purpose": "Required school transport",
+            "minimumAmount": 800,
+            "maximumAmount": 1500,
+            "requiredExpense": true,
+            "minimumForCompletion": 800
+          },
+          {
+            "id": "category_snacks",
+            "label": "Snacks",
+            "purpose": "Optional snacks and treats",
+            "minimumAmount": 0,
+            "maximumAmount": 1000,
+            "requiredExpense": false,
+            "minimumForCompletion": 0
+          },
+          {
+            "id": "category_entertainment",
+            "label": "Entertainment",
+            "purpose": "Optional games, videos, or other entertainment",
+            "minimumAmount": 0,
+            "maximumAmount": 1200,
+            "requiredExpense": false,
+            "minimumForCompletion": 0
+          }
+        ],
+        "remainingBalanceRule": "The remaining balance equals Rs. 3,000 minus all four allocations. A completed budget must have a remaining balance of Rs. 0.",
+        "goalTimeCalculation": "Divide Rs. 12,000 by the monthly saving amount and round up to the next full month. If the monthly saving amount is Rs. 0, show no finish date.",
+        "goalTimeExamples": [
+          {
+            "monthlySaving": 0,
+            "result": "No finish date under this plan"
+          },
+          {
+            "monthlySaving": 500,
+            "goalMonths": 24
+          },
+          {
+            "monthlySaving": 1000,
+            "goalMonths": 12
+          },
+          {
+            "monthlySaving": 1500,
+            "goalMonths": 8
+          },
+          {
+            "monthlySaving": 2000,
+            "goalMonths": 6
+          }
+        ],
+        "consequences": [
+          {
+            "condition": "Saving increases",
+            "result": "The estimated finish date moves closer, while less money remains for optional spending."
+          },
+          {
+            "condition": "Snacks or entertainment increase",
+            "result": "The amount available for saving may fall, and the estimated finish date may move further away."
+          },
+          {
+            "condition": "Saving is Rs. 0",
+            "result": "Your goal is waiting. This budget does not move the saving jar forward."
+          },
+          {
+            "condition": "Transport is below Rs. 800",
+            "result": "Transport needs at least Rs. 800 in this story."
+          }
+        ],
+        "validCompletionRules": [
+          "All four categories stay within their allowed ranges.",
+          "Transport receives at least Rs. 800.",
+          "Saving receives at least Rs. 100.",
+          "The four allocations total exactly Rs. 3,000.",
+          "The remaining balance is Rs. 0."
+        ],
+        "recommendedExampleCompletion": {
+          "saving": 1000,
+          "transport": 800,
+          "snacks": 600,
+          "entertainment": 600,
+          "remainingBalance": 0,
+          "estimatedGoalMonths": 12,
+          "note": "This is one balanced example, not the only correct answer."
+        },
+        "multipleValidBudgets": true,
+        "multipleValidBudgetsExplanation": "Learners may choose different amounts for snacks and entertainment as long as transport is covered, saving is planned, and the total remains Rs. 3,000. A larger monthly saving reaches the goal sooner, but the mission does not describe all optional spending as irresponsible.",
+        "validationMethod": "Check category limits, required transport, planned saving, total allocation, and remaining balance when the learner submits.",
+        "dynamicSuccessMessage": "You planned to save Rs. [monthly saving] each month. At that pace, you could reach Rs. 12,000 in about [goal months] months.",
+        "retryBehavior": "Keep valid category amounts in place. Highlight only the condition that needs attention and allow unlimited adjustments.",
+        "accessibilityAlternative": {
+          "method": "Provide plus and minus buttons, number inputs, or selectable amount lists for each category. Do not require sliders or dragging.",
+          "screenReaderInstruction": "Choose an amount for each category. Listen to the remaining balance and estimated goal time, then submit when the total is Rs. 3,000."
+        }
+      },
+      "feedback": {
+        "success": "Your budget gives saving a place before optional spending. At this pace, the finish date is part of the plan—not a leftover surprise.",
+        "incorrect": "Your budget needs another look. Cover transport, include a planned saving amount, and make sure the total equals Rs. 3,000.",
+        "incomplete": "Some money still needs a job. Allocate the full Rs. 3,000 before checking your budget."
+      },
+      "primaryAction": {
+        "label": "Check My Budget",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J1-M4-S07",
+      "type": "reveal",
+      "title": "Save Before the Money Disappears",
+      "content": "You watched the finish date change as you moved money between categories. This is planned saving, often called paying yourself first: choose a saving amount before optional spending begins. Even a small regular amount can move a goal forward. If you buy wants first and save only leftovers, the amount may shrink or disappear. Saving first does not mean avoiding all fun. It means giving your goal a place in the budget before choosing snacks or entertainment.",
+      "simpleSummary": "Put savings in the plan before spending on wants.",
+      "illustration": "Coins enter a saving jar first. The remaining coins then split between transport, snacks, and entertainment.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M4-S08",
+      "type": "real_life_example",
+      "title": "The Football Saving Jar",
+      "content": "Zain receives Rs. 1,000 of pocket money. He puts Rs. 200 into his football saving jar first. He then plans the remaining Rs. 800 for transport and treats. The saving amount is small, but his goal moves forward every time.",
+      "illustration": "Zain places Rs. 200 into a jar labelled Football, then divides the remaining money between a bus card and a snack.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-M4-S09",
+      "type": "quiz",
+      "title": "Saving First Check",
+      "questions": [
+        {
+          "id": "J1-M4-Q1",
+          "category": "recognition",
+          "text": "Ayesha receives Rs. 800. Which choice shows planned saving?",
+          "options": [
+            {
+              "id": "J1-M4-Q1-O1",
+              "text": "Put Rs. 100 in her saving jar before buying treats",
+              "isCorrect": true,
+              "feedback": "Correct. Ayesha gives saving a place before optional spending."
+            },
+            {
+              "id": "J1-M4-Q1-O2",
+              "text": "Buy treats first and save anything left",
+              "isCorrect": false,
+              "feedback": "Saving leftovers is uncertain because the treats may use all the available money."
+            },
+            {
+              "id": "J1-M4-Q1-O3",
+              "text": "Wait until she receives several thousand rupees",
+              "isCorrect": false,
+              "feedback": "She does not need to wait for a large amount. Smaller regular savings can also build over time."
+            },
+            {
+              "id": "J1-M4-Q1-O4",
+              "text": "Spend it all because Rs. 800 is too small",
+              "isCorrect": false,
+              "feedback": "A small amount can still be divided. Even Rs. 100 would begin moving the goal forward."
+            }
+          ],
+          "correctAnswerId": "J1-M4-Q1-O1",
+          "correctExplanation": "Ayesha chooses a saving amount before optional spending. A small planned amount still moves her goal forward.",
+          "misconceptionTested": "You can only save when you receive a large amount of money."
+        },
+        {
+          "id": "J1-M4-Q2",
+          "category": "misconception",
+          "text": "Hamza spends throughout the month and plans to save whatever remains. Some months, nothing remains. What would help most?",
+          "options": [
+            {
+              "id": "J1-M4-Q2-O1",
+              "text": "Choose a saving amount at the start",
+              "isCorrect": true,
+              "feedback": "Correct. Planning first gives the goal a regular place in the budget."
+            },
+            {
+              "id": "J1-M4-Q2-O2",
+              "text": "Keep hoping more money remains",
+              "isCorrect": false,
+              "feedback": "Hope does not reserve money. Optional spending may still use the full amount."
+            },
+            {
+              "id": "J1-M4-Q2-O3",
+              "text": "Buy more wants early",
+              "isCorrect": false,
+              "feedback": "More early spending would leave even less money for the saving goal."
+            },
+            {
+              "id": "J1-M4-Q2-O4",
+              "text": "Stop having any fun forever",
+              "isCorrect": false,
+              "feedback": "Saving first does not require removing every want. Hamza can plan both saving and some enjoyment."
+            }
+          ],
+          "correctAnswerId": "J1-M4-Q2-O1",
+          "correctExplanation": "Planning the saving amount first gives the goal a regular place in Hamza’s budget instead of depending on uncertain leftovers.",
+          "misconceptionTested": "Saving means keeping whatever money remains at the end of the month."
+        },
+        {
+          "id": "J1-M4-Q3",
+          "category": "application",
+          "text": "You receive Rs. 2,000, need Rs. 700 for transport, and want to save for a school bag. Which plan uses saving first?",
+          "options": [
+            {
+              "id": "J1-M4-Q3-O1",
+              "text": "Save Rs. 500, cover transport, then plan the remaining Rs. 800",
+              "isCorrect": true,
+              "feedback": "Correct. The saving goal and required transport are included before optional spending."
+            },
+            {
+              "id": "J1-M4-Q3-O2",
+              "text": "Spend Rs. 800 on games before planning",
+              "isCorrect": false,
+              "feedback": "Spending on the want first could reduce the amount available for saving or transport."
+            },
+            {
+              "id": "J1-M4-Q3-O3",
+              "text": "Save only if money remains later",
+              "isCorrect": false,
+              "feedback": "That makes saving uncertain. A planned amount gives the goal a clear place in the budget."
+            },
+            {
+              "id": "J1-M4-Q3-O4",
+              "text": "Use the transport money for entertainment",
+              "isCorrect": false,
+              "feedback": "Transport is required in this situation, so it should be covered before entertainment."
+            }
+          ],
+          "correctAnswerId": "J1-M4-Q3-O1",
+          "correctExplanation": "The plan includes both the saving goal and required transport before optional spending.",
+          "misconceptionTested": "Spending on wants first will not affect a savings goal."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J1-M4-S10",
+      "type": "completion",
+      "headline": "Goal Planner!",
+      "message": "You learned how putting savings into the budget first can turn a wish into a clear plan.",
+      "xpReward": 50,
+      "progressMessage": "Mission 4 complete in Become Money Smart.",
+      "nextMissionTeaser": "Next, discover how everyday spending choices can change your money plan.",
+      "animation": "Coins enter the saving jar first. A calendar flips forward and the headphones goal badge lights up.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J1-M4-S11",
+      "type": "real_life_challenge",
+      "title": "Build a Practice Budget",
+      "instruction": "Draw four boxes labelled Saving, Need, Snack, and Fun. Divide an imaginary Rs. 1,000 between them, placing something in Saving first.",
+      "buttonLabel": "My Plan Is Ready",
+      "primaryAction": {
+        "label": "My Plan Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on planning a saving amount before optional spending."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The budget totals, goal-time examples, and explanation of regular saving are mathematically consistent with the stated assumptions."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses pocket money, snacks, transport, entertainment, headphones, and a saving jar."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investment returns or growth."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Snacks and entertainment are treated as valid wants rather than bad choices."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission states its assumptions, allows multiple valid budgets, and explains that a faster goal requires less optional spending under this scenario."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses Pakistani rupees, school transport, pocket money, snacks, entertainment, and a familiar saving goal."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner must place saving in a complete monthly budget and immediately sees how the amount changes the goal timeline."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses small saving amounts, leftover saving, and the effect of spending on wants first."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, one four-category budget, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
