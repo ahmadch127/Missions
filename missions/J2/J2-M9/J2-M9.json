@@ -1,0 +1,505 @@
+{
+  "id": "J2-M9",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "Interest",
+  "concept": "Interest is an amount added to money over time. Savers may earn interest, while borrowers usually pay interest.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "language": "English",
+  "learningObjective": "Understand that interest can increase savings balances and make borrowed money more expensive to repay.",
+  "primaryMisconception": "Interest is always free money.",
+  "secondaryMisconceptions": [
+    "Savers and borrowers experience interest in the same way.",
+    "A borrower only needs to repay the original amount borrowed."
+  ],
+  "keyTakeaway": "Interest can help savers and cost borrowers.",
+  "screens": [
+    {
+      "id": "J2-M9-S01",
+      "type": "hook",
+      "title": "The Same Increase, Two Reactions",
+      "content": "Two people start with Rs. 10,000. After one year, both balances rise—but only one person is happier. Why?",
+      "illustration": "Two children stand beside identical Rs. 10,000 balance cards. One card has a saving jar; the other has a repayment note.",
+      "primaryAction": {
+        "label": "Follow the Money",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M9-S02",
+      "type": "story",
+      "title": "Save or Borrow?",
+      "content": "Sara saves Rs. 10,000 in a bank account. Hamza borrows Rs. 10,000 with his family to pay for a necessary repair.",
+      "illustration": "Sara places money into a bank account while Hamza and a parent receive a loan for a repair.",
+      "primaryAction": {
+        "label": "Move One Year Ahead",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M9-S03",
+      "type": "story",
+      "title": "One Simple Game Rate",
+      "content": "For this game, both examples use a simple 10% yearly rate. That means Rs. 1,000 is added after one year.",
+      "illustration": "A simple card shows: 10% of Rs. 10,000 = Rs. 1,000.",
+      "primaryAction": {
+        "label": "Predict the Balances",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M9-S04",
+      "type": "story",
+      "title": "Higher Does Not Mean Better",
+      "content": "The saver’s balance grows. The borrower’s amount owed also grows. The same increase has two very different meanings.",
+      "illustration": "Sara’s saving jar rises happily while Hamza’s repayment note becomes larger.",
+      "primaryAction": {
+        "label": "Compare Before and After",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M9-S05",
+      "type": "pre_interaction",
+      "title": "What Will Change?",
+      "question": "After one year, what will most likely happen in this activity?",
+      "options": [
+        {
+          "id": "J2-M9-PQ-O1",
+          "text": "Both balances rise, but for different reasons",
+          "isRecommended": true,
+          "response": "Good prediction. One increase belongs to the saver, while the other becomes an extra cost for the borrower."
+        },
+        {
+          "id": "J2-M9-PQ-O2",
+          "text": "Only the saver’s balance changes",
+          "isRecommended": false,
+          "response": "Savings may grow, but interest can also increase the amount a borrower owes."
+        },
+        {
+          "id": "J2-M9-PQ-O3",
+          "text": "Both people receive free money",
+          "isRecommended": false,
+          "response": "A saver may receive interest. A borrower usually pays it."
+        },
+        {
+          "id": "J2-M9-PQ-O4",
+          "text": "Hamza repays only Rs. 10,000",
+          "isRecommended": false,
+          "response": "The original amount is called the principal. Interest may be added to what must be repaid."
+        }
+      ],
+      "recommendedAnswerId": "J2-M9-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J2-M9-S06",
+      "type": "interaction",
+      "interactionType": "before_vs_after",
+      "title": "One Year Later",
+      "instruction": "Complete both before-and-after comparisons. Then decide whether the added interest helps or costs each person.",
+      "config": {
+        "educationalAssumptions": [
+          "Both examples start at Rs. 10,000.",
+          "Both use a simple 10% rate for one year.",
+          "Ten per cent of Rs. 10,000 is Rs. 1,000.",
+          "The activity uses the same rate only to make the comparison easy.",
+          "No extra deposits, withdrawals, fees, missed payments, or compounding are included.",
+          "Real savings and loan rates may differ.",
+          "The example does not promise that a real bank will offer this return or loan rate."
+        ],
+        "comparisons": [
+          {
+            "id": "comparison_saving",
+            "title": "Saving Money",
+            "beforeState": {
+              "person": "Sara",
+              "situation": "Saving money",
+              "startingBalance": 10000,
+              "interestRatePercent": 10,
+              "timePeriodYears": 1
+            },
+            "learnerQuestion": "What will Sara’s balance be after Rs. 1,000 of interest is added?",
+            "options": [
+              {
+                "id": "comparison_saving_o1",
+                "amount": 9000,
+                "isCorrect": false
+              },
+              {
+                "id": "comparison_saving_o2",
+                "amount": 10000,
+                "isCorrect": false
+              },
+              {
+                "id": "comparison_saving_o3",
+                "amount": 11000,
+                "isCorrect": true
+              },
+              {
+                "id": "comparison_saving_o4",
+                "amount": 20000,
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "comparison_saving_o3",
+            "afterState": {
+              "startingSavings": 10000,
+              "interestAdded": 1000,
+              "finalSavingsBalance": 11000,
+              "effect": "Sara’s money increases by Rs. 1,000."
+            },
+            "explanation": "Sara earns interest in this activity. The added money increases the balance she owns."
+          },
+          {
+            "id": "comparison_borrowing",
+            "title": "Borrowing Money",
+            "beforeState": {
+              "person": "Hamza",
+              "situation": "Borrowing money",
+              "startingAmountOwed": 10000,
+              "interestRatePercent": 10,
+              "timePeriodYears": 1
+            },
+            "learnerQuestion": "What will Hamza owe after Rs. 1,000 of interest is charged?",
+            "options": [
+              {
+                "id": "comparison_borrowing_o1",
+                "amount": 9000,
+                "isCorrect": false
+              },
+              {
+                "id": "comparison_borrowing_o2",
+                "amount": 10000,
+                "isCorrect": false
+              },
+              {
+                "id": "comparison_borrowing_o3",
+                "amount": 11000,
+                "isCorrect": true
+              },
+              {
+                "id": "comparison_borrowing_o4",
+                "amount": 20000,
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "comparison_borrowing_o3",
+            "afterState": {
+              "originalAmountBorrowed": 10000,
+              "interestCharged": 1000,
+              "finalAmountOwed": 11000,
+              "effect": "Hamza must repay Rs. 1,000 more than he borrowed."
+            },
+            "explanation": "Hamza pays interest in this activity. The added amount increases his repayment cost."
+          }
+        ],
+        "comparisonData": [
+          {
+            "person": "Sara",
+            "type": "savings",
+            "beforeAmount": 10000,
+            "interestAmount": 1000,
+            "afterAmount": 11000,
+            "meaning": "owned"
+          },
+          {
+            "person": "Hamza",
+            "type": "loan",
+            "beforeAmount": 10000,
+            "interestAmount": 1000,
+            "afterAmount": 11000,
+            "meaning": "owed"
+          }
+        ],
+        "finalLearnerQuestion": {
+          "text": "Both balances became Rs. 11,000. What is the important difference?",
+          "options": [
+            {
+              "id": "hidden_difference_o1",
+              "text": "Sara owns Rs. 11,000; Hamza owes Rs. 11,000",
+              "isCorrect": true
+            },
+            {
+              "id": "hidden_difference_o2",
+              "text": "Both people earned Rs. 1,000",
+              "isCorrect": false
+            },
+            {
+              "id": "hidden_difference_o3",
+              "text": "Both people received free money",
+              "isCorrect": false
+            },
+            {
+              "id": "hidden_difference_o4",
+              "text": "Hamza no longer needs to repay anything",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "hidden_difference_o1"
+        },
+        "importantHiddenDifference": [
+          "Sara has more money that belongs to her.",
+          "Hamza has more money that he must repay."
+        ],
+        "correctCompletionState": {
+          "saverFinalBalance": 11000,
+          "saverInterestEffect": "helps_the_saver_in_this_activity",
+          "borrowerFinalAmountOwed": 11000,
+          "borrowerInterestEffect": "costs_the_borrower",
+          "hiddenDifference": "one_balance_is_owned_and_the_other_is_owed"
+        },
+        "validationMethod": "Check each after-value and the final hidden-difference answer. Complete the interaction when all three answers are correct.",
+        "retryBehavior": "Keep correct answers marked. Return only the incorrect comparison, show the calculation, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present each comparison as a linear text card with radio-button answers. Read the before amount, interest amount, and after options aloud.",
+          "screenReaderInstruction": "Listen to the starting amount and interest. Choose the final balance, then decide whether the person owns or owes it."
+        }
+      },
+      "feedback": {
+        "success": "Excellent comparison. The same Rs. 1,000 increase helps Sara but increases Hamza’s repayment.",
+        "incorrect": "Look at whether the balance is money the person owns or money the person owes.",
+        "incomplete": "Complete both comparisons and identify the hidden difference before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Comparison",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J2-M9-S07",
+      "type": "reveal",
+      "title": "Interest Changes a Balance",
+      "content": "You saw both balances rise from Rs. 10,000 to Rs. 11,000. The added Rs. 1,000 is interest. Interest is an amount added to money over time. A saver may earn it, so the savings balance grows. A borrower usually pays it, so the amount owed grows. Interest is not always free money: its effect depends on whether you are saving or borrowing. Real rates, time periods, fees, and calculation methods vary.",
+      "simpleSummary": "Interest can grow savings or increase what a borrower must repay.",
+      "illustration": "One Rs. 1,000 arrow moves into Sara’s saving jar. Another Rs. 1,000 arrow is added to Hamza’s repayment note.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M9-S08",
+      "type": "real_life_example",
+      "title": "The Bicycle Comparison",
+      "content": "Mariam saves Rs. 5,000 and earns Rs. 250 under a practice account rate. Her balance becomes Rs. 5,250. Daniyal borrows Rs. 5,000 and is charged Rs. 250. He must repay Rs. 5,250. The same interest amount helps one and costs the other.",
+      "illustration": "A saving jar and a bicycle-repair loan both move from Rs. 5,000 to Rs. 5,250, with Owned and Owed labels.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M9-S09",
+      "type": "quiz",
+      "title": "Interest Check",
+      "questions": [
+        {
+          "id": "J2-M9-Q1",
+          "category": "recognition",
+          "text": "A savings balance rises from Rs. 2,000 to Rs. 2,100 without another deposit. What most likely caused the extra Rs. 100?",
+          "options": [
+            {
+              "id": "J2-M9-Q1-O1",
+              "text": "Interest added to the savings",
+              "isCorrect": true,
+              "feedback": "Correct. In this example, the extra Rs. 100 was interest added over time."
+            },
+            {
+              "id": "J2-M9-Q1-O2",
+              "text": "Money borrowed from the bank",
+              "isCorrect": false,
+              "feedback": "Borrowed money creates an amount to repay. It is different from interest earned on savings."
+            },
+            {
+              "id": "J2-M9-Q1-O3",
+              "text": "A withdrawal",
+              "isCorrect": false,
+              "feedback": "A withdrawal removes money and would normally make the balance lower."
+            },
+            {
+              "id": "J2-M9-Q1-O4",
+              "text": "The original Rs. 2,000 disappearing",
+              "isCorrect": false,
+              "feedback": "The starting money remains in the account. The balance rose because an additional amount was added."
+            }
+          ],
+          "correctAnswerId": "J2-M9-Q1-O1",
+          "correctExplanation": "The saver did not add more money. In this example, the extra Rs. 100 was interest added over time.",
+          "misconceptionTested": "Savers and borrowers experience interest in the same way."
+        },
+        {
+          "id": "J2-M9-Q2",
+          "category": "misconception",
+          "text": "A family borrows Rs. 5,000 and is charged Rs. 500 interest. How much must they repay in this simple example?",
+          "options": [
+            {
+              "id": "J2-M9-Q2-O1",
+              "text": "Rs. 4,500",
+              "isCorrect": false,
+              "feedback": "Interest is added to the borrowed amount in this example; it is not subtracted."
+            },
+            {
+              "id": "J2-M9-Q2-O2",
+              "text": "Rs. 5,000",
+              "isCorrect": false,
+              "feedback": "Rs. 5,000 is only the original amount borrowed. The Rs. 500 interest must also be repaid."
+            },
+            {
+              "id": "J2-M9-Q2-O3",
+              "text": "Rs. 5,500",
+              "isCorrect": true,
+              "feedback": "Correct. The original Rs. 5,000 plus Rs. 500 interest equals Rs. 5,500."
+            },
+            {
+              "id": "J2-M9-Q2-O4",
+              "text": "Rs. 10,000",
+              "isCorrect": false,
+              "feedback": "The amount does not automatically double. Add the stated Rs. 500 interest to Rs. 5,000."
+            }
+          ],
+          "correctAnswerId": "J2-M9-Q2-O3",
+          "correctExplanation": "The borrower repays the original Rs. 5,000 plus Rs. 500 of interest.",
+          "misconceptionTested": "A borrower only needs to repay the original amount borrowed."
+        },
+        {
+          "id": "J2-M9-Q3",
+          "category": "application",
+          "text": "Amina saves Rs. 3,000 and earns Rs. 300 interest. Bilal borrows Rs. 3,000 and is charged Rs. 300 interest. Which statement is correct?",
+          "options": [
+            {
+              "id": "J2-M9-Q3-O1",
+              "text": "Amina owns Rs. 3,300; Bilal owes Rs. 3,300",
+              "isCorrect": true,
+              "feedback": "Correct. The same interest amount helps Amina’s savings but increases Bilal’s repayment."
+            },
+            {
+              "id": "J2-M9-Q3-O2",
+              "text": "Both people earned Rs. 300",
+              "isCorrect": false,
+              "feedback": "Amina earned interest, but Bilal was charged interest."
+            },
+            {
+              "id": "J2-M9-Q3-O3",
+              "text": "Bilal only owes Rs. 3,000",
+              "isCorrect": false,
+              "feedback": "Bilal owes the original Rs. 3,000 plus the Rs. 300 interest charge."
+            },
+            {
+              "id": "J2-M9-Q3-O4",
+              "text": "Interest was free money for both",
+              "isCorrect": false,
+              "feedback": "The interest helps Amina’s savings but is an extra cost for Bilal."
+            }
+          ],
+          "correctAnswerId": "J2-M9-Q3-O1",
+          "correctExplanation": "Amina’s interest increases money she owns. Bilal’s interest increases money he must repay.",
+          "misconceptionTested": "Interest is always free money."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J2-M9-S10",
+      "type": "completion",
+      "headline": "Interest Investigator!",
+      "message": "You discovered why interest can grow a saver’s balance while increasing a borrower’s repayment.",
+      "xpReward": 50,
+      "progressMessage": "Mission 9 complete in Make Money Grow.",
+      "nextMissionTeaser": "Next, discover how earning interest for longer can change the final amount.",
+      "animation": "Two Rs. 10,000 cards rise to Rs. 11,000. One enters a saving jar while the other attaches to a repayment note.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J2-M9-S11",
+      "type": "real_life_challenge",
+      "title": "Owned or Owed?",
+      "instruction": "Draw two boxes labelled Savings and Borrowing. Add an imaginary Rs. 100 interest to each and write whether the new amount is owned or owed.",
+      "buttonLabel": "I Compared Both",
+      "primaryAction": {
+        "label": "I Compared Both",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on how interest affects savings and borrowed money."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The calculations correctly apply the clearly stated simple 10% classroom rate for one year."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses simple numbers, family support, saving, repairs, and clear owned-versus-owed comparisons."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission explains a general concept without recommending a real account, loan, or financial product."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The 10% rate is clearly labelled as an educational activity assumption rather than a promised real return."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or market prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Borrowing is presented neutrally as a tool that creates repayment rather than as a personal failure."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission states that real rates may differ and excludes fees, compounding, missed payments, and other transactions from the simplified comparison."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses Pakistani rupees, savings accounts, family borrowing, and necessary repairs."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner calculates both final balances and identifies the difference between money owned and money owed."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses interest on savings, repayment of principal plus interest, and the idea that interest is always free money."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, two simple comparisons, one hidden-difference question, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
