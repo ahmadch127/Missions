@@ -1,0 +1,452 @@
+{
+  "id": "J2-M8",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "What Banks Do",
+  "concept": "Banks help people safely store, access, transfer, and keep track of their money.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand the basic role of banks and how common banking tools help people manage their money.",
+  "primaryMisconception": "Keeping money in a bank automatically makes a person wealthy.",
+  "secondaryMisconceptions": [
+    "A bank account is only a place where money is stored.",
+    "Money kept at home is always as safe and convenient as money kept in a bank."
+  ],
+  "keyTakeaway": "Banks help store, move, and manage money.",
+  "screens": [
+    {
+      "id": "J2-M8-S01",
+      "type": "hook",
+      "title": "The £100 Hiding Place",
+      "content": "You have £100. Under the mattress or in a bank account—which place makes it easier to protect, move, and track?",
+      "illustration": "Jamie holds £100 between two choices: a mattress with notes underneath and a bank-account screen with four mystery tool icons.",
+      "primaryAction": {
+        "label": "Compare the Choices",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M8-S02",
+      "type": "story",
+      "title": "Birthday Money",
+      "content": "Jamie receives £100 of birthday money. One option is hiding it under the mattress. Another is using a bank account with an adult.",
+      "illustration": "Jamie places five £20 notes beside a mattress and a bank card.",
+      "primaryAction": {
+        "label": "See the Difference",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M8-S03",
+      "type": "story",
+      "title": "Money at Home",
+      "content": "At home, Jamie can see the notes. But paying someone far away or checking every past payment is difficult.",
+      "illustration": "Jamie looks at the cash while imagining a distant shop and a missing list of previous purchases.",
+      "primaryAction": {
+        "label": "Explore Bank Tools",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M8-S04",
+      "type": "story",
+      "title": "More Than Storage",
+      "content": "A bank offers different tools. Jamie must discover what each tool does—and whether using a bank automatically creates more money.",
+      "illustration": "Four locked cards display an account, ATM, transfer arrows, and a statement page.",
+      "primaryAction": {
+        "label": "Unlock the Tools",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M8-S05",
+      "type": "pre_interaction",
+      "title": "What Could a Bank Help With?",
+      "question": "Which statement is most likely to be true?",
+      "options": [
+        {
+          "id": "J2-M8-PQ-O1",
+          "text": "Different bank tools perform different money jobs",
+          "isRecommended": true,
+          "response": "Good thinking. An account, ATM, transfer, and statement each help in a different way."
+        },
+        {
+          "id": "J2-M8-PQ-O2",
+          "text": "A bank only hides money somewhere else",
+          "isRecommended": false,
+          "response": "Storage is one job, but banks also provide tools for accessing, moving, and tracking money."
+        },
+        {
+          "id": "J2-M8-PQ-O3",
+          "text": "Money automatically doubles in a bank",
+          "isRecommended": false,
+          "response": "A bank account does not automatically create more money. Let’s see what it actually does."
+        },
+        {
+          "id": "J2-M8-PQ-O4",
+          "text": "Cash at home can always do everything a bank can",
+          "isRecommended": false,
+          "response": "Cash can be useful, but moving it far away or tracking every payment may be harder."
+        }
+      ],
+      "recommendedAnswerId": "J2-M8-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J2-M8-S06",
+      "type": "interaction",
+      "interactionType": "match_pairs",
+      "title": "Match the Banking Tools",
+      "instruction": "Match each banking tool with the job it performs.",
+      "config": {
+        "educationalAssumptions": [
+          "Jamie uses the account with help from a trusted adult.",
+          "The account already contains money.",
+          "An ATM can provide cash when the account has enough money and the correct access details are used.",
+          "A bank transfer moves money between accounts.",
+          "A statement records money entering and leaving the account.",
+          "Real accounts may have rules, limits, or fees that an adult should check."
+        ],
+        "leftSideItems": [
+          {
+            "id": "tool_bank_account",
+            "label": "Bank account"
+          },
+          {
+            "id": "tool_atm",
+            "label": "ATM"
+          },
+          {
+            "id": "tool_bank_transfer",
+            "label": "Bank transfer"
+          },
+          {
+            "id": "tool_statement",
+            "label": "Statement"
+          }
+        ],
+        "rightSideItems": [
+          {
+            "id": "job_stores_money",
+            "label": "Stores money"
+          },
+          {
+            "id": "job_accesses_cash",
+            "label": "Accesses cash"
+          },
+          {
+            "id": "job_moves_money",
+            "label": "Moves money"
+          },
+          {
+            "id": "job_records_transactions",
+            "label": "Records transactions"
+          }
+        ],
+        "correctPairs": [
+          {
+            "leftItemId": "tool_bank_account",
+            "rightItemId": "job_stores_money",
+            "explanation": "A bank account keeps Jamie’s money balance in one organised place."
+          },
+          {
+            "leftItemId": "tool_atm",
+            "rightItemId": "job_accesses_cash",
+            "explanation": "An ATM can let Jamie withdraw cash from money already available in the account."
+          },
+          {
+            "leftItemId": "tool_bank_transfer",
+            "rightItemId": "job_moves_money",
+            "explanation": "A transfer sends money from one bank account to another without handing over physical cash."
+          },
+          {
+            "leftItemId": "tool_statement",
+            "rightItemId": "job_records_transactions",
+            "explanation": "A statement shows money paid in, money spent or transferred, and the account balance."
+          }
+        ],
+        "placementRules": [
+          "Each banking tool must match with one job.",
+          "Each job can be used only once.",
+          "There is one correct match for every tool.",
+          "The order in which pairs are completed does not matter."
+        ],
+        "correctCompletionState": {
+          "tool_bank_account": "job_stores_money",
+          "tool_atm": "job_accesses_cash",
+          "tool_bank_transfer": "job_moves_money",
+          "tool_statement": "job_records_transactions"
+        },
+        "incorrectMatchFeedback": [
+          {
+            "match": "Bank account matched with Accesses cash",
+            "feedback": "The account holds the balance. An ATM is one tool that can help access cash from it."
+          },
+          {
+            "match": "ATM matched with Moves money",
+            "feedback": "An ATM mainly provides access to cash. A bank transfer moves money between accounts."
+          },
+          {
+            "match": "Bank transfer matched with Records transactions",
+            "feedback": "A transfer moves money. The statement keeps a record of that movement."
+          },
+          {
+            "match": "Statement matched with Stores money",
+            "feedback": "A statement displays account activity. The account itself holds the money balance."
+          }
+        ],
+        "generalIncorrectMatchFeedback": "Look at the action word. Does the tool store, access, move, or record money?",
+        "validationMethod": "Check each pair when the learner submits it. Complete the activity when all four tools are correctly matched.",
+        "retryBehavior": "Keep correct pairs connected. Separate only the incorrect pair, show one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present each banking tool with a dropdown or radio-button list of the four possible jobs.",
+          "screenReaderInstruction": "Select a banking tool, choose its main job, and submit. Repeat until all four tools have a match."
+        }
+      },
+      "feedback": {
+        "success": "Perfect match! Banks use different tools to help people store, access, move, and track their money.",
+        "incorrect": "That pair does not quite fit. Think about the main job performed by the banking tool.",
+        "incomplete": "Match all four banking tools before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Matches",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J2-M8-S07",
+      "type": "reveal",
+      "title": "Four Tools, Four Useful Jobs",
+      "content": "You matched four banking tools to their jobs. A bank helps people store money in an account, access cash, transfer money, and track transactions on a statement. These tools can make money easier to manage than keeping notes at home. A bank account does not automatically make someone wealthy or create extra money. It helps organise and use the money already there. Real bank services can have rules, limits, or fees, so an adult should check the account details.",
+      "simpleSummary": "Banks help you store, access, move, and track money.",
+      "illustration": "A bank account sits in the centre while four arrows connect it to an ATM, transfer symbol, statement, and protected money balance.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M8-S08",
+      "type": "real_life_example",
+      "title": "Paying for the School Trip",
+      "content": "Aria keeps £30 in a bank account. Her parent uses a bank transfer to pay the school-trip fee. Later, they check the statement and see the £30 payment recorded. No physical cash needed to travel between them.",
+      "illustration": "A transfer arrow moves £30 from Aria’s account to a school icon, then appears as a line on a statement.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M8-S09",
+      "type": "quiz",
+      "title": "Banking Tools Check",
+      "questions": [
+        {
+          "id": "J2-M8-Q1",
+          "category": "recognition",
+          "text": "Luca needs to send £8 to his cousin in another city. Which banking tool could move the money?",
+          "options": [
+            {
+              "id": "J2-M8-Q1-O1",
+              "text": "Bank transfer",
+              "isCorrect": true,
+              "feedback": "Correct. A transfer can move money from one bank account to another."
+            },
+            {
+              "id": "J2-M8-Q1-O2",
+              "text": "ATM",
+              "isCorrect": false,
+              "feedback": "An ATM helps access cash. It does not usually send money directly to another person’s account."
+            },
+            {
+              "id": "J2-M8-Q1-O3",
+              "text": "Statement",
+              "isCorrect": false,
+              "feedback": "A statement records transactions. It does not perform the transfer itself."
+            },
+            {
+              "id": "J2-M8-Q1-O4",
+              "text": "Mattress",
+              "isCorrect": false,
+              "feedback": "Money under a mattress cannot be sent electronically to another account."
+            }
+          ],
+          "correctAnswerId": "J2-M8-Q1-O1",
+          "correctExplanation": "A bank transfer moves money from one account to another without requiring Luca to hand over physical cash.",
+          "misconceptionTested": "A bank account is only a place where money is stored."
+        },
+        {
+          "id": "J2-M8-Q2",
+          "category": "misconception",
+          "text": "Priya deposits £50 into a bank account. Does the account automatically turn it into £100?",
+          "options": [
+            {
+              "id": "J2-M8-Q2-O1",
+              "text": "No, the account does not automatically double the money",
+              "isCorrect": true,
+              "feedback": "Correct. The account helps Priya store and manage the £50 already there."
+            },
+            {
+              "id": "J2-M8-Q2-O2",
+              "text": "Yes, every bank doubles deposits",
+              "isCorrect": false,
+              "feedback": "Banks do not automatically double deposited money."
+            },
+            {
+              "id": "J2-M8-Q2-O3",
+              "text": "Yes, because stored money creates wealth",
+              "isCorrect": false,
+              "feedback": "Storing money can help protect and organise it, but storage alone does not create new wealth."
+            },
+            {
+              "id": "J2-M8-Q2-O4",
+              "text": "Yes, after using an ATM",
+              "isCorrect": false,
+              "feedback": "An ATM lets Priya access money already in the account. It does not create additional money."
+            }
+          ],
+          "correctAnswerId": "J2-M8-Q2-O1",
+          "correctExplanation": "The account helps Priya store and manage her £50. Simply placing money in an account does not automatically make her wealthy.",
+          "misconceptionTested": "Keeping money in a bank automatically makes a person wealthy."
+        },
+        {
+          "id": "J2-M8-Q3",
+          "category": "application",
+          "text": "Jay wants to check where his pocket money went last month. Which tool should he use?",
+          "options": [
+            {
+              "id": "J2-M8-Q3-O1",
+              "text": "Statement",
+              "isCorrect": true,
+              "feedback": "Correct. A statement records money entering and leaving the account."
+            },
+            {
+              "id": "J2-M8-Q3-O2",
+              "text": "ATM",
+              "isCorrect": false,
+              "feedback": "An ATM can help access cash, but it is not the main tool for reviewing every past transaction."
+            },
+            {
+              "id": "J2-M8-Q3-O3",
+              "text": "Mattress",
+              "isCorrect": false,
+              "feedback": "Cash stored at home does not automatically create a record of when and where it was spent."
+            },
+            {
+              "id": "J2-M8-Q3-O4",
+              "text": "Bank transfer",
+              "isCorrect": false,
+              "feedback": "A transfer moves money. A statement records that movement and other transactions."
+            }
+          ],
+          "correctAnswerId": "J2-M8-Q3-O1",
+          "correctExplanation": "A statement records money entering and leaving the account, helping Jay review previous transactions.",
+          "misconceptionTested": "Money kept at home is always as safe and convenient as money kept in a bank."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J2-M8-S10",
+      "type": "completion",
+      "headline": "Banking Tool Expert!",
+      "message": "You discovered how bank accounts, ATMs, transfers, and statements help people manage money.",
+      "xpReward": 50,
+      "progressMessage": "Mission 8 complete in Make Money Grow.",
+      "nextMissionTeaser": "Next, explore how money can grow over time—and why growth is never automatic.",
+      "animation": "The four banking tools connect around a £100 balance, then each icon lights up as its job appears.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J2-M8-S11",
+      "type": "real_life_challenge",
+      "title": "Build a Banking Toolkit",
+      "instruction": "Draw four cards labelled Account, ATM, Transfer, and Statement. Write one money job under each. Do not use any real account details.",
+      "buttonLabel": "My Toolkit Is Ready",
+      "primaryAction": {
+        "label": "My Toolkit Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on the basic role of banks and four common banking tools."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission accurately distinguishes storing, accessing, transferring, and recording money without claiming that banking automatically creates wealth."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses birthday money, pocket money, a school trip, simple tools, and trusted-adult support."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not promise interest, growth, or financial returns."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Keeping cash at home is compared by convenience and record-keeping without criticising the learner or their family."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission states that real accounts may have rules, access requirements, limits, or fees."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, birthday money, bank accounts, ATMs, transfers, and school payments familiar to UK learners."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner directly matches each banking tool with its main money-management function."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses automatic wealth, bank accounts as storage only, and the convenience of tracking or moving money."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, four matching pairs, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
