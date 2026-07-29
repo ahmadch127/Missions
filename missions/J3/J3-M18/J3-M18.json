@@ -1,0 +1,517 @@
+{
+  "id": "J3-M18",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "ETFs",
+  "concept": "An exchange-traded fund, or ETF, allows an investor to buy access to a basket of investments through a single purchase.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand how an ETF can provide access to multiple investments instead of requiring the investor to buy each one separately.",
+  "primaryMisconception": "ETFs and individual stocks are identical.",
+  "secondaryMisconceptions": [
+    "Every ETF contains the same investments.",
+    "Buying an ETF guarantees protection from losses."
+  ],
+  "keyTakeaway": "An ETF can provide access to a basket of investments through one purchase.",
+  "screens": [
+    {
+      "id": "J3-M18-S01",
+      "type": "hook",
+      "title": "One Purchase, Many Companies?",
+      "content": "One purchase can give you access to dozens of companies. Did you buy one stock—or something different?",
+      "illustration": "A single purchase ticket opens into a basket containing several fictional company logos.",
+      "primaryAction": {
+        "label": "Open the Basket",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M18-S02",
+      "type": "story",
+      "title": "Noah’s £100 Choice",
+      "content": "Noah has £100. He can buy shares in one fictional company or choose a fund containing shares from several companies.",
+      "illustration": "A £100 card sits between one company-share card and a sealed investment basket.",
+      "primaryAction": {
+        "label": "Compare the Choices",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M18-S03",
+      "type": "story",
+      "title": "Apple or Fruit Basket?",
+      "content": "Buying one stock is like choosing one apple. Buying an ETF can be like choosing a basket containing several kinds of fruit.",
+      "illustration": "One apple appears beside a basket containing apples, bananas, oranges, and grapes.",
+      "primaryAction": {
+        "label": "Look Inside the Basket",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M18-S04",
+      "type": "story",
+      "title": "Following a Group",
+      "content": "Some ETFs follow a market index—a selected group used to measure how certain investments perform.",
+      "illustration": "A checklist of fictional companies connects to an ETF basket and a performance gauge.",
+      "primaryAction": {
+        "label": "Match the Ideas",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M18-S05",
+      "type": "pre_interaction",
+      "title": "What Did Noah Buy?",
+      "question": "Which choice gives Noah access to several investments through one purchase?",
+      "options": [
+        {
+          "id": "J3-M18-PQ-O1",
+          "text": "One company’s stock",
+          "isRecommended": false,
+          "response": "One stock normally provides ownership in one company, so the result depends heavily on that company."
+        },
+        {
+          "id": "J3-M18-PQ-O2",
+          "text": "An ETF containing several companies",
+          "isRecommended": true,
+          "response": "Good thinking. One ETF purchase can provide access to a collection of investments."
+        },
+        {
+          "id": "J3-M18-PQ-O3",
+          "text": "A market index itself",
+          "isRecommended": false,
+          "response": "An index measures a selected group. Some ETFs are designed to follow it, but the index itself is not a company share."
+        },
+        {
+          "id": "J3-M18-PQ-O4",
+          "text": "A guaranteed-profit account",
+          "isRecommended": false,
+          "response": "An ETF can rise or fall in value. A basket of investments does not guarantee a profit."
+        }
+      ],
+      "recommendedAnswerId": "J3-M18-PQ-O2",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M18-S06",
+      "type": "interaction",
+      "interactionType": "match_pairs",
+      "title": "Stock, ETF, or Index?",
+      "instruction": "Match each investing term with its correct meaning.",
+      "config": {
+        "educationalAssumptions": [
+          "All companies and investments in this activity are fictional.",
+          "A single stock represents ownership in one company.",
+          "An ETF is a fund whose shares can be bought and sold through a market.",
+          "An ETF may contain company shares, bonds, or other investments.",
+          "Many ETFs follow a market index, but ETFs can follow different strategies.",
+          "Investors own shares of the ETF rather than directly owning each underlying investment.",
+          "Different ETFs contain different holdings and may charge different fees.",
+          "Holding several investments may spread risk but cannot prevent every loss.",
+          "The activity does not recommend buying any real ETF or stock."
+        ],
+        "leftSideItems": [
+          {
+            "id": "term_single_stock",
+            "label": "Single stock"
+          },
+          {
+            "id": "term_etf",
+            "label": "ETF"
+          },
+          {
+            "id": "term_market_index",
+            "label": "Market index"
+          }
+        ],
+        "rightSideItems": [
+          {
+            "id": "meaning_one_company",
+            "label": "Ownership in one company"
+          },
+          {
+            "id": "meaning_investment_basket",
+            "label": "A basket of investments accessed through one purchase"
+          },
+          {
+            "id": "meaning_selected_group",
+            "label": "A selected group used to measure investment performance"
+          }
+        ],
+        "correctPairs": [
+          {
+            "leftItemId": "term_single_stock",
+            "rightItemId": "meaning_one_company",
+            "explanation": "A stock is a small ownership share in one company. Its result depends heavily on that company’s performance and market price."
+          },
+          {
+            "leftItemId": "term_etf",
+            "rightItemId": "meaning_investment_basket",
+            "explanation": "An ETF combines multiple investments inside one fund. Buying an ETF share gives access to that basket."
+          },
+          {
+            "leftItemId": "term_market_index",
+            "rightItemId": "meaning_selected_group",
+            "explanation": "An index tracks the performance of a chosen group. Some ETFs are designed to follow that group."
+          }
+        ],
+        "incorrectMatchFeedback": [
+          {
+            "leftItemId": "term_single_stock",
+            "rightItemId": "meaning_investment_basket",
+            "feedback": "A single stock normally represents one company. An ETF may contain a basket of different investments."
+          },
+          {
+            "leftItemId": "term_single_stock",
+            "rightItemId": "meaning_selected_group",
+            "feedback": "A stock is ownership in a company. An index measures the performance of a selected group."
+          },
+          {
+            "leftItemId": "term_etf",
+            "rightItemId": "meaning_one_company",
+            "feedback": "An ETF is a fund that may hold several investments. A single stock represents one company."
+          },
+          {
+            "leftItemId": "term_etf",
+            "rightItemId": "meaning_selected_group",
+            "feedback": "An ETF may follow an index, but they are not identical. The ETF is the fund; the index is the group or measurement it follows."
+          },
+          {
+            "leftItemId": "term_market_index",
+            "rightItemId": "meaning_one_company",
+            "feedback": "An index is not ownership in one company. It measures a selected group of investments."
+          },
+          {
+            "leftItemId": "term_market_index",
+            "rightItemId": "meaning_investment_basket",
+            "feedback": "An index describes or measures a group. An ETF is one way an investor may gain access to a basket based on that group."
+          }
+        ],
+        "followUpQuestions": [
+          {
+            "id": "J3-M18-IQ1",
+            "scenario": "The Future Transport ETF holds shares in 30 transport-related companies.",
+            "question": "What does one purchase of this ETF provide?",
+            "options": [
+              {
+                "id": "J3-M18-IQ1-O1",
+                "text": "Access to the ETF’s basket of 30 companies",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M18-IQ1-O2",
+                "text": "Complete ownership of all 30 companies",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M18-IQ1-O3",
+                "text": "A guaranteed profit from every company",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M18-IQ1-O4",
+                "text": "Direct control over the market index",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M18-IQ1-O1",
+            "explanation": "The investor owns shares of the ETF. The ETF holds the underlying company shares."
+          },
+          {
+            "id": "J3-M18-IQ2",
+            "question": "If several companies inside the ETF lose value, what may happen?",
+            "options": [
+              {
+                "id": "J3-M18-IQ2-O1",
+                "text": "The ETF’s value may also fall",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M18-IQ2-O2",
+                "text": "The ETF must stay at the same price",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M18-IQ2-O3",
+                "text": "The fund manager must repay every loss",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M18-IQ2-O4",
+                "text": "The profitable companies guarantee a positive result",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M18-IQ2-O1",
+            "explanation": "Spreading money across several holdings can reduce dependence on one company, but the whole basket can still lose value."
+          }
+        ],
+        "placementRules": [
+          "Each term must match with one meaning.",
+          "Each meaning may be used once.",
+          "There is one correct match for each term.",
+          "The pairs may be completed in any order.",
+          "Both follow-up questions must be answered correctly."
+        ],
+        "correctCompletionState": {
+          "term_single_stock": "meaning_one_company",
+          "term_etf": "meaning_investment_basket",
+          "term_market_index": "meaning_selected_group",
+          "etfOwnership": "investor_owns_etf_shares",
+          "underlyingHoldings": "etf_owns_investments_in_basket",
+          "riskUnderstanding": "etf_value_can_rise_or_fall"
+        },
+        "validationMethod": "Check all three pairs and both follow-up answers. Complete the interaction when every match and answer is correct.",
+        "retryBehavior": "Keep correct pairs connected. Separate only incorrect pairs, show one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present each term with three radio-button definitions. After matching, present the two follow-up questions in a linear format.",
+          "screenReaderInstruction": "Choose the correct meaning for Single Stock, ETF, and Market Index. Then answer the two ETF scenario questions."
+        }
+      },
+      "feedback": {
+        "success": "Perfect match! You separated one-company ownership, an ETF basket, and the index an ETF may follow.",
+        "incorrect": "Look for the key difference: one company, one investment basket, or one group used for measurement.",
+        "incomplete": "Complete all three matches and answer both ETF questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Matches",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M18-S07",
+      "type": "reveal",
+      "title": "One Fund, Many Possible Holdings",
+      "content": "You matched an ETF, or exchange-traded fund, with a basket of investments. Buying one ETF share can provide access to several companies, bonds, or other assets without buying each separately. Many ETFs follow a market index, while others use different strategies. An ETF is not identical to a single stock, and different ETFs can contain very different investments. A broader basket may spread risk, but its value can still fall and fees can reduce results.",
+      "simpleSummary": "One ETF purchase can provide access to several investments.",
+      "illustration": "One ETF share opens into several investment cards while a single-stock card remains connected to only one company.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M18-S08",
+      "type": "real_life_example",
+      "title": "The Gaming ETF",
+      "content": "A fictional gaming ETF contains shares in console, software, chip, and online-game companies. Buying one ETF share gives access to the combined basket. If the gaming industry struggles, several holdings may fall together, so the ETF can still lose value.",
+      "illustration": "One ETF card opens into four gaming-industry company cards with mixed upward and downward arrows.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M18-S09",
+      "type": "quiz",
+      "title": "ETF Basics Check",
+      "questions": [
+        {
+          "id": "J3-M18-Q1",
+          "category": "recognition",
+          "text": "Which purchase is most likely to provide access to several companies at once?",
+          "options": [
+            {
+              "id": "J3-M18-Q1-O1",
+              "text": "One share of an ETF holding 50 companies",
+              "isCorrect": true,
+              "feedback": "Correct. The ETF contains a basket of 50 company holdings."
+            },
+            {
+              "id": "J3-M18-Q1-O2",
+              "text": "One share of a single company",
+              "isCorrect": false,
+              "feedback": "A single stock normally represents ownership in one company."
+            },
+            {
+              "id": "J3-M18-Q1-O3",
+              "text": "A gift card",
+              "isCorrect": false,
+              "feedback": "A gift card provides spending credit, not access to an investment portfolio."
+            },
+            {
+              "id": "J3-M18-Q1-O4",
+              "text": "One company bond only",
+              "isCorrect": false,
+              "feedback": "That purchase provides exposure to one bond issuer rather than a basket of companies."
+            }
+          ],
+          "correctAnswerId": "J3-M18-Q1-O1",
+          "correctExplanation": "The ETF contains a basket of 50 company holdings, so one ETF purchase provides access to the combined portfolio.",
+          "misconceptionTested": "An ETF and a single-company investment provide identical exposure."
+        },
+        {
+          "id": "J3-M18-Q2",
+          "category": "misconception",
+          "text": "Which statement correctly compares an ETF with an individual stock?",
+          "options": [
+            {
+              "id": "J3-M18-Q2-O1",
+              "text": "An ETF may hold many investments; a stock represents one company",
+              "isCorrect": true,
+              "feedback": "Correct. They may both trade through markets, but they represent different structures."
+            },
+            {
+              "id": "J3-M18-Q2-O2",
+              "text": "They are always identical",
+              "isCorrect": false,
+              "feedback": "Both may be traded through markets, but an ETF is a fund and a stock represents one company."
+            },
+            {
+              "id": "J3-M18-Q2-O3",
+              "text": "Every ETF owns the same companies",
+              "isCorrect": false,
+              "feedback": "ETFs follow different indices or strategies and can contain very different holdings."
+            },
+            {
+              "id": "J3-M18-Q2-O4",
+              "text": "Both guarantee a profit",
+              "isCorrect": false,
+              "feedback": "Stocks and ETFs can both fall in value."
+            }
+          ],
+          "correctAnswerId": "J3-M18-Q2-O1",
+          "correctExplanation": "A single stock is ownership in one company. An ETF is a fund that may contain many different holdings.",
+          "misconceptionTested": "ETFs and individual stocks are identical."
+        },
+        {
+          "id": "J3-M18-Q3",
+          "category": "application",
+          "text": "An ETF holds 100 companies, but most are in the same struggling industry. What should an investor understand?",
+          "options": [
+            {
+              "id": "J3-M18-Q3-O1",
+              "text": "Many holdings do not remove risk when they face similar problems",
+              "isCorrect": true,
+              "feedback": "Correct. The number of holdings matters, but their similarities also matter."
+            },
+            {
+              "id": "J3-M18-Q3-O2",
+              "text": "The ETF cannot lose money",
+              "isCorrect": false,
+              "feedback": "Every ETF can lose value when its underlying holdings fall."
+            },
+            {
+              "id": "J3-M18-Q3-O3",
+              "text": "One hundred holdings guarantee diversification",
+              "isCorrect": false,
+              "feedback": "A fund can hold many investments that are still exposed to the same industry or risk."
+            },
+            {
+              "id": "J3-M18-Q3-O4",
+              "text": "The manager must repay any fall",
+              "isCorrect": false,
+              "feedback": "Fund managers manage the portfolio but do not guarantee or personally repay investment losses."
+            }
+          ],
+          "correctAnswerId": "J3-M18-Q3-O1",
+          "correctExplanation": "The number of holdings matters, but their similarities also matter. Companies in the same industry may fall together.",
+          "misconceptionTested": "Buying an ETF guarantees protection from losses."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M18-S10",
+      "type": "completion",
+      "headline": "ETF Basket Builder!",
+      "message": "You learned how one ETF purchase can provide access to several investments while still carrying risk.",
+      "xpReward": 50,
+      "progressMessage": "Mission 18 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, explore how spreading money across different investments can change portfolio risk.",
+      "animation": "One ETF ticket opens into several company and bond cards, followed by a balanced risk reminder.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M18-S11",
+      "type": "real_life_challenge",
+      "title": "Design Two ETF Baskets",
+      "instruction": "Draw two imaginary ETF baskets with four holdings each. Give them different themes to show that ETFs do not all contain the same investments.",
+      "buttonLabel": "My Baskets Are Ready",
+      "primaryAction": {
+        "label": "My Baskets Are Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on ETFs as single purchases providing access to baskets of investments."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes ETFs, individual stocks, market indices, ETF ownership, underlying holdings, strategies, fees, and possible losses."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses fruit baskets, gaming companies, transport companies, matching activities, and introductory investing language suitable for teens."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend any real ETF, index, company, allocation, or investment decision."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that ETFs can lose value and that diversification does not guarantee a profit."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The mission includes no predictions involving real ETFs, indices, or company prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Choosing individual stocks, ETFs, or not investing is discussed neutrally."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that ETFs can use different strategies, contain different assets, charge different fees, and remain exposed to losses."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, familiar fruit comparisons, gaming companies, transport businesses, and introductory market concepts for UK teens."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner directly distinguishes a stock, an ETF, and a market index through matching and application questions."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses ETFs versus individual stocks, different ETF holdings, industry concentration, and loss risk."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, three matching pairs, two follow-up questions, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and appropriate for teens aged 13–17."
+    }
+  ]
+}
