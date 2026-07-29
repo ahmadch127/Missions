@@ -1,0 +1,532 @@
+{
+  "id": "J3-M15",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "Stocks",
+  "concept": "A stock represents a small ownership share in a company. Owning more shares generally means owning a larger portion of that company.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand that buying a stock means purchasing partial ownership in a company.",
+  "primaryMisconception": "Stocks are only prices or numbers moving on a screen.",
+  "secondaryMisconceptions": [
+    "Owning one stock means owning the entire company.",
+    "Buying shares guarantees control over the company or a profit."
+  ],
+  "keyTakeaway": "A stock represents a small ownership share in a company.",
+  "screens": [
+    {
+      "id": "J3-M15-S01",
+      "type": "hook",
+      "title": "Five Pieces of a Pizza Shop",
+      "content": "A pizza shop has 100 equal ownership pieces. You buy five. Do you own the whole shop, or only part of it?",
+      "illustration": "A pizza shop is divided into 100 small ownership tiles. Five tiles are highlighted but not yet labelled.",
+      "primaryAction": {
+        "label": "Claim the Shares",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M15-S02",
+      "type": "story",
+      "title": "A Shop With 100 Pieces",
+      "content": "Slice Street Pizza is divided into 100 equal ownership pieces. Each piece represents one share of the business.",
+      "illustration": "A pizza-shaped ownership chart contains 100 equal slices, with the shop in the centre.",
+      "primaryAction": {
+        "label": "Meet the Owners",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M15-S03",
+      "type": "story",
+      "title": "Most Shares Are Taken",
+      "content": "Founder 1 owns 45 shares. Founder 2 owns 30. Other investors own 20. Five shares are still available.",
+      "illustration": "Three ownership sections display 45, 30, and 20 shares. Five unclaimed share tokens remain.",
+      "primaryAction": {
+        "label": "Buy Five Shares",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M15-S04",
+      "type": "story",
+      "title": "What Did You Buy?",
+      "content": "You buy the final five shares. The shop’s price may change later, but first decide what those shares actually represent.",
+      "illustration": "Five share tokens move towards the learner while a separate market-price screen stays blurred in the background.",
+      "primaryAction": {
+        "label": "Predict Your Ownership",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M15-S05",
+      "type": "pre_interaction",
+      "title": "What Do Five Shares Mean?",
+      "question": "What do you receive when you buy five of the shop’s 100 equal shares?",
+      "options": [
+        {
+          "id": "J3-M15-PQ-O1",
+          "text": "Ownership of 5% of the shop",
+          "isRecommended": true,
+          "response": "Good thinking. Five out of 100 equal shares represent 5% ownership in this simplified company."
+        },
+        {
+          "id": "J3-M15-PQ-O2",
+          "text": "Ownership of the whole shop",
+          "isRecommended": false,
+          "response": "Five shares provide partial ownership. The other 95 shares still belong to other owners."
+        },
+        {
+          "id": "J3-M15-PQ-O3",
+          "text": "A guaranteed profit",
+          "isRecommended": false,
+          "response": "Ownership creates the possibility of gains or income, but neither is guaranteed."
+        },
+        {
+          "id": "J3-M15-PQ-O4",
+          "text": "Only a price on a screen",
+          "isRecommended": false,
+          "response": "A price shows what someone may pay for a share. The share itself represents part of the business."
+        }
+      ],
+      "recommendedAnswerId": "J3-M15-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M15-S06",
+      "type": "interaction",
+      "interactionType": "drag_and_drop",
+      "title": "Build the Ownership Chart",
+      "instruction": "Drag your five share tokens into the Learner section. Watch how each share changes your ownership percentage.",
+      "config": {
+        "educationalAssumptions": [
+          "Slice Street Pizza has exactly 100 equal shares.",
+          "Every share represents 1% ownership in this simplified activity.",
+          "All shares have the same rights in this example.",
+          "Founder 1 already owns 45 shares.",
+          "Founder 2 already owns 30 shares.",
+          "Other investors already own 20 shares.",
+          "The learner buys the remaining five shares.",
+          "Real companies may have millions of shares and different share classes or voting rights.",
+          "Owning shares does not guarantee profit, dividends, or control."
+        ],
+        "totalCompanyShares": 100,
+        "preAllocatedOwnership": [
+          {
+            "ownerId": "owner_founder_1",
+            "label": "Founder 1",
+            "shares": 45,
+            "ownershipPercent": 45
+          },
+          {
+            "ownerId": "owner_founder_2",
+            "label": "Founder 2",
+            "shares": 30,
+            "ownershipPercent": 30
+          },
+          {
+            "ownerId": "owner_other_investors",
+            "label": "Other investors",
+            "shares": 20,
+            "ownershipPercent": 20
+          }
+        ],
+        "draggableItems": [
+          {
+            "id": "J3-M15-SHARE-1",
+            "label": "Learner Share 1",
+            "shareValue": 1,
+            "ownershipPercent": 1
+          },
+          {
+            "id": "J3-M15-SHARE-2",
+            "label": "Learner Share 2",
+            "shareValue": 1,
+            "ownershipPercent": 1
+          },
+          {
+            "id": "J3-M15-SHARE-3",
+            "label": "Learner Share 3",
+            "shareValue": 1,
+            "ownershipPercent": 1
+          },
+          {
+            "id": "J3-M15-SHARE-4",
+            "label": "Learner Share 4",
+            "shareValue": 1,
+            "ownershipPercent": 1
+          },
+          {
+            "id": "J3-M15-SHARE-5",
+            "label": "Learner Share 5",
+            "shareValue": 1,
+            "ownershipPercent": 1
+          }
+        ],
+        "dropZones": [
+          {
+            "id": "zone_founder_1",
+            "label": "Founder 1",
+            "existingShares": 45,
+            "acceptsLearnerShares": false
+          },
+          {
+            "id": "zone_founder_2",
+            "label": "Founder 2",
+            "existingShares": 30,
+            "acceptsLearnerShares": false
+          },
+          {
+            "id": "zone_other_investors",
+            "label": "Other Investors",
+            "existingShares": 20,
+            "acceptsLearnerShares": false
+          },
+          {
+            "id": "zone_learner",
+            "label": "Learner",
+            "existingShares": 0,
+            "requiredFinalShares": 5,
+            "acceptsLearnerShares": true
+          }
+        ],
+        "placementRules": [
+          "Every learner share token belongs in the Learner section.",
+          "A learner token placed in another owner’s section returns to the unallocated area.",
+          "Tokens may be placed in any order.",
+          "All five tokens must be placed to complete the ownership chart.",
+          "The final ownership arrangement has one correct result.",
+          "The order of placement does not affect the result."
+        ],
+        "multipleValidArrangements": false,
+        "multipleValidPlacementOrders": true,
+        "immediateOwnershipFeedback": [
+          {
+            "learnerShares": 1,
+            "ownershipPercent": 1,
+            "message": "1 share out of 100 equals 1% ownership."
+          },
+          {
+            "learnerShares": 2,
+            "ownershipPercent": 2,
+            "message": "2 shares out of 100 equal 2% ownership."
+          },
+          {
+            "learnerShares": 3,
+            "ownershipPercent": 3,
+            "message": "3 shares out of 100 equal 3% ownership."
+          },
+          {
+            "learnerShares": 4,
+            "ownershipPercent": 4,
+            "message": "4 shares out of 100 equal 4% ownership."
+          },
+          {
+            "learnerShares": 5,
+            "ownershipPercent": 5,
+            "message": "5 shares out of 100 equal 5% ownership."
+          }
+        ],
+        "correctCompletionState": {
+          "founder1Shares": 45,
+          "founder1OwnershipPercent": 45,
+          "founder2Shares": 30,
+          "founder2OwnershipPercent": 30,
+          "otherInvestorShares": 20,
+          "otherInvestorOwnershipPercent": 20,
+          "learnerShares": 5,
+          "learnerOwnershipPercent": 5,
+          "totalAllocatedShares": 100,
+          "totalAllocatedPercent": 100,
+          "remainingUnallocatedShares": 0
+        },
+        "ownershipFeedback": {
+          "totalCompanyShares": 100,
+          "learnerShares": 5,
+          "learnerOwnershipPercent": 5,
+          "everyoneElseShares": 95,
+          "everyoneElseOwnershipPercent": 95
+        },
+        "followUpQuestion": {
+          "id": "J3-M15-IQ1",
+          "text": "What does your 5% ownership mean?",
+          "options": [
+            {
+              "id": "J3-M15-IQ1-O1",
+              "text": "You own a small part of the real business",
+              "isCorrect": true
+            },
+            {
+              "id": "J3-M15-IQ1-O2",
+              "text": "You control every company decision",
+              "isCorrect": false
+            },
+            {
+              "id": "J3-M15-IQ1-O3",
+              "text": "You are guaranteed 5% profit every year",
+              "isCorrect": false
+            },
+            {
+              "id": "J3-M15-IQ1-O4",
+              "text": "You own all the shop’s buildings and equipment personally",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "J3-M15-IQ1-O1",
+          "explanation": "Your shares represent partial ownership. They do not automatically give complete control or guarantee profit."
+        },
+        "importantOwnershipNote": "Founder 1 and Founder 2 together own 75 shares, while the learner owns five. The learner is an owner, but not the controlling owner in this simplified example. Real control may also depend on voting rules and different classes of shares.",
+        "validationMethod": "Check that all five learner tokens are in the Learner section and that the follow-up ownership question is answered correctly.",
+        "retryBehavior": "Keep correctly placed tokens in the Learner section. Return only incorrectly placed tokens and provide a short ownership hint.",
+        "accessibilityAlternative": {
+          "method": "Provide a Move to Learner button beside each share token. Also offer a numeric selector allowing the learner to assign five shares to the Learner section.",
+          "screenReaderInstruction": "Move each of the five learner shares into the Learner section. After every share, listen to the updated ownership percentage."
+        }
+      },
+      "feedback": {
+        "success": "Ownership complete! Your five shares represent 5% of the pizza shop—not the whole company and not just a moving price.",
+        "incorrect": "Each share is one of 100 equal ownership pieces. Place your five pieces in the section showing what you own.",
+        "incomplete": "Some of your ownership pieces are still unallocated. Place all five shares before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Ownership",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M15-S07",
+      "type": "reveal",
+      "title": "A Share Is a Piece of a Business",
+      "content": "You placed five of the company’s 100 shares into your ownership section. A stock, or share, represents partial ownership in a company. Your five shares equal 5% ownership in this simplified example. A stock price is what buyers and sellers may currently pay for that ownership piece. Owning shares does not mean owning the entire company, controlling every decision, or receiving guaranteed profit. The company’s results and market demand can affect what the shares are worth.",
+      "simpleSummary": "A stock is ownership in a business, not only a changing price.",
+      "illustration": "The five ownership tiles connect the learner directly to the pizza shop, while a separate price tag moves up and down beside them.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M15-S08",
+      "type": "real_life_example",
+      "title": "Owning Part of a Game Studio",
+      "content": "A fictional game studio has 1,000 equal shares. Maya owns 20 shares, so she owns 2% of the company. She does not own the whole studio or control every decision. Her shares may rise or fall in value depending on the business and what buyers will pay.",
+      "illustration": "Twenty highlighted shares appear inside a 1,000-share game-studio ownership chart, with a clear 2% label.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M15-S09",
+      "type": "quiz",
+      "title": "Stock Ownership Check",
+      "questions": [
+        {
+          "id": "J3-M15-Q1",
+          "category": "recognition",
+          "text": "A company has 200 equal shares. You own 10. What do those shares represent?",
+          "options": [
+            {
+              "id": "J3-M15-Q1-O1",
+              "text": "5% ownership in the company",
+              "isCorrect": true,
+              "feedback": "Correct. Ten out of 200 equal shares represents 5% ownership."
+            },
+            {
+              "id": "J3-M15-Q1-O2",
+              "text": "Ownership of the entire company",
+              "isCorrect": false,
+              "feedback": "The other 190 shares belong to other owners, so you own only part of the company."
+            },
+            {
+              "id": "J3-M15-Q1-O3",
+              "text": "A guaranteed yearly payment",
+              "isCorrect": false,
+              "feedback": "Shares may produce gains or income, but neither is guaranteed."
+            },
+            {
+              "id": "J3-M15-Q1-O4",
+              "text": "Only ten numbers on a screen",
+              "isCorrect": false,
+              "feedback": "Prices may appear on a screen, but the shares represent ownership in a real company."
+            }
+          ],
+          "correctAnswerId": "J3-M15-Q1-O1",
+          "correctExplanation": "Ten out of 200 equal shares is 5%. The shares represent partial ownership in the company.",
+          "misconceptionTested": "Stocks are only prices or numbers moving on a screen."
+        },
+        {
+          "id": "J3-M15-Q2",
+          "category": "misconception",
+          "text": "You buy one share in a company with one million shares. What does that mean?",
+          "options": [
+            {
+              "id": "J3-M15-Q2-O1",
+              "text": "You own a very small part of the company",
+              "isCorrect": true,
+              "feedback": "Correct. One share is partial ownership, but only one of one million ownership units."
+            },
+            {
+              "id": "J3-M15-Q2-O2",
+              "text": "You own the entire company",
+              "isCorrect": false,
+              "feedback": "Owning the entire company would require owning all of its shares."
+            },
+            {
+              "id": "J3-M15-Q2-O3",
+              "text": "You control every company decision",
+              "isCorrect": false,
+              "feedback": "One small share usually provides very limited influence. Voting rights can also vary."
+            },
+            {
+              "id": "J3-M15-Q2-O4",
+              "text": "Your profit is guaranteed",
+              "isCorrect": false,
+              "feedback": "Share prices and company results can rise or fall. A profit is never guaranteed."
+            }
+          ],
+          "correctAnswerId": "J3-M15-Q2-O1",
+          "correctExplanation": "One share represents partial ownership, but it is only one of the company’s one million ownership units.",
+          "misconceptionTested": "Owning one stock means owning the entire company."
+        },
+        {
+          "id": "J3-M15-Q3",
+          "category": "application",
+          "text": "A company’s share price falls after disappointing sales. What is still true about each share?",
+          "options": [
+            {
+              "id": "J3-M15-Q3-O1",
+              "text": "It still represents partial ownership, although its market value changed",
+              "isCorrect": true,
+              "feedback": "Correct. The price changed, but the share still represents an ownership unit."
+            },
+            {
+              "id": "J3-M15-Q3-O2",
+              "text": "It stops representing the company",
+              "isCorrect": false,
+              "feedback": "A lower market price does not automatically remove the ownership represented by the share."
+            },
+            {
+              "id": "J3-M15-Q3-O3",
+              "text": "The owner is guaranteed the original price",
+              "isCorrect": false,
+              "feedback": "A shareholder may receive less than the purchase price if the share value falls."
+            },
+            {
+              "id": "J3-M15-Q3-O4",
+              "text": "The shareholder now controls the company",
+              "isCorrect": false,
+              "feedback": "A price change does not automatically change how many shares the person owns or give complete control."
+            }
+          ],
+          "correctAnswerId": "J3-M15-Q3-O1",
+          "correctExplanation": "The market price may rise or fall, but the share continues to represent an ownership unit unless the company’s structure changes.",
+          "misconceptionTested": "Buying shares guarantees control over the company or a profit."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M15-S10",
+      "type": "completion",
+      "headline": "Shareholder Basics Unlocked!",
+      "message": "You learned that a stock represents ownership in a company, while its market price can change over time.",
+      "xpReward": 50,
+      "progressMessage": "Mission 15 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, explore why a company’s share price can rise, fall, or stay nearly unchanged.",
+      "animation": "Five share tiles lock into the Learner section, forming a 5% ownership badge while a separate price line moves up and down.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M15-S11",
+      "type": "real_life_challenge",
+      "title": "Divide an Imaginary Company",
+      "instruction": "Draw a company divided into 20 equal shares. Shade four shares for one owner and calculate their ownership percentage. Do not buy real shares.",
+      "buttonLabel": "I Calculated the Ownership",
+      "primaryAction": {
+        "label": "I Calculated the Ownership",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on stocks as partial ownership in a company."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The ownership calculations are correct, and the mission separates company ownership from changing market prices."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses a pizza shop, game studio, simple percentages, and introductory shareholder concepts suitable for teens."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend purchasing any real company or stock."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that profits, dividends, company success, and rising share values are not guaranteed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The mission explains that prices can change but does not predict the price of any real or fictional company."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Buying, not buying, and owning different numbers of shares are presented neutrally."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The activity states that real companies may have different share classes, voting rights, and much larger numbers of shares."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, a pizza shop, a game studio, ownership percentages, and familiar business examples for UK teens."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner directly places ownership shares and watches their percentage increase from 0% to 5%."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses stocks as ownership, owning one share, changing prices, control, and guaranteed profit."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, five share placements, one follow-up question, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, and appropriate for teens aged 13–17."
+    }
+  ]
+}
