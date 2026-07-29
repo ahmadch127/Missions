@@ -1,0 +1,642 @@
+{
+  "id": "J3-M20",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "Dividends",
+  "concept": "A dividend is a payment a company may choose to make to shareholders using part of its profits or available cash.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand that distributing dividends is one of several ways a company may use its profits.",
+  "primaryMisconception": "Every profitable company must pay dividends to its shareholders.",
+  "secondaryMisconceptions": [
+    "A company that does not pay dividends is automatically performing badly.",
+    "Dividend payments are guaranteed and always remain the same."
+  ],
+  "keyTakeaway": "A dividend is one possible way a company shares profit with shareholders.",
+  "screens": [
+    {
+      "id": "J3-M20-S01",
+      "type": "hook",
+      "title": "Profit Made—What Happens Next?",
+      "content": "A company earns £10,000. Must it pay shareholders, or could the money help the business in other ways?",
+      "illustration": "A £10,000 profit card stands at a crossroads with four hidden paths.",
+      "primaryAction": {
+        "label": "Follow the Profit",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M20-S02",
+      "type": "story",
+      "title": "A Successful Year",
+      "content": "BrightByte finishes the year with £10,000 available after its normal business costs. Its leaders must decide what to do next.",
+      "illustration": "A fictional technology company displays a £10,000 available-money card beside a decision table.",
+      "primaryAction": {
+        "label": "See the Choices",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M20-S03",
+      "type": "story",
+      "title": "Four Possible Uses",
+      "content": "The company could improve its products, keep money for future needs, repay debt, or give some money to eligible shareholders.",
+      "illustration": "Four cards show product development, a cash reserve, debt repayment, and shareholder payments.",
+      "primaryAction": {
+        "label": "Compare the Results",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M20-S04",
+      "type": "story",
+      "title": "Is a Payment Required?",
+      "content": "Shareholder Zara owns five shares. She wonders whether earning a profit means BrightByte must send her money.",
+      "illustration": "Zara holds five share cards while a dividend envelope displays a question mark.",
+      "primaryAction": {
+        "label": "Make a Prediction",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M20-S05",
+      "type": "pre_interaction",
+      "title": "What Must the Company Do?",
+      "question": "BrightByte earned a profit. Which statement is most accurate?",
+      "options": [
+        {
+          "id": "J3-M20-PQ-O1",
+          "text": "It must pay all shareholders",
+          "isRecommended": false,
+          "response": "A profitable company may pay dividends, but it can also use the money in other ways."
+        },
+        {
+          "id": "J3-M20-PQ-O2",
+          "text": "It must keep all the money",
+          "isRecommended": false,
+          "response": "Keeping a reserve is one option, but it is not the only possible decision."
+        },
+        {
+          "id": "J3-M20-PQ-O3",
+          "text": "It can choose among several uses",
+          "isRecommended": true,
+          "response": "Correct. The company may reinvest, save, repay debt, or distribute part of the money."
+        },
+        {
+          "id": "J3-M20-PQ-O4",
+          "text": "Profit guarantees the same dividend every year",
+          "isRecommended": false,
+          "response": "Dividend amounts may increase, decrease, remain unchanged, or stop."
+        }
+      ],
+      "recommendedAnswerId": "J3-M20-PQ-O3",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M20-S06",
+      "type": "interaction",
+      "interactionType": "cause_and_effect",
+      "title": "Where Can the Profit Go?",
+      "instruction": "Connect each company decision with its possible result. Then calculate what different shareholders may receive.",
+      "config": {
+        "educationalAssumptions": [
+          "BrightByte is a fictional company.",
+          "The activity treats £10,000 as money available after normal operating costs.",
+          "Real accounting profit and available cash are not always the same.",
+          "The company has several possible uses for the money.",
+          "Reinvestment may support growth but does not guarantee success.",
+          "Debt repayment may reduce future interest costs, depending on the debt terms.",
+          "The dividend example uses one ordinary share class with equal payments per eligible share.",
+          "Taxes, fees, different share classes, and other company commitments are excluded.",
+          "The activity does not recommend buying any real company’s shares."
+        ],
+        "events": [
+          {
+            "id": "J3-M20-EVENT-A",
+            "title": "Reinvest the profit"
+          },
+          {
+            "id": "J3-M20-EVENT-B",
+            "title": "Keep the profit as savings"
+          },
+          {
+            "id": "J3-M20-EVENT-C",
+            "title": "Repay debt"
+          },
+          {
+            "id": "J3-M20-EVENT-D",
+            "title": "Distribute some profit as dividends"
+          }
+        ],
+        "effects": [
+          {
+            "id": "J3-M20-EFFECT-1",
+            "title": "Support future growth",
+            "content": "The company may improve products, hire employees, open locations, or expand operations."
+          },
+          {
+            "id": "J3-M20-EFFECT-2",
+            "title": "Build a cash reserve",
+            "content": "The company keeps money available for future opportunities or unexpected costs."
+          },
+          {
+            "id": "J3-M20-EFFECT-3",
+            "title": "Reduce money owed",
+            "content": "The company lowers its outstanding debt and may reduce future interest costs."
+          },
+          {
+            "id": "J3-M20-EFFECT-4",
+            "title": "Pay eligible shareholders",
+            "content": "Eligible shareholders receive a payment based on the number of shares they own."
+          }
+        ],
+        "correctConnections": [
+          {
+            "eventId": "J3-M20-EVENT-A",
+            "effectId": "J3-M20-EFFECT-1",
+            "explanation": "The company uses the money inside the business. This may help it grow, but success is not guaranteed."
+          },
+          {
+            "eventId": "J3-M20-EVENT-B",
+            "effectId": "J3-M20-EFFECT-2",
+            "explanation": "The company keeps money available for future plans or unexpected costs."
+          },
+          {
+            "eventId": "J3-M20-EVENT-C",
+            "effectId": "J3-M20-EFFECT-3",
+            "explanation": "Repaying debt lowers the outstanding balance and may reduce future interest costs."
+          },
+          {
+            "eventId": "J3-M20-EVENT-D",
+            "effectId": "J3-M20-EFFECT-4",
+            "explanation": "The company shares some money with eligible shareholders according to the dividend declared per share."
+          }
+        ],
+        "incorrectConnectionFeedback": [
+          {
+            "eventId": "J3-M20-EVENT-A",
+            "effectId": "J3-M20-EFFECT-2",
+            "feedback": "A reserve remains available as savings. Reinvestment puts the money into business activities."
+          },
+          {
+            "eventId": "J3-M20-EVENT-A",
+            "effectId": "J3-M20-EFFECT-3",
+            "feedback": "Reinvestment funds company operations or growth rather than directly reducing debt."
+          },
+          {
+            "eventId": "J3-M20-EVENT-A",
+            "effectId": "J3-M20-EFFECT-4",
+            "feedback": "Reinvested money stays inside the company rather than being distributed to shareholders."
+          },
+          {
+            "eventId": "J3-M20-EVENT-B",
+            "effectId": "J3-M20-EFFECT-1",
+            "feedback": "Saving the money builds a reserve. Expansion would require the company to use or reinvest it."
+          },
+          {
+            "eventId": "J3-M20-EVENT-B",
+            "effectId": "J3-M20-EFFECT-3",
+            "feedback": "Money kept as savings remains available rather than being used to repay what the company owes."
+          },
+          {
+            "eventId": "J3-M20-EVENT-B",
+            "effectId": "J3-M20-EFFECT-4",
+            "feedback": "Money distributed to shareholders leaves the company instead of remaining in its reserve."
+          },
+          {
+            "eventId": "J3-M20-EVENT-C",
+            "effectId": "J3-M20-EFFECT-1",
+            "feedback": "Debt repayment reduces money owed rather than directly funding new products or locations."
+          },
+          {
+            "eventId": "J3-M20-EVENT-C",
+            "effectId": "J3-M20-EFFECT-2",
+            "feedback": "Money used to repay debt is no longer being kept as available savings."
+          },
+          {
+            "eventId": "J3-M20-EVENT-C",
+            "effectId": "J3-M20-EFFECT-4",
+            "feedback": "Debt repayment goes to lenders. Dividends are paid to eligible shareholders."
+          },
+          {
+            "eventId": "J3-M20-EVENT-D",
+            "effectId": "J3-M20-EFFECT-1",
+            "feedback": "Dividend money is distributed to shareholders rather than reinvested in the company."
+          },
+          {
+            "eventId": "J3-M20-EVENT-D",
+            "effectId": "J3-M20-EFFECT-2",
+            "feedback": "A dividend reduces cash held by the company instead of building its reserve."
+          },
+          {
+            "eventId": "J3-M20-EVENT-D",
+            "effectId": "J3-M20-EFFECT-3",
+            "feedback": "Dividends go to eligible shareholders, while debt repayments go to lenders."
+          }
+        ],
+        "dividendExample": {
+          "dividendPerEligibleShare": 1,
+          "currency": "GBP",
+          "disclaimer": "This is a fictional classroom example, not a promised or predicted payment."
+        },
+        "followUpQuestions": [
+          {
+            "id": "J3-M20-IQ1",
+            "scenario": "Zara owns 5 shares and the dividend is £1 per eligible share.",
+            "question": "How much does Zara receive?",
+            "options": [
+              {
+                "id": "J3-M20-IQ1-O1",
+                "text": "£1",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ1-O2",
+                "text": "£5",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M20-IQ1-O3",
+                "text": "£10",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ1-O4",
+                "text": "£0",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M20-IQ1-O2",
+            "calculation": "5 shares × £1 = £5",
+            "explanation": "Zara receives £1 for each of her five eligible shares."
+          },
+          {
+            "id": "J3-M20-IQ2",
+            "scenario": "Noah owns 20 shares and the dividend is £1 per eligible share.",
+            "question": "How much does Noah receive?",
+            "options": [
+              {
+                "id": "J3-M20-IQ2-O1",
+                "text": "£5",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ2-O2",
+                "text": "£10",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ2-O3",
+                "text": "£20",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M20-IQ2-O4",
+                "text": "£100",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M20-IQ2-O3",
+            "calculation": "20 shares × £1 = £20",
+            "explanation": "Noah receives £1 for each of his twenty eligible shares."
+          },
+          {
+            "id": "J3-M20-IQ3",
+            "scenario": "Maya owns 0 shares and the dividend is £1 per eligible share.",
+            "question": "How much does Maya receive?",
+            "options": [
+              {
+                "id": "J3-M20-IQ3-O1",
+                "text": "£1",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ3-O2",
+                "text": "£5",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ3-O3",
+                "text": "£20",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ3-O4",
+                "text": "£0",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswerId": "J3-M20-IQ3-O4",
+            "calculation": "0 shares × £1 = £0",
+            "explanation": "A person who owns no eligible shares receives no dividend."
+          },
+          {
+            "id": "J3-M20-IQ4",
+            "scenario": "BrightByte earns another profit next year.",
+            "question": "Must it pay the same £1 dividend again?",
+            "options": [
+              {
+                "id": "J3-M20-IQ4-O1",
+                "text": "Yes, profitable companies must repeat dividends",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ4-O2",
+                "text": "Yes, dividends can never change",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M20-IQ4-O3",
+                "text": "No, the company may change or stop the dividend",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M20-IQ4-O4",
+                "text": "No, because companies can pay only once",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M20-IQ4-O3",
+            "explanation": "Future dividends depend on company decisions, available cash, plans, obligations, and business conditions."
+          }
+        ],
+        "correctCompletionState": {
+          "reinvestProfit": "possible_business_growth",
+          "keepAsSavings": "cash_reserve",
+          "repayDebt": "lower_amount_owed",
+          "distributeDividends": "eligible_shareholder_payment",
+          "fiveShareDividend": 5,
+          "twentyShareDividend": 20,
+          "zeroShareDividend": 0,
+          "futureDividendUnderstanding": "not_guaranteed"
+        },
+        "alternativeContributingFactors": [
+          "Future growth opportunities",
+          "Available cash",
+          "Unexpected expenses",
+          "Existing debt",
+          "Business conditions",
+          "Planned projects",
+          "Previous dividend decisions",
+          "The needs of the company"
+        ],
+        "simplificationExplanation": [
+          "This activity shows four common choices separately.",
+          "A real company may divide its available money across several uses.",
+          "A company might reinvest some money, repay some debt, keep a reserve, and distribute only part as a dividend.",
+          "A company can earn an accounting profit without having the same amount available as cash."
+        ],
+        "validationMethod": "Check all four cause-and-effect connections, three dividend calculations, and the final dividend decision question.",
+        "retryBehavior": "Keep correct connections and answers marked. Return only incorrect items with one short hint.",
+        "accessibilityAlternative": {
+          "method": "Present each company decision with four radio-button outcomes. Show dividend calculations as text questions with selectable answers.",
+          "screenReaderInstruction": "Match each company decision with its result. Then calculate the dividend using the number of shares and payment per share."
+        }
+      },
+      "feedback": {
+        "success": "Excellent connection! You showed that dividends are one possible use of company money—not an automatic result of earning profit.",
+        "incorrect": "Ask where the money goes: into the business, into savings, to lenders, or to eligible shareholders.",
+        "incomplete": "Complete all four connections and the four dividend questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check the Decisions",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M20-S07",
+      "type": "reveal",
+      "title": "One Choice Among Several",
+      "content": "You connected company profit with four possible uses. A dividend is a payment a company may choose to make to eligible shareholders, often stated as an amount per share. A profitable company does not have to pay one. It may reinvest, build savings, or repay debt instead. A company can also split its money between several choices. Dividends may increase, decrease, remain unchanged, or stop, so shareholders should never treat them as guaranteed income.",
+      "simpleSummary": "A dividend is optional and depends on the company’s decision.",
+      "illustration": "A company-profit card divides across growth, savings, debt, and dividend paths, with no path marked as compulsory.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M20-S08",
+      "type": "real_life_example",
+      "title": "The Clothing Brand’s Decision",
+      "content": "A fictional clothing brand earns money from a successful launch. Instead of paying a dividend, it keeps part as savings and uses the rest to improve its website. The lack of a dividend does not automatically mean the company performed badly.",
+      "illustration": "Profit from clothing sales divides between a savings reserve and a website-upgrade card.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M20-S09",
+      "type": "quiz",
+      "title": "Dividend Decision Check",
+      "questions": [
+        {
+          "id": "J3-M20-Q1",
+          "category": "recognition",
+          "text": "A company declares a dividend of £0.50 per share. Liam owns eight eligible shares. How much does he receive?",
+          "options": [
+            {
+              "id": "J3-M20-Q1-O1",
+              "text": "£0.50",
+              "isCorrect": false,
+              "feedback": "£0.50 is the payment for one share. Liam owns eight shares."
+            },
+            {
+              "id": "J3-M20-Q1-O2",
+              "text": "£2",
+              "isCorrect": false,
+              "feedback": "Four shares would receive £2. Eight shares receive twice that amount."
+            },
+            {
+              "id": "J3-M20-Q1-O3",
+              "text": "£4",
+              "isCorrect": true,
+              "feedback": "Correct. Eight shares multiplied by £0.50 equals £4."
+            },
+            {
+              "id": "J3-M20-Q1-O4",
+              "text": "£8",
+              "isCorrect": false,
+              "feedback": "£8 would mean a dividend of £1 per share rather than £0.50."
+            }
+          ],
+          "correctAnswerId": "J3-M20-Q1-O3",
+          "correctExplanation": "Eight shares multiplied by £0.50 per share equals £4.",
+          "misconceptionTested": "A dividend payment is unrelated to the number of eligible shares owned."
+        },
+        {
+          "id": "J3-M20-Q2",
+          "category": "misconception",
+          "text": "A profitable company pays no dividend and uses the money to develop a new product. What does this show?",
+          "options": [
+            {
+              "id": "J3-M20-Q2-O1",
+              "text": "Profitable companies may choose to reinvest instead",
+              "isCorrect": true,
+              "feedback": "Correct. A dividend is optional, and reinvestment may support the company’s plans."
+            },
+            {
+              "id": "J3-M20-Q2-O2",
+              "text": "The company must be failing",
+              "isCorrect": false,
+              "feedback": "A profitable company may intentionally keep or reinvest money to support future plans."
+            },
+            {
+              "id": "J3-M20-Q2-O3",
+              "text": "Every shareholder has lost their shares",
+              "isCorrect": false,
+              "feedback": "Not receiving a dividend does not remove the shareholder’s ownership."
+            },
+            {
+              "id": "J3-M20-Q2-O4",
+              "text": "Paying no dividend is illegal",
+              "isCorrect": false,
+              "feedback": "Companies are not automatically required to distribute dividends whenever they earn a profit."
+            }
+          ],
+          "correctAnswerId": "J3-M20-Q2-O1",
+          "correctExplanation": "A dividend is optional. A company may decide that investing in its operations is a better use of the money.",
+          "misconceptionTested": "Every profitable company must pay dividends to its shareholders."
+        },
+        {
+          "id": "J3-M20-Q3",
+          "category": "application",
+          "text": "A company paid £1 per share last year. What should shareholders expect this year?",
+          "options": [
+            {
+              "id": "J3-M20-Q3-O1",
+              "text": "The dividend could rise, fall, stay the same, or stop",
+              "isCorrect": true,
+              "feedback": "Correct. A previous dividend does not guarantee the next payment."
+            },
+            {
+              "id": "J3-M20-Q3-O2",
+              "text": "It must remain £1",
+              "isCorrect": false,
+              "feedback": "A previous dividend does not guarantee the same future payment."
+            },
+            {
+              "id": "J3-M20-Q3-O3",
+              "text": "It must increase",
+              "isCorrect": false,
+              "feedback": "Dividend payments can increase, but they can also decrease or stop."
+            },
+            {
+              "id": "J3-M20-Q3-O4",
+              "text": "Profit guarantees a payment",
+              "isCorrect": false,
+              "feedback": "The company may choose to use its profit in other ways."
+            }
+          ],
+          "correctAnswerId": "J3-M20-Q3-O1",
+          "correctExplanation": "Dividend decisions can change with the company’s available cash, plans, obligations, and business conditions.",
+          "misconceptionTested": "Dividend payments are guaranteed and always remain the same."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M20-S10",
+      "type": "completion",
+      "headline": "Profit Decision Mapper!",
+      "message": "You learned how dividends fit alongside reinvestment, savings, and debt repayment.",
+      "xpReward": 50,
+      "progressMessage": "Mission 20 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, explore why possible investment rewards usually come with uncertainty and risk.",
+      "animation": "Four profit paths connect to their outcomes, followed by £1 dividend tokens moving to eligible shareholder cards.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M20-S11",
+      "type": "real_life_challenge",
+      "title": "Divide an Imaginary Profit",
+      "instruction": "Imagine a company has £100 available. Divide it among growth, savings, debt repayment, and dividends. Explain that other choices could also be reasonable.",
+      "buttonLabel": "My Profit Plan Is Ready",
+      "primaryAction": {
+        "label": "My Profit Plan Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on dividends as one possible use of company profits or available cash."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes profit from available cash, explains per-share payments, and presents dividends as optional and changeable."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses fictional companies, straightforward calculations, business choices, and introductory shareholder concepts suitable for teens."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend buying any real dividend-paying company or investment."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that dividend payments may increase, decrease, remain unchanged, or stop."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not predict the future price of any stock or company."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Companies and shareholders are discussed neutrally whether dividends are paid or not."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission clarifies that profit and cash differ, companies may combine several uses, and dividends depend on company decisions and eligibility."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, technology and clothing companies, shares, debt, savings, and familiar business decisions for UK teens."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner connects four company decisions with their effects and calculates shareholder payments."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses mandatory dividends, companies that reinvest profits, per-share calculations, and changing future payments."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, four cause-and-effect connections, four interaction questions, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and appropriate for teens aged 13–17."
+    }
+  ]
+}
