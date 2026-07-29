@@ -1,0 +1,529 @@
+{
+  "id": "J2-M13",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "Assets and Liabilities",
+  "concept": "Some things can generate income or increase in value, while others mainly require ongoing spending. Their financial role may depend on how they are used.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand the difference between things that may generate value and things that mainly cost money.",
+  "primaryMisconception": "Every expensive item is automatically an asset.",
+  "secondaryMisconceptions": [
+    "An item is always an asset or always a liability, regardless of how it is used.",
+    "Anything that earns money has no costs or financial risks."
+  ],
+  "keyTakeaway": "The same item can play a different financial role depending on how it is used.",
+  "screens": [
+    {
+      "id": "J2-M13-S01",
+      "type": "hook",
+      "title": "One Bike, Two Money Stories",
+      "content": "Two identical bikes cost the same. One earns money; the other needs repairs. Can the same item play two different money roles?",
+      "illustration": "Two identical bikes split into separate paths. One carries paid deliveries, while the other sits beside a repair bill.",
+      "primaryAction": {
+        "label": "Compare the Bikes",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M13-S02",
+      "type": "story",
+      "title": "Same Bike, Different Use",
+      "content": "Ava and Leo each receive the same bike. Ava uses hers for paid deliveries. Leo rides his only for weekend fun.",
+      "illustration": "Ava carries a delivery bag while Leo cycles through a park.",
+      "primaryAction": {
+        "label": "Follow the Money",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M13-S03",
+      "type": "story",
+      "title": "Income and Costs",
+      "content": "Ava earns delivery money but still pays for tyres and repairs. Leo earns nothing from the bike and also pays maintenance costs.",
+      "illustration": "Coins enter Ava’s wallet while repair coins leave both Ava’s and Leo’s wallets.",
+      "primaryAction": {
+        "label": "Look at Other Items",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M13-S04",
+      "type": "story",
+      "title": "Price Is Not the Answer",
+      "content": "Now a computer, spare room, tools, and unused device appear. Their price alone will not reveal their financial role.",
+      "illustration": "Several item cards hide behind question marks labelled Income, Value, Use, and Costs.",
+      "primaryAction": {
+        "label": "Sort the Items",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M13-S05",
+      "type": "pre_interaction",
+      "title": "What Changes an Item’s Role?",
+      "question": "What should you check before deciding whether an item helps create value or mainly costs money?",
+      "options": [
+        {
+          "id": "J2-M13-PQ-O1",
+          "text": "How it is used, what it earns, and what it costs",
+          "isRecommended": true,
+          "response": "Good thinking. An item’s price is only one clue. Its use, income, value, and running costs also matter."
+        },
+        {
+          "id": "J2-M13-PQ-O2",
+          "text": "Only how expensive it was",
+          "isRecommended": false,
+          "response": "An expensive item may lose value or create ongoing costs without producing income."
+        },
+        {
+          "id": "J2-M13-PQ-O3",
+          "text": "Whether it looks impressive",
+          "isRecommended": false,
+          "response": "Appearance does not show whether the item earns money, keeps value, or costs more over time."
+        },
+        {
+          "id": "J2-M13-PQ-O4",
+          "text": "Whether it is new",
+          "isRecommended": false,
+          "response": "New items can still lose value quickly or create monthly costs."
+        }
+      ],
+      "recommendedAnswerId": "J2-M13-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Thinking",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J2-M13-S06",
+      "type": "interaction",
+      "interactionType": "sort_categories",
+      "title": "What Role Does It Play?",
+      "instruction": "Sort each example into Can Generate Value, Mainly Costs Money, or Depends on Use. Consider income, value, purpose, and ongoing costs.",
+      "config": {
+        "educationalAssumptions": [
+          "These examples show simplified financial roles.",
+          "A trusted adult manages paid work, renting, contracts, and payments.",
+          "Earning income does not guarantee that an item will be profitable.",
+          "Maintenance, repairs, subscriptions, and other costs must also be considered.",
+          "An item may move to another category if its use or costs change.",
+          "Future prices and income are not guaranteed."
+        ],
+        "categories": [
+          {
+            "id": "category_can_generate_value",
+            "label": "Can Generate Value",
+            "description": "Items that may earn income, support paid work, or provide lasting financial value under the stated conditions."
+          },
+          {
+            "id": "category_mainly_costs_money",
+            "label": "Mainly Costs Money",
+            "description": "Items that do not currently earn income and mainly create purchase, subscription, repair, or maintenance costs."
+          },
+          {
+            "id": "category_depends_on_use",
+            "label": "Depends on Use",
+            "description": "Items whose financial role changes depending on how they are used, what they earn, and what they cost."
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "item_delivery_bike",
+            "title": "Delivery Bike",
+            "example": "A bike is used for paid deliveries with an adult’s supervision.",
+            "details": [
+              "Earns about £25 each week",
+              "Average repairs and maintenance cost about £5 each week",
+              "The bike is needed to complete the deliveries"
+            ],
+            "correctCategoryId": "category_can_generate_value",
+            "explanation": "The bike supports paid work and earns more than its stated weekly costs in this example."
+          },
+          {
+            "id": "item_rented_camera",
+            "title": "Rented Camera Equipment",
+            "example": "Camera equipment is rented to a local school club through an adult-managed agreement.",
+            "details": [
+              "Produces rental income",
+              "Requires cleaning and occasional repairs",
+              "It may remain valuable if cared for properly"
+            ],
+            "correctCategoryId": "category_can_generate_value",
+            "explanation": "The equipment may generate income and keep some value, although its costs and risks still need checking."
+          },
+          {
+            "id": "item_repair_tool",
+            "title": "Repair Tool",
+            "example": "A tool is used to provide a paid bicycle-repair service.",
+            "details": [
+              "Helps complete paid repair jobs",
+              "May last for several years",
+              "Requires replacement if damaged or worn out"
+            ],
+            "correctCategoryId": "category_can_generate_value",
+            "explanation": "The tool supports a service that earns money and may continue providing value over time."
+          },
+          {
+            "id": "item_recreational_bike",
+            "title": "Recreational Bike",
+            "example": "A bike is used only for occasional weekend rides.",
+            "details": [
+              "Produces no income",
+              "Requires tyres, repairs, and storage",
+              "Provides enjoyment and exercise"
+            ],
+            "correctCategoryId": "category_mainly_costs_money",
+            "explanation": "The bike may be enjoyable and useful, but its financial role in this example is mainly creating costs."
+          },
+          {
+            "id": "item_unused_tablet",
+            "title": "Unused Tablet",
+            "example": "A tablet remains unused while an £8 monthly subscription continues.",
+            "details": [
+              "Produces no income",
+              "Loses value as it becomes older",
+              "Creates an ongoing subscription cost"
+            ],
+            "correctCategoryId": "category_mainly_costs_money",
+            "explanation": "The device is not being used to create value and continues to reduce available money each month."
+          },
+          {
+            "id": "item_status_trainers",
+            "title": "Status Trainers",
+            "example": "Expensive trainers are purchased only to look fashionable.",
+            "details": [
+              "Produce no income",
+              "May wear out or lose resale value",
+              "Require money to replace"
+            ],
+            "correctCategoryId": "category_mainly_costs_money",
+            "explanation": "Their high price does not automatically make them an asset. In this example, they mainly create spending."
+          },
+          {
+            "id": "item_family_car",
+            "title": "Family Car",
+            "example": "A car may be used for family travel or for adult-managed paid work.",
+            "details": [
+              "Personal use creates fuel, insurance, and repair costs",
+              "Paid use may produce income",
+              "Income may or may not be greater than the running costs"
+            ],
+            "correctCategoryId": "category_depends_on_use",
+            "explanation": "The same car may mainly cost money or help generate value depending on its use and total expenses."
+          },
+          {
+            "id": "item_computer",
+            "title": "Computer",
+            "example": "A computer may be used for games, schoolwork, or adult-supervised paid design work.",
+            "details": [
+              "Entertainment use produces no income",
+              "Study use provides educational value",
+              "Paid work may produce income",
+              "Software, electricity, and repairs create costs"
+            ],
+            "correctCategoryId": "category_depends_on_use",
+            "explanation": "Its role depends on what it is used for and whether the value or income created is greater than its costs."
+          },
+          {
+            "id": "item_spare_room",
+            "title": "Spare Room",
+            "example": "A spare room may remain empty, be used by the family, or be rented through an adult-managed arrangement.",
+            "details": [
+              "An empty room may still have maintenance costs",
+              "Family use provides practical value",
+              "Renting may create income and additional responsibilities"
+            ],
+            "correctCategoryId": "category_depends_on_use",
+            "explanation": "The room’s financial role changes with its purpose, income, costs, and responsibilities."
+          }
+        ],
+        "correctCompletionState": {
+          "category_can_generate_value": [
+            "item_delivery_bike",
+            "item_rented_camera",
+            "item_repair_tool"
+          ],
+          "category_mainly_costs_money": [
+            "item_recreational_bike",
+            "item_unused_tablet",
+            "item_status_trainers"
+          ],
+          "category_depends_on_use": [
+            "item_family_car",
+            "item_computer",
+            "item_spare_room"
+          ]
+        },
+        "contextDependentItems": [
+          "A bike",
+          "A car",
+          "A computer",
+          "A spare room",
+          "Equipment or tools"
+        ],
+        "ambiguityExplanation": [
+          "The same item can play different roles.",
+          "A bike used only for recreation mainly creates costs.",
+          "The same type of bike used for paid deliveries may help generate value.",
+          "A computer used only for gaming creates costs, while one used for paid work may generate income.",
+          "Income alone does not decide the result. Running costs, repairs, time, risks, and changing value also matter."
+        ],
+        "placementRules": [
+          "Every item must be placed in one category.",
+          "Use the details provided for each example.",
+          "Consider both money coming in and money going out.",
+          "Each item has one recommended category in this activity.",
+          "The category applies to the stated use, not to every similar item."
+        ],
+        "validationMethod": "Check all nine items after submission. Keep correctly sorted items in place and return incorrect items with a short explanation.",
+        "retryBehavior": "Keep correctly sorted items in place. Return only incorrect items to the centre, provide one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present each item as a text card with three buttons: Can Generate Value, Mainly Costs Money, and Depends on Use.",
+          "screenReaderInstruction": "Listen to the item’s use, possible income, and ongoing costs. Then choose the most suitable financial role."
+        }
+      },
+      "feedback": {
+        "success": "Excellent sorting. You looked beyond price and checked how each item was used, what it earned, and what it cost.",
+        "incorrect": "Check the item’s use again. Does it create income or value, mainly create costs, or change roles depending on the situation?",
+        "incomplete": "Sort all nine items before checking your answer."
+      },
+      "primaryAction": {
+        "label": "Check My Sort",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J2-M13-S07",
+      "type": "reveal",
+      "title": "What You Own—and What You Owe",
+      "content": "You sorted items by how they were used. An asset is something you own that has value and may generate income or rise in value. A liability is money you owe, such as a loan. An item that mainly creates costs is not technically always a liability, but any debt used to buy it may be. Price alone does not decide an item’s role. Income, changing value, maintenance, and purpose all matter.",
+      "simpleSummary": "Check what an item earns, costs, is worth, and how it is used.",
+      "illustration": "A balance board separates things owned, money earned, running costs, and money owed. The same bike appears in two different roles.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M13-S08",
+      "type": "real_life_example",
+      "title": "The Family Printer",
+      "content": "A family printer is used only for occasional homework and requires ink, so it mainly creates costs. Later, an adult uses it for a small paid invitation-printing service. It can then generate value—but ink, paper, electricity, and repairs still reduce the money earned.",
+      "illustration": "The printer changes from a homework-only card to a paid-printing card, while supply costs remain visible.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M13-S09",
+      "type": "quiz",
+      "title": "Financial Role Check",
+      "questions": [
+        {
+          "id": "J2-M13-Q1",
+          "category": "recognition",
+          "text": "Which item is most likely to generate value in the situation described?",
+          "options": [
+            {
+              "id": "J2-M13-Q1-O1",
+              "text": "A laptop used for paid design work",
+              "isCorrect": true,
+              "feedback": "Correct. The laptop supports a service that earns income, although its costs must still be considered."
+            },
+            {
+              "id": "J2-M13-Q1-O2",
+              "text": "An unused phone with a monthly subscription",
+              "isCorrect": false,
+              "feedback": "The phone is not creating income and continues to produce a monthly cost."
+            },
+            {
+              "id": "J2-M13-Q1-O3",
+              "text": "Trainers bought only for status",
+              "isCorrect": false,
+              "feedback": "Their price or appearance does not automatically make them an income-producing asset."
+            },
+            {
+              "id": "J2-M13-Q1-O4",
+              "text": "A broken device kept in storage",
+              "isCorrect": false,
+              "feedback": "The device is not currently producing income or useful financial value."
+            }
+          ],
+          "correctAnswerId": "J2-M13-Q1-O1",
+          "correctExplanation": "The laptop supports a service that earns income, although software, repairs, and other costs must still be considered.",
+          "misconceptionTested": "Anything expensive automatically creates financial value."
+        },
+        {
+          "id": "J2-M13-Q2",
+          "category": "misconception",
+          "text": "A watch costs £2,000. Does its high price automatically make it an asset that improves someone’s finances?",
+          "options": [
+            {
+              "id": "J2-M13-Q2-O1",
+              "text": "No, its use, value, income, and costs still matter",
+              "isCorrect": true,
+              "feedback": "Correct. Price alone does not show whether the watch improves someone’s finances."
+            },
+            {
+              "id": "J2-M13-Q2-O2",
+              "text": "Yes, because every expensive item is an asset",
+              "isCorrect": false,
+              "feedback": "An expensive purchase can still lose value or mainly create ongoing spending."
+            },
+            {
+              "id": "J2-M13-Q2-O3",
+              "text": "Yes, because high prices always rise",
+              "isCorrect": false,
+              "feedback": "An item’s future price may rise, fall, or stay similar. An increase is not guaranteed."
+            },
+            {
+              "id": "J2-M13-Q2-O4",
+              "text": "Yes, even if it quickly loses value",
+              "isCorrect": false,
+              "feedback": "Losing value can weaken the item’s financial role even when its original price was high."
+            }
+          ],
+          "correctAnswerId": "J2-M13-Q2-O1",
+          "correctExplanation": "An expensive item may lose value, create costs, or produce no income. Price alone does not show whether it improves someone’s finances.",
+          "misconceptionTested": "Every expensive item is automatically an asset."
+        },
+        {
+          "id": "J2-M13-Q3",
+          "category": "application",
+          "text": "A family car earns £200 from paid work but costs £170 for fuel, repairs, and other work-related expenses. What should the family consider?",
+          "options": [
+            {
+              "id": "J2-M13-Q3-O1",
+              "text": "The £30 remaining and whether other costs or risks exist",
+              "isCorrect": true,
+              "feedback": "Correct. Income should be compared with every related cost and risk."
+            },
+            {
+              "id": "J2-M13-Q3-O2",
+              "text": "Only the £200 income",
+              "isCorrect": false,
+              "feedback": "Income alone does not show the result. The £170 of costs must also be included."
+            },
+            {
+              "id": "J2-M13-Q3-O3",
+              "text": "Only the car’s purchase price",
+              "isCorrect": false,
+              "feedback": "The purchase price matters, but ongoing income, fuel, repairs, and other costs also affect the car’s role."
+            },
+            {
+              "id": "J2-M13-Q3-O4",
+              "text": "Assume all £200 is profit",
+              "isCorrect": false,
+              "feedback": "Profit is what remains after related costs. The full £200 is not profit when £170 was spent."
+            }
+          ],
+          "correctAnswerId": "J2-M13-Q3-O1",
+          "correctExplanation": "The income must be compared with all related costs. In this simplified example, £30 remains before considering any additional expenses or risks.",
+          "misconceptionTested": "Anything that earns money has no costs or financial risks."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J2-M13-S10",
+      "type": "completion",
+      "headline": "Value Role Detective!",
+      "message": "You learned why price alone does not decide whether something generates value or mainly creates costs.",
+      "xpReward": 50,
+      "progressMessage": "Mission 13 complete in Make Money Grow.",
+      "nextMissionTeaser": "Next, explore why possible financial rewards often come with uncertainty and risk.",
+      "animation": "The same bike moves between three role cards as income, repair costs, and usage icons change.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J2-M13-S11",
+      "type": "real_life_challenge",
+      "title": "Give One Item Two Roles",
+      "instruction": "Choose one household item. Write one way it could mainly create costs and one safe, adult-managed way it could generate value. No transaction is required.",
+      "buttonLabel": "I Found Two Roles",
+      "primaryAction": {
+        "label": "I Found Two Roles",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on how an item’s financial role depends on its use, value, income, and costs."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes assets from liabilities and clarifies that a cost-producing item is not technically always a liability."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses bikes, computers, trainers, tools, rooms, and family examples with simple income-and-cost comparisons."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission teaches a general concept without recommending the purchase, sale, or rental of any real item."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that income, rental demand, future value, and paid work are not guaranteed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or financial markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Recreational and status purchases are described by their financial role without presenting enjoyment or personal choices as morally wrong."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that assets are things owned with value, liabilities are amounts owed, and an item’s financial role can change with its use."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds and familiar UK examples such as bikes, cars, computers, subscriptions, tools, and spare rooms."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner sorts identical or similar items according to their income, costs, value, and use."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses expensive purchases, income-producing items, running costs, and financial risks."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, nine concise sorting cards, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
