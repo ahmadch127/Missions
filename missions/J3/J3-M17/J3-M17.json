@@ -1,0 +1,619 @@
+{
+  "id": "J3-M17",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "Mutual Funds",
+  "concept": "A mutual fund combines money from many investors into one professionally managed pool that can hold shares, bonds, or other investments.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand how a mutual fund pools money from multiple investors to purchase a collection of investments.",
+  "primaryMisconception": "A mutual fund is one company.",
+  "secondaryMisconceptions": [
+    "Every investor directly owns each investment held by the fund.",
+    "A professionally managed mutual fund cannot lose value."
+  ],
+  "keyTakeaway": "A mutual fund pools money from many investors.",
+  "screens": [
+    {
+      "id": "J3-M17-S01",
+      "type": "hook",
+      "title": "Small Contributions, Bigger Pool",
+      "content": "You have £10 to invest. Could joining 99 other learners help your group buy more than one type of investment?",
+      "illustration": "One £10 contribution card faces four investment cards that appear too large to buy alone. Ninety-nine learner icons wait nearby.",
+      "primaryAction": {
+        "label": "Build the Pool",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M17-S02",
+      "type": "story",
+      "title": "One Hundred Learners",
+      "content": "One hundred learners have different amounts available. Alone, each person may have too little to buy a wide range of investments.",
+      "illustration": "Learners hold contribution cards of different sizes while several larger investment cards remain out of reach.",
+      "primaryAction": {
+        "label": "Combine the Money",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M17-S03",
+      "type": "story",
+      "title": "One Shared Fund",
+      "content": "The learners combine their contributions into one pool. Together, the fund contains £1,000.",
+      "illustration": "Many contribution arrows flow into one shared container labelled Fund Pool: £1,000.",
+      "primaryAction": {
+        "label": "Meet the Manager",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M17-S04",
+      "type": "story",
+      "title": "A Collection, Not One Company",
+      "content": "A professional fund manager follows the fund’s strategy and uses the pool to buy several investments. The result can still rise or fall.",
+      "illustration": "The fund pool connects to technology shares, food-company shares, government bonds, and transport-company shares.",
+      "primaryAction": {
+        "label": "Build the Portfolio",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M17-S05",
+      "type": "pre_interaction",
+      "title": "What Does the Fund Buy?",
+      "question": "Which description best matches the shared investment pool?",
+      "options": [
+        {
+          "id": "J3-M17-PQ-O1",
+          "text": "It can hold a collection of investments",
+          "isRecommended": true,
+          "response": "Good thinking. A mutual fund can combine different shares, bonds, or other investments in one portfolio."
+        },
+        {
+          "id": "J3-M17-PQ-O2",
+          "text": "It becomes one new technology company",
+          "isRecommended": false,
+          "response": "The fund is not the same as one company. It can hold investments in several companies and other assets."
+        },
+        {
+          "id": "J3-M17-PQ-O3",
+          "text": "Every learner directly owns every company share",
+          "isRecommended": false,
+          "response": "Investors generally own units or shares of the fund rather than directly owning each investment inside it."
+        },
+        {
+          "id": "J3-M17-PQ-O4",
+          "text": "Professional management prevents every loss",
+          "isRecommended": false,
+          "response": "Professional management may help organise decisions, but the fund’s value can still fall."
+        }
+      ],
+      "recommendedAnswerId": "J3-M17-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M17-S06",
+      "type": "interaction",
+      "interactionType": "drag_and_drop",
+      "title": "Pool It, Then Invest It",
+      "instruction": "First combine the learners’ contributions. Then place the four investments inside the mutual fund portfolio.",
+      "config": {
+        "educationalAssumptions": [
+          "This is a fictional classroom activity.",
+          "One hundred learners contribute a combined £1,000.",
+          "Contributions vary between learners.",
+          "The activity creates one fund unit for every £1 contributed.",
+          "The fund therefore has 1,000 units in total.",
+          "A professional fund manager follows a stated classroom strategy.",
+          "Investment values may rise or fall.",
+          "Professional management and holding several investments do not guarantee profit.",
+          "No fees, taxes, trading costs, or currency changes are included.",
+          "The activity does not recommend a real mutual fund or investment."
+        ],
+        "stages": [
+          {
+            "id": "stage_pool_contributions",
+            "title": "Combine the Contributions",
+            "draggableItems": [
+              {
+                "id": "contribution_learner_a",
+                "label": "Learner A",
+                "contributionAmount": 10,
+                "fundUnitsReceived": 10,
+                "fundUnitSharePercent": 1
+              },
+              {
+                "id": "contribution_learner_b",
+                "label": "Learner B",
+                "contributionAmount": 20,
+                "fundUnitsReceived": 20,
+                "fundUnitSharePercent": 2
+              },
+              {
+                "id": "contribution_learner_c",
+                "label": "Learner C",
+                "contributionAmount": 15,
+                "fundUnitsReceived": 15,
+                "fundUnitSharePercent": 1.5
+              },
+              {
+                "id": "contribution_other_learners",
+                "label": "Other 97 Learners",
+                "contributionAmount": 955,
+                "fundUnitsReceived": 955,
+                "fundUnitSharePercent": 95.5
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "zone_shared_fund_pool",
+                "label": "Shared Mutual Fund Pool",
+                "startingAmount": 0,
+                "requiredFinalAmount": 1000,
+                "acceptedItemIds": [
+                  "contribution_learner_a",
+                  "contribution_learner_b",
+                  "contribution_learner_c",
+                  "contribution_other_learners"
+                ]
+              }
+            ],
+            "runningTotalFeedback": [
+              {
+                "afterItemId": "contribution_learner_a",
+                "fundTotal": 10
+              },
+              {
+                "afterItemId": "contribution_learner_b",
+                "fundTotal": 30
+              },
+              {
+                "afterItemId": "contribution_learner_c",
+                "fundTotal": 45
+              },
+              {
+                "afterItemId": "contribution_other_learners",
+                "fundTotal": 1000
+              }
+            ],
+            "completionState": {
+              "totalInvestors": 100,
+              "totalPooledMoney": 1000,
+              "totalFundUnits": 1000,
+              "unpooledMoney": 0
+            }
+          },
+          {
+            "id": "stage_build_portfolio",
+            "title": "Build the Fund Portfolio",
+            "draggableItems": [
+              {
+                "id": "investment_technology_shares",
+                "label": "Technology Company Shares",
+                "allocationAmount": 300,
+                "investmentType": "company_shares",
+                "possibleResult": "Value may rise or fall"
+              },
+              {
+                "id": "investment_food_shares",
+                "label": "Food Company Shares",
+                "allocationAmount": 250,
+                "investmentType": "company_shares",
+                "possibleResult": "Value may rise or fall"
+              },
+              {
+                "id": "investment_government_bonds",
+                "label": "Government Bonds",
+                "allocationAmount": 250,
+                "investmentType": "bonds",
+                "possibleResult": "May provide payments, but value and repayment risks still exist"
+              },
+              {
+                "id": "investment_transport_shares",
+                "label": "Transport Company Shares",
+                "allocationAmount": 200,
+                "investmentType": "company_shares",
+                "possibleResult": "Value may rise or fall"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "zone_mutual_fund_portfolio",
+                "label": "Mutual Fund Portfolio",
+                "startingValue": 0,
+                "requiredFinalAllocation": 1000,
+                "acceptedItemIds": [
+                  "investment_technology_shares",
+                  "investment_food_shares",
+                  "investment_government_bonds",
+                  "investment_transport_shares"
+                ]
+              }
+            ],
+            "completionState": {
+              "technologyCompanyShares": 300,
+              "foodCompanyShares": 250,
+              "governmentBonds": 250,
+              "transportCompanyShares": 200,
+              "totalInvested": 1000,
+              "remainingCash": 0,
+              "numberOfHoldings": 4
+            }
+          }
+        ],
+        "investorOwnership": [
+          {
+            "investor": "Learner A",
+            "fundUnitsOwned": 10,
+            "fundUnitSharePercent": 1
+          },
+          {
+            "investor": "Learner B",
+            "fundUnitsOwned": 20,
+            "fundUnitSharePercent": 2
+          },
+          {
+            "investor": "Learner C",
+            "fundUnitsOwned": 15,
+            "fundUnitSharePercent": 1.5
+          },
+          {
+            "investor": "Other 97 Learners",
+            "fundUnitsOwned": 955,
+            "fundUnitSharePercent": 95.5
+          }
+        ],
+        "ownershipExplanation": "The learners own units of the mutual fund. They do not directly receive separate technology shares, food-company shares, bonds, or transport-company shares. The fund holds the underlying investments on behalf of its investors.",
+        "fundManagerRole": [
+          "Follows the fund’s stated strategy",
+          "Chooses and monitors investments",
+          "Decides how the pooled money is allocated",
+          "May buy or sell investments when appropriate",
+          "Cannot guarantee that the fund will make money"
+        ],
+        "followUpQuestions": [
+          {
+            "id": "J3-M17-IQ1",
+            "text": "What does Learner A directly own after contributing £10?",
+            "options": [
+              {
+                "id": "J3-M17-IQ1-O1",
+                "text": "Ten units of the mutual fund",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M17-IQ1-O2",
+                "text": "Every technology-company share",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M17-IQ1-O3",
+                "text": "The entire mutual fund",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M17-IQ1-O4",
+                "text": "A guaranteed £10 profit",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M17-IQ1-O1",
+            "explanation": "Learner A owns part of the pooled fund. The fund itself holds the collection of underlying investments."
+          },
+          {
+            "id": "J3-M17-IQ2",
+            "text": "Why might holding four investments be different from putting the full £1,000 into one company?",
+            "options": [
+              {
+                "id": "J3-M17-IQ2-O1",
+                "text": "Poor results from one holding may have less effect on the whole fund",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M17-IQ2-O2",
+                "text": "Four investments guarantee a profit",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M17-IQ2-O3",
+                "text": "Every investment must rise together",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M17-IQ2-O4",
+                "text": "The fund can no longer lose value",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M17-IQ2-O1",
+            "explanation": "Spreading money across different investments can spread risk, but several or all holdings may still lose value."
+          }
+        ],
+        "placementRules": [
+          "Every contribution card must be placed in the shared fund pool.",
+          "Every investment card must be placed in the mutual fund portfolio.",
+          "Contributions and investments may be placed in any order.",
+          "The final contribution total must equal £1,000.",
+          "The final portfolio allocation must equal £1,000.",
+          "The learner must answer both follow-up questions correctly.",
+          "There is one valid final allocation, but multiple valid placement orders."
+        ],
+        "multipleValidArrangements": false,
+        "multipleValidPlacementOrders": true,
+        "correctCompletionState": {
+          "pooledContributions": {
+            "learnerA": 10,
+            "learnerB": 20,
+            "learnerC": 15,
+            "other97Learners": 955,
+            "total": 1000
+          },
+          "fundPortfolio": {
+            "technologyShares": 300,
+            "foodCompanyShares": 250,
+            "governmentBonds": 250,
+            "transportShares": 200,
+            "total": 1000
+          },
+          "requiredUnderstanding": [
+            "investors_own_fund_units",
+            "fund_holds_underlying_investments",
+            "manager_follows_fund_strategy",
+            "multiple_holdings_may_spread_risk_but_cannot_prevent_losses"
+          ]
+        },
+        "validationMethod": "Check the pooled total, portfolio total, placement of every card, and both follow-up answers.",
+        "retryBehavior": "Keep correctly placed cards in position. Return only incorrect cards and show whether they belong in the contribution pool or investment portfolio.",
+        "accessibilityAlternative": {
+          "method": "Provide Add to Pool and Add to Portfolio buttons beside each card. Display running totals after every selection.",
+          "screenReaderInstruction": "Add each contribution to the shared pool. Then add each investment to the fund portfolio. Listen to the updated totals and answer both questions."
+        }
+      },
+      "feedback": {
+        "success": "Fund complete! One hundred investors combined £1,000 to own units in a fund holding four different investments.",
+        "incorrect": "Check whether the card represents money entering the fund or an investment being purchased by the fund.",
+        "incomplete": "Some contributions or investments are still outside the fund. Complete both stages before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Fund",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M17-S07",
+      "type": "reveal",
+      "title": "Many Investors, One Managed Pool",
+      "content": "You combined money from 100 learners and used the shared pool to buy four investments. This is how a mutual fund works: many investors contribute money to one professionally managed fund. Investors own units or shares of the fund, while the fund holds the underlying investments. Holding several investments can spread risk, but it cannot remove risk. Professional management also does not guarantee a profit, and the value of fund units can rise or fall.",
+      "simpleSummary": "Investors own fund units; the fund owns the investment collection.",
+      "illustration": "Many contribution arrows enter one mutual fund, which branches into four investments. Fund-unit certificates return to the investors.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M17-S08",
+      "type": "real_life_example",
+      "title": "The Shared Music Portfolio",
+      "content": "Fifty students contribute to a fictional fund. Its manager buys shares in a music app, a headphone company, and a concert business. Each student owns fund units, not separate pieces of all three companies. If the investments lose value, the students’ fund units may also lose value.",
+      "illustration": "Fifty contribution cards enter one fund, which connects to three music-related investments.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M17-S09",
+      "type": "quiz",
+      "title": "Mutual Fund Check",
+      "questions": [
+        {
+          "id": "J3-M17-Q1",
+          "category": "recognition",
+          "text": "Which situation best describes a mutual fund?",
+          "options": [
+            {
+              "id": "J3-M17-Q1-O1",
+              "text": "Many investors combine money into one managed investment pool",
+              "isCorrect": true,
+              "feedback": "Correct. The combined pool can hold a collection of investments."
+            },
+            {
+              "id": "J3-M17-Q1-O2",
+              "text": "One person buys one company",
+              "isCorrect": false,
+              "feedback": "That is a direct investment in one company, not a pooled mutual fund."
+            },
+            {
+              "id": "J3-M17-Q1-O3",
+              "text": "A company gives guaranteed returns",
+              "isCorrect": false,
+              "feedback": "Mutual funds can rise or fall in value and cannot guarantee returns."
+            },
+            {
+              "id": "J3-M17-Q1-O4",
+              "text": "Investors store cash in separate envelopes",
+              "isCorrect": false,
+              "feedback": "A mutual fund combines the money rather than keeping every contribution completely separate."
+            }
+          ],
+          "correctAnswerId": "J3-M17-Q1-O1",
+          "correctExplanation": "A mutual fund pools contributions from many investors and uses the combined money to hold a collection of investments.",
+          "misconceptionTested": "A mutual fund is simply one direct company investment."
+        },
+        {
+          "id": "J3-M17-Q2",
+          "category": "misconception",
+          "text": "Is a mutual fund one company?",
+          "options": [
+            {
+              "id": "J3-M17-Q2-O1",
+              "text": "No, it is a fund that may hold investments in several companies or assets",
+              "isCorrect": true,
+              "feedback": "Correct. A mutual fund may hold shares, bonds, or other investments."
+            },
+            {
+              "id": "J3-M17-Q2-O2",
+              "text": "Yes, every mutual fund is one company share",
+              "isCorrect": false,
+              "feedback": "One company share represents ownership in one company. A mutual fund can hold many different investments."
+            },
+            {
+              "id": "J3-M17-Q2-O3",
+              "text": "Yes, because one manager runs it",
+              "isCorrect": false,
+              "feedback": "Professional management does not turn the fund into one company."
+            },
+            {
+              "id": "J3-M17-Q2-O4",
+              "text": "Yes, if it owns technology shares",
+              "isCorrect": false,
+              "feedback": "Technology shares may be only one part of a larger fund portfolio."
+            }
+          ],
+          "correctAnswerId": "J3-M17-Q2-O1",
+          "correctExplanation": "A mutual fund is a pooled investment structure. Its portfolio may contain shares, bonds, or other investments.",
+          "misconceptionTested": "A mutual fund is one company."
+        },
+        {
+          "id": "J3-M17-Q3",
+          "category": "application",
+          "text": "A mutual fund holds four investments. Two rise in value and two fall. What can happen to the fund?",
+          "options": [
+            {
+              "id": "J3-M17-Q3-O1",
+              "text": "Its total value depends on the combined results of all four investments",
+              "isCorrect": true,
+              "feedback": "Correct. The fund’s value reflects the combined performance of its holdings."
+            },
+            {
+              "id": "J3-M17-Q3-O2",
+              "text": "It must make a profit",
+              "isCorrect": false,
+              "feedback": "Several investments may spread risk, but they cannot guarantee a positive result."
+            },
+            {
+              "id": "J3-M17-Q3-O3",
+              "text": "It cannot lose value because it is professionally managed",
+              "isCorrect": false,
+              "feedback": "Professional managers can make decisions, but they cannot control markets or prevent every loss."
+            },
+            {
+              "id": "J3-M17-Q3-O4",
+              "text": "Every investor directly owns each company share",
+              "isCorrect": false,
+              "feedback": "Investors generally own units or shares of the fund, while the fund holds the underlying investments."
+            }
+          ],
+          "correctAnswerId": "J3-M17-Q3-O1",
+          "correctExplanation": "The fund’s total value reflects the combined performance of its holdings after relevant costs. Gains in some holdings may offset losses in others, but not always.",
+          "misconceptionTested": "A professionally managed mutual fund cannot lose value."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M17-S10",
+      "type": "completion",
+      "headline": "Fund Builder Unlocked!",
+      "message": "You learned how many investors can combine money to own units in one managed investment fund.",
+      "xpReward": 50,
+      "progressMessage": "Mission 17 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, compare funds that follow a manager’s choices with funds designed to track a market index.",
+      "animation": "One hundred contribution icons flow into a £1,000 fund, which opens into four investment cards and returns unit badges to the investors.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M17-S11",
+      "type": "real_life_challenge",
+      "title": "Design an Imaginary Fund",
+      "instruction": "Draw one fund containing four fictional investments. Add three imaginary investors and show that they own fund units, not each investment directly.",
+      "buttonLabel": "My Fund Is Designed",
+      "primaryAction": {
+        "label": "My Fund Is Designed",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on pooling money into a professionally managed mutual fund."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes investor contributions, fund units, underlying holdings, management, diversification, and possible losses."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The activity uses small contributions, familiar company types, simple percentages, and introductory portfolio concepts suitable for teens."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend any real fund, company, bond, allocation, or financial action."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission repeatedly states that diversification and professional management cannot guarantee a profit."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The mission contains no predictions about real company, bond, or fund prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Different contribution amounts are presented neutrally, and every investor participates through fund units."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission clarifies indirect ownership, management responsibility, diversification limits, and omitted fees and taxes."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, learners, technology, food, transport, government bonds, music apps, and familiar introductory investment examples."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner physically combines contributions, builds the fund portfolio, and distinguishes fund-unit ownership from underlying holdings."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses mutual funds as one company, direct ownership of holdings, guaranteed returns, and professional management."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, eight card placements, two follow-up questions, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and appropriate for teens aged 13–17."
+    }
+  ]
+}
