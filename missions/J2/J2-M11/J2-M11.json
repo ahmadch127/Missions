@@ -1,0 +1,632 @@
+{
+  "id": "J2-M11",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "Compound Growth",
+  "concept": "Compound growth happens when money earns returns and future returns are calculated on both the original money and its previous growth.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand how earning returns on previous growth can make money grow faster over a long period.",
+  "primaryMisconception": "Compound growth creates huge results immediately.",
+  "secondaryMisconceptions": [
+    "Compound growth increases money by the same fixed amount every year.",
+    "Time does not make a significant difference to how much money can grow."
+  ],
+  "keyTakeaway": "Compound growth becomes powerful with time.",
+  "screens": [
+    {
+      "id": "J2-M11-S01",
+      "type": "hook",
+      "title": "Why Does the Growth Change?",
+      "content": "A £1,000 balance grows by only £50 in year one. Why does the yearly growth become larger later?",
+      "illustration": "A £1,000 balance card sits beside a small mango seed. A faint timeline stretches twenty years ahead.",
+      "primaryAction": {
+        "label": "Follow the Growth",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M11-S02",
+      "type": "story",
+      "title": "One Seed, One Balance",
+      "content": "Maya places £1,000 into a practice growth account. A mango-tree picture appears beside it, starting with one small seed.",
+      "illustration": "Maya places £1,000 into a practice account while a mango seed is planted beside a twenty-year timeline.",
+      "primaryAction": {
+        "label": "Move One Year Ahead",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M11-S03",
+      "type": "story",
+      "title": "The First New Growth",
+      "content": "After the first year, the balance grows by £50. The next year begins with £1,050 instead of the original £1,000.",
+      "illustration": "The balance changes from £1,000 to £1,050 as the seed becomes a small sprout.",
+      "primaryAction": {
+        "label": "Look at Year Two",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M11-S04",
+      "type": "story",
+      "title": "Growth Stays to Grow",
+      "content": "If each year’s growth stays in the account, later growth is calculated on a larger balance. Will the change stay small forever?",
+      "illustration": "The £50 remains inside the balance while the sprout grows extra branches.",
+      "primaryAction": {
+        "label": "Make a Prediction",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M11-S05",
+      "type": "pre_interaction",
+      "title": "What Happens Each Year?",
+      "question": "What do you predict about the amount added each year?",
+      "options": [
+        {
+          "id": "J2-M11-PQ-O1",
+          "text": "It slowly becomes larger",
+          "isRecommended": true,
+          "response": "Good prediction. Each return is calculated on a balance that includes earlier growth."
+        },
+        {
+          "id": "J2-M11-PQ-O2",
+          "text": "It always stays at £50",
+          "isRecommended": false,
+          "response": "That would be fixed growth. Here, the percentage is applied to the new balance each year."
+        },
+        {
+          "id": "J2-M11-PQ-O3",
+          "text": "It becomes huge immediately",
+          "isRecommended": false,
+          "response": "The early changes are usually small in this example. Time may make the difference more noticeable."
+        },
+        {
+          "id": "J2-M11-PQ-O4",
+          "text": "The balance returns to £1,000",
+          "isRecommended": false,
+          "response": "The previous growth stays in the balance unless money is removed."
+        }
+      ],
+      "recommendedAnswerId": "J2-M11-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J2-M11-S06",
+      "type": "interaction",
+      "interactionType": "timeline_slider",
+      "title": "Slide Through 20 Years",
+      "instruction": "Move from Year 1 to Year 20. Compare the original £1,000, previous growth, and the new return added each year.",
+      "config": {
+        "startingTime": "year_0",
+        "endingTime": "year_20",
+        "sliderStartYear": 1,
+        "sliderEndYear": 20,
+        "sliderStepYears": 1,
+        "startingAmount": 1000,
+        "illustrativeAnnualReturnPercent": 5,
+        "educationalAssumptions": [
+          "The activity begins with one £1,000 contribution.",
+          "No additional money is added or withdrawn.",
+          "A fixed 5% classroom return is added once per year.",
+          "Each year’s return stays in the balance.",
+          "Each displayed yearly return is rounded to the nearest penny before it is added.",
+          "No fees, taxes, or other charges are included.",
+          "Real returns may be lower, higher, or negative and can change over time.",
+          "This activity is an educational example, not a prediction or guaranteed result."
+        ],
+        "valuesShownAtEachStage": [
+          "Year",
+          "Starting balance",
+          "Return added that year",
+          "Ending balance",
+          "Original contribution",
+          "Total growth"
+        ],
+        "annualValues": [
+          {
+            "year": 1,
+            "startingBalance": 1000.0,
+            "returnAdded": 50.0,
+            "endingBalance": 1050.0,
+            "totalGrowth": 50.0
+          },
+          {
+            "year": 2,
+            "startingBalance": 1050.0,
+            "returnAdded": 52.5,
+            "endingBalance": 1102.5,
+            "totalGrowth": 102.5
+          },
+          {
+            "year": 3,
+            "startingBalance": 1102.5,
+            "returnAdded": 55.13,
+            "endingBalance": 1157.63,
+            "totalGrowth": 157.63
+          },
+          {
+            "year": 4,
+            "startingBalance": 1157.63,
+            "returnAdded": 57.88,
+            "endingBalance": 1215.51,
+            "totalGrowth": 215.51
+          },
+          {
+            "year": 5,
+            "startingBalance": 1215.51,
+            "returnAdded": 60.78,
+            "endingBalance": 1276.29,
+            "totalGrowth": 276.29
+          },
+          {
+            "year": 6,
+            "startingBalance": 1276.29,
+            "returnAdded": 63.81,
+            "endingBalance": 1340.1,
+            "totalGrowth": 340.1
+          },
+          {
+            "year": 7,
+            "startingBalance": 1340.1,
+            "returnAdded": 67.01,
+            "endingBalance": 1407.11,
+            "totalGrowth": 407.11
+          },
+          {
+            "year": 8,
+            "startingBalance": 1407.11,
+            "returnAdded": 70.36,
+            "endingBalance": 1477.47,
+            "totalGrowth": 477.47
+          },
+          {
+            "year": 9,
+            "startingBalance": 1477.47,
+            "returnAdded": 73.87,
+            "endingBalance": 1551.34,
+            "totalGrowth": 551.34
+          },
+          {
+            "year": 10,
+            "startingBalance": 1551.34,
+            "returnAdded": 77.57,
+            "endingBalance": 1628.91,
+            "totalGrowth": 628.91
+          },
+          {
+            "year": 11,
+            "startingBalance": 1628.91,
+            "returnAdded": 81.45,
+            "endingBalance": 1710.36,
+            "totalGrowth": 710.36
+          },
+          {
+            "year": 12,
+            "startingBalance": 1710.36,
+            "returnAdded": 85.52,
+            "endingBalance": 1795.88,
+            "totalGrowth": 795.88
+          },
+          {
+            "year": 13,
+            "startingBalance": 1795.88,
+            "returnAdded": 89.79,
+            "endingBalance": 1885.67,
+            "totalGrowth": 885.67
+          },
+          {
+            "year": 14,
+            "startingBalance": 1885.67,
+            "returnAdded": 94.28,
+            "endingBalance": 1979.95,
+            "totalGrowth": 979.95
+          },
+          {
+            "year": 15,
+            "startingBalance": 1979.95,
+            "returnAdded": 99.0,
+            "endingBalance": 2078.95,
+            "totalGrowth": 1078.95
+          },
+          {
+            "year": 16,
+            "startingBalance": 2078.95,
+            "returnAdded": 103.95,
+            "endingBalance": 2182.9,
+            "totalGrowth": 1182.9
+          },
+          {
+            "year": 17,
+            "startingBalance": 2182.9,
+            "returnAdded": 109.15,
+            "endingBalance": 2292.05,
+            "totalGrowth": 1292.05
+          },
+          {
+            "year": 18,
+            "startingBalance": 2292.05,
+            "returnAdded": 114.6,
+            "endingBalance": 2406.65,
+            "totalGrowth": 1406.65
+          },
+          {
+            "year": 19,
+            "startingBalance": 2406.65,
+            "returnAdded": 120.33,
+            "endingBalance": 2526.98,
+            "totalGrowth": 1526.98
+          },
+          {
+            "year": 20,
+            "startingBalance": 2526.98,
+            "returnAdded": 126.35,
+            "endingBalance": 2653.33,
+            "totalGrowth": 1653.33
+          }
+        ],
+        "milestones": [
+          {
+            "year": 1,
+            "balance": 1050,
+            "message": "The first year adds £50. The change is noticeable but still small."
+          },
+          {
+            "year": 5,
+            "balance": 1276.29,
+            "message": "The balance is £1,276.29. Growth added so far is £276.29."
+          },
+          {
+            "year": 10,
+            "balance": 1628.91,
+            "message": "The balance is £1,628.91. The yearly return is now £77.57 instead of £50."
+          },
+          {
+            "year": 15,
+            "balance": 2078.95,
+            "message": "The balance passes £2,000 even though no extra contribution was added."
+          },
+          {
+            "year": 20,
+            "balance": 2653.33,
+            "message": "The balance reaches £2,653.33: £1,000 original money and £1,653.33 of classroom-example growth."
+          }
+        ],
+        "milestoneQuestions": [
+          {
+            "id": "J2-M11-IQ1",
+            "triggerYear": 2,
+            "question": "Year one added £50. How much is added in Year 2?",
+            "options": [
+              {
+                "id": "J2-M11-IQ1-O1",
+                "text": "£50",
+                "isCorrect": false
+              },
+              {
+                "id": "J2-M11-IQ1-O2",
+                "text": "£52.50",
+                "isCorrect": true
+              },
+              {
+                "id": "J2-M11-IQ1-O3",
+                "text": "£100",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J2-M11-IQ1-O2",
+            "explanation": "Five per cent of the new £1,050 balance is £52.50."
+          },
+          {
+            "id": "J2-M11-IQ2",
+            "triggerYear": 10,
+            "question": "What is included in the Year 10 balance?",
+            "options": [
+              {
+                "id": "J2-M11-IQ2-O1",
+                "text": "Only the original £1,000",
+                "isCorrect": false
+              },
+              {
+                "id": "J2-M11-IQ2-O2",
+                "text": "The original money and previous growth",
+                "isCorrect": true
+              },
+              {
+                "id": "J2-M11-IQ2-O3",
+                "text": "Ten new £1,000 contributions",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J2-M11-IQ2-O2",
+            "explanation": "No new contributions were added. The balance contains the original £1,000 plus growth that stayed in the account."
+          },
+          {
+            "id": "J2-M11-IQ3",
+            "triggerYear": 20,
+            "question": "Why is the Year 20 return larger than the Year 1 return?",
+            "options": [
+              {
+                "id": "J2-M11-IQ3-O1",
+                "text": "The rate secretly increased",
+                "isCorrect": false
+              },
+              {
+                "id": "J2-M11-IQ3-O2",
+                "text": "The same rate is applied to a larger balance",
+                "isCorrect": true
+              },
+              {
+                "id": "J2-M11-IQ3-O3",
+                "text": "Extra money was added every year",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J2-M11-IQ3-O2",
+            "explanation": "Earlier growth remained in the balance, so the same 5% rate was calculated on more money."
+          }
+        ],
+        "contributionGrowthComparison": {
+          "originalContribution": 1000,
+          "additionalContributions": 0,
+          "totalGrowthAtYear20": 1653.33,
+          "endingBalanceAtYear20": 2653.33
+        },
+        "correctCompletionState": {
+          "sliderReachedYear": 20,
+          "requiredQuestionIds": [
+            "J2-M11-IQ1",
+            "J2-M11-IQ2",
+            "J2-M11-IQ3"
+          ],
+          "finalUnderstanding": "returns_are_calculated_on_original_money_and_previous_growth"
+        },
+        "validationMethod": "Check each milestone answer and confirm that the learner reaches Year 20. Complete the interaction when all three milestone questions are correct.",
+        "retryBehavior": "Keep completed milestones marked. Return only the incorrect milestone question, show the relevant balance, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Provide Previous Year and Next Year buttons plus a list view of all twenty yearly values. Milestone questions use radio buttons.",
+          "screenReaderInstruction": "Move one year at a time. Listen to the starting balance, return added, ending balance, and total growth. Answer each milestone question."
+        }
+      },
+      "feedback": {
+        "success": "Timeline complete! The yearly return grew from £50 to £126.35 because earlier growth stayed in the balance.",
+        "incorrect": "Look at the new balance before the next year begins. The return is calculated on that larger amount.",
+        "incomplete": "Reach Year 20 and answer all three milestone questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Complete the Timeline",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J2-M11-S07",
+      "type": "reveal",
+      "title": "When Growth Earns Growth",
+      "content": "You moved through 20 years and saw the yearly addition rise from £50 to £126.35. This is compound growth: future returns are calculated on the original money and earlier growth left in the balance. It often looks slow at first because the balance is still small. Over longer periods, the larger balance can produce larger additions. The 5% rate is only a classroom example. Real returns can change, fall, or become negative, so growth is never guaranteed.",
+      "simpleSummary": "Growth can earn more growth when it stays in the balance.",
+      "illustration": "One mango tree grows into a small orchard while the balance timeline curves upward gradually rather than jumping immediately.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M11-S08",
+      "type": "real_life_example",
+      "title": "The Second Year Is Different",
+      "content": "Nora puts £200 into a practice account using a 5% classroom rate. Year one adds £10, creating £210. Year two adds £10.50 because the return is calculated on £210. The second addition is larger even though Nora added no new money.",
+      "illustration": "A £200 balance becomes £210, then £220.50, with the second growth arrow slightly larger than the first.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M11-S09",
+      "type": "quiz",
+      "title": "Compound Growth Check",
+      "questions": [
+        {
+          "id": "J2-M11-Q1",
+          "category": "recognition",
+          "text": "A practice balance grows from £100 to £110. The next 10% return is calculated on £110. What does that show?",
+          "options": [
+            {
+              "id": "J2-M11-Q1-O1",
+              "text": "Previous growth can earn more growth",
+              "isCorrect": true,
+              "feedback": "Correct. The next return uses the new £110 balance, which includes the first £10 of growth."
+            },
+            {
+              "id": "J2-M11-Q1-O2",
+              "text": "The original money disappeared",
+              "isCorrect": false,
+              "feedback": "The original £100 remains in the balance together with the £10 of growth."
+            },
+            {
+              "id": "J2-M11-Q1-O3",
+              "text": "The return must stay at £10",
+              "isCorrect": false,
+              "feedback": "Ten per cent of £110 is £11, so the next addition can be larger."
+            }
+          ],
+          "correctAnswerId": "J2-M11-Q1-O1",
+          "correctExplanation": "The balance used for the next calculation includes both the original £100 and the earlier £10 growth.",
+          "misconceptionTested": "Compound growth increases money by the same fixed amount every year."
+        },
+        {
+          "id": "J2-M11-Q2",
+          "category": "misconception",
+          "text": "A £1,000 balance earns a 5% classroom return for one year. What should you expect?",
+          "options": [
+            {
+              "id": "J2-M11-Q2-O1",
+              "text": "A small rise to £1,050",
+              "isCorrect": true,
+              "feedback": "Correct. Compound growth usually begins gradually; it does not create a huge result immediately."
+            },
+            {
+              "id": "J2-M11-Q2-O2",
+              "text": "An instant rise to £5,000",
+              "isCorrect": false,
+              "feedback": "A 5% return adds £50 to £1,000, not £4,000."
+            },
+            {
+              "id": "J2-M11-Q2-O3",
+              "text": "A guaranteed fortune",
+              "isCorrect": false,
+              "feedback": "The 5% rate is only a classroom assumption. Real returns are uncertain and never guarantee wealth."
+            },
+            {
+              "id": "J2-M11-Q2-O4",
+              "text": "No change for twenty years",
+              "isCorrect": false,
+              "feedback": "In this activity, the first return is added after Year 1."
+            }
+          ],
+          "correctAnswerId": "J2-M11-Q2-O1",
+          "correctExplanation": "Five per cent of £1,000 is £50, so the classroom balance becomes £1,050 after one year.",
+          "misconceptionTested": "Compound growth creates huge results immediately."
+        },
+        {
+          "id": "J2-M11-Q3",
+          "category": "application",
+          "text": "Two practice balances start at £500 with the same yearly rate. One stays for 2 years and one for 10 years. Which usually gains more in this activity?",
+          "options": [
+            {
+              "id": "J2-M11-Q3-O1",
+              "text": "The 10-year balance",
+              "isCorrect": true,
+              "feedback": "Correct. It has more years for returns to be added and for earlier growth to remain in the balance."
+            },
+            {
+              "id": "J2-M11-Q3-O2",
+              "text": "The 2-year balance",
+              "isCorrect": false,
+              "feedback": "The shorter timeline provides fewer chances for growth to build on previous growth."
+            },
+            {
+              "id": "J2-M11-Q3-O3",
+              "text": "They must always finish equal",
+              "isCorrect": false,
+              "feedback": "With the same classroom rate and no withdrawals, the longer timeline produces more growth in this activity."
+            },
+            {
+              "id": "J2-M11-Q3-O4",
+              "text": "Time makes no difference",
+              "isCorrect": false,
+              "feedback": "Time provides repeated chances for returns to be added to the growing balance."
+            }
+          ],
+          "correctAnswerId": "J2-M11-Q3-O1",
+          "correctExplanation": "Under the same positive classroom rate, the 10-year balance has more periods for growth to build on earlier growth.",
+          "misconceptionTested": "Time does not make a significant difference to how much money can grow."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J2-M11-S10",
+      "type": "completion",
+      "headline": "Growth Timeline Explorer!",
+      "message": "You discovered why compound growth often starts slowly and becomes more noticeable when given time.",
+      "xpReward": 50,
+      "progressMessage": "Mission 11 complete in Make Money Grow.",
+      "nextMissionTeaser": "Next, explore why the chance of greater growth can also bring greater uncertainty.",
+      "animation": "A mango seed grows into a small orchard as the £1,000 timeline rises gradually to £2,653.33.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J2-M11-S11",
+      "type": "real_life_challenge",
+      "title": "Grow an Imaginary Balance",
+      "instruction": "Write £100. Add an imaginary 10% return to make £110. Then add 10% of £110. Notice why the second addition is larger.",
+      "buttonLabel": "I Grew the Balance",
+      "primaryAction": {
+        "label": "I Grew the Balance",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on returns being calculated on original money and previous growth."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The activity consistently applies a 5% annual classroom return, rounds each yearly addition to the nearest penny, and separates original contribution from growth."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses a mango-tree analogy, simple percentages, a timeline, and small milestone questions."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission teaches a general concept and does not recommend any real account, asset, or financial action."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The 5% rate is labelled as a classroom example, and the mission states that real returns may vary or become negative."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or predict market prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "The content explains time and growth without judging how much money a learner or family has."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The activity states its rate, rounding method, time period, contribution assumptions, and exclusion of fees and taxes."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds for the UK locale and a familiar mango-tree analogy."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner moves through twenty years and sees returns become larger as previous growth remains in the balance."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses immediate huge growth, fixed yearly additions, and the importance of time."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The learner explores a slider with three checkpoints and completes three short quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
