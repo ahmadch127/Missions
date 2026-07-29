@@ -1,0 +1,557 @@
+{
+  "id": "J3-M14",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "What Is Investing?",
+  "concept": "Investing means using money today to buy something that may generate income or increase in value in the future, while accepting the possibility of loss.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand investing as using money today for the possibility of future growth while accepting uncertainty and risk.",
+  "primaryMisconception": "Investing and gambling are always the same.",
+  "secondaryMisconceptions": [
+    "Every investment is guaranteed to make money.",
+    "Giving money, lending money, and investing money are the same thing."
+  ],
+  "keyTakeaway": "Investing means accepting uncertainty for the possibility of future growth.",
+  "screens": [
+    {
+      "id": "J3-M14-S01",
+      "type": "hook",
+      "title": "Three Ways to Help",
+      "content": "Your friend needs £300 to expand a burger shop. Gift it, lend it, or become part-owner—which choice could grow or shrink?",
+      "illustration": "A £300 card splits into three paths: a gift box, a repayment note, and a small ownership slice of a burger shop.",
+      "primaryAction": {
+        "label": "Explore the Choices",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M14-S02",
+      "type": "story",
+      "title": "A Busy Burger Shop",
+      "content": "Alex’s burger shop is getting more customers. Alex wants £300 for a second grill but cannot promise that the expansion will succeed.",
+      "illustration": "Customers queue at a small burger counter while one grill struggles to handle all the orders.",
+      "primaryAction": {
+        "label": "Hear the Options",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M14-S03",
+      "type": "story",
+      "title": "Same Money, Different Deal",
+      "content": "You could give Alex the money, lend it with a repayment agreement, or buy a small share of the business.",
+      "illustration": "Three agreement cards appear: Gift, Loan, and Ownership.",
+      "primaryAction": {
+        "label": "Compare the Deals",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M14-S04",
+      "type": "story",
+      "title": "What Comes Back?",
+      "content": "Each choice has a different result. You might expect nothing, expect repayment, or share in future gains and losses.",
+      "illustration": "Three arrows return from the shop: an empty thank-you card, scheduled repayments, and an uncertain up-or-down ownership value.",
+      "primaryAction": {
+        "label": "Choose a Path",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M14-S05",
+      "type": "pre_interaction",
+      "title": "Which Choice Creates Ownership?",
+      "question": "Which option could make you a part-owner of the burger shop?",
+      "options": [
+        {
+          "id": "J3-M14-PQ-O1",
+          "text": "Give Alex £300",
+          "isRecommended": false,
+          "response": "That would help Alex, but a gift does not normally create repayment rights or business ownership."
+        },
+        {
+          "id": "J3-M14-PQ-O2",
+          "text": "Lend Alex £300",
+          "isRecommended": false,
+          "response": "A loan creates an agreement to repay money. It does not normally make the lender a business owner."
+        },
+        {
+          "id": "J3-M14-PQ-O3",
+          "text": "Buy a share of the business",
+          "isRecommended": true,
+          "response": "Good thinking. Buying a share means owning part of the business and sharing in its uncertain future results."
+        },
+        {
+          "id": "J3-M14-PQ-O4",
+          "text": "Buy £300 of burgers",
+          "isRecommended": false,
+          "response": "That is a purchase. You receive burgers, not ownership in the business."
+        }
+      ],
+      "recommendedAnswerId": "J3-M14-PQ-O3",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M14-S06",
+      "type": "interaction",
+      "interactionType": "decision_tree",
+      "title": "Gift, Loan, or Investment?",
+      "instruction": "Explore all three paths. Follow what happens to your £300 and identify which choice is an investment.",
+      "config": {
+        "startingNode": {
+          "id": "J3-M14-NODE-START",
+          "content": "Alex asks for £300 to buy a second grill for the burger shop.",
+          "choiceIds": [
+            "J3-M14-CHOICE-GIFT",
+            "J3-M14-CHOICE-LOAN",
+            "J3-M14-CHOICE-OWNERSHIP"
+          ]
+        },
+        "educationalAssumptions": [
+          "This is a fictional, adult-supported learning scenario.",
+          "The £300 amounts are classroom examples.",
+          "The business may succeed, struggle, or close.",
+          "Research can improve understanding but cannot remove uncertainty.",
+          "Any repayment or ownership arrangement would need clear terms.",
+          "The activity does not recommend investing in a real business.",
+          "Real investments may involve additional rules, costs, taxes, and legal requirements."
+        ],
+        "choices": [
+          {
+            "id": "J3-M14-CHOICE-GIFT",
+            "label": "Give the money",
+            "consequence": "Alex can buy the grill. You help the business without asking for repayment, ownership, or a share of future profits.",
+            "followUpNodeId": "J3-M14-NODE-GIFT"
+          },
+          {
+            "id": "J3-M14-CHOICE-LOAN",
+            "label": "Lend the money",
+            "consequence": "Alex receives the money. You expect repayment according to the agreement, possibly with an agreed interest amount.",
+            "followUpNodeId": "J3-M14-NODE-LOAN"
+          },
+          {
+            "id": "J3-M14-CHOICE-OWNERSHIP",
+            "label": "Buy part of the business",
+            "consequence": "You become a part-owner. Your result depends on how the business performs and on the ownership agreement.",
+            "followUpNodeId": "J3-M14-NODE-OWNERSHIP"
+          }
+        ],
+        "followUpNodes": [
+          {
+            "id": "J3-M14-NODE-GIFT",
+            "question": "What are you entitled to receive?",
+            "options": [
+              {
+                "id": "J3-M14-NODE-GIFT-O1",
+                "text": "Nothing financially",
+                "isRecommended": true
+              },
+              {
+                "id": "J3-M14-NODE-GIFT-O2",
+                "text": "Guaranteed monthly profit",
+                "isRecommended": false
+              },
+              {
+                "id": "J3-M14-NODE-GIFT-O3",
+                "text": "Ownership of the grill",
+                "isRecommended": false
+              },
+              {
+                "id": "J3-M14-NODE-GIFT-O4",
+                "text": "Repayment with interest",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "J3-M14-NODE-GIFT-O1",
+            "explanation": "A gift is given without expecting repayment, ownership, or financial growth.",
+            "terminalOutcomeId": "J3-M14-OUTCOME-GIFT"
+          },
+          {
+            "id": "J3-M14-NODE-LOAN",
+            "question": "What is the main financial promise?",
+            "options": [
+              {
+                "id": "J3-M14-NODE-LOAN-O1",
+                "text": "Alex should repay the agreed amount",
+                "isRecommended": true
+              },
+              {
+                "id": "J3-M14-NODE-LOAN-O2",
+                "text": "You own part of the shop",
+                "isRecommended": false
+              },
+              {
+                "id": "J3-M14-NODE-LOAN-O3",
+                "text": "You receive every future profit",
+                "isRecommended": false
+              },
+              {
+                "id": "J3-M14-NODE-LOAN-O4",
+                "text": "Repayment is impossible to miss",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "J3-M14-NODE-LOAN-O1",
+            "explanation": "Lending creates a repayment claim, not ownership. Repayment may still be delayed or missed if the borrower cannot pay.",
+            "terminalOutcomeId": "J3-M14-OUTCOME-LOAN"
+          },
+          {
+            "id": "J3-M14-NODE-OWNERSHIP",
+            "question": "What could happen to your money?",
+            "options": [
+              {
+                "id": "J3-M14-NODE-OWNERSHIP-O1",
+                "text": "It could grow, stay similar, or fall",
+                "isRecommended": true
+              },
+              {
+                "id": "J3-M14-NODE-OWNERSHIP-O2",
+                "text": "It must double",
+                "isRecommended": false
+              },
+              {
+                "id": "J3-M14-NODE-OWNERSHIP-O3",
+                "text": "Alex must repay £300 next month",
+                "isRecommended": false
+              },
+              {
+                "id": "J3-M14-NODE-OWNERSHIP-O4",
+                "text": "It becomes a gift",
+                "isRecommended": false
+              }
+            ],
+            "recommendedAnswerId": "J3-M14-NODE-OWNERSHIP-O1",
+            "explanation": "Ownership may produce income or increase in value if the shop succeeds. It may also lose value if the shop performs poorly.",
+            "terminalOutcomeId": "J3-M14-OUTCOME-OWNERSHIP"
+          }
+        ],
+        "terminalOutcomes": [
+          {
+            "id": "J3-M14-OUTCOME-GIFT",
+            "title": "Helpful gift, not an investment",
+            "content": "The shop may succeed, but you do not automatically receive money or ownership because your £300 was a gift."
+          },
+          {
+            "id": "J3-M14-OUTCOME-LOAN",
+            "title": "Loan with repayment risk",
+            "content": "You do not own part of the shop. You expect repayment, but receiving every payment is not guaranteed."
+          },
+          {
+            "id": "J3-M14-OUTCOME-OWNERSHIP",
+            "title": "Investment with uncertain results",
+            "content": "You own part of something that may create real value, but there is no guaranteed profit or repayment date."
+          }
+        ],
+        "finalDecisionNode": {
+          "id": "J3-M14-NODE-FINAL",
+          "question": "Which path is the investment?",
+          "options": [
+            {
+              "id": "J3-M14-NODE-FINAL-O1",
+              "text": "Give the money",
+              "isCorrect": false
+            },
+            {
+              "id": "J3-M14-NODE-FINAL-O2",
+              "text": "Lend the money",
+              "isCorrect": false
+            },
+            {
+              "id": "J3-M14-NODE-FINAL-O3",
+              "text": "Buy part of the business",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswerId": "J3-M14-NODE-FINAL-O3",
+          "explanation": "Buying part of the shop creates ownership and the possibility of future growth or income, together with the risk of loss."
+        },
+        "correctCompletionState": {
+          "gift": "no_repayment_ownership_or_expected_financial_return",
+          "loan": "repayment_agreement_without_business_ownership",
+          "investment": "ownership_with_possible_gains_and_possible_losses"
+        },
+        "tradeOffSummary": [
+          {
+            "choice": "Giving",
+            "points": [
+              "Helps another person",
+              "No repayment expected",
+              "No ownership",
+              "No expected profit"
+            ]
+          },
+          {
+            "choice": "Lending",
+            "points": [
+              "Creates a repayment agreement",
+              "May include interest",
+              "Does not create business ownership",
+              "Repayment may be delayed or missed"
+            ]
+          },
+          {
+            "choice": "Investing",
+            "points": [
+              "Creates ownership",
+              "May provide income or growth",
+              "Does not guarantee repayment or profit",
+              "Some or all of the money could be lost"
+            ]
+          }
+        ],
+        "investingAndGamblingExplanation": "Both investing and gambling involve uncertainty, but they are not always the same. An investment can represent ownership or another financial claim connected to something that may create real value. Gambling usually involves staking money on an uncertain event without gaining ownership of a productive asset. Highly speculative investing can resemble gambling when decisions rely mainly on chance or excitement.",
+        "validationMethod": "Check each follow-up answer, require the learner to explore all three paths, and complete the interaction when the learner correctly identifies the ownership path as investing.",
+        "retryBehavior": "Keep completed paths marked. Return only the incorrect follow-up question, show one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present the decision tree as three numbered, linear paths. Each path contains the choice, consequence, question, explanation, and return button.",
+          "screenReaderInstruction": "Choose Gift, Loan, or Ownership. Listen to the consequence, answer the follow-up question, and return to explore the remaining paths."
+        }
+      },
+      "feedback": {
+        "success": "Strong analysis. You separated a gift, a loan, and an investment—and recognised that ownership brings both opportunity and risk.",
+        "incorrect": "Check what the person receives: nothing financial, a repayment promise, or ownership with uncertain results.",
+        "incomplete": "Explore all three paths before identifying the investment."
+      },
+      "primaryAction": {
+        "label": "Finish the Decision",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M14-S07",
+      "type": "reveal",
+      "title": "Ownership With an Uncertain Future",
+      "content": "You saw that giving, lending, and investing are different. Investing means using money to buy something that may produce income or rise in value later. Buying part of the burger shop created ownership, but no guaranteed profit. The shop could succeed, struggle, or close. Investing is not automatically gambling because an investment can be researched and linked to something creating value. However, both involve uncertainty, and speculative decisions can resemble gambling.",
+      "simpleSummary": "Investing offers possible growth, but your result is never guaranteed.",
+      "illustration": "The ownership path connects £300 to a small share of the burger shop, followed by possible upward, flat, and downward results.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M14-S08",
+      "type": "real_life_example",
+      "title": "The Student T-Shirt Project",
+      "content": "Three students start a T-shirt project. Priya pays £50 for a small ownership share. If sales are strong, her share may earn money or become more valuable. If customers lose interest, she may receive little or lose her £50. She invested rather than giving or lending the money.",
+      "illustration": "Priya’s £50 becomes an ownership slice beside three possible sales-result arrows.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M14-S09",
+      "type": "quiz",
+      "title": "Investment Basics Check",
+      "questions": [
+        {
+          "id": "J3-M14-Q1",
+          "category": "recognition",
+          "text": "Which situation is an investment?",
+          "options": [
+            {
+              "id": "J3-M14-Q1-O1",
+              "text": "Buying 5% of a small business",
+              "isCorrect": true,
+              "feedback": "Correct. Buying 5% creates ownership with possible gains and possible losses."
+            },
+            {
+              "id": "J3-M14-Q1-O2",
+              "text": "Giving a friend birthday money",
+              "isCorrect": false,
+              "feedback": "That is a gift because repayment or ownership is not expected."
+            },
+            {
+              "id": "J3-M14-Q1-O3",
+              "text": "Lending £20 with an agreement to repay it",
+              "isCorrect": false,
+              "feedback": "That is lending. It creates a repayment agreement rather than business ownership."
+            },
+            {
+              "id": "J3-M14-Q1-O4",
+              "text": "Buying food from a shop",
+              "isCorrect": false,
+              "feedback": "That is a normal purchase. You receive food rather than ownership in the shop."
+            }
+          ],
+          "correctAnswerId": "J3-M14-Q1-O1",
+          "correctExplanation": "Buying 5% creates ownership. The owner may benefit if the business succeeds but may lose money if it struggles.",
+          "misconceptionTested": "Giving, lending, purchasing, and investing are the same thing."
+        },
+        {
+          "id": "J3-M14-Q2",
+          "category": "misconception",
+          "text": "Which statement best compares investing and gambling?",
+          "options": [
+            {
+              "id": "J3-M14-Q2-O1",
+              "text": "Both involve uncertainty, but investing can involve researched ownership in something that creates value",
+              "isCorrect": true,
+              "feedback": "Correct. Research may improve understanding, but it cannot guarantee a profit."
+            },
+            {
+              "id": "J3-M14-Q2-O2",
+              "text": "They are always exactly the same",
+              "isCorrect": false,
+              "feedback": "Investments can provide ownership or claims linked to real assets and economic activity."
+            },
+            {
+              "id": "J3-M14-Q2-O3",
+              "text": "Every researched investment makes money",
+              "isCorrect": false,
+              "feedback": "Research can improve understanding, but investments can still lose value."
+            },
+            {
+              "id": "J3-M14-Q2-O4",
+              "text": "Gambling gives ownership of a business",
+              "isCorrect": false,
+              "feedback": "A wager normally does not provide ownership of a productive business or asset."
+            }
+          ],
+          "correctAnswerId": "J3-M14-Q2-O1",
+          "correctExplanation": "Investing may connect money to a productive business or asset. It still involves risk, and research cannot guarantee a profit.",
+          "misconceptionTested": "Investing and gambling are always the same."
+        },
+        {
+          "id": "J3-M14-Q3",
+          "category": "application",
+          "text": "You buy a share of a small app business. Which outcome should you expect?",
+          "options": [
+            {
+              "id": "J3-M14-Q3-O1",
+              "text": "The value may rise or fall depending on the business",
+              "isCorrect": true,
+              "feedback": "Correct. Ownership can benefit from success, but poor results can reduce its value."
+            },
+            {
+              "id": "J3-M14-Q3-O2",
+              "text": "Your money must double",
+              "isCorrect": false,
+              "feedback": "No investment is guaranteed to double or produce any profit."
+            },
+            {
+              "id": "J3-M14-Q3-O3",
+              "text": "The owner must repay you next week",
+              "isCorrect": false,
+              "feedback": "Ownership is different from a loan. It normally has no fixed repayment date."
+            },
+            {
+              "id": "J3-M14-Q3-O4",
+              "text": "You cannot lose any money",
+              "isCorrect": false,
+              "feedback": "Investment value can fall, and some or all of the invested money may be lost."
+            }
+          ],
+          "correctAnswerId": "J3-M14-Q3-O1",
+          "correctExplanation": "An ownership investment can benefit from business success, but poor results can reduce its value or cause a loss.",
+          "misconceptionTested": "Every investment is guaranteed to make money."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M14-S10",
+      "type": "completion",
+      "headline": "Investment Path Finder!",
+      "message": "You learned how investing differs from giving, lending, purchasing, and gambling.",
+      "xpReward": 50,
+      "progressMessage": "Mission 14 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, explore why possible rewards and possible losses often travel together.",
+      "animation": "The three paths become labelled Gift, Loan, and Investment. The investment path ends with balanced growth and risk arrows.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M14-S11",
+      "type": "real_life_challenge",
+      "title": "Classify Three Money Choices",
+      "instruction": "Write three imaginary £100 choices: a gift, a loan, and an investment. Under each, write what the giver expects to receive. Do not use real money.",
+      "buttonLabel": "I Classified the Choices",
+      "primaryAction": {
+        "label": "I Classified the Choices",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on investing as ownership or another value-linked financial commitment with uncertain future results."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes gifts, loans, purchases, ownership investments, repayment claims, possible returns, and possible losses."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The scenario uses a small business, first earnings, agreements, and introductory investment ideas suitable for teens."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend a real company, asset, investment amount, or financial action."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission repeatedly states that profits, repayment, business success, and investment growth are not guaranteed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss or predict stock prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Gifting, lending, investing, and choosing not to invest are described neutrally."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission distinguishes investing from gambling while acknowledging that speculative investment behaviour may resemble gambling."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, a burger shop, a T-shirt project, an app business, loans, and ownership familiar to UK teens."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner follows gift, loan, and ownership paths and compares what is received and what risks remain."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses investment versus gambling, guaranteed profit, and the difference between giving, lending, buying, and investing."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, three decision paths, one final classification, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and appropriate for teens aged 13–17."
+    }
+  ]
+}
