@@ -1,0 +1,539 @@
+{
+  "id": "J3-M16",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "The Stock Market",
+  "concept": "The stock market connects buyers and sellers of company shares. Stock prices change when new information affects how much people are willing to pay or accept for those shares.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand how the reactions and changing expectations of buyers and sellers influence stock prices.",
+  "primaryMisconception": "Stock prices move completely at random.",
+  "secondaryMisconceptions": [
+    "A stock price rises whenever a company makes a profit.",
+    "One buyer or seller always controls the market price."
+  ],
+  "keyTakeaway": "Stock prices reflect changing expectations from buyers and sellers.",
+  "screens": [
+    {
+      "id": "J3-M16-S01",
+      "type": "hook",
+      "title": "More Buyers, Same Shares",
+      "content": "A game company announces exciting news. More people want its limited shares, but few owners will sell. What might happen to the price?",
+      "illustration": "A fictional game-company share sits between a growing queue of buyers and a small group of sellers. The price tag displays a question mark.",
+      "primaryAction": {
+        "label": "Follow the Reaction",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M16-S02",
+      "type": "story",
+      "title": "Shares at £10",
+      "content": "PixelForge Games has a limited number of shares. Buyers and sellers are currently agreeing on trades near £10 per share.",
+      "illustration": "A fictional trading board shows buy and sell offers meeting near £10.",
+      "primaryAction": {
+        "label": "Reveal the News",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M16-S03",
+      "type": "story",
+      "title": "Expectations Change",
+      "content": "The company announces strong pre-orders for a new game. Some investors now expect the business to perform better than they thought yesterday.",
+      "illustration": "A game pre-order announcement appears as investors update their expectation cards.",
+      "primaryAction": {
+        "label": "Watch the Buyers",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M16-S04",
+      "type": "story",
+      "title": "Competition for Shares",
+      "content": "More buyers arrive, while fewer owners want to sell. Buyers may need to offer more to persuade someone to part with a share.",
+      "illustration": "Several buyer offers rise from £10 towards sellers holding a limited number of shares.",
+      "primaryAction": {
+        "label": "Predict the Price",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M16-S05",
+      "type": "pre_interaction",
+      "title": "What Happens First?",
+      "question": "After new company information appears, what usually happens before the market price changes?",
+      "options": [
+        {
+          "id": "J3-M16-PQ-O1",
+          "text": "Buyers and sellers react to the information",
+          "isRecommended": true,
+          "response": "Good thinking. People first update their expectations and change the prices they are willing to offer or accept."
+        },
+        {
+          "id": "J3-M16-PQ-O2",
+          "text": "The price automatically doubles",
+          "isRecommended": false,
+          "response": "News does not create a fixed price change. Buyers and sellers may interpret the same information differently."
+        },
+        {
+          "id": "J3-M16-PQ-O3",
+          "text": "The company creates new shares immediately",
+          "isRecommended": false,
+          "response": "New information does not automatically change the number of company shares."
+        },
+        {
+          "id": "J3-M16-PQ-O4",
+          "text": "One buyer permanently chooses the price",
+          "isRecommended": false,
+          "response": "One order may affect a trade, but the market price usually reflects many buyers and sellers interacting."
+        }
+      ],
+      "recommendedAnswerId": "J3-M16-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M16-S06",
+      "type": "interaction",
+      "interactionType": "cause_and_effect",
+      "title": "From News to Price",
+      "instruction": "Arrange the four events in order. Then predict what may happen when buyers and sellers react differently.",
+      "config": {
+        "educationalAssumptions": [
+          "PixelForge Games is fictional.",
+          "The activity uses a simplified market with a limited number of shares.",
+          "The starting market price is approximately £10 per share.",
+          "A market price is based on prices at which buyers and sellers agree to trade.",
+          "More buyers means buying interest is stronger than the number of shares currently offered for sale.",
+          "Price movements are possible outcomes, not guarantees.",
+          "Real markets include many orders, different expectations, rapid changes, and additional factors.",
+          "The activity does not recommend buying or selling any real stock."
+        ],
+        "events": [
+          {
+            "id": "J3-M16-EVENT-A",
+            "title": "New information about the company appears",
+            "content": "PixelForge announces strong pre-orders for its upcoming game."
+          },
+          {
+            "id": "J3-M16-EVENT-B",
+            "title": "Buyers and sellers react to the information",
+            "content": "Some buyers become more hopeful and offer to buy. Some owners decide to keep their shares instead of selling."
+          },
+          {
+            "id": "J3-M16-EVENT-C",
+            "title": "Demand for the available shares changes",
+            "content": "More people want to buy than the number of owners currently willing to sell."
+          },
+          {
+            "id": "J3-M16-EVENT-D",
+            "title": "The market price moves",
+            "content": "Buyers may offer higher prices until a seller agrees to trade."
+          }
+        ],
+        "correctSequence": [
+          "J3-M16-EVENT-A",
+          "J3-M16-EVENT-B",
+          "J3-M16-EVENT-C",
+          "J3-M16-EVENT-D"
+        ],
+        "relationships": [
+          {
+            "id": "J3-M16-RELATIONSHIP-1",
+            "cause": "New information appears.",
+            "effect": "People update their expectations about the company’s future."
+          },
+          {
+            "id": "J3-M16-RELATIONSHIP-2",
+            "cause": "Expectations change.",
+            "effect": "Buyers and sellers change their orders or decide whether to trade."
+          },
+          {
+            "id": "J3-M16-RELATIONSHIP-3",
+            "cause": "Buying interest becomes stronger or weaker compared with selling interest.",
+            "effect": "Buyers and sellers adjust the prices they offer or accept."
+          },
+          {
+            "id": "J3-M16-RELATIONSHIP-4",
+            "cause": "A buyer and seller agree at a new price.",
+            "effect": "The latest market price may rise, fall, or remain similar."
+          }
+        ],
+        "scenarioChecks": [
+          {
+            "id": "J3-M16-IQ1",
+            "title": "More Buyers Than Sellers",
+            "scenario": "Many buyers want PixelForge shares, but few owners are willing to sell near £10.",
+            "question": "What may happen next?",
+            "options": [
+              {
+                "id": "J3-M16-IQ1-O1",
+                "text": "Buyers may offer higher prices",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M16-IQ1-O2",
+                "text": "Sellers must accept lower prices",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M16-IQ1-O3",
+                "text": "The price can never change",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M16-IQ1-O4",
+                "text": "The company automatically creates more profit",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M16-IQ1-O1",
+            "likelyEducationalOutcome": "Buyers may offer higher prices.",
+            "explanation": "When several buyers compete for limited shares, some may raise their offers to persuade an owner to sell. This can push the market price higher."
+          },
+          {
+            "id": "J3-M16-IQ2",
+            "title": "More Sellers Than Buyers",
+            "scenario": "PixelForge delays its new game. More owners want to sell, while fewer buyers are interested at £10.",
+            "question": "What may happen next?",
+            "options": [
+              {
+                "id": "J3-M16-IQ2-O1",
+                "text": "Buyers must offer more",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M16-IQ2-O2",
+                "text": "Sellers may accept lower prices",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M16-IQ2-O3",
+                "text": "The price must stay at £10",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M16-IQ2-O4",
+                "text": "Every seller receives the original purchase price",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M16-IQ2-O2",
+            "likelyEducationalOutcome": "Sellers may accept lower prices.",
+            "explanation": "When many people want to sell but fewer people want to buy, sellers may lower their asking prices to find buyers. This can push the market price down."
+          },
+          {
+            "id": "J3-M16-IQ3",
+            "title": "Similar Buying and Selling Interest",
+            "scenario": "Investors receive mixed news. The number of willing buyers and sellers remains fairly balanced.",
+            "question": "What may happen to the price?",
+            "options": [
+              {
+                "id": "J3-M16-IQ3-O1",
+                "text": "It must double",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M16-IQ3-O2",
+                "text": "It must fall to zero",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M16-IQ3-O3",
+                "text": "It may remain relatively stable",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M16-IQ3-O4",
+                "text": "One investor permanently sets it",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M16-IQ3-O3",
+            "likelyEducationalOutcome": "It may remain relatively stable.",
+            "explanation": "When buyers and sellers have similar expectations and offers, trades may continue near the existing price."
+          }
+        ],
+        "correctCompletionState": {
+          "sequenceOrderedCorrectly": true,
+          "requiredScenarioIds": [
+            "J3-M16-IQ1",
+            "J3-M16-IQ2",
+            "J3-M16-IQ3"
+          ],
+          "finalUnderstanding": "stock_prices_are_influenced_by_information_expectations_and_buyer_seller_activity"
+        },
+        "alternativeContributingFactors": [
+          "Company earnings and future plans",
+          "Product launches or delays",
+          "Competitor news",
+          "Changes in the wider economy",
+          "Interest rates",
+          "Industry developments",
+          "New laws or regulations",
+          "The overall mood of investors",
+          "Rumours or incorrect information",
+          "The number and size of buy and sell orders"
+        ],
+        "simplificationExplanation": [
+          "Real stock markets contain many buyers and sellers placing orders continuously.",
+          "The market price commonly refers to the price of the most recent agreed trade.",
+          "One large order may affect the price, especially when few shares are being traded.",
+          "One ordinary buyer or seller does not usually control the price permanently.",
+          "A price rise does not prove that a company is successful.",
+          "A current profit does not guarantee that the price will rise because investors compare results with previous expectations."
+        ],
+        "validationMethod": "Check the four-event sequence and all three scenario answers. Complete the interaction when the sequence and outcomes are correct.",
+        "retryBehavior": "Keep correctly ordered events and completed scenarios marked. Return only incorrect items and provide one short cause-and-effect hint.",
+        "accessibilityAlternative": {
+          "method": "Present the four events as a numbered list with Move Up and Move Down buttons. Present each scenario using radio-button answers.",
+          "screenReaderInstruction": "Arrange the events from company news to price movement. Then listen to each buyer-and-seller scenario and choose the likely effect."
+        }
+      },
+      "feedback": {
+        "success": "Excellent chain! You connected company news to expectations, trading decisions, changing demand, and possible price movement.",
+        "incorrect": "Start with the new information. Ask what people do next before deciding how the price may respond.",
+        "incomplete": "Arrange all four events and complete the three market scenarios before finishing."
+      },
+      "primaryAction": {
+        "label": "Check the Market Chain",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M16-S07",
+      "type": "reveal",
+      "title": "A Market of Changing Expectations",
+      "content": "You arranged the chain from news to price. The stock market connects buyers and sellers of company shares. New information changes what people expect about a company’s future. Those expectations affect how many shares people want to buy or sell and the prices they offer or accept. Stronger buying pressure may raise prices, stronger selling pressure may lower them, and balanced views may keep prices steadier. Prices are influenced by information, but future movements remain uncertain.",
+      "simpleSummary": "New information changes expectations, and expectations influence share prices.",
+      "illustration": "A loop connects Company News, Expectations, Buy and Sell Orders, Agreed Trade, and New Market Price.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M16-S08",
+      "type": "real_life_example",
+      "title": "Profit—but a Falling Price",
+      "content": "A fictional music app earns a £2 million profit. Investors expected £4 million, so some become disappointed and sell their shares. The company made money, but the share price may still fall because the result was weaker than expected.",
+      "illustration": "A £2 million profit card appears beside an earlier £4 million expectation card as more sell orders enter the market.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M16-S09",
+      "type": "quiz",
+      "title": "Market Movement Check",
+      "questions": [
+        {
+          "id": "J3-M16-Q1",
+          "category": "recognition",
+          "text": "A company announces stronger-than-expected customer growth. More people want to buy its limited shares than sell them. What may happen?",
+          "options": [
+            {
+              "id": "J3-M16-Q1-O1",
+              "text": "Buyers may offer higher prices",
+              "isCorrect": true,
+              "feedback": "Correct. Stronger buying interest can lead buyers to compete by offering more."
+            },
+            {
+              "id": "J3-M16-Q1-O2",
+              "text": "Sellers must lower the price",
+              "isCorrect": false,
+              "feedback": "Sellers are more likely to lower their prices when selling interest is stronger than buying interest."
+            },
+            {
+              "id": "J3-M16-Q1-O3",
+              "text": "The price can never change",
+              "isCorrect": false,
+              "feedback": "The price may change when buyers and sellers adjust the prices they will offer or accept."
+            },
+            {
+              "id": "J3-M16-Q1-O4",
+              "text": "The company guarantees a profit",
+              "isCorrect": false,
+              "feedback": "Higher demand for shares does not guarantee future company profits or investor gains."
+            }
+          ],
+          "correctAnswerId": "J3-M16-Q1-O1",
+          "correctExplanation": "When buying interest is stronger than selling interest, buyers may compete by offering more. This can push the market price higher.",
+          "misconceptionTested": "Stock-price movements are unrelated to buyers, sellers, and new information."
+        },
+        {
+          "id": "J3-M16-Q2",
+          "category": "misconception",
+          "text": "Which statement about stock prices is most accurate?",
+          "options": [
+            {
+              "id": "J3-M16-Q2-O1",
+              "text": "Prices respond to changing information and expectations, but remain difficult to predict",
+              "isCorrect": true,
+              "feedback": "Correct. Information influences prices, but different reactions and unexpected events make future movements uncertain."
+            },
+            {
+              "id": "J3-M16-Q2-O2",
+              "text": "Prices move completely at random",
+              "isCorrect": false,
+              "feedback": "Price changes may be difficult to predict, but they are influenced by orders, information, expectations, and market conditions."
+            },
+            {
+              "id": "J3-M16-Q2-O3",
+              "text": "One buyer always controls the price",
+              "isCorrect": false,
+              "feedback": "Market prices usually result from the interaction of many buyers and sellers."
+            },
+            {
+              "id": "J3-M16-Q2-O4",
+              "text": "Every piece of good news makes the price rise",
+              "isCorrect": false,
+              "feedback": "The news may already be expected, or investors may interpret it differently."
+            }
+          ],
+          "correctAnswerId": "J3-M16-Q2-O1",
+          "correctExplanation": "Prices are influenced by buyers’ and sellers’ reactions to information. Different interpretations and unexpected events make future movements uncertain.",
+          "misconceptionTested": "Stock prices move completely at random."
+        },
+        {
+          "id": "J3-M16-Q3",
+          "category": "application",
+          "text": "A company reports a profit, but the profit is much lower than investors expected. What could happen to its share price?",
+          "options": [
+            {
+              "id": "J3-M16-Q3-O1",
+              "text": "It may fall because expectations were disappointed",
+              "isCorrect": true,
+              "feedback": "Correct. Investors compare results with what they expected before the announcement."
+            },
+            {
+              "id": "J3-M16-Q3-O2",
+              "text": "It must rise because the company made a profit",
+              "isCorrect": false,
+              "feedback": "A profit alone does not decide the price. Investors also consider whether the result was better or worse than expected."
+            },
+            {
+              "id": "J3-M16-Q3-O3",
+              "text": "It must stay unchanged",
+              "isCorrect": false,
+              "feedback": "New information may change what buyers and sellers are willing to offer or accept."
+            },
+            {
+              "id": "J3-M16-Q3-O4",
+              "text": "One shareholder chooses the new price",
+              "isCorrect": false,
+              "feedback": "The market price usually develops through trades between many buyers and sellers."
+            }
+          ],
+          "correctAnswerId": "J3-M16-Q3-O1",
+          "correctExplanation": "Investors compare results with earlier expectations. A profitable company’s share price may fall when its results are weaker than expected.",
+          "misconceptionTested": "A stock price rises whenever a company makes a profit."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M16-S10",
+      "type": "completion",
+      "headline": "Market Reaction Mapper!",
+      "message": "You learned how company information can change expectations, trading decisions, and stock prices.",
+      "xpReward": 50,
+      "progressMessage": "Mission 16 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, explore how possible investment rewards are connected to uncertainty and risk.",
+      "animation": "Four cause-and-effect cards connect in order, followed by balanced upward, downward, and stable price arrows.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M16-S11",
+      "type": "real_life_challenge",
+      "title": "Build a Market Chain",
+      "instruction": "Create four imaginary cards: Company News, Investor Reaction, Buying or Selling Interest, and Price Effect. Arrange them in order without using real stocks.",
+      "buttonLabel": "My Market Chain Is Ready",
+      "primaryAction": {
+        "label": "My Market Chain Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on how changing expectations and buyer-seller activity influence stock prices."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission explains price formation through agreed trades, changing demand, available supply, and investor expectations."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses a fictional game company, product announcements, simple trading scenarios, and introductory market concepts suitable for teens."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend buying, selling, or holding any real investment."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "Every price outcome is described as possible rather than guaranteed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The mission uses fictional classroom scenarios and does not predict the future price of any real company."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Buyers, sellers, profits, losses, and changing expectations are discussed neutrally."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission includes alternative price factors and clarifies that real markets contain many continuous orders and different interpretations."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, a game company, app businesses, pre-orders, profits, and familiar digital products for UK teens."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner arranges the complete sequence from company information to investor reaction, changing demand, and price movement."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses random price movements, profitable companies, changing expectations, and the influence of multiple buyers and sellers."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, one four-card sequence, three scenario checks, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and appropriate for teens aged 13–17."
+    }
+  ]
+}
