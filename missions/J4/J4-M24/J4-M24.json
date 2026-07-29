@@ -1,0 +1,711 @@
+{
+  "id": "J4-M24",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Start Early",
+  "concept": "Starting to invest earlier gives money more time to grow and potentially earn returns on previous growth.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "currencyDisplay": "£",
+  "language": "English",
+  "learningObjective": "Understand how starting earlier can improve long-term investment outcomes by giving money more time to grow.",
+  "primaryMisconception": "Starting later with more money always makes it easy to catch up with someone who started earlier.",
+  "secondaryMisconceptions": [
+    "Small amounts invested early cannot make a meaningful difference.",
+    "The amount invested matters, but the length of time invested does not."
+  ],
+  "keyTakeaway": "Time can be one of the strongest advantages in long-term investing.",
+  "screens": [
+    {
+      "id": "J4-M24-S01",
+      "type": "hook",
+      "title": "A Ten-Year Head Start",
+      "content": "Two friends invest £100 monthly. One starts ten years earlier. At 60, who contributed more—and who may finish with more?",
+      "illustration": "Two runners follow the same long timeline. One starts at age 20, while the other waits at the age-30 marker.",
+      "primaryAction": {
+        "label": "Compare Their Timelines",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M24-S02",
+      "type": "story",
+      "title": "Same Goal, Different Start",
+      "content": "Hana starts investing £100 monthly at age 20. Omar plans to invest the same amount but waits until age 30.",
+      "illustration": "Hana begins at the age-20 marker while Omar’s path remains paused until age 30.",
+      "primaryAction": {
+        "label": "Move to Age 30",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M24-S03",
+      "type": "story",
+      "title": "Ten Years Already Working",
+      "content": "When Omar begins, Hana has already made ten years of contributions. Her earlier money has also had time for possible growth.",
+      "illustration": "Hana’s timeline shows contributions and a separate growth layer. Omar’s timeline begins at zero.",
+      "primaryAction": {
+        "label": "Look Further Ahead",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M24-S04",
+      "type": "story",
+      "title": "Growth on Earlier Growth",
+      "content": "Both continue contributing. Over time, Hana’s earlier returns may generate additional returns, increasing the value of her head start.",
+      "illustration": "Small growth branches appear on top of earlier growth while both investors continue adding monthly contributions.",
+      "primaryAction": {
+        "label": "Explore the Timeline",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M24-S05",
+      "type": "pre_interaction",
+      "title": "What Creates the Advantage?",
+      "question": "What gives Hana an advantage when Omar begins at age 30?",
+      "options": [
+        {
+          "id": "J4-M24-PQ-O1",
+          "text": "Her investments are guaranteed to rise",
+          "isRecommended": false,
+          "response": "Starting early does not guarantee positive returns. Investment values can rise or fall."
+        },
+        {
+          "id": "J4-M24-PQ-O2",
+          "text": "She has contributed for ten extra years",
+          "isRecommended": true,
+          "response": "Correct. Her earlier contributions have also had more time for potential growth."
+        },
+        {
+          "id": "J4-M24-PQ-O3",
+          "text": "Her £100 is worth more than Omar’s £100",
+          "isRecommended": false,
+          "response": "Their monthly amounts are equal. The important difference is how long the money remains invested."
+        },
+        {
+          "id": "J4-M24-PQ-O4",
+          "text": "Omar can never catch up",
+          "isRecommended": false,
+          "response": "Catching up may be possible, but it can require larger contributions and still depends on uncertain returns."
+        }
+      ],
+      "recommendedAnswerId": "J4-M24-PQ-O2",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J4-M24-S06",
+      "type": "interaction",
+      "interactionType": "timeline_slider",
+      "title": "Follow Forty Years of Growth",
+      "instruction": "Move through ages 20, 30, 40, 50, and 60. Compare each investor’s contributions, illustrative growth, and total balance.",
+      "config": {
+        "timeline": {
+          "startingAge": 20,
+          "endingAge": 60,
+          "steps": [
+            20,
+            30,
+            40,
+            50,
+            60
+          ]
+        },
+        "monthlyContribution": 100,
+        "illustrativeAnnualReturnPercent": 5,
+        "compoundingFrequency": "monthly",
+        "educationalAssumptions": [
+          "Hana starts contributing at age 20.",
+          "Omar starts contributing at age 30.",
+          "Each contributes £100 at the end of every month after starting.",
+          "Both continue until age 60.",
+          "The activity uses an illustrative annual return of 5%, compounded monthly.",
+          "The return remains smooth and constant only to make the role of time easy to see.",
+          "Real returns do not arrive smoothly and may be positive or negative.",
+          "Fees, taxes, inflation, missed contributions, and currency changes are excluded.",
+          "Balances are rounded to the nearest pound.",
+          "These values are examples, not forecasts or guaranteed outcomes.",
+          "The activity is educational and does not recommend a real investment."
+        ],
+        "milestones": [
+          {
+            "id": "age_20",
+            "age": 20,
+            "earlyInvestor": {
+              "name": "Hana",
+              "status": "begins_contributing",
+              "yearsInvested": 0,
+              "contributions": 0,
+              "illustrativeGrowth": 0,
+              "illustrativeBalance": 0
+            },
+            "lateInvestor": {
+              "name": "Omar",
+              "status": "not_started",
+              "yearsInvested": 0,
+              "contributions": 0,
+              "illustrativeGrowth": 0,
+              "illustrativeBalance": 0
+            },
+            "feedback": "Both begin at the same financial starting point, but only Hana starts the clock today.",
+            "prompt": {
+              "id": "J4-M24-IQ1",
+              "question": "Who is currently contributing?",
+              "options": [
+                {
+                  "id": "J4-M24-IQ1-O1",
+                  "text": "Hana only",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M24-IQ1-O2",
+                  "text": "Omar only",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ1-O3",
+                  "text": "Both",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M24-IQ1-O1",
+              "explanation": "Hana begins at age 20. Omar plans to wait until age 30."
+            }
+          },
+          {
+            "id": "age_30",
+            "age": 30,
+            "earlyInvestor": {
+              "name": "Hana",
+              "yearsInvested": 10,
+              "contributions": 12000,
+              "illustrativeGrowth": 3528,
+              "illustrativeBalance": 15528
+            },
+            "lateInvestor": {
+              "name": "Omar",
+              "status": "begins_contributing",
+              "yearsInvested": 0,
+              "contributions": 0,
+              "illustrativeGrowth": 0,
+              "illustrativeBalance": 0
+            },
+            "feedback": "Hana has contributed £12,000. Under the classroom assumption, earlier returns have added approximately £3,528.",
+            "question": {
+              "id": "J4-M24-IQ2",
+              "question": "What is the most important difference at age 30?",
+              "options": [
+                {
+                  "id": "J4-M24-IQ2-O1",
+                  "text": "Hana’s monthly contribution was larger",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ2-O2",
+                  "text": "Hana’s money had ten extra years",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M24-IQ2-O3",
+                  "text": "Omar’s investment has failed",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ2-O4",
+                  "text": "Hana’s future return is guaranteed",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M24-IQ2-O2",
+              "explanation": "The monthly amounts are the same. Hana’s advantage comes from earlier contributions and more time for potential growth."
+            }
+          },
+          {
+            "id": "age_40",
+            "age": 40,
+            "earlyInvestor": {
+              "name": "Hana",
+              "yearsInvested": 20,
+              "contributions": 24000,
+              "illustrativeGrowth": 17103,
+              "illustrativeBalance": 41103
+            },
+            "lateInvestor": {
+              "name": "Omar",
+              "yearsInvested": 10,
+              "contributions": 12000,
+              "illustrativeGrowth": 3528,
+              "illustrativeBalance": 15528
+            },
+            "comparison": {
+              "contributionDifference": 12000,
+              "illustrativeBalanceDifference": 25575,
+              "differenceBeyondContributions": 13575
+            },
+            "feedback": "Both now contribute monthly, but Hana’s first ten years have had another decade to potentially grow.",
+            "question": {
+              "id": "J4-M24-IQ3",
+              "question": "Why is the balance difference larger than the contribution difference?",
+              "options": [
+                {
+                  "id": "J4-M24-IQ3-O1",
+                  "text": "Hana secretly contributes more each month",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ3-O2",
+                  "text": "Omar’s contributions do not count",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ3-O3",
+                  "text": "Hana’s earlier money has also generated illustrative growth",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M24-IQ3-O4",
+                  "text": "The result is legally guaranteed",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M24-IQ3-O3",
+              "explanation": "The difference includes both extra contributions and potential returns earned over more time."
+            }
+          },
+          {
+            "id": "age_50",
+            "age": 50,
+            "earlyInvestor": {
+              "name": "Hana",
+              "yearsInvested": 30,
+              "contributions": 36000,
+              "illustrativeGrowth": 47226,
+              "illustrativeBalance": 83226
+            },
+            "lateInvestor": {
+              "name": "Omar",
+              "yearsInvested": 20,
+              "contributions": 24000,
+              "illustrativeGrowth": 17103,
+              "illustrativeBalance": 41103
+            },
+            "comparison": {
+              "contributionDifference": 12000,
+              "illustrativeBalanceDifference": 42123,
+              "illustrativeGrowthDifference": 30123
+            },
+            "feedback": "For Hana, illustrative growth now exceeds her total contributions. Growth on previous growth has become more noticeable.",
+            "question": {
+              "id": "J4-M24-IQ4",
+              "question": "What has become more noticeable by age 50?",
+              "options": [
+                {
+                  "id": "J4-M24-IQ4-O1",
+                  "text": "Monthly contributions have stopped",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ4-O2",
+                  "text": "Returns are now guaranteed",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ4-O3",
+                  "text": "Potential growth on earlier contributions and previous growth",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M24-IQ4-O4",
+                  "text": "Omar’s £100 has become smaller",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M24-IQ4-O3",
+              "explanation": "More time allows potential returns to build on both contributions and earlier returns."
+            }
+          },
+          {
+            "id": "age_60",
+            "age": 60,
+            "earlyInvestor": {
+              "name": "Hana",
+              "yearsInvested": 40,
+              "contributions": 48000,
+              "illustrativeGrowth": 104602,
+              "illustrativeBalance": 152602
+            },
+            "lateInvestor": {
+              "name": "Omar",
+              "yearsInvested": 30,
+              "contributions": 36000,
+              "illustrativeGrowth": 47226,
+              "illustrativeBalance": 83226
+            },
+            "comparison": {
+              "monthlyContributionDifference": 0,
+              "yearsContributingDifference": 10,
+              "contributionDifference": 12000,
+              "illustrativeGrowthDifference": 57376,
+              "illustrativeBalanceDifference": 69376
+            },
+            "feedback": "Hana contributed £12,000 more because she started ten years earlier. Under the classroom assumption, her illustrative balance is approximately £69,376 higher.",
+            "question": {
+              "id": "J4-M24-IQ5",
+              "question": "What explains most of the final balance gap in this example?",
+              "options": [
+                {
+                  "id": "J4-M24-IQ5-O1",
+                  "text": "Hana’s monthly amount was higher",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ5-O2",
+                  "text": "Omar lost every contribution",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M24-IQ5-O3",
+                  "text": "Hana had more contributions and more time for potential growth",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M24-IQ5-O4",
+                  "text": "Starting early guaranteed a 5% return",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M24-IQ5-O3",
+              "explanation": "Hana contributed for ten extra years, and those earlier contributions had longer to potentially generate returns."
+            }
+          }
+        ],
+        "catchUpComparison": {
+          "lateInvestorStartAge": 30,
+          "lateInvestorMonthlyContribution": 184,
+          "lateInvestorYearsContributing": 30,
+          "lateInvestorTotalContributions": 66240,
+          "lateInvestorIllustrativeEndingBalance": 153136,
+          "earlyInvestorMonthlyContribution": 100,
+          "earlyInvestorTotalContributions": 48000,
+          "earlyInvestorIllustrativeEndingBalance": 152602,
+          "monthlyContributionIncreasePercent": 84,
+          "additionalTotalContributions": 18240,
+          "clarification": "The £184 figure is only an arithmetic illustration based on a constant 5% classroom assumption. Real investment returns, fees, taxes, and contribution patterns would change the result.",
+          "question": {
+            "id": "J4-M24-IQ6",
+            "question": "What does the catch-up example demonstrate?",
+            "options": [
+              {
+                "id": "J4-M24-IQ6-O1",
+                "text": "Starting later always makes catching up easy",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M24-IQ6-O2",
+                "text": "A larger contribution guarantees success",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M24-IQ6-O3",
+                "text": "Starting later may require much larger contributions",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M24-IQ6-O4",
+                "text": "Time has no effect when monthly contributions change",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M24-IQ6-O3",
+            "explanation": "Omar can try to close the gap, but doing so requires a substantially larger monthly amount under the same illustrative assumptions."
+          }
+        },
+        "causeAndEffectFeedback": [
+          {
+            "cause": "Start earlier with a smaller amount",
+            "effect": "The money receives more time to potentially grow."
+          },
+          {
+            "cause": "Wait ten years before starting",
+            "effect": "There are fewer years for contributions and potential compound growth."
+          },
+          {
+            "cause": "Invest more money later",
+            "effect": "Larger contributions may help close the gap, but catching up may require much more money."
+          },
+          {
+            "cause": "Pause contributions during a market decline",
+            "effect": "Less money is contributed during that period, and the investor may miss part of a later recovery.",
+            "clarification": "Personal cash needs may still require contribution changes. Continuing is not always possible or appropriate."
+          }
+        ],
+        "displayRequirements": [
+          "Total money personally contributed",
+          "Illustrative investment growth",
+          "Total illustrative balance"
+        ],
+        "correctCompletionState": {
+          "allTimelineStagesVisited": true,
+          "earlyInvestorStartAge": 20,
+          "lateInvestorStartAge": 30,
+          "normalMonthlyContribution": 100,
+          "totalContributionDifference": 12000,
+          "timeAdvantageUnderstood": true,
+          "compoundGrowthUnderstood": true,
+          "returnsNotGuaranteedUnderstood": true,
+          "catchUpMayRequireLargerContributionsUnderstood": true
+        },
+        "validationMethod": "Confirm that the learner visits all five ages and correctly answers the questions at ages 30, 40, 50, and 60, plus the catch-up question.",
+        "retryBehavior": "Keep completed timeline stages unlocked. Return only incorrectly answered questions and highlight the relevant contribution and growth figures.",
+        "accessibilityAlternative": {
+          "method": "Provide Previous Age and Next Age buttons. At each stage, read Hana’s and Omar’s contributions, illustrative growth, and balances separately.",
+          "screenReaderInstruction": "Move through ages 20, 30, 40, 50, and 60. Compare contributions with illustrative growth and answer each timeline question."
+        }
+      },
+      "feedback": {
+        "success": "Timeline complete! You separated contributions from growth and discovered why ten additional years can create a major advantage.",
+        "incorrect": "Compare both the money contributed and the time each contribution has had to potentially grow.",
+        "incomplete": "Visit every age and complete all five timeline questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check the Timeline",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J4-M24-S07",
+      "type": "reveal",
+      "title": "Time Gives Growth More Chances",
+      "content": "You saw Hana’s contributions begin working ten years sooner. This creates more time for compound growth, where returns may generate further returns. Starting early does not guarantee profit, and actual results depend on investment performance, fees, taxes, contribution consistency, and time invested. However, a longer time horizon can make modest contributions more powerful. Waiting may still be recoverable, but catching up can require much larger payments or a later goal date.",
+      "simpleSummary": "Starting earlier gives contributions and potential growth more time to build.",
+      "illustration": "Early contributions grow into branches, with later growth forming additional branches over a 40-year timeline.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M24-S08",
+      "type": "real_life_example",
+      "title": "Starting With £50",
+      "content": "At 25, Mariam starts contributing £50 monthly to a fictional long-term investment. At 35, Sam begins the same amount. Mariam contributes more overall, but her earliest deposits also have ten extra years to potentially grow. Neither result is guaranteed.",
+      "illustration": "Two £50 monthly paths begin at ages 25 and 35, with the earlier path extending farther along the timeline.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M24-S09",
+      "type": "quiz",
+      "title": "Starting Early Check",
+      "questions": [
+        {
+          "id": "J4-M24-Q1",
+          "category": "recognition",
+          "text": "Two people contribute £100 monthly until age 60. One starts at 22 and the other at 32. What advantage does the first person have?",
+          "options": [
+            {
+              "id": "J4-M24-Q1-O1",
+              "text": "A guaranteed profit",
+              "isCorrect": false,
+              "feedback": "Starting early provides more time, but it cannot guarantee positive returns."
+            },
+            {
+              "id": "J4-M24-Q1-O2",
+              "text": "A higher monthly contribution",
+              "isCorrect": false,
+              "feedback": "Both people contribute the same monthly amount."
+            },
+            {
+              "id": "J4-M24-Q1-O3",
+              "text": "Ten additional years for contributions and potential growth",
+              "isCorrect": true,
+              "feedback": "Correct. The early contributions have more time to potentially grow."
+            },
+            {
+              "id": "J4-M24-Q1-O4",
+              "text": "Protection from every market decline",
+              "isCorrect": false,
+              "feedback": "An early investor can still experience losses and volatility."
+            }
+          ],
+          "correctAnswerId": "J4-M24-Q1-O3",
+          "correctExplanation": "The earlier investor contributes for longer, and each early contribution has more time to potentially grow.",
+          "misconceptionTested": "The length of time invested does not affect the outcome."
+        },
+        {
+          "id": "J4-M24-Q2",
+          "category": "misconception",
+          "text": "Someone starts ten years later but contributes more each month. What is most accurate?",
+          "options": [
+            {
+              "id": "J4-M24-Q2-O1",
+              "text": "Catching up is always quick and easy",
+              "isCorrect": false,
+              "feedback": "The required increase may be significant, especially when the earlier money has grown for many years."
+            },
+            {
+              "id": "J4-M24-Q2-O2",
+              "text": "The larger contribution guarantees a better result",
+              "isCorrect": false,
+              "feedback": "Investment returns remain uncertain regardless of the amount contributed."
+            },
+            {
+              "id": "J4-M24-Q2-O3",
+              "text": "Starting time no longer matters",
+              "isCorrect": false,
+              "feedback": "A larger payment does not restore the years that have already passed."
+            },
+            {
+              "id": "J4-M24-Q2-O4",
+              "text": "Larger contributions may help, but catching up can require much more money",
+              "isCorrect": true,
+              "feedback": "Correct. The later investor has fewer years for contributions and potential growth."
+            }
+          ],
+          "correctAnswerId": "J4-M24-Q2-O4",
+          "correctExplanation": "The later investor has fewer years for contributions and potential growth, so closing the gap may require a substantially larger monthly amount.",
+          "misconceptionTested": "Starting later with more money always makes it easy to catch up."
+        },
+        {
+          "id": "J4-M24-Q3",
+          "category": "application",
+          "text": "A person can contribute £25 monthly now or wait ten years before contributing £100. What does starting now provide?",
+          "options": [
+            {
+              "id": "J4-M24-Q3-O1",
+              "text": "Guaranteed wealth",
+              "isCorrect": false,
+              "feedback": "Starting early can help, but no contribution schedule guarantees wealth."
+            },
+            {
+              "id": "J4-M24-Q3-O2",
+              "text": "A guaranteed better final result",
+              "isCorrect": false,
+              "feedback": "The later contribution is larger, and actual returns are uncertain. The early option’s clear advantage is time."
+            },
+            {
+              "id": "J4-M24-Q3-O3",
+              "text": "More time for the early contributions to potentially grow",
+              "isCorrect": true,
+              "feedback": "Correct. Even a small early amount receives additional time."
+            },
+            {
+              "id": "J4-M24-Q3-O4",
+              "text": "Protection from fees and taxes",
+              "isCorrect": false,
+              "feedback": "Starting time does not remove fees or tax considerations."
+            }
+          ],
+          "correctAnswerId": "J4-M24-Q3-O3",
+          "correctExplanation": "Even a small early amount receives additional time. The final result still depends on performance, fees, consistency, and later decisions.",
+          "misconceptionTested": "Small amounts invested early cannot make a meaningful difference."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J4-M24-S10",
+      "type": "completion",
+      "headline": "Time Advantage Unlocked!",
+      "message": "You learned how starting earlier gives contributions and potential growth more time to work.",
+      "xpReward": 50,
+      "progressMessage": "Mission 24 complete in Grow Wealth Wisely.",
+      "nextMissionTeaser": "Next, explore how compound growth builds when returns remain invested over time.",
+      "animation": "A timeline extends from age 20 to 60 as early contribution tokens grow into larger branching patterns.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J4-M24-S11",
+      "type": "real_life_challenge",
+      "title": "Build a Start-Time Comparison",
+      "instruction": "Create two fictional timelines using the same monthly amount. Start one ten years earlier and mark how many additional contributions it receives.",
+      "buttonLabel": "My Timelines Are Ready",
+      "primaryAction": {
+        "label": "My Timelines Are Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on the advantage created by additional time in long-term investing."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission separates contributions from illustrative compound growth and clearly identifies the return assumption."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses monthly contributions, long-term goals, catch-up amounts, fees, taxes, and adult financial planning."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "All contribution schedules, return assumptions, people, and balances are fictional educational examples."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission repeatedly states that the 5% classroom return and final balances are not guaranteed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss or predict the price of any real stock or investment."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Starting early, starting late, contributing small amounts, and pausing contributions are discussed without judgement."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission includes investment performance, fees, taxes, contribution consistency, inflation exclusions, and the uncertainty of real returns."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, monthly contributions, ages, employment income, and familiar long-term financial decisions."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The timeline separately displays contributions and illustrative growth at five ages and includes a later-start catch-up comparison."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses easy catch-up, small early contributions, guaranteed outcomes, and the importance of time."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, five slider milestones, five interaction questions, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
