@@ -1,0 +1,602 @@
+{
+  "id": "J3-M19",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "Bonds",
+  "concept": "A bond is generally a loan made by an investor to a company or government. The borrower promises interest payments and repayment under agreed terms.",
+  "audience": "teens_13_17",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand that buying a bond generally means lending money to an organisation rather than purchasing ownership in it.",
+  "primaryMisconception": "Bonds are the same as stocks.",
+  "secondaryMisconceptions": [
+    "Buying a bond gives the investor ownership or control of the borrower.",
+    "Bonds are completely risk-free and always repay investors on time."
+  ],
+  "keyTakeaway": "Buying a bond generally means lending money, not owning the borrower.",
+  "screens": [
+    {
+      "id": "J3-M19-S01",
+      "type": "hook",
+      "title": "Owner or Lender?",
+      "content": "A company needs £10,000 but refuses to sell ownership. Investors still provide the money. What do they receive instead?",
+      "illustration": "A company stands between an ownership-share card and a loan agreement. The ownership card is crossed out.",
+      "primaryAction": {
+        "label": "Follow the Money",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M19-S02",
+      "type": "story",
+      "title": "New Equipment Needed",
+      "content": "BrightBuild needs £10,000 for new equipment. Its owners want to keep ownership of the company.",
+      "illustration": "A workshop displays new equipment with a £10,000 price tag while the founders protect an ownership chart.",
+      "primaryAction": {
+        "label": "See the Plan",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M19-S03",
+      "type": "story",
+      "title": "Borrowing From Investors",
+      "content": "BrightBuild offers bonds to investors. Each bond includes rules about interest payments and when the borrowed money should be repaid.",
+      "illustration": "Several bond documents travel from the company to investors while money moves towards the company.",
+      "primaryAction": {
+        "label": "Compare With Stocks",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M19-S04",
+      "type": "story",
+      "title": "Two Different Roles",
+      "content": "A shareholder owns part of a company. A bond investor lends money and receives a repayment promise instead of ownership.",
+      "illustration": "One path shows a shareholder ownership badge. The other shows a lender agreement and repayment calendar.",
+      "primaryAction": {
+        "label": "Predict Your Role",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M19-S05",
+      "type": "pre_interaction",
+      "title": "What Does the Bond Investor Become?",
+      "question": "When you buy a company bond, what role do you generally take?",
+      "options": [
+        {
+          "id": "J3-M19-PQ-O1",
+          "text": "A lender to the company",
+          "isRecommended": true,
+          "response": "Correct. The company borrows your money and agrees to follow the bond’s repayment terms."
+        },
+        {
+          "id": "J3-M19-PQ-O2",
+          "text": "An owner of the company",
+          "isRecommended": false,
+          "response": "Ownership usually comes from shares. A bond generally creates a lending relationship instead."
+        },
+        {
+          "id": "J3-M19-PQ-O3",
+          "text": "The company’s manager",
+          "isRecommended": false,
+          "response": "Buying a bond does not normally give control over daily business decisions."
+        },
+        {
+          "id": "J3-M19-PQ-O4",
+          "text": "A customer buying equipment",
+          "isRecommended": false,
+          "response": "The investor provides money to the company but does not personally purchase or own its equipment."
+        }
+      ],
+      "recommendedAnswerId": "J3-M19-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J3-M19-S06",
+      "type": "interaction",
+      "interactionType": "match_pairs",
+      "title": "Ownership or Lending?",
+      "instruction": "Match each financial term with what it represents.",
+      "config": {
+        "educationalAssumptions": [
+          "BrightBuild and its bond are fictional.",
+          "The bond terms are simplified classroom examples.",
+          "A bond is generally a lending arrangement rather than company ownership.",
+          "Bond issuers may be companies, governments, or other organisations.",
+          "Interest and repayment are promises under the bond terms, not guaranteed outcomes.",
+          "A bond’s market value may rise or fall before its repayment date.",
+          "Real bonds can have different payment schedules, risks, prices, and conditions.",
+          "The activity does not recommend buying any real bond or stock."
+        ],
+        "leftSideItems": [
+          {
+            "id": "term_stock",
+            "label": "Stock"
+          },
+          {
+            "id": "term_bond",
+            "label": "Bond"
+          },
+          {
+            "id": "term_dividend",
+            "label": "Dividend"
+          },
+          {
+            "id": "term_interest_payment",
+            "label": "Interest payment"
+          }
+        ],
+        "rightSideItems": [
+          {
+            "id": "meaning_company_ownership",
+            "label": "Ownership in a company"
+          },
+          {
+            "id": "meaning_money_lent",
+            "label": "Money lent to a company or government"
+          },
+          {
+            "id": "meaning_profit_distribution",
+            "label": "A possible distribution of company profits to shareholders"
+          },
+          {
+            "id": "meaning_lender_payment",
+            "label": "An amount paid to a lender for borrowing money"
+          }
+        ],
+        "correctPairs": [
+          {
+            "leftItemId": "term_stock",
+            "rightItemId": "meaning_company_ownership",
+            "explanation": "Buying stock generally makes the investor a partial owner. The stock’s value may rise or fall, and profit is not guaranteed."
+          },
+          {
+            "leftItemId": "term_bond",
+            "rightItemId": "meaning_money_lent",
+            "explanation": "Buying a bond generally means lending money to the issuer under agreed repayment and interest terms."
+          },
+          {
+            "leftItemId": "term_dividend",
+            "rightItemId": "meaning_profit_distribution",
+            "explanation": "Some companies may distribute part of their profits to shareholders. Dividends are not guaranteed."
+          },
+          {
+            "leftItemId": "term_interest_payment",
+            "rightItemId": "meaning_lender_payment",
+            "explanation": "Interest is the amount the borrower agrees to pay for using the lender’s money."
+          }
+        ],
+        "incorrectMatchFeedback": [
+          {
+            "leftItemId": "term_stock",
+            "rightItemId": "meaning_money_lent",
+            "feedback": "A stock usually represents ownership. Lending money to an organisation is more closely connected with a bond."
+          },
+          {
+            "leftItemId": "term_stock",
+            "rightItemId": "meaning_profit_distribution",
+            "feedback": "A dividend may be paid to a shareholder, but the stock itself represents ownership."
+          },
+          {
+            "leftItemId": "term_stock",
+            "rightItemId": "meaning_lender_payment",
+            "feedback": "Interest is generally paid to a lender. A shareholder may instead receive a dividend, although dividends are not guaranteed."
+          },
+          {
+            "leftItemId": "term_bond",
+            "rightItemId": "meaning_company_ownership",
+            "feedback": "A bond generally makes the investor a lender, not a company owner."
+          },
+          {
+            "leftItemId": "term_bond",
+            "rightItemId": "meaning_profit_distribution",
+            "feedback": "Dividends are connected with shares and company ownership. Bonds may make interest payments under their terms."
+          },
+          {
+            "leftItemId": "term_bond",
+            "rightItemId": "meaning_lender_payment",
+            "feedback": "Interest is a payment connected with a bond, but the bond itself represents the money lent."
+          },
+          {
+            "leftItemId": "term_dividend",
+            "rightItemId": "meaning_money_lent",
+            "feedback": "A dividend is a possible payment to shareholders rather than the original money lent."
+          },
+          {
+            "leftItemId": "term_dividend",
+            "rightItemId": "meaning_lender_payment",
+            "feedback": "Both may provide income, but dividends come from company decisions while bond interest follows the bond’s agreed terms."
+          },
+          {
+            "leftItemId": "term_interest_payment",
+            "rightItemId": "meaning_company_ownership",
+            "feedback": "Receiving interest does not normally create company ownership."
+          },
+          {
+            "leftItemId": "term_interest_payment",
+            "rightItemId": "meaning_profit_distribution",
+            "feedback": "Interest is paid for borrowing money. A dividend is a possible distribution to shareholders."
+          }
+        ],
+        "classroomBondExample": {
+          "amountLent": 100,
+          "annualInterestPayment": 4,
+          "lengthYears": 3,
+          "promisedRepaymentAtEnd": 100,
+          "disclaimer": "These figures explain the bond structure only. They are not a real offer or guaranteed result."
+        },
+        "followUpQuestions": [
+          {
+            "id": "J3-M19-IQ1",
+            "question": "What does the investor own after buying this bond?",
+            "options": [
+              {
+                "id": "J3-M19-IQ1-O1",
+                "text": "A lending claim under the bond agreement",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M19-IQ1-O2",
+                "text": "Part of BrightBuild",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M19-IQ1-O3",
+                "text": "BrightBuild’s equipment",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M19-IQ1-O4",
+                "text": "Control of the company",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M19-IQ1-O1",
+            "explanation": "The investor has lent £100 under agreed terms. The bond does not normally provide company ownership."
+          },
+          {
+            "id": "J3-M19-IQ2",
+            "question": "If BrightBuild makes every promised payment, how much would the investor receive over three years?",
+            "options": [
+              {
+                "id": "J3-M19-IQ2-O1",
+                "text": "£100",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M19-IQ2-O2",
+                "text": "£112",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M19-IQ2-O3",
+                "text": "£104",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M19-IQ2-O4",
+                "text": "£300",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M19-IQ2-O2",
+            "explanation": "The investor receives three £4 interest payments, totalling £12, plus the £100 repayment."
+          },
+          {
+            "id": "J3-M19-IQ3",
+            "question": "Is receiving the full £112 guaranteed?",
+            "options": [
+              {
+                "id": "J3-M19-IQ3-O1",
+                "text": "No, the borrower may struggle to make payments",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-M19-IQ3-O2",
+                "text": "Yes, every bond is risk-free",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M19-IQ3-O3",
+                "text": "Yes, because interest is promised",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-M19-IQ3-O4",
+                "text": "No, because bonds never repay investors",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J3-M19-IQ3-O1",
+            "explanation": "The issuer promises to pay, but financial problems could cause delayed, reduced, or missed payments."
+          }
+        ],
+        "bondRiskReminder": [
+          {
+            "risk": "repayment_risk",
+            "explanation": "The issuer may struggle to make interest payments or repay the borrowed amount."
+          },
+          {
+            "risk": "price_risk",
+            "explanation": "The bond’s market value may rise or fall if it is sold before repayment."
+          },
+          {
+            "risk": "interest_rate_risk",
+            "explanation": "Changes in wider interest rates may affect the bond’s market value."
+          },
+          {
+            "risk": "inflation_risk",
+            "explanation": "Future payments may buy less if prices rise."
+          }
+        ],
+        "placementRules": [
+          "Each term must be matched with one meaning.",
+          "Each meaning may be used once.",
+          "There is one correct definition for each term.",
+          "Matches may be completed in any order.",
+          "All three follow-up questions must be answered correctly."
+        ],
+        "correctCompletionState": {
+          "term_stock": "meaning_company_ownership",
+          "term_bond": "meaning_money_lent",
+          "term_dividend": "meaning_profit_distribution",
+          "term_interest_payment": "meaning_lender_payment",
+          "bondInvestorRole": "lender",
+          "classroomTotalReceivedIfAllPaymentsOccur": 112,
+          "riskUnderstanding": "payments_are_promised_but_not_guaranteed"
+        },
+        "validationMethod": "Check all four matches and the three follow-up answers. Complete the interaction when every match and answer is correct.",
+        "retryBehavior": "Keep correct matches connected. Separate only incorrect matches and return only incorrectly answered follow-up questions.",
+        "accessibilityAlternative": {
+          "method": "Present each term with four radio-button definitions. Then present the classroom bond example and follow-up questions in a linear format.",
+          "screenReaderInstruction": "Choose the correct meaning for Stock, Bond, Dividend, and Interest Payment. Then answer the three bond questions."
+        }
+      },
+      "feedback": {
+        "success": "Excellent match! You separated ownership from lending and identified how bond interest and repayment work.",
+        "incorrect": "Ask who receives the payment and why: an owner may receive a dividend, while a lender may receive interest.",
+        "incomplete": "Complete all four matches and answer the three bond questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Matches",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J3-M19-S07",
+      "type": "reveal",
+      "title": "Lending Instead of Owning",
+      "content": "You matched a bond with money lent to a company or government. Buying a bond generally makes you a lender, not an owner. The issuer promises interest payments and repayment under agreed terms. A stock represents ownership and may provide dividends, while a bond creates a repayment claim. Bonds may sometimes move less sharply than some stocks, but they are not risk-free. Payments can be missed, and the bond’s market value can change.",
+      "simpleSummary": "Stocks create ownership; bonds generally create a lending relationship.",
+      "illustration": "A stock certificate connects to an ownership badge, while a bond connects to a lending agreement and payment calendar.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M19-S08",
+      "type": "real_life_example",
+      "title": "Funding a School Project",
+      "content": "A fictional organisation needs £500 for equipment. Instead of selling ownership, it issues five £100 bonds. Investors lend the money and expect interest plus repayment under the agreement. They do not own the organisation, and payment problems are still possible.",
+      "illustration": "Five £100 bond cards fund one equipment purchase while ownership remains unchanged.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-M19-S09",
+      "type": "quiz",
+      "title": "Bond Basics Check",
+      "questions": [
+        {
+          "id": "J3-M19-Q1",
+          "category": "recognition",
+          "text": "Which situation describes buying a bond?",
+          "options": [
+            {
+              "id": "J3-M19-Q1-O1",
+              "text": "Lending money to an organisation under agreed terms",
+              "isCorrect": true,
+              "feedback": "Correct. A bond generally represents money lent to an issuer."
+            },
+            {
+              "id": "J3-M19-Q1-O2",
+              "text": "Buying partial ownership in a company",
+              "isCorrect": false,
+              "feedback": "Partial ownership is generally represented by stock rather than a bond."
+            },
+            {
+              "id": "J3-M19-Q1-O3",
+              "text": "Purchasing a company’s products",
+              "isCorrect": false,
+              "feedback": "Buying a product makes someone a customer, not a bond investor."
+            },
+            {
+              "id": "J3-M19-Q1-O4",
+              "text": "Receiving guaranteed company profits",
+              "isCorrect": false,
+              "feedback": "Bond payments depend on the issuer meeting its obligations and are not guaranteed profits."
+            }
+          ],
+          "correctAnswerId": "J3-M19-Q1-O1",
+          "correctExplanation": "A bond generally represents money lent to an issuer, which promises interest and repayment according to the agreement.",
+          "misconceptionTested": "Buying a bond creates company ownership."
+        },
+        {
+          "id": "J3-M19-Q2",
+          "category": "misconception",
+          "text": "Which statement correctly compares stocks and bonds?",
+          "options": [
+            {
+              "id": "J3-M19-Q2-O1",
+              "text": "Stocks generally represent ownership; bonds generally represent lending",
+              "isCorrect": true,
+              "feedback": "Correct. Shareholders are owners, while bondholders are generally lenders."
+            },
+            {
+              "id": "J3-M19-Q2-O2",
+              "text": "Stocks and bonds are identical",
+              "isCorrect": false,
+              "feedback": "They may both be investments, but they create different financial relationships."
+            },
+            {
+              "id": "J3-M19-Q2-O3",
+              "text": "Both always guarantee profit",
+              "isCorrect": false,
+              "feedback": "Stocks can fall in value, and bond issuers can miss payments."
+            },
+            {
+              "id": "J3-M19-Q2-O4",
+              "text": "Bonds always give more control than stocks",
+              "isCorrect": false,
+              "feedback": "Bondholders are generally lenders and do not normally control company decisions."
+            }
+          ],
+          "correctAnswerId": "J3-M19-Q2-O1",
+          "correctExplanation": "A shareholder owns part of a company. A bond investor generally lends money to an issuer under agreed terms.",
+          "misconceptionTested": "Bonds are the same as stocks."
+        },
+        {
+          "id": "J3-M19-Q3",
+          "category": "application",
+          "text": "A company bond promises repayment next year, but the company develops serious financial problems. What should the investor understand?",
+          "options": [
+            {
+              "id": "J3-M19-Q3-O1",
+              "text": "The company may delay or miss payments",
+              "isCorrect": true,
+              "feedback": "Correct. The repayment promise remains, but the company may be unable to fulfil it."
+            },
+            {
+              "id": "J3-M19-Q3-O2",
+              "text": "Repayment is automatically guaranteed",
+              "isCorrect": false,
+              "feedback": "A promise to repay does not remove the possibility that the issuer may struggle financially."
+            },
+            {
+              "id": "J3-M19-Q3-O3",
+              "text": "The investor now owns the company",
+              "isCorrect": false,
+              "feedback": "Payment difficulties do not turn a bondholder into a shareholder."
+            },
+            {
+              "id": "J3-M19-Q3-O4",
+              "text": "The bond’s price cannot change",
+              "isCorrect": false,
+              "feedback": "A bond’s market value may rise or fall before repayment, especially when the issuer’s financial condition changes."
+            }
+          ],
+          "correctAnswerId": "J3-M19-Q3-O1",
+          "correctExplanation": "A bond creates a repayment promise, but the issuer may be unable to fulfil every payment.",
+          "misconceptionTested": "Bonds are completely risk-free and always repay investors on time."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J3-M19-S10",
+      "type": "completion",
+      "headline": "Bond Basics Unlocked!",
+      "message": "You learned how bonds create a lending relationship rather than company ownership.",
+      "xpReward": 50,
+      "progressMessage": "Mission 19 complete in Become an Investor.",
+      "nextMissionTeaser": "Next, compare how different investments balance possible rewards with different types of risk.",
+      "animation": "The stock and bond cards separate into Owner and Lender paths, followed by an interest-payment and repayment calendar.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J3-M19-S11",
+      "type": "real_life_challenge",
+      "title": "Create a Fictional Bond",
+      "instruction": "Write an imaginary bond with an amount lent, one interest payment, and a repayment date. Label the investor as lender, not owner.",
+      "buttonLabel": "My Bond Is Ready",
+      "primaryAction": {
+        "label": "My Bond Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on bonds as lending arrangements rather than company ownership."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes principal repayment, interest, bondholder claims, shareholders, dividends, default risk, and changing bond values."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses a fictional equipment purchase, a £100 classroom bond, simple calculations, and introductory investment terms."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend any real company, government, bond, stock, or investment decision."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission clearly states that promised bond payments may be delayed, reduced, or missed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The mission contains no predictions involving real stocks, bonds, companies, or markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Borrowers, lenders, shareholders, missed payments, and investment losses are discussed neutrally."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission includes repayment risk, market-price risk, interest-rate risk, inflation risk, and different real-world bond terms."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, companies, equipment purchases, school projects, lending agreements, and familiar UK financial language."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner directly matches bonds with lending, stocks with ownership, interest with lenders, and dividends with shareholders."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses bonds versus stocks, ownership, control, repayment promises, and bond risks."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, four matching pairs, three follow-up questions, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and appropriate for teens aged 13–17."
+    }
+  ]
+}
