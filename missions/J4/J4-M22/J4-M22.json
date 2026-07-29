@@ -1,0 +1,660 @@
+{
+  "id": "J4-M22",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Risk and Reward",
+  "concept": "Investments with greater potential returns often involve greater uncertainty and a wider range of possible gains and losses.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "currencyDisplay": "£",
+  "language": "English",
+  "learningObjective": "Understand that potential return and uncertainty are related.",
+  "primaryMisconception": "Higher risk always produces higher profit.",
+  "secondaryMisconceptions": [
+    "A stable investment option can never lose purchasing power.",
+    "A high-return opportunity must be a better investment.",
+    "Risk only means how much profit an investment may produce."
+  ],
+  "keyTakeaway": "Higher risk may create greater potential returns, but never guarantees them.",
+  "screens": [
+    {
+      "id": "J4-M22-S01",
+      "type": "hook",
+      "title": "Two Roads, One Destination",
+      "content": "One road looks steady. Another may be faster but has sharp turns. Which one reaches the destination first?",
+      "illustration": "Two roads lead towards the same financial goal. One is smooth and slower; the other is steep with shortcuts and warning signs.",
+      "primaryAction": {
+        "label": "Compare the Roads",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M22-S02",
+      "type": "story",
+      "title": "Your £1,000 Decision",
+      "content": "You have a fictional £1,000 to set aside for one year. Three options offer different levels of uncertainty.",
+      "illustration": "A £1,000 card sits above three unopened investment paths labelled Stable, Moderate, and High Risk.",
+      "primaryAction": {
+        "label": "View the Options",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M22-S03",
+      "type": "story",
+      "title": "Three Different Paths",
+      "content": "The stable option may change little. The moderate option may move more. The high-risk option could rise sharply—or lose much more.",
+      "illustration": "Three value lines show narrow, medium, and wide possible movement ranges without displaying guaranteed outcomes.",
+      "primaryAction": {
+        "label": "Compare the Possibilities",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M22-S04",
+      "type": "story",
+      "title": "Potential Is Not a Promise",
+      "content": "A larger possible reward comes with more uncertainty. You must predict the range of outcomes, not search for a guaranteed winner.",
+      "illustration": "A reward arrow rises alongside a widening band of possible gains and losses.",
+      "primaryAction": {
+        "label": "Predict the Outcomes",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M22-S05",
+      "type": "pre_interaction",
+      "title": "Which Result Is Guaranteed?",
+      "question": "Which statement about the three options is most accurate?",
+      "options": [
+        {
+          "id": "J4-M22-PQ-O1",
+          "text": "The highest-risk option will earn the most",
+          "isRecommended": false,
+          "response": "Higher risk may create a larger possible gain, but it can also produce a larger loss."
+        },
+        {
+          "id": "J4-M22-PQ-O2",
+          "text": "The stable option cannot lose value",
+          "isRecommended": false,
+          "response": "Its price may change less, but fees, inflation, or other risks can still reduce its real value."
+        },
+        {
+          "id": "J4-M22-PQ-O3",
+          "text": "More potential reward usually comes with more uncertainty",
+          "isRecommended": true,
+          "response": "Correct. A wider range of possible results includes both larger gains and larger losses."
+        },
+        {
+          "id": "J4-M22-PQ-O4",
+          "text": "All three options should produce the same result",
+          "isRecommended": false,
+          "response": "Different levels of uncertainty can create very different outcomes."
+        }
+      ],
+      "recommendedAnswerId": "J4-M22-PQ-O3",
+      "primaryAction": {
+        "label": "Test My Prediction",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J4-M22-S06",
+      "type": "interaction",
+      "interactionType": "predict_outcome",
+      "title": "Choose the Most Likely Range",
+      "instruction": "Review each fictional option. Predict the range of possible outcomes, then compare what could happen during favourable and difficult conditions.",
+      "config": {
+        "startingAmount": 1000,
+        "timePeriod": "one_year",
+        "educationalAssumptions": [
+          "This is a fictional classroom comparison.",
+          "Each option starts with £1,000.",
+          "The time period is one year.",
+          "No real company, fund, savings product, or return rate is represented.",
+          "The outcome descriptions demonstrate uncertainty rather than predict actual performance.",
+          "Fees, taxes, inflation, and currency changes are simplified or excluded unless stated.",
+          "Lower price movement does not mean an option is completely risk-free.",
+          "Greater uncertainty may create greater potential returns and greater potential losses.",
+          "No option is presented as universally suitable or recommended.",
+          "Past results and professional management cannot guarantee future outcomes."
+        ],
+        "options": [
+          {
+            "id": "option_stable",
+            "label": "Stable Path",
+            "description": "A fictional low-volatility option designed to change relatively little over one year.",
+            "characteristics": [
+              "Narrower range of possible outcomes",
+              "Lower potential for a large gain",
+              "Lower likelihood of a large price fall",
+              "Inflation may still reduce purchasing power"
+            ],
+            "predictionQuestion": {
+              "id": "J4-M22-IQ1",
+              "text": "Which outcome range best fits the Stable Path?",
+              "predictionOptions": [
+                {
+                  "id": "J4-M22-IQ1-O1",
+                  "text": "Small gain, little change, or small loss",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M22-IQ1-O2",
+                  "text": "Large gain or complete loss",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ1-O3",
+                  "text": "Guaranteed profit",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ1-O4",
+                  "text": "Exactly the same return every year",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M22-IQ1-O1",
+              "educationalOutcome": "Small gain, little change, or small loss",
+              "explanation": "A stable option generally has a narrower range of possible results. It may reduce some uncertainty but cannot remove every risk."
+            }
+          },
+          {
+            "id": "option_moderate",
+            "label": "Moderate Path",
+            "description": "A fictional mixed investment containing both steadier and more changeable holdings.",
+            "characteristics": [
+              "Moderate range of possible outcomes",
+              "More growth potential than the stable option",
+              "More chance of losing value",
+              "Different holdings may respond differently"
+            ],
+            "predictionQuestion": {
+              "id": "J4-M22-IQ2",
+              "text": "Which outcome range best fits the Moderate Path?",
+              "predictionOptions": [
+                {
+                  "id": "J4-M22-IQ2-O1",
+                  "text": "No change is possible",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ2-O2",
+                  "text": "Moderate gain or moderate loss",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M22-IQ2-O3",
+                  "text": "Guaranteed large profit",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ2-O4",
+                  "text": "Complete loss is the only outcome",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M22-IQ2-O2",
+              "educationalOutcome": "Moderate gain or moderate loss",
+              "explanation": "This option accepts more uncertainty for greater potential growth, but its result may still be positive, negative, or close to unchanged."
+            }
+          },
+          {
+            "id": "option_high_risk",
+            "label": "High-Risk Path",
+            "description": "A fictional investment in an early-stage company with an uncertain future.",
+            "characteristics": [
+              "Wide range of possible outcomes",
+              "Possibility of a large gain",
+              "Possibility of a large loss",
+              "The business may fail even if the idea appears promising"
+            ],
+            "predictionQuestion": {
+              "id": "J4-M22-IQ3",
+              "text": "Which outcome range best fits the High-Risk Path?",
+              "predictionOptions": [
+                {
+                  "id": "J4-M22-IQ3-O1",
+                  "text": "Guaranteed large gain",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ3-O2",
+                  "text": "Only a small change is possible",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ3-O3",
+                  "text": "Large gain, large loss, or another uncertain result",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M22-IQ3-O4",
+                  "text": "No possibility of losing money",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M22-IQ3-O3",
+              "educationalOutcome": "Large gain, large loss, or another uncertain result",
+              "explanation": "High risk increases the range of possible outcomes. It may create greater upside, but it also increases the chance and size of potential losses."
+            }
+          }
+        ],
+        "scenarios": [
+          {
+            "id": "scenario_favourable",
+            "title": "Favourable Conditions",
+            "scenario": "Business conditions are strong, customers are spending, and investor confidence rises.",
+            "possibleOutcomes": [
+              {
+                "optionId": "option_stable",
+                "outcome": "May produce a small positive result"
+              },
+              {
+                "optionId": "option_moderate",
+                "outcome": "May produce a moderate positive result"
+              },
+              {
+                "optionId": "option_high_risk",
+                "outcome": "May produce a large gain, but this is not guaranteed"
+              }
+            ],
+            "question": {
+              "id": "J4-M22-IQ4",
+              "text": "Which option has the greatest potential gain in this scenario?",
+              "predictionOptions": [
+                {
+                  "id": "J4-M22-IQ4-O1",
+                  "text": "Stable Path",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ4-O2",
+                  "text": "Moderate Path",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ4-O3",
+                  "text": "High-Risk Path",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M22-IQ4-O4",
+                  "text": "All outcomes are guaranteed to be equal",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M22-IQ4-O3",
+              "explanation": "The high-risk option has the greatest upside potential, but potential does not mean the gain will occur."
+            }
+          },
+          {
+            "id": "scenario_difficult",
+            "title": "Difficult Conditions",
+            "scenario": "Demand falls, businesses struggle, and investors become more cautious.",
+            "possibleOutcomes": [
+              {
+                "optionId": "option_stable",
+                "outcome": "May experience a small decline or little change"
+              },
+              {
+                "optionId": "option_moderate",
+                "outcome": "May experience a moderate decline"
+              },
+              {
+                "optionId": "option_high_risk",
+                "outcome": "May experience a large loss"
+              }
+            ],
+            "question": {
+              "id": "J4-M22-IQ5",
+              "text": "Which option has the greatest potential loss in this scenario?",
+              "predictionOptions": [
+                {
+                  "id": "J4-M22-IQ5-O1",
+                  "text": "Stable Path",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ5-O2",
+                  "text": "Moderate Path",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ5-O3",
+                  "text": "High-Risk Path",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M22-IQ5-O4",
+                  "text": "None of the options can lose value",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M22-IQ5-O3",
+              "explanation": "The wider possible outcome range works in both directions. Greater upside potential generally comes with greater downside risk."
+            }
+          },
+          {
+            "id": "scenario_unexpected",
+            "title": "Unexpected Result",
+            "scenario": "The high-risk company launches a promising product, but customers do not buy it.",
+            "question": {
+              "id": "J4-M22-IQ6",
+              "text": "What does this outcome show?",
+              "predictionOptions": [
+                {
+                  "id": "J4-M22-IQ6-O1",
+                  "text": "High risk guarantees high profit",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ6-O2",
+                  "text": "A good idea always succeeds",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M22-IQ6-O3",
+                  "text": "Potential reward does not guarantee an actual return",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M22-IQ6-O4",
+                  "text": "Research removes all uncertainty",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M22-IQ6-O3",
+              "explanation": "Even a promising opportunity can perform poorly. Risk exists because the future result is uncertain."
+            }
+          }
+        ],
+        "optionalConfidenceSelection": {
+          "enabled": true,
+          "options": [
+            "not_confident",
+            "somewhat_confident",
+            "very_confident"
+          ],
+          "affectsScoring": false
+        },
+        "riskRewardComparison": [
+          {
+            "optionId": "option_stable",
+            "potentialGain": "lower",
+            "potentialLoss": "lower",
+            "uncertainty": "lower"
+          },
+          {
+            "optionId": "option_moderate",
+            "potentialGain": "moderate",
+            "potentialLoss": "moderate",
+            "uncertainty": "moderate"
+          },
+          {
+            "optionId": "option_high_risk",
+            "potentialGain": "higher",
+            "potentialLoss": "higher",
+            "uncertainty": "higher"
+          }
+        ],
+        "importantClarification": "These are relative classroom descriptions, not guaranteed outcomes or real investment forecasts.",
+        "correctCompletionState": {
+          "stablePath": "narrower_range_of_possible_outcomes",
+          "moderatePath": "moderate_potential_gain_and_loss",
+          "highRiskPath": "wider_range_including_large_gains_and_large_losses",
+          "rewardUnderstanding": "greater_risk_may_increase_potential_reward",
+          "lossUnderstanding": "greater_risk_also_increases_possible_loss",
+          "misconceptionCorrected": "higher_risk_never_guarantees_higher_profit"
+        },
+        "validationMethod": "Check the three option predictions and the three scenario questions.",
+        "retryBehavior": "Keep correct predictions marked. Return only incorrect questions and provide one short risk-range hint.",
+        "accessibilityAlternative": {
+          "method": "Present each option as a text card followed by selectable outcome ranges. Read the favourable, difficult, and unexpected scenarios in sequence.",
+          "screenReaderInstruction": "Listen to each option’s characteristics, predict its possible outcome range, and answer the three scenario questions."
+        }
+      },
+      "feedback": {
+        "success": "Strong prediction! You recognised that greater reward potential comes with a wider and less certain range of outcomes.",
+        "incorrect": "Look at both sides of the outcome range. Greater possible gains usually come with greater possible losses.",
+        "incomplete": "Complete all three option predictions and all three scenario questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Predictions",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J4-M22-S07",
+      "type": "reveal",
+      "title": "A Wider Range of Possibilities",
+      "content": "You predicted a narrower outcome range for the stable option and a wider range for the high-risk option. Investment risk is the uncertainty that the actual result may differ from what you expect, including the possibility of loss. Investors may accept more risk because an investment offers greater potential returns. However, potential is not a promise. A high-risk investment may earn more, earn less, or lose money. Risk and possible reward are related, but higher risk never guarantees higher profit.",
+      "simpleSummary": "More potential reward usually means accepting more uncertainty and possible loss.",
+      "illustration": "Three outcome bands widen from Stable to Moderate to High Risk, extending towards both gains and losses.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M22-S08",
+      "type": "real_life_example",
+      "title": "Freelance Income or New Business?",
+      "content": "Sara can keep her freelance income in a stable reserve or use some to launch an untested online business. The business could grow quickly, but it might earn nothing. Its higher potential reward comes from taking greater uncertainty—not from a guaranteed profit.",
+      "illustration": "Sara’s money splits between a stable reserve and a new online-business path with wide possible outcomes.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M22-S09",
+      "type": "quiz",
+      "title": "Risk and Reward Check",
+      "questions": [
+        {
+          "id": "J4-M22-Q1",
+          "category": "recognition",
+          "text": "Which option has the widest range of possible outcomes?",
+          "options": [
+            {
+              "id": "J4-M22-Q1-O1",
+              "text": "A low-volatility savings option",
+              "isCorrect": false,
+              "feedback": "This would generally have a narrower range of possible outcomes than an untested business."
+            },
+            {
+              "id": "J4-M22-Q1-O2",
+              "text": "A mixed portfolio",
+              "isCorrect": false,
+              "feedback": "A mixed portfolio can still lose value, but spreading holdings may reduce dependence on one uncertain company."
+            },
+            {
+              "id": "J4-M22-Q1-O3",
+              "text": "An investment in one untested start-up",
+              "isCorrect": true,
+              "feedback": "Correct. The start-up could grow significantly, struggle, or fail."
+            },
+            {
+              "id": "J4-M22-Q1-O4",
+              "text": "Cash kept for a short-term bill",
+              "isCorrect": false,
+              "feedback": "Cash may face inflation and other risks, but its short-term price movement is generally narrower."
+            }
+          ],
+          "correctAnswerId": "J4-M22-Q1-O3",
+          "correctExplanation": "The start-up could grow significantly, struggle, or fail, giving it a wider range of possible results.",
+          "misconceptionTested": "All investment choices have the same level of uncertainty."
+        },
+        {
+          "id": "J4-M22-Q2",
+          "category": "misconception",
+          "text": "An investment is described as high risk. What does that guarantee?",
+          "options": [
+            {
+              "id": "J4-M22-Q2-O1",
+              "text": "A high profit",
+              "isCorrect": false,
+              "feedback": "Higher potential return is not the same as a guaranteed return."
+            },
+            {
+              "id": "J4-M22-Q2-O2",
+              "text": "A complete loss",
+              "isCorrect": false,
+              "feedback": "A large loss may be possible, but it is not the only possible outcome."
+            },
+            {
+              "id": "J4-M22-Q2-O3",
+              "text": "A better result than every safer option",
+              "isCorrect": false,
+              "feedback": "A high-risk investment may perform better or worse than a lower-risk option."
+            },
+            {
+              "id": "J4-M22-Q2-O4",
+              "text": "Nothing about the final profit",
+              "isCorrect": true,
+              "feedback": "Correct. High risk describes uncertainty, not a guaranteed outcome."
+            }
+          ],
+          "correctAnswerId": "J4-M22-Q2-O4",
+          "correctExplanation": "High risk describes greater uncertainty and loss potential. It does not guarantee a positive or negative result.",
+          "misconceptionTested": "Higher risk always produces higher profit."
+        },
+        {
+          "id": "J4-M22-Q3",
+          "category": "application",
+          "text": "Two investments offer the same expected goal. One has much wider possible gains and losses. What should the investor recognise?",
+          "options": [
+            {
+              "id": "J4-M22-Q3-O1",
+              "text": "The wider range guarantees success",
+              "isCorrect": false,
+              "feedback": "A wider range includes the possibility of larger losses as well as larger gains."
+            },
+            {
+              "id": "J4-M22-Q3-O2",
+              "text": "Both investments have identical risk",
+              "isCorrect": false,
+              "feedback": "The investment with the wider possible outcomes carries greater uncertainty."
+            },
+            {
+              "id": "J4-M22-Q3-O3",
+              "text": "The wider-range investment involves greater uncertainty",
+              "isCorrect": true,
+              "feedback": "Correct. The actual result could differ more significantly from expectations."
+            },
+            {
+              "id": "J4-M22-Q3-O4",
+              "text": "The safer option cannot lose purchasing power",
+              "isCorrect": false,
+              "feedback": "Inflation and other risks can still affect options with relatively stable prices."
+            }
+          ],
+          "correctAnswerId": "J4-M22-Q3-O3",
+          "correctExplanation": "A wider range means the actual result could differ more significantly from what the investor expects.",
+          "misconceptionTested": "Risk only describes possible reward rather than uncertainty and possible loss."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J4-M22-S10",
+      "type": "completion",
+      "headline": "Risk Range Reader!",
+      "message": "You learned how greater return potential usually comes with greater uncertainty and possible loss.",
+      "xpReward": 50,
+      "progressMessage": "Mission 22 complete in Grow Wealth Wisely.",
+      "nextMissionTeaser": "Next, explore how investment time horizons can change which risks matter most.",
+      "animation": "Three outcome ranges expand from narrow to wide, with both gain and loss arrows remaining visible.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J4-M22-S11",
+      "type": "real_life_challenge",
+      "title": "Compare Three Fictional Choices",
+      "instruction": "Write one stable, one moderate, and one high-risk fictional option. List one possible gain and one possible loss for each. Do not invest real money.",
+      "buttonLabel": "My Risk Map Is Ready",
+      "primaryAction": {
+        "label": "My Risk Map Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on the relationship between potential return, uncertainty, and possible loss."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission describes risk as uncertainty and presents higher potential returns alongside wider possible gains and losses."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult savings, freelancing, business decisions, portfolios, and straightforward investment comparisons."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "All options, amounts, conditions, and outcomes are fictional classroom examples."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission repeatedly states that higher risk and greater potential reward do not guarantee profit."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "No real investment, company, stock, or future price is discussed."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Stable, moderate, and high-risk choices are compared through trade-offs without presenting one as universally correct."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that lower-risk options still carry inflation and other risks, while high-risk options can produce gains or losses."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, savings, freelancing, business launches, investment options, and familiar adult financial choices."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner predicts narrow, moderate, and wide outcome ranges and compares favourable and difficult conditions."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz directly addresses guaranteed profit, uncertainty, wider outcome ranges, and risks in relatively stable options."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, six prediction questions, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
