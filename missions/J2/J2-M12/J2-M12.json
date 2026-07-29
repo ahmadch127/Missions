@@ -1,0 +1,478 @@
+{
+  "id": "J2-M12",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "Good Debt and Harmful Debt",
+  "concept": "Debt should be evaluated by its purpose, total cost, repayment terms, and whether the borrower can afford the repayments.",
+  "audience": "kids_8_12",
+  "difficulty": "beginner",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "language": "English",
+  "learningObjective": "Understand that debt can be more or less useful depending on why the money is borrowed, how much it costs, and whether it can be repaid comfortably.",
+  "primaryMisconception": "All debt is equally harmful.",
+  "secondaryMisconceptions": [
+    "Borrowing for education or a business is always a good decision.",
+    "A small monthly repayment means a loan is automatically affordable."
+  ],
+  "keyTakeaway": "Debt is not automatically good or bad; purpose, cost, terms, and affordability matter.",
+  "screens": [
+    {
+      "id": "J2-M12-S01",
+      "type": "hook",
+      "title": "Same Loan, Different Result?",
+      "content": "Two people borrow money for useful reasons. One loan helps, while the other causes trouble. Is the purpose enough?",
+      "illustration": "Two borrowing cards show useful purchases. One path leads to a balanced budget, while the other leads to an overflowing repayment calendar.",
+      "primaryAction": {
+        "label": "Investigate the Loans",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M12-S02",
+      "type": "story",
+      "title": "Four Borrowing Choices",
+      "content": "A family is comparing loans for education, a work tool, a luxury phone, and everyday expenses. Each choice has different costs and consequences.",
+      "illustration": "Four cards show a course, sewing machine, premium phone, and grocery basket.",
+      "primaryAction": {
+        "label": "Check the Details",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M12-S03",
+      "type": "story",
+      "title": "Purpose Is Only One Clue",
+      "content": "A useful purchase can still become difficult if fees are high or repayments leave too little for food, transport, and other needs.",
+      "illustration": "A useful course card sits beside a large fee tag and an essential-expense envelope with too little money.",
+      "primaryAction": {
+        "label": "Look Beyond the Label",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M12-S04",
+      "type": "story",
+      "title": "Sort With Care",
+      "content": "Your task is not to call every debt good or bad. Use the purpose, total cost, repayment plan, and family budget.",
+      "illustration": "Four magnifying glasses are labelled Purpose, Total Cost, Repayments, and Affordability.",
+      "primaryAction": {
+        "label": "Start Sorting",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M12-S05",
+      "type": "pre_interaction",
+      "title": "What Should You Check?",
+      "question": "What information matters most before deciding whether debt may be useful or risky?",
+      "options": [
+        {
+          "id": "J2-M12-PQ-O1",
+          "text": "Purpose, total cost, repayments, and affordability",
+          "isRecommended": true,
+          "response": "Good thinking. A useful purpose is only part of the decision. The full cost and effect on essential spending also matter."
+        },
+        {
+          "id": "J2-M12-PQ-O2",
+          "text": "Whether the monthly repayment sounds small",
+          "isRecommended": false,
+          "response": "A small payment may continue for many months. The total amount repaid could still be high."
+        },
+        {
+          "id": "J2-M12-PQ-O3",
+          "text": "Whether the purchase looks important",
+          "isRecommended": false,
+          "response": "An important-looking purchase can still have expensive or unaffordable loan terms."
+        },
+        {
+          "id": "J2-M12-PQ-O4",
+          "text": "Whether someone else also borrowed",
+          "isRecommended": false,
+          "response": "Another person’s decision does not show whether the loan fits this borrower’s income and budget."
+        }
+      ],
+      "recommendedAnswerId": "J2-M12-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Thinking",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J2-M12-S06",
+      "type": "interaction",
+      "interactionType": "sort_categories",
+      "title": "Sort the Borrowing Decisions",
+      "instruction": "Place each borrowing decision under Potentially Useful, Risky, or Depends on Situation. Use all the details, not only the purchase.",
+      "config": {
+        "educationalAssumptions": [
+          "The examples involve adults or families making borrowing decisions.",
+          "A trusted adult reviews the loan details.",
+          "The stated repayments and total costs are simplified classroom examples.",
+          "A useful purchase does not guarantee future income or success.",
+          "Real loans may include different interest rates, fees, penalties, and repayment conditions.",
+          "The activity does not recommend taking any loan."
+        ],
+        "categories": [
+          {
+            "id": "category_potentially_useful",
+            "label": "Potentially Useful Debt",
+            "description": "Borrowing that may create lasting value, has manageable terms, and leaves enough money for essential needs."
+          },
+          {
+            "id": "category_risky",
+            "label": "Risky Debt",
+            "description": "Borrowing that is difficult to afford, mainly pays for an optional purchase, or disrupts essential spending."
+          },
+          {
+            "id": "category_depends",
+            "label": "Depends on Situation",
+            "description": "Borrowing that could help or harm depending on the loan cost, repayment plan, income, timing, and available alternatives."
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "item_affordable_education",
+            "title": "Affordable Education Course",
+            "decision": "Borrow £600 for a verified skills course that may improve future work opportunities.",
+            "details": [
+              "Total repayment: £660",
+              "Repayment: £55 per month for 12 months",
+              "The family can cover the repayment without reducing food, transport, or emergency savings",
+              "The course may improve skills, but employment is not guaranteed"
+            ],
+            "correctCategoryId": "category_potentially_useful",
+            "explanation": "The course may create lasting value, the total cost is clear, and the repayments appear manageable in this scenario."
+          },
+          {
+            "id": "item_work_tool",
+            "title": "Tool for Paid Work",
+            "decision": "Borrow £300 for a sewing machine needed to complete existing customer orders.",
+            "details": [
+              "Total repayment: £336",
+              "Repayment: £28 per month for 12 months",
+              "The borrower already has confirmed orders",
+              "Repayments leave enough money for essential expenses",
+              "Future income is still not guaranteed"
+            ],
+            "correctCategoryId": "category_potentially_useful",
+            "explanation": "The tool may help generate income, and the repayment appears affordable. It remains important to recognise that earnings are never guaranteed."
+          },
+          {
+            "id": "item_luxury_phone",
+            "title": "Unaffordable Luxury Phone",
+            "decision": "Borrow £900 for a premium phone even though the current phone still works.",
+            "details": [
+              "Total repayment: £1,080",
+              "Repayment: £90 per month for 12 months",
+              "The repayment would reduce money available for food and transport",
+              "The purchase is an optional upgrade"
+            ],
+            "correctCategoryId": "category_risky",
+            "explanation": "The optional purchase costs more through borrowing and would make important expenses harder to cover."
+          },
+          {
+            "id": "item_daily_expenses",
+            "title": "Temporary Everyday Expenses",
+            "decision": "Borrow £200 for groceries and transport during a one-month delay in family income.",
+            "details": [
+              "Total repayment: £220",
+              "The delayed income is expected next month",
+              "The family has a repayment plan",
+              "It is unclear whether cheaper or safer alternatives are available"
+            ],
+            "correctCategoryId": "category_depends",
+            "explanation": "The borrowing covers essential needs and may solve a temporary problem. However, the cost, alternatives, and repayment certainty still need checking."
+          },
+          {
+            "id": "item_expensive_education",
+            "title": "Expensive Education Loan",
+            "decision": "Borrow £600 for an education course with very high charges.",
+            "details": [
+              "Total repayment: £1,020",
+              "Repayment: £170 per month for six months",
+              "The repayment would reduce the grocery budget",
+              "The course may be useful, but its results are uncertain"
+            ],
+            "correctCategoryId": "category_depends",
+            "explanation": "Education may create value, but the high total cost and unaffordable repayments could make this loan harmful. The purpose alone does not decide the result."
+          }
+        ],
+        "correctCompletionState": {
+          "category_potentially_useful": [
+            "item_affordable_education",
+            "item_work_tool"
+          ],
+          "category_risky": [
+            "item_luxury_phone"
+          ],
+          "category_depends": [
+            "item_daily_expenses",
+            "item_expensive_education"
+          ]
+        },
+        "contextDependentItems": [
+          "Borrowing for everyday expenses",
+          "Borrowing for education with high fees or unaffordable repayments",
+          "Borrowing for a business or work tool without clear demand or a manageable repayment plan"
+        ],
+        "ambiguityExplanation": [
+          "The same purchase can belong in different categories when the loan terms or family situation change.",
+          "An affordable education loan may be potentially useful.",
+          "An education loan with very high fees or repayments that reduce grocery money may be risky.",
+          "A work tool may help create income, but it is not automatically a good loan if no customers exist or repayments are unaffordable."
+        ],
+        "placementRules": [
+          "Every item must be placed in one category.",
+          "Use the purpose, total repayment, repayment amount, and effect on essential needs.",
+          "Each item has one recommended category based on the details provided.",
+          "The category applies only to this scenario, not to every similar loan."
+        ],
+        "validationMethod": "Check all five items after submission. Keep correct items in place and return incorrect items with a short explanation.",
+        "retryBehavior": "Keep correctly sorted items in place. Return only incorrect items to the centre, provide one short hint, and allow unlimited retries.",
+        "accessibilityAlternative": {
+          "method": "Present each borrowing decision as a card with three buttons: Potentially Useful, Risky, and Depends on Situation.",
+          "screenReaderInstruction": "Listen to the loan purpose, total cost, monthly repayment, and effect on essential spending. Then choose the most suitable category."
+        }
+      },
+      "feedback": {
+        "success": "Excellent sorting. You checked more than the reason for borrowing—you also considered cost, repayment terms, and essential spending.",
+        "incorrect": "Look beyond the purchase. Does the total repayment fit the budget without reducing money for essential needs?",
+        "incomplete": "Sort all five borrowing decisions before checking your answer."
+      },
+      "primaryAction": {
+        "label": "Check My Sort",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J2-M12-S07",
+      "type": "reveal",
+      "title": "Look Beyond Good and Bad",
+      "content": "You sorted debt using more than its purpose. Debt is money borrowed and repaid later, often with interest or fees. It may be useful when it creates lasting value and repayments are affordable. It may be harmful when costs are high or essential needs are squeezed. Education and business borrowing are not automatically good, and optional borrowing is not automatically manageable. Check the purpose, total repayment, loan length, income, and money left for essentials.",
+      "simpleSummary": "Judge debt by its purpose, full cost, and effect on the budget.",
+      "illustration": "A borrowing decision passes through four checkpoints labelled Purpose, Total Cost, Repayment Terms, and Affordable?",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M12-S08",
+      "type": "real_life_example",
+      "title": "The Bicycle Repair Loan",
+      "content": "A parent needs a bicycle for travelling to work. The repair costs £120. Before borrowing, the family checks the total repayment, monthly cost, other transport choices, and whether food money remains protected. The repair is useful, but the loan is sensible only if the terms are affordable.",
+      "illustration": "A bicycle repair card sits beside a repayment calendar, grocery envelope, and alternative bus route.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-M12-S09",
+      "type": "quiz",
+      "title": "Debt Decision Check",
+      "questions": [
+        {
+          "id": "J2-M12-Q1",
+          "category": "recognition",
+          "text": "Which borrowing decision appears potentially useful in the situation described?",
+          "options": [
+            {
+              "id": "J2-M12-Q1-O1",
+              "text": "A work tool with affordable repayments and confirmed orders",
+              "isCorrect": true,
+              "feedback": "Correct. The tool may create lasting value, has a clear use, and leaves essential spending protected."
+            },
+            {
+              "id": "J2-M12-Q1-O2",
+              "text": "A luxury watch that reduces grocery money",
+              "isCorrect": false,
+              "feedback": "The purchase is optional, and the repayment would make an essential expense harder to cover."
+            },
+            {
+              "id": "J2-M12-Q1-O3",
+              "text": "A new phone when the current phone works",
+              "isCorrect": false,
+              "feedback": "An optional upgrade may not create enough lasting value to justify borrowing costs."
+            },
+            {
+              "id": "J2-M12-Q1-O4",
+              "text": "A loan with unknown fees and no repayment plan",
+              "isCorrect": false,
+              "feedback": "Without the total cost and repayment plan, it is difficult to judge whether the borrowing is affordable."
+            }
+          ],
+          "correctAnswerId": "J2-M12-Q1-O1",
+          "correctExplanation": "The tool may create lasting value, there is a clear use for it, and the repayments leave essential spending protected.",
+          "misconceptionTested": "A debt’s purpose is the only information needed to judge it."
+        },
+        {
+          "id": "J2-M12-Q2",
+          "category": "misconception",
+          "text": "Which statement about debt is most accurate?",
+          "options": [
+            {
+              "id": "J2-M12-Q2-O1",
+              "text": "Debt can be useful or harmful depending on its terms and affordability",
+              "isCorrect": true,
+              "feedback": "Correct. Purpose, total cost, repayment period, income, and essential spending all matter."
+            },
+            {
+              "id": "J2-M12-Q2-O2",
+              "text": "Every debt is equally harmful",
+              "isCorrect": false,
+              "feedback": "Some borrowing may create lasting value and remain affordable, while other borrowing can cause financial pressure."
+            },
+            {
+              "id": "J2-M12-Q2-O3",
+              "text": "Education debt is always good",
+              "isCorrect": false,
+              "feedback": "Education may be useful, but high fees or unaffordable repayments can still make the loan harmful."
+            },
+            {
+              "id": "J2-M12-Q2-O4",
+              "text": "A loan is affordable whenever the monthly payment is small",
+              "isCorrect": false,
+              "feedback": "A small payment may continue for a long time and create a high total repayment."
+            }
+          ],
+          "correctAnswerId": "J2-M12-Q2-O1",
+          "correctExplanation": "The purpose matters, but the total cost, repayment period, income, and money remaining for essentials also affect the result.",
+          "misconceptionTested": "All debt is equally harmful."
+        },
+        {
+          "id": "J2-M12-Q3",
+          "category": "application",
+          "text": "A tablet costs £500, but a loan asks for £15 monthly for 60 months. What should the borrower check first?",
+          "options": [
+            {
+              "id": "J2-M12-Q3-O1",
+              "text": "The £900 total repayment and whether it fits the budget",
+              "isCorrect": true,
+              "feedback": "Correct. Sixty payments of £15 total £900, so the full cost and affordability matter."
+            },
+            {
+              "id": "J2-M12-Q3-O2",
+              "text": "Only whether £15 sounds small",
+              "isCorrect": false,
+              "feedback": "The monthly amount is only one part of the loan. Sixty payments create a much larger total cost."
+            },
+            {
+              "id": "J2-M12-Q3-O3",
+              "text": "Whether the tablet looks exciting",
+              "isCorrect": false,
+              "feedback": "Excitement does not show whether the loan is affordable or good value."
+            },
+            {
+              "id": "J2-M12-Q3-O4",
+              "text": "Whether the first payment is affordable",
+              "isCorrect": false,
+              "feedback": "The borrower must be able to manage the full repayment period, not only the first month."
+            }
+          ],
+          "correctAnswerId": "J2-M12-Q3-O1",
+          "correctExplanation": "Sixty payments of £15 total £900. The borrower must consider the full cost and whether all repayments leave enough for essential needs.",
+          "misconceptionTested": "A small monthly repayment means a loan is automatically affordable."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J2-M12-S10",
+      "type": "completion",
+      "headline": "Debt Decision Detective!",
+      "message": "You learned to check why money is borrowed, what it costs, and whether repayments fit the budget.",
+      "xpReward": 50,
+      "progressMessage": "Mission 12 complete in Make Money Grow.",
+      "nextMissionTeaser": "Next, discover how different financial risks can change possible outcomes.",
+      "animation": "Five borrowing cards pass through four checkpoints. The correct category badges then lock into place.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J2-M12-S11",
+      "type": "real_life_challenge",
+      "title": "Check the Full Cost",
+      "instruction": "Create two imaginary loans for the same £100 item. Give them different fees and repayment periods, then compare the total repayment. Do not borrow real money.",
+      "buttonLabel": "I Compared the Loans",
+      "primaryAction": {
+        "label": "I Compared the Loans",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on evaluating debt using purpose, cost, repayment terms, and affordability."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The loan examples distinguish the amount borrowed, total repayment, monthly repayments, fees, and impact on essential spending."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The learner evaluates simplified family borrowing decisions rather than being encouraged to take debt personally."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss investing."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that education and work tools may create value but do not guarantee employment, customers, or income."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or markets."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Borrowing is discussed neutrally, including situations where families may need help covering essential expenses."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission avoids calling all education or business borrowing good and explains how the same purpose can produce different results."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, education, everyday expenses, phones, work tools, groceries, and transport familiar to UK learners."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner sorts borrowing decisions using purpose, total cost, repayments, and effect on essential spending."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses the belief that all debt is harmful, education borrowing is always good, and small payments always mean affordability."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, five sorting cards, and three concise quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The wording is concrete, supportive, and suitable for children aged 8–12."
+    }
+  ]
+}
