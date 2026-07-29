@@ -1,0 +1,696 @@
+{
+  "id": "J4-M23",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Volatility",
+  "concept": "Volatility describes how much and how quickly an investment’s price moves up and down over time.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "GBP",
+  "currencyDisplay": "£",
+  "language": "English",
+  "learningObjective": "Understand that short-term price movement can differ greatly between investments, even when their long-term results are similar.",
+  "primaryMisconception": "Any drop in an investment’s price means the investment is bad or has permanently failed.",
+  "secondaryMisconceptions": [
+    "A less volatile investment is always a better investment.",
+    "A highly volatile investment will always produce a higher long-term return."
+  ],
+  "keyTakeaway": "Volatility describes price movement, not necessarily permanent failure.",
+  "screens": [
+    {
+      "id": "J4-M23-S01",
+      "type": "hook",
+      "title": "Same Finish, Different Journey",
+      "content": "Two investments finish near £1,200. One climbs steadily; the other crashes twice. Did they produce completely different results?",
+      "illustration": "Two paths begin at £1,000 and finish near £1,200. One resembles stairs, while the other resembles a roller coaster.",
+      "primaryAction": {
+        "label": "Compare the Journeys",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M23-S02",
+      "type": "story",
+      "title": "Two £1,000 Investments",
+      "content": "You compare two fictional investments. Both begin at £1,000 and remain invested for five years.",
+      "illustration": "Two identical £1,000 starting cards appear beside separate covered price charts.",
+      "primaryAction": {
+        "label": "Reveal Investment A",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M23-S03",
+      "type": "story",
+      "title": "The Staircase Path",
+      "content": "Investment A rises gradually. Its value changes by relatively small amounts and reaches £1,200 in Year 5.",
+      "illustration": "A gently rising staircase chart ends at £1,200.",
+      "primaryAction": {
+        "label": "Reveal Investment B",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M23-S04",
+      "type": "story",
+      "title": "The Roller-Coaster Path",
+      "content": "Investment B rises above £1,000, falls to £850, recovers, drops again, and finally reaches £1,210.",
+      "illustration": "A sharp zigzag chart moves above and below £1,000 before ending at £1,210.",
+      "primaryAction": {
+        "label": "Compare the Results",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M23-S05",
+      "type": "pre_interaction",
+      "title": "Which Journey Felt More Uncertain?",
+      "question": "Which investment would probably feel more difficult to hold during the five years?",
+      "options": [
+        {
+          "id": "J4-M23-PQ-O1",
+          "text": "Investment A, because it ended at £1,200",
+          "isRecommended": false,
+          "response": "The ending value does not show how stressful the journey was. Look at the size of the movements along the way."
+        },
+        {
+          "id": "J4-M23-PQ-O2",
+          "text": "Investment B, because its value moved sharply",
+          "isRecommended": true,
+          "response": "Correct. Large rises and falls may create more uncertainty and make an investor more tempted to react."
+        },
+        {
+          "id": "J4-M23-PQ-O3",
+          "text": "Both were identical throughout",
+          "isRecommended": false,
+          "response": "They began and ended near similar values, but their paths were very different."
+        },
+        {
+          "id": "J4-M23-PQ-O4",
+          "text": "Neither, because both finished above £1,000",
+          "isRecommended": false,
+          "response": "The final result does not erase the large temporary declines experienced during the journey."
+        }
+      ],
+      "recommendedAnswerId": "J4-M23-PQ-O2",
+      "primaryAction": {
+        "label": "Test My Comparison",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J4-M23-S06",
+      "type": "interaction",
+      "interactionType": "before_vs_after",
+      "title": "Compare the Path, Not Just the Finish",
+      "instruction": "Compare both investments before, during, and after five years. Identify which one moved more and what its temporary declines mean.",
+      "config": {
+        "timePeriod": {
+          "start": "year_0",
+          "end": "year_5",
+          "steps": 5
+        },
+        "educationalAssumptions": [
+          "Both investments are fictional.",
+          "Each investment begins at £1,000.",
+          "The comparison lasts five years.",
+          "No fees, taxes, dividends, interest, inflation, or currency changes are included.",
+          "The displayed values are teaching examples, not market forecasts.",
+          "A temporary price decline may be followed by recovery, further decline, or little change.",
+          "A similar ending value does not mean two investments carried the same experience or risk.",
+          "Lower volatility does not guarantee a positive return.",
+          "Higher volatility does not guarantee a higher return.",
+          "The activity does not recommend buying, holding, or selling any real investment."
+        ],
+        "beforeState": {
+          "investmentA": {
+            "label": "Investment A — Staircase Path",
+            "startingValue": 1000
+          },
+          "investmentB": {
+            "label": "Investment B — Roller-Coaster Path",
+            "startingValue": 1000
+          },
+          "comparison": [
+            "Both start with the same amount.",
+            "Neither future path is known at the beginning.",
+            "The final result cannot be guaranteed."
+          ]
+        },
+        "duringState": {
+          "investmentA": {
+            "values": [
+              {
+                "stage": "start",
+                "value": 1000,
+                "changeFromPrevious": null
+              },
+              {
+                "stage": "year_1",
+                "value": 1030,
+                "changeFromPrevious": 30
+              },
+              {
+                "stage": "year_2",
+                "value": 1070,
+                "changeFromPrevious": 40
+              },
+              {
+                "stage": "year_3",
+                "value": 1100,
+                "changeFromPrevious": 30
+              },
+              {
+                "stage": "year_4",
+                "value": 1150,
+                "changeFromPrevious": 50
+              },
+              {
+                "stage": "year_5",
+                "value": 1200,
+                "changeFromPrevious": 50
+              }
+            ],
+            "observation": "Investment A changes gradually. Its largest yearly movement in this simplified example is £50.",
+            "lowestDisplayedValue": 1000,
+            "largestDeclineFromPreviousDisplayedValue": 0,
+            "endingGain": 200
+          },
+          "investmentB": {
+            "values": [
+              {
+                "stage": "start",
+                "value": 1000,
+                "changeFromPrevious": null
+              },
+              {
+                "stage": "year_1",
+                "value": 1180,
+                "changeFromPrevious": 180
+              },
+              {
+                "stage": "year_2",
+                "value": 850,
+                "changeFromPrevious": -330
+              },
+              {
+                "stage": "year_3",
+                "value": 1250,
+                "changeFromPrevious": 400
+              },
+              {
+                "stage": "year_4",
+                "value": 950,
+                "changeFromPrevious": -300
+              },
+              {
+                "stage": "year_5",
+                "value": 1210,
+                "changeFromPrevious": 260
+              }
+            ],
+            "observation": "Investment B moves sharply in both directions. Its largest yearly movement in this example is £400.",
+            "lowestDisplayedValue": 850,
+            "largestDeclineFromPreviousPeak": {
+              "fromValue": 1180,
+              "toValue": 850,
+              "amount": 330,
+              "approximatePercent": 28
+            },
+            "endingGain": 210
+          }
+        },
+        "afterState": {
+          "investmentA": {
+            "startingValue": 1000,
+            "endingValue": 1200,
+            "totalGain": 200,
+            "totalPercentageGain": 20
+          },
+          "investmentB": {
+            "startingValue": 1000,
+            "endingValue": 1210,
+            "totalGain": 210,
+            "totalPercentageGain": 21
+          },
+          "endingValueDifference": 10,
+          "comparison": "The ending values differ by only £10, but Investment B experienced much larger temporary rises and falls."
+        },
+        "learnerQuestions": [
+          {
+            "id": "J4-M23-IQ1",
+            "category": "movement_comparison",
+            "question": "Which investment experienced greater short-term price movement?",
+            "options": [
+              {
+                "id": "J4-M23-IQ1-O1",
+                "text": "Investment A",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ1-O2",
+                "text": "Investment B",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M23-IQ1-O3",
+                "text": "Both moved by exactly the same amounts",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ1-O4",
+                "text": "This cannot be compared",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M23-IQ1-O2",
+            "explanation": "Investment B moved by hundreds of pounds between some years, while Investment A changed more gradually."
+          },
+          {
+            "id": "J4-M23-IQ2",
+            "category": "temporary_decline",
+            "question": "When Investment B fell to £850, had it permanently failed?",
+            "options": [
+              {
+                "id": "J4-M23-IQ2-O1",
+                "text": "Yes, every decline is permanent",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ2-O2",
+                "text": "Yes, because it fell below £1,000",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ2-O3",
+                "text": "No, the decline was temporary in this example",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M23-IQ2-O4",
+                "text": "No, because every investment always recovers",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M23-IQ2-O3",
+            "explanation": "The value later recovered and finished at £1,210. However, a real investment might recover, remain lower, or fall further."
+          },
+          {
+            "id": "J4-M23-IQ3",
+            "category": "emotional_difficulty",
+            "question": "Which investment may have been emotionally harder to hold?",
+            "options": [
+              {
+                "id": "J4-M23-IQ3-O1",
+                "text": "Investment A, because it moved gradually",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ3-O2",
+                "text": "Investment B, because its large declines created greater uncertainty",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M23-IQ3-O3",
+                "text": "Neither, because emotions never affect decisions",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ3-O4",
+                "text": "Investment A, because £1,200 is lower than £1,210",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M23-IQ3-O2",
+            "explanation": "Large temporary losses may make an investor feel anxious or tempted to sell before the longer-term result becomes known."
+          }
+        ],
+        "importantHiddenDifference": "The final values alone hide the journey. An investor looking only at Year 5 might conclude that the investments were nearly identical, although Investment B involved much larger movements and greater short-term uncertainty.",
+        "causeAndEffectChecks": [
+          {
+            "id": "J4-M23-IQ4",
+            "event": "An investment falls temporarily.",
+            "possibleResult": "Its price may recover, remain low, or fall further.",
+            "question": "What can be concluded immediately from the fall?",
+            "options": [
+              {
+                "id": "J4-M23-IQ4-O1",
+                "text": "The investment is permanently worthless",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ4-O2",
+                "text": "It will definitely recover",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ4-O3",
+                "text": "Its future result remains uncertain",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M23-IQ4-O4",
+                "text": "It must finish with a profit",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M23-IQ4-O3",
+            "explanation": "A temporary fall does not prove permanent failure, but it also does not guarantee recovery."
+          },
+          {
+            "id": "J4-M23-IQ5",
+            "event": "An investor sells Investment B at £850 after buying at £1,000.",
+            "possibleResult": "The temporary £150 decline becomes a realised loss.",
+            "question": "What happens to the loss after the sale?",
+            "options": [
+              {
+                "id": "J4-M23-IQ5-O1",
+                "text": "It remains only a movement on a chart",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ5-O2",
+                "text": "It becomes a realised £150 loss",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M23-IQ5-O3",
+                "text": "It is automatically refunded",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ5-O4",
+                "text": "It guarantees the next investment will rise",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M23-IQ5-O2",
+            "explanation": "Selling at £850 after investing £1,000 locks in the £150 difference, excluding fees and taxes."
+          },
+          {
+            "id": "J4-M23-IQ6",
+            "event": "An investment has lower volatility.",
+            "question": "What does lower volatility tell you?",
+            "options": [
+              {
+                "id": "J4-M23-IQ6-O1",
+                "text": "It must produce the highest return",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ6-O2",
+                "text": "It can never lose value",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M23-IQ6-O3",
+                "text": "Its price has moved more steadily during the measured period",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M23-IQ6-O4",
+                "text": "It is suitable for every investor",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M23-IQ6-O3",
+            "explanation": "Lower volatility describes the pattern of price movement. It does not guarantee profit, quality, or suitability."
+          }
+        ],
+        "importantClarification": {
+          "volatilityDoesNotDetermine": [
+            "Whether an investment is good or bad",
+            "Whether its price will recover",
+            "Whether its underlying value has permanently changed",
+            "Whether it will produce a higher return",
+            "Whether it is suitable for a particular person",
+            "Whether selling or holding is the correct decision"
+          ],
+          "considerAlongside": [
+            "Investment quality",
+            "Time horizon",
+            "Financial goals",
+            "Risk of permanent loss",
+            "Diversification",
+            "Need for access to the money",
+            "Ability to tolerate temporary declines"
+          ]
+        },
+        "correctCompletionState": {
+          "higherVolatilityInvestment": "investment_b",
+          "temporaryDeclineUnderstanding": "temporary_decline_does_not_automatically_mean_permanent_failure",
+          "emotionalDifficultyInvestment": "investment_b",
+          "sellingDuringDecline": "may_convert_temporary_fall_into_realised_loss",
+          "lowerVolatilityUnderstanding": "does_not_guarantee_return_or_no_loss",
+          "higherVolatilityUnderstanding": "does_not_guarantee_better_long_term_return",
+          "hiddenDifferenceUnderstanding": "similar_final_values_can_hide_different_price_journeys"
+        },
+        "validationMethod": "Check the three main comparison questions and all three cause-and-effect questions.",
+        "retryBehavior": "Keep correct answers marked. Return only incorrect questions and show the relevant values from the comparison.",
+        "accessibilityAlternative": {
+          "method": "Present both investments as text-based yearly tables. Allow learners to move between years using Previous Year and Next Year buttons.",
+          "screenReaderInstruction": "Listen to each investment’s yearly value. Compare the size of its changes, then answer the six questions."
+        }
+      },
+      "feedback": {
+        "success": "Excellent comparison! You looked beyond the final values and recognised the much larger price movements in Investment B.",
+        "incorrect": "Compare the size of the rises and falls during the journey, not only the starting and ending values.",
+        "incomplete": "Complete the three comparison questions and three cause-and-effect checks before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Comparison",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J4-M23-S07",
+      "type": "reveal",
+      "title": "The Size of the Swings",
+      "content": "You saw two investments finish near the same value after very different journeys. Volatility describes how much and how quickly an investment’s price moves up and down. Investment B was more volatile because its changes were larger. A price drop does not automatically prove permanent failure, but recovery is never guaranteed. Volatility describes movement, not quality, suitability, or future return. It matters because large short-term declines can affect decisions and make an investment harder to hold.",
+      "simpleSummary": "Volatility measures price swings, not whether an investment is good or bad.",
+      "illustration": "The staircase and roller-coaster charts finish side by side, with the size of each movement highlighted.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M23-S08",
+      "type": "real_life_example",
+      "title": "A House Price During a Slow Market",
+      "content": "A fictional home is valued at £200,000, then £180,000, and later £205,000. The temporary decline did not prove the property had permanently failed. However, an owner forced to sell at £180,000 would experience a different result from someone able to wait.",
+      "illustration": "Three property valuations appear along a timeline, with a sale marker placed at the temporary low.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M23-S09",
+      "type": "quiz",
+      "title": "Volatility Check",
+      "questions": [
+        {
+          "id": "J4-M23-Q1",
+          "category": "recognition",
+          "text": "Which price path shows greater volatility?",
+          "options": [
+            {
+              "id": "J4-M23-Q1-O1",
+              "text": "£1,000 → £1,020 → £1,040 → £1,060",
+              "isCorrect": false,
+              "feedback": "This path rises in relatively small, steady steps."
+            },
+            {
+              "id": "J4-M23-Q1-O2",
+              "text": "£1,000 → £1,250 → £800 → £1,100",
+              "isCorrect": true,
+              "feedback": "Correct. This path has the largest and quickest movements in both directions."
+            },
+            {
+              "id": "J4-M23-Q1-O3",
+              "text": "£1,000 → £1,010 → £1,015 → £1,020",
+              "isCorrect": false,
+              "feedback": "These movements are small compared with the sharp rise and fall in the correct answer."
+            },
+            {
+              "id": "J4-M23-Q1-O4",
+              "text": "£1,000 → £1,000 → £1,005 → £1,010",
+              "isCorrect": false,
+              "feedback": "This path changes very little during the displayed period."
+            }
+          ],
+          "correctAnswerId": "J4-M23-Q1-O2",
+          "correctExplanation": "This path has the largest and quickest movements in both directions.",
+          "misconceptionTested": "Volatility is determined only by whether the final value is higher or lower."
+        },
+        {
+          "id": "J4-M23-Q2",
+          "category": "misconception",
+          "text": "An investment falls by 15% this month. What can you conclude?",
+          "options": [
+            {
+              "id": "J4-M23-Q2-O1",
+              "text": "It has permanently failed",
+              "isCorrect": false,
+              "feedback": "A temporary decline does not automatically prove permanent failure."
+            },
+            {
+              "id": "J4-M23-Q2-O2",
+              "text": "It will definitely recover",
+              "isCorrect": false,
+              "feedback": "Some investments recover, while others remain low or fall further."
+            },
+            {
+              "id": "J4-M23-Q2-O3",
+              "text": "It is automatically a bad investment",
+              "isCorrect": false,
+              "feedback": "Price movement alone does not provide enough information to judge overall quality."
+            },
+            {
+              "id": "J4-M23-Q2-O4",
+              "text": "Its price fell, but its future outcome remains uncertain",
+              "isCorrect": true,
+              "feedback": "Correct. More information is needed to understand the investment and its future prospects."
+            }
+          ],
+          "correctAnswerId": "J4-M23-Q2-O4",
+          "correctExplanation": "The decline shows a change in price. More information is needed to judge the investment’s condition and future prospects.",
+          "misconceptionTested": "Any price drop means an investment is bad or has permanently failed."
+        },
+        {
+          "id": "J4-M23-Q3",
+          "category": "application",
+          "text": "Two investments both gain 20% over five years. One experiences several 30% declines. What should an investor recognise?",
+          "options": [
+            {
+              "id": "J4-M23-Q3-O1",
+              "text": "Both had identical journeys",
+              "isCorrect": false,
+              "feedback": "The final percentages may match while the paths differ greatly."
+            },
+            {
+              "id": "J4-M23-Q3-O2",
+              "text": "The more volatile investment guaranteed a higher return",
+              "isCorrect": false,
+              "feedback": "Higher volatility does not guarantee a better long-term result."
+            },
+            {
+              "id": "J4-M23-Q3-O3",
+              "text": "The final returns were similar, but the short-term experiences were different",
+              "isCorrect": true,
+              "feedback": "Correct. The more volatile investment exposed the investor to larger temporary declines."
+            },
+            {
+              "id": "J4-M23-Q3-O4",
+              "text": "The steadier investment was automatically better",
+              "isCorrect": false,
+              "feedback": "Lower volatility may be easier to tolerate, but suitability and quality depend on more than price movement."
+            }
+          ],
+          "correctAnswerId": "J4-M23-Q3-O3",
+          "correctExplanation": "The more volatile investment exposed the investor to larger temporary declines even though the final gain was similar.",
+          "misconceptionTested": "A less volatile investment is always better, or high volatility always produces higher returns."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J4-M23-S10",
+      "type": "completion",
+      "headline": "Price Path Reader!",
+      "message": "You learned how similar final results can hide very different levels of short-term price movement.",
+      "xpReward": 50,
+      "progressMessage": "Mission 23 complete in Grow Wealth Wisely.",
+      "nextMissionTeaser": "Next, explore how the length of time before a financial goal can affect investment decisions.",
+      "animation": "The staircase and roller-coaster paths animate together before ending near the same value.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J4-M23-S11",
+      "type": "real_life_challenge",
+      "title": "Draw Two Price Journeys",
+      "instruction": "Draw two fictional investments that start at £100 and finish at £120. Make one path steady and the other highly changeable. No transaction is required.",
+      "buttonLabel": "My Price Paths Are Ready",
+      "primaryAction": {
+        "label": "My Price Paths Are Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on volatility as the size and frequency of price movements."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes price movement, temporary decline, realised loss, permanent failure, and final return."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult investing decisions, five-year values, selling during declines, property values, and emotional decision-making."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not tell the learner to buy, sell, or hold any real investment."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that temporary declines may recover, remain low, or fall further."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "All investments, values, and price paths are fictional teaching examples."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Selling, holding, anxiety, and reactions to losses are explained without judging the learner."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission clarifies that volatility does not independently determine quality, suitability, recovery, or long-term return."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses pounds, investment values, property prices, financial goals, and familiar adult decisions."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner compares identical starting values, similar final results, yearly movements, temporary declines, and realised losses."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses permanent failure, guaranteed recovery, higher-return assumptions, and misleading final-value comparisons."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, two simple value tables, six interaction questions, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
