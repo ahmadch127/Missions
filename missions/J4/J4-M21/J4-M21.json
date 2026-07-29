@@ -1,0 +1,737 @@
+{
+  "id": "J4-M21",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Diversification",
+  "concept": "Diversification means spreading money across different investments and asset types so financial results do not depend too heavily on one company or outcome.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-GB",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Understand how spreading money across different investments can reduce concentration risk without eliminating the possibility of loss.",
+  "primaryMisconception": "Diversification guarantees that an investor will not lose money.",
+  "secondaryMisconceptions": [
+    "Owning several investments from the same company or industry provides complete diversification.",
+    "Diversification always produces higher returns than concentrating money in one investment."
+  ],
+  "keyTakeaway": "Diversification reduces concentration risk but does not remove all risk.",
+  "screens": [
+    {
+      "id": "J4-M21-S01",
+      "type": "hook",
+      "title": "Everything Riding on One Result",
+      "content": "You put Rs. 10,000 into one company. One bad announcement arrives. How much of your plan depends on that single result?",
+      "illustration": "Ten Rs. 1,000 tokens balance on one company card while a warning notification appears above it.",
+      "primaryAction": {
+        "label": "Test the Portfolio",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M21-S02",
+      "type": "story",
+      "title": "Your Rs. 10,000 Choice",
+      "content": "You have Rs. 10,000 available for a fictional investment plan. You can place it in one company or spread it across several choices.",
+      "illustration": "Ten Rs. 1,000 tokens sit beside four empty allocation sections.",
+      "primaryAction": {
+        "label": "View the Options",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M21-S03",
+      "type": "story",
+      "title": "Different Sources of Risk",
+      "content": "One company may struggle. An entire industry may slow down. Markets may fall together, while cash can lose purchasing power over time.",
+      "illustration": "Four risk cards show a company problem, industry slowdown, market decline, and rising prices.",
+      "primaryAction": {
+        "label": "Build an Allocation",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M21-S04",
+      "type": "story",
+      "title": "Spread, Then Stress-Test",
+      "content": "Your task is to spread the money and observe how different problems affect concentrated and diversified portfolios.",
+      "illustration": "The allocation board connects to two test buttons: One Company Falls and Whole Market Falls.",
+      "primaryAction": {
+        "label": "Start Allocating",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M21-S05",
+      "type": "pre_interaction",
+      "title": "Which Plan Depends Least on One Outcome?",
+      "question": "Which allocation is least dependent on the result of one company?",
+      "options": [
+        {
+          "id": "J4-M21-PQ-O1",
+          "text": "Rs. 10,000 in one company",
+          "isRecommended": false,
+          "response": "This is highly concentrated. One company’s result can strongly affect the whole portfolio."
+        },
+        {
+          "id": "J4-M21-PQ-O2",
+          "text": "Rs. 10,000 across four companies in one industry",
+          "isRecommended": false,
+          "response": "This spreads money across companies, but all four may still be affected by the same industry problem."
+        },
+        {
+          "id": "J4-M21-PQ-O3",
+          "text": "Money across different companies, cash, and a broad fund",
+          "isRecommended": true,
+          "response": "This reduces dependence on one company or one type of outcome, although losses are still possible."
+        },
+        {
+          "id": "J4-M21-PQ-O4",
+          "text": "Rs. 10,000 in cash",
+          "isRecommended": false,
+          "response": "Cash may reduce short-term price changes, but the plan remains concentrated in one asset type and faces inflation risk."
+        }
+      ],
+      "recommendedAnswerId": "J4-M21-PQ-O3",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J4-M21-S06",
+      "type": "interaction",
+      "interactionType": "drag_and_drop",
+      "title": "Build and Stress-Test the Portfolio",
+      "instruction": "Allocate ten Rs. 1,000 tokens. Then test how your portfolio responds when one company or the wider market performs badly.",
+      "config": {
+        "totalAvailableAmount": 10000,
+        "allocationStep": 1000,
+        "educationalAssumptions": [
+          "This is a fictional classroom activity.",
+          "The available amount is Rs. 10,000.",
+          "The learner allocates money in Rs. 1,000 steps.",
+          "The company, fund, and market outcomes are fictional.",
+          "The several-companies option contains four companies from different industries in this activity.",
+          "The diversified fund is assumed to hold a broad mix of investments.",
+          "Cash does not change during the short classroom stress tests.",
+          "Cash can still lose purchasing power because of inflation.",
+          "Fees, taxes, dividends, interest, and currency changes are excluded.",
+          "The scoring rules demonstrate concentration only and are not investment recommendations.",
+          "Diversification may reduce some risks but cannot guarantee profit or prevent loss."
+        ],
+        "draggableItems": [
+          {
+            "id": "J4-M21-TOKEN-01",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-02",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-03",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-04",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-05",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-06",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-07",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-08",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-09",
+            "label": "Rs. 1,000",
+            "value": 1000
+          },
+          {
+            "id": "J4-M21-TOKEN-10",
+            "label": "Rs. 1,000",
+            "value": 1000
+          }
+        ],
+        "dropZones": [
+          {
+            "id": "zone_one_company",
+            "label": "One Company",
+            "description": "Money placed in one fictional company.",
+            "minimumAmount": 0,
+            "maximumAmount": 10000,
+            "mainRisk": "The result depends heavily on one business."
+          },
+          {
+            "id": "zone_several_companies",
+            "label": "Several Companies",
+            "description": "Money divided across fictional food, healthcare, telecom, and transport companies.",
+            "minimumAmount": 0,
+            "maximumAmount": 10000,
+            "mainRisk": "Company-specific risk is spread, but company investments may still fall together."
+          },
+          {
+            "id": "zone_cash",
+            "label": "Cash",
+            "description": "Money held as cash in this classroom example.",
+            "minimumAmount": 0,
+            "maximumAmount": 10000,
+            "mainRisk": "Inflation may reduce purchasing power and growth may be limited."
+          },
+          {
+            "id": "zone_diversified_fund",
+            "label": "Diversified Fund",
+            "description": "Money placed in a fictional broad fund holding different investments.",
+            "minimumAmount": 0,
+            "maximumAmount": 10000,
+            "mainRisk": "The fund can still lose value when markets or several holdings fall."
+          }
+        ],
+        "runningDisplayFields": [
+          "Amount in each category",
+          "Percentage in each category",
+          "Largest allocation",
+          "Amount dependent on one company",
+          "Number of categories used",
+          "Concentration level",
+          "Unallocated balance"
+        ],
+        "concentrationLevels": [
+          {
+            "id": "very_high",
+            "label": "Very High Concentration",
+            "conditions": [
+              "One Company contains Rs. 7,000 or more",
+              "Any category contains Rs. 8,000 or more"
+            ],
+            "feedback": "Most of the result depends on one company or one type of asset."
+          },
+          {
+            "id": "high",
+            "label": "High Concentration",
+            "conditions": [
+              "One Company contains more than Rs. 5,000",
+              "Only one category is used"
+            ],
+            "feedback": "The portfolio remains strongly dependent on a limited number of outcomes."
+          },
+          {
+            "id": "partial",
+            "label": "Partial Diversification",
+            "conditions": [
+              "At least two categories are used",
+              "One Company contains no more than Rs. 5,000",
+              "No category contains more than Rs. 7,000"
+            ],
+            "feedback": "Money is spread across more outcomes, but concentration remains noticeable."
+          },
+          {
+            "id": "lower_for_lesson",
+            "label": "Lower Concentration for This Lesson",
+            "conditions": [
+              "At least three categories are used",
+              "One Company contains no more than Rs. 3,000",
+              "No category contains more than Rs. 5,000",
+              "All Rs. 10,000 is allocated"
+            ],
+            "feedback": "The result is less dependent on one company or asset type, but the portfolio can still lose money."
+          }
+        ],
+        "exampleAllocations": [
+          {
+            "id": "allocation_highly_concentrated",
+            "label": "Highly Concentrated",
+            "amounts": {
+              "zone_one_company": 10000,
+              "zone_several_companies": 0,
+              "zone_cash": 0,
+              "zone_diversified_fund": 0
+            },
+            "feedback": "The entire result depends on one company. If that company performs poorly, the whole portfolio may be affected."
+          },
+          {
+            "id": "allocation_partially_diversified",
+            "label": "Partially Diversified",
+            "amounts": {
+              "zone_one_company": 3000,
+              "zone_several_companies": 3000,
+              "zone_cash": 2000,
+              "zone_diversified_fund": 2000
+            },
+            "feedback": "The money is spread across several outcomes, reducing dependence on one company. General market and inflation risks still remain."
+          }
+        ],
+        "stressTests": [
+          {
+            "id": "stress_test_company",
+            "title": "One Company Performs Badly",
+            "event": "The fictional company in the One Company category falls by 50%. All other categories remain unchanged.",
+            "calculationRule": "Loss equals 50% of the amount allocated to One Company.",
+            "exampleResults": [
+              {
+                "allocationId": "allocation_highly_concentrated",
+                "startingValue": 10000,
+                "loss": 5000,
+                "endingValue": 5000
+              },
+              {
+                "allocationId": "allocation_partially_diversified",
+                "startingValue": 10000,
+                "loss": 1500,
+                "endingValue": 8500
+              }
+            ],
+            "question": {
+              "id": "J4-M21-IQ1",
+              "text": "Why is the loss smaller in the partially diversified example?",
+              "options": [
+                {
+                  "id": "J4-M21-IQ1-O1",
+                  "text": "Less money depended on the single company",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M21-IQ1-O2",
+                  "text": "Diversification prevented every loss",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M21-IQ1-O3",
+                  "text": "Cash created a guaranteed profit",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M21-IQ1-O4",
+                  "text": "The company did not fall",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M21-IQ1-O1",
+              "explanation": "The company still performed badly, but only part of the portfolio was directly exposed to that one result."
+            }
+          },
+          {
+            "id": "stress_test_market",
+            "title": "The Wider Market Falls",
+            "event": "One Company, Several Companies, and the Diversified Fund each fall by 20%. Cash remains unchanged during this short test.",
+            "calculationRule": "Loss equals 20% of the combined amount in One Company, Several Companies, and Diversified Fund.",
+            "exampleResults": [
+              {
+                "allocationId": "allocation_highly_concentrated",
+                "startingValue": 10000,
+                "marketExposedAmount": 10000,
+                "loss": 2000,
+                "endingValue": 8000
+              },
+              {
+                "allocationId": "allocation_partially_diversified",
+                "startingValue": 10000,
+                "marketExposedAmount": 8000,
+                "loss": 1600,
+                "cashUnchanged": 2000,
+                "endingValue": 8400
+              }
+            ],
+            "question": {
+              "id": "J4-M21-IQ2",
+              "text": "What does this market-wide fall show?",
+              "options": [
+                {
+                  "id": "J4-M21-IQ2-O1",
+                  "text": "A diversified portfolio can still lose value",
+                  "isCorrect": true
+                },
+                {
+                  "id": "J4-M21-IQ2-O2",
+                  "text": "Diversification guarantees no loss",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M21-IQ2-O3",
+                  "text": "Several investments can never fall together",
+                  "isCorrect": false
+                },
+                {
+                  "id": "J4-M21-IQ2-O4",
+                  "text": "Cash always grows faster than investments",
+                  "isCorrect": false
+                }
+              ],
+              "correctAnswerId": "J4-M21-IQ2-O1",
+              "explanation": "Diversification reduces dependence on one company, but several investments may fall during a wider market decline."
+            }
+          }
+        ],
+        "meaningfulDiversificationQuestion": {
+          "id": "J4-M21-IQ3",
+          "scenario": "A person owns shares in five different telecom companies.",
+          "question": "Is this completely diversified?",
+          "options": [
+            {
+              "id": "J4-M21-IQ3-O1",
+              "text": "No, all five may be affected by the same industry problem",
+              "isCorrect": true
+            },
+            {
+              "id": "J4-M21-IQ3-O2",
+              "text": "Yes, because five names are enough",
+              "isCorrect": false
+            },
+            {
+              "id": "J4-M21-IQ3-O3",
+              "text": "Yes, because company shares cannot fall together",
+              "isCorrect": false
+            },
+            {
+              "id": "J4-M21-IQ3-O4",
+              "text": "No, because diversification requires guaranteed profit",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "J4-M21-IQ3-O1",
+          "explanation": "Owning several investments is not enough if they depend on the same industry or economic factor."
+        },
+        "causeAndEffectFeedback": [
+          {
+            "cause": "One company performs badly",
+            "concentratedEffect": "A large part of the portfolio may fall.",
+            "diversifiedEffect": "Other holdings may reduce the effect on the total result."
+          },
+          {
+            "cause": "An entire industry performs badly",
+            "concentratedEffect": "Several companies from that industry may fall together.",
+            "diversifiedEffect": "Different industries may respond differently, although several can still decline."
+          },
+          {
+            "cause": "The entire market falls",
+            "concentratedEffect": "The portfolio may experience a large market-driven loss.",
+            "diversifiedEffect": "The portfolio may still lose because broad market risk remains."
+          },
+          {
+            "cause": "Too much money is held in cash",
+            "concentratedEffect": "Short-term price changes may be lower.",
+            "diversifiedEffect": "Inflation may reduce purchasing power and long-term growth may be limited."
+          }
+        ],
+        "risksNotRemoved": [
+          "General market risk",
+          "Inflation risk",
+          "Interest-rate risk",
+          "Currency risk",
+          "The possibility that several investments fall together",
+          "The possibility of permanent loss",
+          "Fees and taxes in real investing"
+        ],
+        "placementRules": [
+          "All ten tokens must be allocated.",
+          "Tokens may be moved between categories before submission.",
+          "Each category accepts between Rs. 0 and Rs. 10,000.",
+          "The final total must equal Rs. 10,000.",
+          "Multiple allocations are valid.",
+          "The recommended classroom completion requires at least three categories.",
+          "The One Company allocation must not exceed Rs. 3,000 for recommended completion.",
+          "No category may exceed Rs. 5,000 for recommended completion.",
+          "All three follow-up questions must be answered correctly."
+        ],
+        "multipleValidArrangements": true,
+        "recommendedExamples": [
+          {
+            "zone_one_company": 2000,
+            "zone_several_companies": 3000,
+            "zone_cash": 2000,
+            "zone_diversified_fund": 3000
+          },
+          {
+            "zone_one_company": 1000,
+            "zone_several_companies": 4000,
+            "zone_cash": 2000,
+            "zone_diversified_fund": 3000
+          },
+          {
+            "zone_one_company": 3000,
+            "zone_several_companies": 2000,
+            "zone_cash": 2000,
+            "zone_diversified_fund": 3000
+          }
+        ],
+        "recommendedCompletionState": {
+          "totalAllocated": 10000,
+          "unallocatedBalance": 0,
+          "minimumCategoriesUsed": 3,
+          "maximumOneCompanyAmount": 3000,
+          "maximumAnyCategoryAmount": 5000,
+          "requiredQuestionIds": [
+            "J4-M21-IQ1",
+            "J4-M21-IQ2",
+            "J4-M21-IQ3"
+          ],
+          "finalUnderstanding": "diversification_reduces_concentration_risk_but_does_not_remove_all_risk"
+        },
+        "validationMethod": "Check the total allocation, number of categories, maximum category size, One Company amount, and all three follow-up answers.",
+        "retryBehavior": "Keep valid allocations in place. Highlight only the rule that needs attention and allow the learner to move tokens freely.",
+        "accessibilityAlternative": {
+          "method": "Provide Add Rs. 1,000 and Remove Rs. 1,000 buttons for each category. Display the same running totals and concentration feedback.",
+          "screenReaderInstruction": "Allocate ten Rs. 1,000 units among the four categories. Listen to the concentration level, then complete the three risk questions."
+        }
+      },
+      "feedback": {
+        "success": "Portfolio tested! Your result depends less on one company, but wider market and inflation risks still remain.",
+        "incorrect": "Check whether too much money depends on one company, one industry, or one asset type.",
+        "incomplete": "Allocate all Rs. 10,000 and complete the three risk questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Portfolio",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J4-M21-S07",
+      "type": "reveal",
+      "title": "Reduce Dependence, Not Every Risk",
+      "content": "You saw how one company’s fall had a larger effect when all Rs. 10,000 depended on it. Diversification means spreading money across different investments and asset types so one result has less influence. Meaningful diversification also considers industries and risk sources, not only the number of holdings. It can reduce concentration risk, but markets, inflation, interest rates, currencies, or several investments falling together can still cause losses. Diversification manages risk; it does not guarantee safety or higher returns.",
+      "simpleSummary": "Spread exposure to reduce concentration, not to guarantee profit.",
+      "illustration": "One concentrated tower splits into several smaller towers, while a wider market-risk cloud remains above all of them.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M21-S08",
+      "type": "real_life_example",
+      "title": "More Than Several Company Names",
+      "content": "Ayesha owns shares in five banks. She has several investments, but all depend heavily on one industry. Adding different industries or asset types could reduce that concentration. However, a broad economic decline could still affect several holdings at once.",
+      "illustration": "Five bank cards sit in one cluster while other industry and asset-type cards remain outside it.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M21-S09",
+      "type": "quiz",
+      "title": "Diversification Check",
+      "questions": [
+        {
+          "id": "J4-M21-Q1",
+          "category": "recognition",
+          "text": "Which fictional portfolio is the most diversified?",
+          "options": [
+            {
+              "id": "J4-M21-Q1-O1",
+              "text": "Rs. 10,000 in one technology company",
+              "isCorrect": false,
+              "feedback": "The entire result depends on one company."
+            },
+            {
+              "id": "J4-M21-Q1-O2",
+              "text": "Rs. 10,000 across four technology companies",
+              "isCorrect": false,
+              "feedback": "There are several companies, but all may be affected by the same industry problem."
+            },
+            {
+              "id": "J4-M21-Q1-O3",
+              "text": "Money across different industries, cash, and a broad fund",
+              "isCorrect": true,
+              "feedback": "Correct. The money is spread across more companies, industries, and asset types."
+            },
+            {
+              "id": "J4-M21-Q1-O4",
+              "text": "Rs. 10,000 in cash",
+              "isCorrect": false,
+              "feedback": "This avoids company concentration but remains dependent on one asset type and faces inflation risk."
+            }
+          ],
+          "correctAnswerId": "J4-M21-Q1-O3",
+          "correctExplanation": "The money is spread across more companies, industries, and asset types, reducing dependence on one outcome.",
+          "misconceptionTested": "The number of holdings alone determines whether a portfolio is diversified."
+        },
+        {
+          "id": "J4-M21-Q2",
+          "category": "misconception",
+          "text": "A diversified portfolio loses value during a broad market decline. What does this show?",
+          "options": [
+            {
+              "id": "J4-M21-Q2-O1",
+              "text": "Diversification reduces some risks but cannot prevent every loss",
+              "isCorrect": true,
+              "feedback": "Correct. General market risk may still affect many holdings together."
+            },
+            {
+              "id": "J4-M21-Q2-O2",
+              "text": "Diversification never works",
+              "isCorrect": false,
+              "feedback": "It may still reduce the damage caused by one company or one industry performing badly."
+            },
+            {
+              "id": "J4-M21-Q2-O3",
+              "text": "The portfolio was guaranteed to stay positive",
+              "isCorrect": false,
+              "feedback": "Diversification never guarantees a positive result."
+            },
+            {
+              "id": "J4-M21-Q2-O4",
+              "text": "Diversified investments cannot fall together",
+              "isCorrect": false,
+              "feedback": "Several investments may fall together during market-wide or economic problems."
+            }
+          ],
+          "correctAnswerId": "J4-M21-Q2-O1",
+          "correctExplanation": "Diversification can reduce concentration risk, while general market risk may still affect many holdings together.",
+          "misconceptionTested": "Diversification guarantees that an investor will not lose money."
+        },
+        {
+          "id": "J4-M21-Q3",
+          "category": "application",
+          "text": "A portfolio contains six property companies from the same country. Which change would reduce concentration most in this example?",
+          "options": [
+            {
+              "id": "J4-M21-Q3-O1",
+              "text": "Add exposure to different industries and asset types",
+              "isCorrect": true,
+              "feedback": "Correct. Different investments may respond differently to the same event."
+            },
+            {
+              "id": "J4-M21-Q3-O2",
+              "text": "Buy more shares in the same six companies",
+              "isCorrect": false,
+              "feedback": "This increases the amount exposed to the same industry."
+            },
+            {
+              "id": "J4-M21-Q3-O3",
+              "text": "Choose only the largest property company",
+              "isCorrect": false,
+              "feedback": "This would concentrate the portfolio further in one company."
+            },
+            {
+              "id": "J4-M21-Q3-O4",
+              "text": "Assume six companies remove all risk",
+              "isCorrect": false,
+              "feedback": "Several companies can still share the same industry, country, and economic risks."
+            }
+          ],
+          "correctAnswerId": "J4-M21-Q3-O1",
+          "correctExplanation": "Different industries and asset types may respond differently to the same event, reducing dependence on property alone.",
+          "misconceptionTested": "Owning several investments from the same industry provides complete diversification."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J4-M21-S10",
+      "type": "completion",
+      "headline": "Concentration Risk Mapper!",
+      "message": "You learned how spreading exposure can reduce dependence on one company without eliminating investment risk.",
+      "xpReward": 50,
+      "progressMessage": "Mission 21 complete in Grow Wealth Wisely.",
+      "nextMissionTeaser": "Next, explore how risk and possible return can influence investment choices.",
+      "animation": "Ten money tokens spread across four categories while a concentration meter falls from Very High to Lower.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J4-M21-S11",
+      "type": "real_life_challenge",
+      "title": "Map a Fictional Portfolio",
+      "instruction": "Draw an imaginary Rs. 10,000 portfolio. Label each holding by company, industry, and asset type, then circle any repeated risk.",
+      "buttonLabel": "My Risk Map Is Ready",
+      "primaryAction": {
+        "label": "My Risk Map Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on diversification as a method for reducing concentration risk."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes company-specific, industry, market, inflation, interest-rate, and currency risks."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult investment decisions, cash, funds, industries, inflation, and portfolio allocation without advanced technical language."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The allocations and scoring thresholds are clearly labelled as fictional classroom examples rather than real recommendations."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission repeatedly states that diversification cannot guarantee profit or prevent loss."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The mission uses fictional percentage shocks only to demonstrate concentration and does not predict real market movements."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Concentrated, cash-heavy, and diversified allocations are explained through trade-offs without judging the learner."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains meaningful diversification, correlated investments, cash risk, market-wide declines, and risks diversification cannot remove."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, Rs. 10,000, companies, cash, funds, banks, property businesses, and familiar adult financial decisions in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner allocates money, receives concentration feedback, and compares company-specific and market-wide stress tests."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses guaranteed protection, same-industry concentration, cash concentration, and meaningful diversification."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, ten quick allocation tokens, three follow-up questions, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
