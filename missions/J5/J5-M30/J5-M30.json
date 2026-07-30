@@ -1,0 +1,942 @@
+{
+  "id": "J5-M30",
+  "journeyId": "J5",
+  "journeyName": "Master Money Decisions",
+  "title": "Build Your Financial Life",
+  "concept": "Financial strength comes from combining budgeting, saving, emergency planning, responsible spending, scam awareness, debt management, and long-term investing.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 8,
+  "locale": "en-PK",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Apply multiple money-management and investing concepts to make balanced financial decisions across one simulated year.",
+  "primaryMisconception": "Wealth usually comes from one lucky or highly profitable investment.",
+  "secondaryMisconceptions": [
+    "One financial mistake permanently ruins a person’s financial future.",
+    "Investing should always come before budgeting and emergency savings."
+  ],
+  "keyTakeaway": "Financial strength usually comes from many consistent decisions, not one perfect choice.",
+  "screens": [
+    {
+      "id": "J5-M30-S01",
+      "type": "hook",
+      "title": "Your First Salary Year",
+      "content": "You earn Rs. 100,000 monthly. Bills, emergencies, scams, investing, and a new phone all compete for it. What will you prioritise?",
+      "illustration": "A twelve-month calendar surrounds salary, bills, savings, emergency, scam, investment, and phone icons.",
+      "primaryAction": {
+        "label": "Start the Year",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M30-S02",
+      "type": "story",
+      "title": "A Fresh Start",
+      "content": "You begin your first job with Rs. 20,000 in savings, no emergency fund, no debt, and no investments.",
+      "illustration": "A financial dashboard shows Rs. 20,000 cash and zero balances for emergency savings, debt, and investments.",
+      "primaryAction": {
+        "label": "View the Salary",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M30-S03",
+      "type": "story",
+      "title": "Rs. 100,000 Each Month",
+      "content": "Your salary must cover essential expenses, current enjoyment, savings, protection, and future plans.",
+      "illustration": "A Rs. 100,000 salary card divides into needs, wants, savings, emergency, and investing sections.",
+      "primaryAction": {
+        "label": "Build the Budget",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M30-S04",
+      "type": "story",
+      "title": "Real Life Interrupts",
+      "content": "During the year, an appliance breaks, a suspicious offer appears, the market falls, and you want an expensive phone.",
+      "illustration": "Four event cards appear along Months 4, 6, 10, and 12.",
+      "primaryAction": {
+        "label": "Make the Decisions",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M30-S05",
+      "type": "pre_interaction",
+      "title": "What Builds Financial Strength?",
+      "question": "Which approach is most likely to build a stronger financial position?",
+      "options": [
+        {
+          "id": "J5-M30-PQ-O1",
+          "text": "Put all available money into one exciting investment",
+          "isRecommended": false,
+          "response": "A large gain is possible, but essentials, emergencies, debt, and losses still need attention."
+        },
+        {
+          "id": "J5-M30-PQ-O2",
+          "text": "Balance essentials, savings, protection, wants, and long-term plans",
+          "isRecommended": true,
+          "response": "Correct. Financial strength usually develops through several coordinated habits."
+        },
+        {
+          "id": "J5-M30-PQ-O3",
+          "text": "Avoid every financial decision",
+          "isRecommended": false,
+          "response": "Avoiding decisions may leave goals unfunded and problems unresolved."
+        },
+        {
+          "id": "J5-M30-PQ-O4",
+          "text": "Focus only on earning a higher salary",
+          "isRecommended": false,
+          "response": "Income matters, but the way money is managed also affects stability."
+        }
+      ],
+      "recommendedAnswerId": "J5-M30-PQ-O2",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J5-M30-S06",
+      "type": "interaction",
+      "interactionType": "decision_tree_budget_builder",
+      "title": "Manage One Financial Year",
+      "instruction": "Build a monthly budget, move through seven financial decisions, and observe how each choice affects savings, debt, emergency readiness, investments, and confidence.",
+      "config": {
+        "simulationLengthMonths": 12,
+        "monthlySalary": 100000,
+        "startingBalances": {
+          "generalSavings": 20000,
+          "emergencyFund": 0,
+          "debt": 0,
+          "investmentBalance": 0
+        },
+        "educationalAssumptions": [
+          "The salary remains Rs. 100,000 throughout the year.",
+          "All expenses, investments, people, companies, and events are fictional.",
+          "Taxes, inflation, salary changes, investment fees, and interest on cash are excluded.",
+          "Expensive debt is represented by the amount owed without inventing an interest rate.",
+          "The investment uses a fictional diversified fund.",
+          "The 15% decline is a teaching event rather than a prediction.",
+          "Different choices may be reasonable depending on circumstances.",
+          "The score rewards planning and informed decisions, not the highest investment balance."
+        ],
+        "budgetBuilder": {
+          "totalAvailableAmount": 100000,
+          "period": "monthly",
+          "categories": [
+            {
+              "id": "housing_household",
+              "label": "Housing and Household Expenses",
+              "minimum": 35000,
+              "maximum": 45000,
+              "startingAmount": 35000,
+              "required": true
+            },
+            {
+              "id": "food",
+              "label": "Food",
+              "minimum": 15000,
+              "maximum": 25000,
+              "startingAmount": 15000,
+              "required": true
+            },
+            {
+              "id": "transport",
+              "label": "Transport",
+              "minimum": 8000,
+              "maximum": 15000,
+              "startingAmount": 8000,
+              "required": true
+            },
+            {
+              "id": "mobile_internet",
+              "label": "Mobile and Internet",
+              "minimum": 4000,
+              "maximum": 8000,
+              "startingAmount": 4000,
+              "required": true
+            },
+            {
+              "id": "emergency_savings",
+              "label": "Emergency Savings",
+              "minimum": 0,
+              "maximum": 25000,
+              "startingAmount": 10000,
+              "required": false
+            },
+            {
+              "id": "long_term_savings",
+              "label": "Long-Term Savings",
+              "minimum": 0,
+              "maximum": 25000,
+              "startingAmount": 8000,
+              "required": false
+            },
+            {
+              "id": "entertainment_wants",
+              "label": "Entertainment and Wants",
+              "minimum": 0,
+              "maximum": 20000,
+              "startingAmount": 10000,
+              "required": false
+            },
+            {
+              "id": "planned_investing",
+              "label": "Planned Investing",
+              "minimum": 0,
+              "maximum": 20000,
+              "startingAmount": 10000,
+              "required": false
+            }
+          ],
+          "validationRules": [
+            "All required category minimums must be covered.",
+            "Total allocations must equal Rs. 100,000.",
+            "No category may have a negative amount.",
+            "At least one of emergency savings, long-term savings, or planned investing must receive money."
+          ],
+          "feedback": {
+            "essentialShortfall": "The budget may not be sustainable because a required expense is underfunded.",
+            "noSavings": "An unexpected expense may create debt or force another goal to be abandoned.",
+            "noWants": "The plan may be mathematically valid but difficult to maintain.",
+            "balanced": "The plan gives needs, savings, protection, and current enjoyment a place."
+          }
+        },
+        "stages": [
+          {
+            "id": "J5-M30-STAGE-01",
+            "stageNumber": 1,
+            "title": "Build a Monthly Budget",
+            "type": "budget_builder",
+            "maximumScore": 15,
+            "recommendedState": {
+              "housing_household": 35000,
+              "food": 15000,
+              "transport": 8000,
+              "mobile_internet": 4000,
+              "emergency_savings": 10000,
+              "long_term_savings": 8000,
+              "entertainment_wants": 10000,
+              "planned_investing": 10000
+            },
+            "scoringRules": [
+              {
+                "score": 15,
+                "condition": "required_expenses_covered_total_equals_100000_and_savings_category_is_positive"
+              },
+              {
+                "score": 5,
+                "condition": "required_expenses_covered_but_no_savings_or_protection"
+              },
+              {
+                "score": 0,
+                "condition": "required_expense_shortfall_or_total_exceeds_100000"
+              }
+            ]
+          },
+          {
+            "id": "J5-M30-STAGE-02",
+            "stageNumber": 2,
+            "title": "Create Emergency Savings",
+            "type": "decision",
+            "timing": "months_1_to_3",
+            "maximumScore": 15,
+            "choices": [
+              {
+                "id": "J5-M30-EF-O1",
+                "label": "Save nothing",
+                "monthlyAmount": 0,
+                "score": 0,
+                "consequence": "No emergency fund is created. Unexpected costs may require savings cuts or debt."
+              },
+              {
+                "id": "J5-M30-EF-O2",
+                "label": "Save Rs. 5,000 monthly",
+                "monthlyAmount": 5000,
+                "score": 10,
+                "consequence": "The emergency fund reaches Rs. 15,000 by Month 4."
+              },
+              {
+                "id": "J5-M30-EF-O3",
+                "label": "Save Rs. 10,000 monthly",
+                "monthlyAmount": 10000,
+                "score": 15,
+                "isRecommended": true,
+                "consequence": "The emergency fund reaches Rs. 30,000 by Month 4 while the example budget remains affordable."
+              },
+              {
+                "id": "J5-M30-EF-O4",
+                "label": "Save Rs. 25,000 even if needs become underfunded",
+                "monthlyAmount": 25000,
+                "score": 5,
+                "consequence": "The fund grows quickly, but the budget fails if required expenses are no longer covered."
+              }
+            ]
+          },
+          {
+            "id": "J5-M30-STAGE-03",
+            "stageNumber": 3,
+            "title": "Manage a Surprise Expense",
+            "type": "decision",
+            "timing": "month_4",
+            "eventAmount": 35000,
+            "maximumScore": 15,
+            "choices": [
+              {
+                "id": "J5-M30-REPAIR-O1",
+                "label": "Use emergency savings",
+                "score": 15,
+                "isRecommended": true,
+                "stateEffect": {
+                  "rule": "deduct_from_emergency_fund_first_then_general_savings"
+                },
+                "consequence": "Emergency savings cover as much of the repair as possible."
+              },
+              {
+                "id": "J5-M30-REPAIR-O2",
+                "label": "Borrow the full amount",
+                "score": 5,
+                "stateEffect": {
+                  "debtChange": 35000
+                },
+                "consequence": "The repair is completed, but Rs. 35,000 of debt is created."
+              },
+              {
+                "id": "J5-M30-REPAIR-O3",
+                "label": "Skip an essential payment",
+                "score": 0,
+                "stateEffect": {
+                  "debtChange": 35000
+                },
+                "consequence": "A Rs. 35,000 unpaid essential obligation is created."
+              },
+              {
+                "id": "J5-M30-REPAIR-O4",
+                "label": "Use savings and temporarily reduce wants",
+                "score": 12,
+                "stateEffect": {
+                  "rule": "deduct_from_general_savings_and_reduce_next_month_wants"
+                },
+                "consequence": "The repair is paid without new debt, but optional spending is reduced temporarily."
+              }
+            ]
+          },
+          {
+            "id": "J5-M30-STAGE-04",
+            "stageNumber": 4,
+            "title": "Avoid a Financial Scam",
+            "type": "decision",
+            "timing": "month_6",
+            "message": "Invest Rs. 25,000 today and receive Rs. 50,000 next week. Profit is guaranteed. Do not discuss this opportunity with your bank.",
+            "maximumScore": 15,
+            "choices": [
+              {
+                "id": "J5-M30-SCAM-O1",
+                "label": "Send the money immediately",
+                "score": 0,
+                "stateEffect": {
+                  "generalSavingsChange": -25000
+                },
+                "consequence": "In the fictional scenario, the offer is fraudulent and Rs. 25,000 is lost."
+              },
+              {
+                "id": "J5-M30-SCAM-O2",
+                "label": "Ask a friend whether it looks genuine",
+                "score": 8,
+                "consequence": "A friend may help, but they may also rely on the same misleading information."
+              },
+              {
+                "id": "J5-M30-SCAM-O3",
+                "label": "Research through independent sources",
+                "score": 15,
+                "isRecommended": true,
+                "consequence": "The company, contact details, authorisation, payment destination, risks, and complaints are checked independently."
+              },
+              {
+                "id": "J5-M30-SCAM-O4",
+                "label": "Trust the professional website",
+                "score": 2,
+                "consequence": "Professional design does not prove that the offer is genuine."
+              }
+            ]
+          },
+          {
+            "id": "J5-M30-STAGE-05",
+            "stageNumber": 5,
+            "title": "Decide Whether You Are Ready to Invest",
+            "type": "decision",
+            "timing": "month_8",
+            "maximumScore": 15,
+            "readinessChecks": [
+              "Essential expenses are covered.",
+              "Expensive debt is under control.",
+              "Some emergency money is available.",
+              "The money can remain invested for several years.",
+              "The learner understands the investment and its risks."
+            ],
+            "availableAsset": {
+              "id": "fictional_diversified_fund",
+              "name": "Fictional Diversified Fund"
+            },
+            "choices": [
+              {
+                "id": "J5-M30-INVEST-O1",
+                "label": "Invest all available cash",
+                "score": 4,
+                "stateEffect": {
+                  "rule": "move_all_general_savings_to_investment_balance"
+                },
+                "consequence": "The investment balance rises, but short-term cash may become too low."
+              },
+              {
+                "id": "J5-M30-INVEST-O2",
+                "label": "Invest money needed next month",
+                "score": 0,
+                "consequence": "A decline before the bill is due may create a cash shortfall."
+              },
+              {
+                "id": "J5-M30-INVEST-O3",
+                "label": "Begin an affordable regular contribution",
+                "score": 15,
+                "isRecommended": true,
+                "stateEffect": {
+                  "rule": "move_planned_investing_allocation_into_investments_during_months_8_to_12"
+                },
+                "consequence": "Investing begins only after the readiness checks."
+              },
+              {
+                "id": "J5-M30-INVEST-O4",
+                "label": "Avoid investing forever",
+                "score": 8,
+                "stateEffect": {
+                  "rule": "keep_planned_investing_allocation_in_general_savings"
+                },
+                "consequence": "Investment losses are avoided, but every future opportunity is rejected without evaluation."
+              }
+            ]
+          },
+          {
+            "id": "J5-M30-STAGE-06",
+            "stageNumber": 6,
+            "title": "Respond to a Market Drop",
+            "type": "decision",
+            "timing": "month_10",
+            "marketChangePercent": -15,
+            "maximumScore": 15,
+            "choices": [
+              {
+                "id": "J5-M30-DROP-O1",
+                "label": "Sell immediately",
+                "score": 4,
+                "stateEffect": {
+                  "rule": "move_current_investment_value_to_general_savings_and_set_investment_balance_to_zero"
+                },
+                "consequence": "The current decline becomes realised."
+              },
+              {
+                "id": "J5-M30-DROP-O2",
+                "label": "Invest more without reviewing anything",
+                "score": 6,
+                "consequence": "Buying after a fall may or may not help, and the investment remains unreviewed."
+              },
+              {
+                "id": "J5-M30-DROP-O3",
+                "label": "Review the goal, time horizon, and investment quality",
+                "score": 15,
+                "isRecommended": true,
+                "consequence": "The decision uses the original plan and current evidence rather than panic."
+              },
+              {
+                "id": "J5-M30-DROP-O4",
+                "label": "Borrow money to recover quickly",
+                "score": 0,
+                "stateEffect": {
+                  "debtChange": 20000,
+                  "investmentContributionChange": 20000
+                },
+                "consequence": "Debt increases while the future investment result remains uncertain."
+              }
+            ]
+          },
+          {
+            "id": "J5-M30-STAGE-07",
+            "stageNumber": 7,
+            "title": "Balance Wants and Long-Term Goals",
+            "type": "decision",
+            "timing": "month_12",
+            "phoneCost": 180000,
+            "maximumScore": 10,
+            "choices": [
+              {
+                "id": "J5-M30-PHONE-O1",
+                "label": "Use the entire emergency fund",
+                "score": 2,
+                "stateEffect": {
+                  "rule": "set_emergency_fund_to_zero"
+                },
+                "consequence": "Emergency readiness disappears, and the phone may remain partly unfunded."
+              },
+              {
+                "id": "J5-M30-PHONE-O2",
+                "label": "Buy it using expensive debt",
+                "score": 0,
+                "stateEffect": {
+                  "debtChange": 180000
+                },
+                "consequence": "The phone is obtained, but Rs. 180,000 of debt is created."
+              },
+              {
+                "id": "J5-M30-PHONE-O3",
+                "label": "Delay the purchase and create a savings goal",
+                "score": 10,
+                "isRecommended": true,
+                "createdGoal": {
+                  "amount": 180000,
+                  "deadlineMonths": 18,
+                  "monthlyContribution": 10000
+                },
+                "consequence": "The want is matched with an affordable future plan."
+              },
+              {
+                "id": "J5-M30-PHONE-O4",
+                "label": "Spend all investment money",
+                "score": 4,
+                "stateEffect": {
+                  "rule": "liquidate_investment_balance_for_phone"
+                },
+                "consequence": "The long-term investment plan is interrupted, and the phone may remain partly unfunded."
+              }
+            ]
+          }
+        ],
+        "financialStateRules": {
+          "monthlyTransfers": [
+            "Emergency allocation moves to the emergency fund each month.",
+            "Long-term savings move to general savings each month.",
+            "Planned-investing money remains in general savings through Month 7.",
+            "From Month 8, planned-investing money enters investments only when the investment plan is activated.",
+            "Essential and entertainment allocations are treated as monthly spending."
+          ],
+          "marketDropRule": "investment_balance_multiplied_by_0.85_in_month_10",
+          "debtRule": "debt_increases_by_each_borrowed_or_unpaid_amount",
+          "noInventedInterestRate": true
+        },
+        "dashboard": {
+          "fields": [
+            "general_savings",
+            "debt",
+            "emergency_fund",
+            "emergency_readiness",
+            "investment_contributions",
+            "investment_balance",
+            "financial_confidence_score",
+            "financial_confidence_level"
+          ],
+          "scoreWeights": [
+            {
+              "area": "monthly_budget",
+              "maximumPoints": 15
+            },
+            {
+              "area": "emergency_planning",
+              "maximumPoints": 15
+            },
+            {
+              "area": "surprise_expense",
+              "maximumPoints": 15
+            },
+            {
+              "area": "scam_awareness",
+              "maximumPoints": 15
+            },
+            {
+              "area": "investment_readiness",
+              "maximumPoints": 15
+            },
+            {
+              "area": "market_drop_response",
+              "maximumPoints": 15
+            },
+            {
+              "area": "wants_and_goals",
+              "maximumPoints": 10
+            }
+          ],
+          "confidenceLevels": [
+            {
+              "minimum": 0,
+              "maximum": 39,
+              "label": "Financially Vulnerable",
+              "description": "The learner may depend heavily on debt and have little preparation for unexpected costs."
+            },
+            {
+              "minimum": 40,
+              "maximum": 69,
+              "label": "Building Stability",
+              "description": "The learner has made some strong decisions but still has important areas to improve."
+            },
+            {
+              "minimum": 70,
+              "maximum": 89,
+              "label": "Financially Prepared",
+              "description": "The learner has balanced spending, saving, protection, and long-term planning well."
+            },
+            {
+              "minimum": 90,
+              "maximum": 100,
+              "label": "Strong Financial Habits",
+              "description": "The learner has made consistent and thoughtful decisions throughout the year."
+            }
+          ],
+          "emergencyReadinessRules": [
+            {
+              "label": "Strong",
+              "conditions": [
+                "Emergency money remains available.",
+                "Emergency funds were used only for a genuine emergency.",
+                "Contributions resumed after use."
+              ]
+            },
+            {
+              "label": "Developing",
+              "conditions": [
+                "Some emergency money exists.",
+                "The amount may not cover a major surprise."
+              ]
+            },
+            {
+              "label": "Vulnerable",
+              "conditions": [
+                "No emergency fund exists.",
+                "Emergency money was used for a non-emergency want.",
+                "Essential expenses depend on debt."
+              ]
+            }
+          ]
+        },
+        "exampleBalancedPath": {
+          "budget": {
+            "housing_household": 35000,
+            "food": 15000,
+            "transport": 8000,
+            "mobile_internet": 4000,
+            "emergency_savings": 10000,
+            "long_term_savings": 8000,
+            "entertainment_wants": 10000,
+            "planned_investing": 10000
+          },
+          "selectedChoices": [
+            "J5-M30-EF-O3",
+            "J5-M30-REPAIR-O1",
+            "J5-M30-SCAM-O3",
+            "J5-M30-INVEST-O3",
+            "J5-M30-DROP-O3",
+            "J5-M30-PHONE-O3"
+          ],
+          "illustrativeDashboard": {
+            "generalSavings": 181000,
+            "emergencyFund": 90000,
+            "debt": 0,
+            "investmentContributions": 50000,
+            "investmentBalance": 45500,
+            "financialConfidenceScore": 100,
+            "financialConfidenceLevel": "Strong Financial Habits"
+          },
+          "clarification": "These balances depend on the fictional budget and event timing and are not recommendations or forecasts."
+        },
+        "tradeOffSummary": [
+          {
+            "decision": "Save more for emergencies",
+            "possibleBenefit": "Greater protection",
+            "mainRisk": "Less money for wants or other goals"
+          },
+          {
+            "decision": "Borrow for a surprise",
+            "possibleBenefit": "Solves the immediate problem",
+            "mainRisk": "Creates future repayment obligations"
+          },
+          {
+            "decision": "Invest more money",
+            "possibleBenefit": "Greater growth potential",
+            "mainRisk": "Greater exposure to loss"
+          },
+          {
+            "decision": "Keep more cash",
+            "possibleBenefit": "Greater short-term access",
+            "mainRisk": "Lower growth potential and inflation risk"
+          },
+          {
+            "decision": "Delay a want",
+            "possibleBenefit": "Protects current stability",
+            "mainRisk": "The purchase happens later"
+          },
+          {
+            "decision": "Spend on enjoyment",
+            "possibleBenefit": "Supports a sustainable life",
+            "mainRisk": "May delay other goals when unaffordable"
+          }
+        ],
+        "correctCompletionState": {
+          "validBudgetCreated": true,
+          "essentialExpensesCovered": true,
+          "allSevenStagesCompleted": true,
+          "scamWarningSignsRecognised": true,
+          "investmentReadinessReviewed": true,
+          "marketDropReviewedWithoutAutomaticPanic": true,
+          "phoneDecisionConsidersAffordability": true,
+          "finalDashboardViewed": true,
+          "oneMistakeDoesNotDefineFutureUnderstood": true,
+          "financialStrengthUsesMultipleHabitsUnderstood": true
+        },
+        "validationMethod": "Check the budget rules, all seven decisions, financial-state calculations, and final dashboard.",
+        "retryBehavior": "Keep completed stages and valid budget allocations. Allow any decision to be replayed and update the dashboard immediately.",
+        "accessibilityAlternative": {
+          "method": "Provide forms and numbered choice buttons instead of drag controls. Announce updated balances and confidence after every stage.",
+          "screenReaderInstruction": "Build the monthly budget, complete seven decisions, and listen to how each choice changes savings, debt, emergency readiness, investments, and confidence."
+        }
+      },
+      "feedback": {
+        "success": "Year complete! You balanced present needs, protection, debt, saving, and investing across several real-life decisions.",
+        "incorrect": "Review which decision created the pressure: an uncovered need, missing emergency savings, debt, urgency, or a goal without a plan.",
+        "incomplete": "Complete the budget, all seven stages, and the final dashboard before finishing."
+      },
+      "primaryAction": {
+        "label": "View My Financial Year",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J5-M30-S07",
+      "type": "reveal",
+      "title": "Strength Comes From the Whole System",
+      "content": "You managed a budget, emergency, scam, investment decision, market decline, debt risk, and major want. This is financial management: using several connected habits to support stability and long-term goals. One lucky investment cannot replace budgeting, protection, informed decisions, and responsible debt use. One mistake also does not permanently ruin the future. Financial strength usually grows through repeated choices, regular review, and realistic adjustments.",
+      "simpleSummary": "Strong finances come from connected habits repeated over time.",
+      "illustration": "Budgeting, emergency savings, scam checks, debt control, goals, and investing connect like parts of one strong structure.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M30-S08",
+      "type": "real_life_example",
+      "title": "Recovering After an Expensive Month",
+      "content": "Nadia overspends during one month and uses part of her savings. Instead of giving up, she reviews her budget, pauses one optional purchase, rebuilds savings, and continues her long-term plan. One setback changes the next steps—not her entire financial future.",
+      "illustration": "A monthly plan dips once, then returns through budget review and renewed saving.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M30-S09",
+      "type": "quiz",
+      "title": "Financial Life Check",
+      "questions": [
+        {
+          "id": "J5-M30-Q1",
+          "category": "recognition",
+          "text": "Which situation shows the strongest overall financial foundation?",
+          "options": [
+            {
+              "id": "J5-M30-Q1-O1",
+              "text": "One investment rises quickly, but bills and emergencies depend on debt",
+              "isCorrect": false,
+              "feedback": "A large gain does not replace essential expenses, emergency preparation, or debt control."
+            },
+            {
+              "id": "J5-M30-Q1-O2",
+              "text": "All money remains in cash with no goals or plan",
+              "isCorrect": false,
+              "feedback": "Cash may be useful, but goals, inflation, and long-term decisions still need a plan."
+            },
+            {
+              "id": "J5-M30-Q1-O3",
+              "text": "Essentials are covered, savings exist, debt is controlled, and investing fits the plan",
+              "isCorrect": true,
+              "feedback": "Correct. Financial strength comes from several balanced systems."
+            },
+            {
+              "id": "J5-M30-Q1-O4",
+              "text": "Every want is removed permanently",
+              "isCorrect": false,
+              "feedback": "A sustainable plan may include affordable enjoyment as well as future goals."
+            }
+          ],
+          "correctAnswerId": "J5-M30-Q1-O3",
+          "correctExplanation": "Financial strength comes from several balanced systems rather than one isolated result.",
+          "misconceptionTested": "The highest investment balance is the only measure of financial strength."
+        },
+        {
+          "id": "J5-M30-Q2",
+          "category": "misconception",
+          "text": "What is most likely to build wealth and stability over time?",
+          "options": [
+            {
+              "id": "J5-M30-Q2-O1",
+              "text": "One lucky investment",
+              "isCorrect": false,
+              "feedback": "A gain may help, but it cannot guarantee lasting stability or replace other financial needs."
+            },
+            {
+              "id": "J5-M30-Q2-O2",
+              "text": "Borrowing whenever an opportunity appears",
+              "isCorrect": false,
+              "feedback": "Debt adds repayment risk and does not guarantee a profitable result."
+            },
+            {
+              "id": "J5-M30-Q2-O3",
+              "text": "Waiting for one perfect financial decision",
+              "isCorrect": false,
+              "feedback": "Financial life changes and requires repeated review."
+            },
+            {
+              "id": "J5-M30-Q2-O4",
+              "text": "Many consistent and informed decisions",
+              "isCorrect": true,
+              "feedback": "Correct. Budgeting, saving, protection, debt control, and suitable investing work together."
+            }
+          ],
+          "correctAnswerId": "J5-M30-Q2-O4",
+          "correctExplanation": "Budgeting, saving, emergency planning, debt control, scam awareness, and appropriate investing work together.",
+          "misconceptionTested": "Wealth comes from one lucky investment."
+        },
+        {
+          "id": "J5-M30-Q3",
+          "category": "application",
+          "text": "Someone makes one poor spending decision. What is the most useful next step?",
+          "options": [
+            {
+              "id": "J5-M30-Q3-O1",
+              "text": "Assume their financial future is ruined",
+              "isCorrect": false,
+              "feedback": "One decision may have consequences, but it does not determine every future result."
+            },
+            {
+              "id": "J5-M30-Q3-O2",
+              "text": "Borrow more to hide the mistake",
+              "isCorrect": false,
+              "feedback": "Additional debt may increase the original problem."
+            },
+            {
+              "id": "J5-M30-Q3-O3",
+              "text": "Ignore the effect completely",
+              "isCorrect": false,
+              "feedback": "Reviewing the impact helps prevent the same issue from continuing."
+            },
+            {
+              "id": "J5-M30-Q3-O4",
+              "text": "Review the impact and adjust the next decisions",
+              "isCorrect": true,
+              "feedback": "Correct. A setback can be followed by budgeting, repayment, saving, and revised goals."
+            }
+          ],
+          "correctAnswerId": "J5-M30-Q3-O4",
+          "correctExplanation": "A mistake may slow progress, but budgeting, repayment, saving, and revised goals can support recovery.",
+          "misconceptionTested": "One financial mistake permanently ruins a person’s financial future."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J5-M30-S10",
+      "type": "completion",
+      "headline": "Financial Life Builder!",
+      "message": "You completed a full financial year by balancing everyday needs, protection, informed decisions, and long-term goals.",
+      "xpReward": 100,
+      "progressMessage": "Mission 30 complete in Master Money Decisions.",
+      "nextMissionTeaser": "Your next challenge is to apply these habits to your own fictional financial plan.",
+      "animation": "The twelve-month calendar completes as budget, savings, emergency, scam shield, debt, goals, and investment icons form one stable structure.",
+      "primaryAction": {
+        "label": "Complete Journey",
+        "action": "complete_journey"
+      }
+    },
+    {
+      "id": "J5-M30-S11",
+      "type": "real_life_challenge",
+      "title": "Draw Your Financial System",
+      "instruction": "Create a fictional monthly plan with five boxes: needs, wants, emergency savings, goals, and long-term money. Write one rule for each. Do not move real money.",
+      "buttonLabel": "My System Is Ready",
+      "primaryAction": {
+        "label": "My System Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The capstone teaches that financial strength is a connected system of consistent decisions."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes cash savings, emergency funds, debt, investment contributions, market value, affordability, and decision quality."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses salary, rent, bills, emergencies, debt, scams, investing, phones, and long-term goals."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "All budgets, amounts, events, investments, and outcomes are fictional educational examples."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that investments can fall and that no result or recovery is guaranteed."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The fictional 15% decline is a teaching event, not a market forecast."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Mistakes, wants, debt, low savings, and different priorities are discussed without judgement."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission allows multiple valid paths and scores consistency and informed decisions rather than investment wealth alone."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, salary, household expenses, mobile costs, appliances, scam messages, debt, and phones in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner manages a budget and seven connected decisions while balances and confidence update."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses lucky investments, financial systems, sustainable enjoyment, and recovery after mistakes."
+    },
+    {
+      "item": "Mission can be completed within eight minutes",
+      "status": "PASS",
+      "notes": "The mission includes one budget task, seven short decisions, a final dashboard, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and suitable for beginner adults."
+    }
+  ]
+}
