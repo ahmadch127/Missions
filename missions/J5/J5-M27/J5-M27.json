@@ -1,0 +1,672 @@
+{
+  "id": "J5-M27",
+  "journeyId": "J5",
+  "journeyName": "Master Money Decisions",
+  "title": "FOMO",
+  "concept": "Fear of missing out can pressure people into rushed investment decisions without properly understanding the opportunity or its risks.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 4,
+  "locale": "en-PK",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Recognise when fear, social pressure, and excitement are influencing an investment decision.",
+  "primaryMisconception": "If many people are buying an investment, the opportunity must be safe.",
+  "secondaryMisconceptions": [
+    "A friend’s large profit means another person will achieve the same result.",
+    "Acting immediately is necessary whenever an investment price is rising."
+  ],
+  "keyTakeaway": "Fear of missing out can make people act before understanding the risk.",
+  "screens": [
+    {
+      "id": "J5-M27-S01",
+      "type": "hook",
+      "title": "Buy Before It Is Too Late?",
+      "content": "Your friend doubled their money and says everyone is buying. The price is rising. Do you act before checking what it is?",
+      "illustration": "A phone displays a friend’s profit screenshot, rising price arrows, and a flashing Buy Now message.",
+      "primaryAction": {
+        "label": "Open the Message",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M27-S02",
+      "type": "story",
+      "title": "The Profit Screenshot",
+      "content": "Your friend posts that a cryptocurrency investment produced a large profit. Their screenshot quickly fills with excited comments.",
+      "illustration": "A social-media post shows a fictional profit result surrounded by celebration emojis and replies.",
+      "primaryAction": {
+        "label": "Read the Comments",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M27-S03",
+      "type": "story",
+      "title": "The Pressure Builds",
+      "content": "Your friend messages: “The price is still rising. Buy now or you will miss your chance.”",
+      "illustration": "A chat bubble appears beside a rapidly moving price chart and a countdown-style graphic.",
+      "primaryAction": {
+        "label": "Notice the Pressure",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M27-S04",
+      "type": "story",
+      "title": "Your Savings Are Available",
+      "content": "You have Rs. 30,000 in savings, but you do not yet understand the asset, its risks, fees, or price.",
+      "illustration": "A Rs. 30,000 savings card sits between a Buy Now button and a Research First checklist.",
+      "primaryAction": {
+        "label": "Choose a Response",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M27-S05",
+      "type": "pre_interaction",
+      "title": "What Is Driving the Decision?",
+      "question": "Which detail is the strongest warning that emotion may be replacing careful thinking?",
+      "options": [
+        {
+          "id": "J5-M27-PQ-O1",
+          "text": "Your friend says you must act immediately",
+          "isRecommended": true,
+          "response": "Correct. Urgency can pressure you to act before checking the investment and its risks."
+        },
+        {
+          "id": "J5-M27-PQ-O2",
+          "text": "The investment has a name",
+          "isRecommended": false,
+          "response": "A name alone does not show whether the decision is informed or emotional."
+        },
+        {
+          "id": "J5-M27-PQ-O3",
+          "text": "You have access to a phone",
+          "isRecommended": false,
+          "response": "The device is not the warning. The pressure and excitement surrounding the decision are more important."
+        },
+        {
+          "id": "J5-M27-PQ-O4",
+          "text": "The amount is shown in rupees",
+          "isRecommended": false,
+          "response": "The currency does not make an opportunity safe or unsafe."
+        }
+      ],
+      "recommendedAnswerId": "J5-M27-PQ-O1",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J5-M27-S06",
+      "type": "interaction",
+      "interactionType": "decision_tree",
+      "title": "Pause, Copy, Buy, or Reject?",
+      "instruction": "Choose how to respond to the message. Follow each consequence and identify whether the decision is based on evidence or FOMO.",
+      "config": {
+        "educationalAssumptions": [
+          "The cryptocurrency, friend, platform, prices, and outcomes are fictional.",
+          "The activity does not recommend buying or avoiding cryptocurrency.",
+          "A popular investment may rise, fall, or remain near the same price.",
+          "Research can improve understanding but cannot remove risk.",
+          "Someone else’s result does not predict another investor’s outcome.",
+          "Profit screenshots may omit losses, timing, fees, and unsuccessful investments.",
+          "The learner’s Rs. 30,000 is used only as a classroom example.",
+          "No real transaction is required.",
+          "The quality of the decision process is evaluated separately from the eventual price movement."
+        ],
+        "startingNodeId": "J5-M27-NODE-START",
+        "nodes": [
+          {
+            "id": "J5-M27-NODE-START",
+            "type": "choice",
+            "title": "The Urgent Message",
+            "content": "I made a huge profit. Everyone is buying. Put in your Rs. 30,000 now before it is too late!",
+            "question": "How do you respond?",
+            "choices": [
+              {
+                "id": "J5-M27-CHOICE-A",
+                "label": "Buy immediately",
+                "nextNodeId": "J5-M27-NODE-A1"
+              },
+              {
+                "id": "J5-M27-CHOICE-B",
+                "label": "Research first",
+                "nextNodeId": "J5-M27-NODE-B1"
+              },
+              {
+                "id": "J5-M27-CHOICE-C",
+                "label": "Copy the friend",
+                "nextNodeId": "J5-M27-NODE-C1"
+              },
+              {
+                "id": "J5-M27-CHOICE-D",
+                "label": "Avoid every investment forever",
+                "nextNodeId": "J5-M27-NODE-D1"
+              }
+            ]
+          },
+          {
+            "id": "J5-M27-NODE-A1",
+            "type": "follow_up",
+            "branch": "buy_immediately",
+            "title": "Money Sent Before Research",
+            "content": "You invest all Rs. 30,000 without understanding the asset, fees, price, liquidity, or possible loss.",
+            "question": "What is the biggest weakness in this decision?",
+            "options": [
+              {
+                "id": "J5-M27-A1-O1",
+                "text": "The investment uses technology",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-A1-O2",
+                "text": "The decision is based mainly on urgency and excitement",
+                "isCorrect": true
+              },
+              {
+                "id": "J5-M27-A1-O3",
+                "text": "The amount is Rs. 30,000",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-A1-O4",
+                "text": "The friend used social media",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J5-M27-A1-O2",
+            "explanation": "The problem is committing money before understanding the opportunity and risk.",
+            "nextNodeId": "J5-M27-NODE-A2"
+          },
+          {
+            "id": "J5-M27-NODE-A2",
+            "type": "follow_up",
+            "branch": "buy_immediately",
+            "title": "The Price Rises",
+            "content": "The fictional investment becomes worth Rs. 34,500.",
+            "question": "Does the profit prove the rushed decision process was safe?",
+            "options": [
+              {
+                "id": "J5-M27-A2-O1",
+                "text": "Yes, profit proves the process was safe",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-A2-O2",
+                "text": "No, a risky decision can sometimes produce a positive result",
+                "isCorrect": true
+              },
+              {
+                "id": "J5-M27-A2-O3",
+                "text": "Yes, rising prices remove future risk",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-A2-O4",
+                "text": "No, because investment profits are impossible",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J5-M27-A2-O2",
+            "explanation": "A positive outcome does not prove the rushed process was informed or repeatable.",
+            "nextNodeId": "J5-M27-OUTCOME-A"
+          },
+          {
+            "id": "J5-M27-OUTCOME-A",
+            "type": "terminal_outcome",
+            "branch": "buy_immediately",
+            "title": "Emotion Led the Purchase",
+            "content": "The price could rise or fall. The original decision still lacked research and risk checks."
+          },
+          {
+            "id": "J5-M27-NODE-B1",
+            "type": "follow_up",
+            "branch": "research_first",
+            "title": "Pause and Investigate",
+            "content": "You check the asset, risks, fees, price history, platform, liquidity, goals, and possible loss.",
+            "question": "What does research guarantee?",
+            "options": [
+              {
+                "id": "J5-M27-B1-O1",
+                "text": "A profit",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-B1-O2",
+                "text": "The lowest purchase price",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-B1-O3",
+                "text": "Protection from every scam",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-B1-O4",
+                "text": "Better understanding, but not a guaranteed result",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswerId": "J5-M27-B1-O4",
+            "explanation": "Research can reveal risks and missing information but cannot control future prices.",
+            "nextNodeId": "J5-M27-NODE-B2"
+          },
+          {
+            "id": "J5-M27-NODE-B2",
+            "type": "choice",
+            "branch": "research_first",
+            "title": "An Informed Choice",
+            "content": "After researching, several decisions may be reasonable depending on the evidence and personal situation.",
+            "choices": [
+              {
+                "id": "J5-M27-B2-C1",
+                "label": "Do not invest",
+                "nextNodeId": "J5-M27-OUTCOME-B"
+              },
+              {
+                "id": "J5-M27-B2-C2",
+                "label": "Continue researching",
+                "nextNodeId": "J5-M27-OUTCOME-B"
+              },
+              {
+                "id": "J5-M27-B2-C3",
+                "label": "Consider a smaller amount",
+                "nextNodeId": "J5-M27-OUTCOME-B"
+              },
+              {
+                "id": "J5-M27-B2-C4",
+                "label": "Follow a different plan",
+                "nextNodeId": "J5-M27-OUTCOME-B"
+              }
+            ]
+          },
+          {
+            "id": "J5-M27-OUTCOME-B",
+            "type": "terminal_outcome",
+            "branch": "research_first",
+            "title": "Evidence Led the Decision",
+            "content": "Research did not force one answer. It replaced pressure with information.",
+            "isRecommendedOutcome": true
+          },
+          {
+            "id": "J5-M27-NODE-C1",
+            "type": "follow_up",
+            "branch": "copy_the_friend",
+            "title": "Same Asset, Different Situation",
+            "content": "Your friend bought earlier, accepted different risks, and shared only one successful result.",
+            "question": "Why might your result differ?",
+            "options": [
+              {
+                "id": "J5-M27-C1-O1",
+                "text": "Friends always receive special prices",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-C1-O2",
+                "text": "Timing, price, risk, fees, and circumstances may be different",
+                "isCorrect": true
+              },
+              {
+                "id": "J5-M27-C1-O3",
+                "text": "Everyone receives identical results",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-C1-O4",
+                "text": "Profit screenshots guarantee future gains",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J5-M27-C1-O2",
+            "explanation": "Two people can buy the same asset at different prices and experience different outcomes.",
+            "nextNodeId": "J5-M27-OUTCOME-C"
+          },
+          {
+            "id": "J5-M27-OUTCOME-C",
+            "type": "terminal_outcome",
+            "branch": "copy_the_friend",
+            "title": "Someone Else’s Result Replaced Your Analysis",
+            "content": "Copying another investor ignores differences in timing, finances, goals, fees, and risk."
+          },
+          {
+            "id": "J5-M27-NODE-D1",
+            "type": "follow_up",
+            "branch": "avoid_everything",
+            "title": "Reject Every Opportunity",
+            "content": "You avoid the rushed purchase but decide that every investment must be dangerous.",
+            "question": "What is the weakness in this response?",
+            "options": [
+              {
+                "id": "J5-M27-D1-O1",
+                "text": "Avoiding one rushed decision is always wrong",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-D1-O2",
+                "text": "Every investment is safe",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M27-D1-O3",
+                "text": "It replaces one emotional reaction with another",
+                "isCorrect": true
+              },
+              {
+                "id": "J5-M27-D1-O4",
+                "text": "Research guarantees profit",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J5-M27-D1-O3",
+            "explanation": "Rejecting pressure may be sensible, but future opportunities should still be evaluated individually.",
+            "nextNodeId": "J5-M27-OUTCOME-D"
+          },
+          {
+            "id": "J5-M27-OUTCOME-D",
+            "type": "terminal_outcome",
+            "branch": "avoid_everything",
+            "title": "Pressure Avoided, But Thinking Stopped",
+            "content": "A blanket rejection may prevent informed evaluation of future opportunities."
+          }
+        ],
+        "decisionCheck": [
+          "Do I understand what I am buying?",
+          "Am I acting because of evidence or excitement?",
+          "Can I afford to lose some or all of this money?",
+          "Does the investment fit my goals and risk tolerance?",
+          "Am I relying only on someone else’s success story?"
+        ],
+        "fomoWarningSignals": [
+          "Everyone is buying.",
+          "This is your last chance.",
+          "The price can only go up.",
+          "My profit proves it works.",
+          "Do not waste time researching.",
+          "Borrow money before the opportunity disappears.",
+          "You will regret missing this.",
+          "A countdown creates urgency.",
+          "Profit screenshots appear without risk information."
+        ],
+        "tradeOffSummary": [
+          {
+            "response": "buy_immediately",
+            "possibleBenefit": "May enter before another price rise.",
+            "mainRisk": "Acts without understanding the risk."
+          },
+          {
+            "response": "research_first",
+            "possibleBenefit": "Builds understanding and reveals missing information.",
+            "mainRisk": "The price may move while research continues."
+          },
+          {
+            "response": "copy_the_friend",
+            "possibleBenefit": "Feels simple and socially supported.",
+            "mainRisk": "Another person’s result may not apply."
+          },
+          {
+            "response": "avoid_everything",
+            "possibleBenefit": "Prevents this rushed purchase.",
+            "mainRisk": "May reject future opportunities without evaluation."
+          }
+        ],
+        "recommendedLearningPath": "research_first",
+        "correctCompletionState": {
+          "allBranchesViewed": true,
+          "urgencyRecognised": true,
+          "popularityDoesNotProveSafetyUnderstood": true,
+          "positiveOutcomeDoesNotValidatePoorProcessUnderstood": true,
+          "friendResultDoesNotPredictLearnerResultUnderstood": true,
+          "researchDoesNotGuaranteeProfitUnderstood": true,
+          "evidenceBasedEvaluationSelected": true
+        },
+        "validationMethod": "Confirm that all four branches are viewed and each branch’s decision question is answered correctly.",
+        "retryBehavior": "Keep completed branches unlocked. Return only the unanswered or incorrect node with one short hint.",
+        "accessibilityAlternative": {
+          "method": "Present the four choices as numbered buttons. Read each consequence and follow-up question in a linear format.",
+          "screenReaderInstruction": "Choose each response, listen to its consequences, and identify whether the decision is based on evidence or fear of missing out."
+        }
+      },
+      "feedback": {
+        "success": "Decision tree complete! You separated social pressure and excitement from evidence, risk, and personal suitability.",
+        "incorrect": "Ask what information is known, what remains uncertain, and whether urgency is replacing understanding.",
+        "incomplete": "Explore all four responses and complete each decision check before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Decisions",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J5-M27-S07",
+      "type": "reveal",
+      "title": "When Excitement Replaces Evidence",
+      "content": "You saw how urgency, popularity, and someone else’s profit can influence a decision. This pressure is called fear of missing out, or FOMO. It can make people act before understanding an investment’s risks, fees, price, or suitability. A popular investment is not automatically safe or unsafe. Research can improve the decision process, but it cannot guarantee profit. The goal is to avoid letting social pressure make the decision.",
+      "simpleSummary": "FOMO creates urgency before understanding.",
+      "illustration": "A flashing Buy Now button fades while a checklist of evidence, risks, goals, and fees becomes clearer.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M27-S08",
+      "type": "real_life_example",
+      "title": "The Trending Property Scheme",
+      "content": "A colleague says a property scheme is selling out and promises fast profits. Instead of paying immediately, Hira checks the ownership documents, fees, risks, and withdrawal rules. The countdown no longer controls her decision.",
+      "illustration": "A countdown advertisement sits beside a document, fee, and risk checklist.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M27-S09",
+      "type": "quiz",
+      "title": "FOMO Check",
+      "questions": [
+        {
+          "id": "J5-M27-Q1",
+          "category": "recognition",
+          "text": "Which situation most clearly shows FOMO influencing a decision?",
+          "options": [
+            {
+              "id": "J5-M27-Q1-O1",
+              "text": "Reviewing fees before investing",
+              "isCorrect": false,
+              "feedback": "This is part of an evidence-based review."
+            },
+            {
+              "id": "J5-M27-Q1-O2",
+              "text": "Comparing an investment with a financial goal",
+              "isCorrect": false,
+              "feedback": "This checks whether the opportunity fits the investor’s plan."
+            },
+            {
+              "id": "J5-M27-Q1-O3",
+              "text": "Buying immediately because everyone online seems excited",
+              "isCorrect": true,
+              "feedback": "Correct. Popularity and urgency are replacing understanding."
+            },
+            {
+              "id": "J5-M27-Q1-O4",
+              "text": "Checking whether a platform is genuine",
+              "isCorrect": false,
+              "feedback": "Verification can reveal risks before money is transferred."
+            }
+          ],
+          "correctAnswerId": "J5-M27-Q1-O3",
+          "correctExplanation": "The decision is being driven by popularity and urgency rather than understanding.",
+          "misconceptionTested": "FOMO is the same as normal investment research."
+        },
+        {
+          "id": "J5-M27-Q2",
+          "category": "misconception",
+          "text": "Thousands of people are buying an investment. What does this prove?",
+          "options": [
+            {
+              "id": "J5-M27-Q2-O1",
+              "text": "The investment is safe",
+              "isCorrect": false,
+              "feedback": "Many buyers can still be wrong or accept risks that do not fit another person."
+            },
+            {
+              "id": "J5-M27-Q2-O2",
+              "text": "The price must continue rising",
+              "isCorrect": false,
+              "feedback": "Prices can reverse even after strong demand."
+            },
+            {
+              "id": "J5-M27-Q2-O3",
+              "text": "Everyone will make the same profit",
+              "isCorrect": false,
+              "feedback": "People may buy at different prices, sell at different times, and pay different fees."
+            },
+            {
+              "id": "J5-M27-Q2-O4",
+              "text": "Only that the investment is currently popular",
+              "isCorrect": true,
+              "feedback": "Correct. Popularity does not prove safety, value, or future profit."
+            }
+          ],
+          "correctAnswerId": "J5-M27-Q2-O4",
+          "correctExplanation": "Popularity may affect demand and price, but it does not prove safety, value, or future profit.",
+          "misconceptionTested": "If many people are buying, the opportunity must be safe."
+        },
+        {
+          "id": "J5-M27-Q3",
+          "category": "application",
+          "text": "A friend shows a large profit and tells you to buy immediately. What is the best first response?",
+          "options": [
+            {
+              "id": "J5-M27-Q3-O1",
+              "text": "Copy the same amount",
+              "isCorrect": false,
+              "feedback": "The same amount does not create the same price, timing, or result."
+            },
+            {
+              "id": "J5-M27-Q3-O2",
+              "text": "Borrow money before the price rises",
+              "isCorrect": false,
+              "feedback": "Urgency does not remove the possibility of loss or repayment obligations."
+            },
+            {
+              "id": "J5-M27-Q3-O3",
+              "text": "Assume the result will be identical",
+              "isCorrect": false,
+              "feedback": "Another person’s successful result cannot guarantee yours."
+            },
+            {
+              "id": "J5-M27-Q3-O4",
+              "text": "Pause and understand the opportunity and risks",
+              "isCorrect": true,
+              "feedback": "Correct. Their timing, risk, fees, and financial situation may be different."
+            }
+          ],
+          "correctAnswerId": "J5-M27-Q3-O4",
+          "correctExplanation": "The friend’s result may involve a different entry price, risk level, holding period, and financial situation.",
+          "misconceptionTested": "A friend’s large profit means another person will achieve the same result."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J5-M27-S10",
+      "type": "completion",
+      "headline": "Pressure Detector Unlocked!",
+      "message": "You learned to recognise when urgency, popularity, and excitement are replacing investment research.",
+      "xpReward": 50,
+      "progressMessage": "Mission 27 complete in Master Money Decisions.",
+      "nextMissionTeaser": "Next, explore how overconfidence can make uncertain predictions feel more reliable than they are.",
+      "animation": "Social-media alerts fade while five decision-check questions lock into place around a calm Pause button.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J5-M27-S11",
+      "type": "real_life_challenge",
+      "title": "Rewrite the Hype Message",
+      "instruction": "Write a fictional buy-now message. Circle every phrase that creates urgency, popularity pressure, or guaranteed-profit expectations. Do not invest money.",
+      "buttonLabel": "I Found the Pressure",
+      "primaryAction": {
+        "label": "I Found the Pressure",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on recognising FOMO and preventing social pressure from replacing informed decision-making."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission separates popularity, price movement, decision quality, risk, fees, timing, and individual circumstances."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult savings, social media, cryptocurrency, colleagues, financial goals, fees, and investment risk."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend buying or avoiding cryptocurrency or any other real investment."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that research, popularity, rising prices, and another person’s profit cannot guarantee results."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "All assets, prices, profits, and losses are fictional educational examples."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Rushed buying, copying, avoiding, and researching are discussed without insulting or blaming the learner."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that a popular investment is not automatically safe or unsafe and that research cannot eliminate risk."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, social-media posts, cryptocurrency, savings, colleagues, and familiar adult financial pressure in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner explores four emotional and evidence-based responses and sees the consequence of each decision process."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses popularity, urgency, copied profits, platform checks, and the need to understand risk."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The mission uses three short story screens, four concise decision branches, and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
