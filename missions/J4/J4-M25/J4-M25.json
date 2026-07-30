@@ -1,0 +1,836 @@
+{
+  "id": "J4-M25",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Regular Investing",
+  "concept": "Regular investing means contributing a planned amount at consistent intervals instead of waiting for a supposedly perfect market entry point.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 5,
+  "locale": "en-PK",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Understand how investing consistently over time can reduce the pressure and uncertainty of trying to predict the perfect moment to invest.",
+  "primaryMisconception": "Successful investing requires accurately predicting the best time to enter the market.",
+  "secondaryMisconceptions": [
+    "An investor should stop contributing whenever market prices fall.",
+    "Regular investing guarantees a profit or prevents losses."
+  ],
+  "keyTakeaway": "Regular investing reduces the pressure of trying to predict the perfect time.",
+  "screens": [
+    {
+      "id": "J4-M25-S01",
+      "type": "hook",
+      "title": "Waiting for the Perfect Price",
+      "content": "You have Rs. 60,000 ready. Prices keep changing. Do you invest gradually—or wait for a low point you may recognise too late?",
+      "illustration": "A person watches a moving price chart while twelve Rs. 5,000 contribution cards wait beside a calendar.",
+      "primaryAction": {
+        "label": "Compare the Strategies",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M25-S02",
+      "type": "story",
+      "title": "Same Money, Different Plans",
+      "content": "Ayesha and Hamza each have Rs. 60,000 available for a fictional one-year investment plan.",
+      "illustration": "Two people stand beside equal Rs. 60,000 balances and separate twelve-month calendars.",
+      "primaryAction": {
+        "label": "See Their Plans",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M25-S03",
+      "type": "story",
+      "title": "Ayesha Follows a Schedule",
+      "content": "Ayesha invests Rs. 5,000 every month. She continues whether the unit price is rising or falling.",
+      "illustration": "Twelve Rs. 5,000 cards appear beside monthly calendar dates.",
+      "primaryAction": {
+        "label": "Meet Hamza",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M25-S04",
+      "type": "story",
+      "title": "Hamza Waits for the Bottom",
+      "content": "Hamza keeps watching the market. He wants to invest when prices reach their lowest point—but nobody labels the lowest month in advance.",
+      "illustration": "Hamza watches a zigzag chart with several points that could appear to be the bottom.",
+      "primaryAction": {
+        "label": "Enter the Simulator",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M25-S05",
+      "type": "pre_interaction",
+      "title": "Which Plan Requires a Prediction?",
+      "question": "Which strategy depends more heavily on correctly guessing one market entry point?",
+      "options": [
+        {
+          "id": "J4-M25-PQ-O1",
+          "text": "Investing Rs. 5,000 every month",
+          "isRecommended": false,
+          "response": "Regular contributions occur at several prices, so the result does not depend entirely on one entry point."
+        },
+        {
+          "id": "J4-M25-PQ-O2",
+          "text": "Waiting and investing everything in one chosen month",
+          "isRecommended": true,
+          "response": "Correct. The result depends heavily on whether the chosen month was early, late, expensive, or inexpensive."
+        },
+        {
+          "id": "J4-M25-PQ-O3",
+          "text": "Keeping an emergency fund separate",
+          "isRecommended": false,
+          "response": "An emergency fund serves a different purpose and does not require predicting market prices."
+        },
+        {
+          "id": "J4-M25-PQ-O4",
+          "text": "Reviewing investment fees",
+          "isRecommended": false,
+          "response": "Fees matter, but comparing them does not require guessing the exact lowest market price."
+        }
+      ],
+      "recommendedAnswerId": "J4-M25-PQ-O2",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J4-M25-S06",
+      "type": "interaction",
+      "interactionType": "investment_simulator",
+      "title": "Twelve Months, Changing Prices",
+      "instruction": "Move through twelve months. Compare Ayesha’s automatic monthly plan with the timing decisions you make for Hamza.",
+      "config": {
+        "timePeriod": {
+          "unit": "month",
+          "numberOfPeriods": 12
+        },
+        "startingAmountPerStrategy": 60000,
+        "regularContributionAmount": 5000,
+        "finalValuationUnitPrice": 118,
+        "availableAsset": {
+          "id": "fictional_market_fund",
+          "name": "Fictional Market Fund",
+          "description": "A teaching-only investment used to demonstrate purchasing units at changing prices."
+        },
+        "requiredDisclaimer": "This is an educational simulation. The prices and outcomes are fictional and do not predict or guarantee real investment performance.",
+        "educationalAssumptions": [
+          "The simulation lasts twelve months.",
+          "Ayesha automatically invests Rs. 5,000 every month.",
+          "Hamza begins with Rs. 60,000 in cash.",
+          "Each month, the learner chooses Hamza’s action.",
+          "Units may be purchased in fractions.",
+          "The final comparison uses the Month 12 unit price of Rs. 118.",
+          "Cash does not earn interest during this simplified activity.",
+          "Fees, taxes, inflation, dividends, and currency changes are excluded.",
+          "Prices are fictional and selected to demonstrate changing purchase prices.",
+          "The lowest price is visible only after the year is complete.",
+          "Regular investing may produce gains or losses.",
+          "Investing everything at once may perform better or worse than regular investing.",
+          "The simulator does not recommend either strategy for a particular person."
+        ],
+        "learnerActions": [
+          {
+            "id": "invest_planned_amount",
+            "label": "Invest Rs. 5,000",
+            "rule": "Invest the smaller of Rs. 5,000 or all remaining cash at the current unit price."
+          },
+          {
+            "id": "wait",
+            "label": "Wait",
+            "rule": "Invest nothing and carry all remaining cash into the next month."
+          },
+          {
+            "id": "invest_all_remaining",
+            "label": "Invest All Remaining Cash",
+            "rule": "Invest the entire remaining cash balance at the current unit price."
+          },
+          {
+            "id": "stop_for_year",
+            "label": "Stop for the Rest of the Year",
+            "rule": "Make no further purchases and keep all remaining money in cash."
+          }
+        ],
+        "displayFields": [
+          "unit_price",
+          "amount_invested_this_month",
+          "total_amount_invested",
+          "units_purchased_this_month",
+          "total_units_owned",
+          "cash_still_waiting",
+          "average_purchase_price",
+          "current_investment_value",
+          "combined_investment_and_cash_value"
+        ],
+        "marketPrices": [
+          {
+            "month": 1,
+            "unitPrice": 100
+          },
+          {
+            "month": 2,
+            "unitPrice": 95
+          },
+          {
+            "month": 3,
+            "unitPrice": 105
+          },
+          {
+            "month": 4,
+            "unitPrice": 90
+          },
+          {
+            "month": 5,
+            "unitPrice": 110
+          },
+          {
+            "month": 6,
+            "unitPrice": 98
+          },
+          {
+            "month": 7,
+            "unitPrice": 115
+          },
+          {
+            "month": 8,
+            "unitPrice": 108
+          },
+          {
+            "month": 9,
+            "unitPrice": 120
+          },
+          {
+            "month": 10,
+            "unitPrice": 112
+          },
+          {
+            "month": 11,
+            "unitPrice": 125
+          },
+          {
+            "month": 12,
+            "unitPrice": 118
+          }
+        ],
+        "regularStrategy": {
+          "investorName": "Ayesha",
+          "strategyType": "regular_monthly_investing",
+          "monthlyResults": [
+            {
+              "month": 1,
+              "unitPrice": 100,
+              "amountInvested": 5000,
+              "unitsPurchased": 50,
+              "totalUnits": 50,
+              "totalInvested": 5000,
+              "cashWaiting": 55000,
+              "averagePurchasePrice": 100,
+              "currentInvestmentValue": 5000
+            },
+            {
+              "month": 2,
+              "unitPrice": 95,
+              "amountInvested": 5000,
+              "unitsPurchased": 52.63,
+              "totalUnits": 102.63,
+              "totalInvested": 10000,
+              "cashWaiting": 50000,
+              "averagePurchasePrice": 97.44,
+              "currentInvestmentValue": 9750
+            },
+            {
+              "month": 3,
+              "unitPrice": 105,
+              "amountInvested": 5000,
+              "unitsPurchased": 47.62,
+              "totalUnits": 150.25,
+              "totalInvested": 15000,
+              "cashWaiting": 45000,
+              "averagePurchasePrice": 99.83,
+              "currentInvestmentValue": 15776
+            },
+            {
+              "month": 4,
+              "unitPrice": 90,
+              "amountInvested": 5000,
+              "unitsPurchased": 55.56,
+              "totalUnits": 205.81,
+              "totalInvested": 20000,
+              "cashWaiting": 40000,
+              "averagePurchasePrice": 97.18,
+              "currentInvestmentValue": 18523
+            },
+            {
+              "month": 5,
+              "unitPrice": 110,
+              "amountInvested": 5000,
+              "unitsPurchased": 45.45,
+              "totalUnits": 251.26,
+              "totalInvested": 25000,
+              "cashWaiting": 35000,
+              "averagePurchasePrice": 99.5,
+              "currentInvestmentValue": 27639
+            },
+            {
+              "month": 6,
+              "unitPrice": 98,
+              "amountInvested": 5000,
+              "unitsPurchased": 51.02,
+              "totalUnits": 302.28,
+              "totalInvested": 30000,
+              "cashWaiting": 30000,
+              "averagePurchasePrice": 99.25,
+              "currentInvestmentValue": 29624
+            },
+            {
+              "month": 7,
+              "unitPrice": 115,
+              "amountInvested": 5000,
+              "unitsPurchased": 43.48,
+              "totalUnits": 345.76,
+              "totalInvested": 35000,
+              "cashWaiting": 25000,
+              "averagePurchasePrice": 101.23,
+              "currentInvestmentValue": 39762
+            },
+            {
+              "month": 8,
+              "unitPrice": 108,
+              "amountInvested": 5000,
+              "unitsPurchased": 46.3,
+              "totalUnits": 392.06,
+              "totalInvested": 40000,
+              "cashWaiting": 20000,
+              "averagePurchasePrice": 102.03,
+              "currentInvestmentValue": 42342
+            },
+            {
+              "month": 9,
+              "unitPrice": 120,
+              "amountInvested": 5000,
+              "unitsPurchased": 41.67,
+              "totalUnits": 433.72,
+              "totalInvested": 45000,
+              "cashWaiting": 15000,
+              "averagePurchasePrice": 103.75,
+              "currentInvestmentValue": 52047
+            },
+            {
+              "month": 10,
+              "unitPrice": 112,
+              "amountInvested": 5000,
+              "unitsPurchased": 44.64,
+              "totalUnits": 478.37,
+              "totalInvested": 50000,
+              "cashWaiting": 10000,
+              "averagePurchasePrice": 104.52,
+              "currentInvestmentValue": 53577
+            },
+            {
+              "month": 11,
+              "unitPrice": 125,
+              "amountInvested": 5000,
+              "unitsPurchased": 40,
+              "totalUnits": 518.37,
+              "totalInvested": 55000,
+              "cashWaiting": 5000,
+              "averagePurchasePrice": 106.1,
+              "currentInvestmentValue": 64796
+            },
+            {
+              "month": 12,
+              "unitPrice": 118,
+              "amountInvested": 5000,
+              "unitsPurchased": 42.37,
+              "totalUnits": 560.74,
+              "totalInvested": 60000,
+              "cashWaiting": 0,
+              "averagePurchasePrice": 107,
+              "currentInvestmentValue": 66167
+            }
+          ],
+          "finalResult": {
+            "totalContributed": 60000,
+            "totalUnits": 560.74,
+            "averagePurchasePrice": 107,
+            "finalUnitPrice": 118,
+            "finalIllustrativeValue": 66167,
+            "illustrativeGain": 6167,
+            "clarification": "This gain occurred because of this fictional price sequence. A different sequence could have produced a loss."
+          }
+        },
+        "marketTimingStrategy": {
+          "investorName": "Hamza",
+          "strategyType": "learner_controlled_market_timing",
+          "startingCash": 60000,
+          "calculationRules": {
+            "unitsPurchased": "purchase_amount_divided_by_current_unit_price",
+            "totalUnits": "sum_of_all_units_purchased",
+            "averagePurchasePrice": "total_amount_invested_divided_by_total_units",
+            "finalInvestmentValue": "total_units_multiplied_by_118",
+            "finalCombinedValue": "final_investment_value_plus_uninvested_cash"
+          },
+          "exampleOutcomes": [
+            {
+              "id": "perfect_hindsight_month_4",
+              "description": "Invest all Rs. 60,000 in Month 4",
+              "entryPrice": 90,
+              "unitsPurchased": 666.67,
+              "finalValue": 78667,
+              "illustrativeGain": 18667,
+              "lesson": "This result requires knowing in advance that Month 4 will be the lowest point."
+            },
+            {
+              "id": "all_in_month_1",
+              "description": "Invest all Rs. 60,000 in Month 1",
+              "entryPrice": 100,
+              "unitsPurchased": 600,
+              "finalValue": 70800,
+              "illustrativeGain": 10800
+            },
+            {
+              "id": "all_in_month_9",
+              "description": "Wait until Month 9",
+              "entryPrice": 120,
+              "unitsPurchased": 500,
+              "finalValue": 59000,
+              "illustrativeGain": -1000
+            },
+            {
+              "id": "all_in_month_11",
+              "description": "Wait until Month 11",
+              "entryPrice": 125,
+              "unitsPurchased": 480,
+              "finalValue": 56640,
+              "illustrativeGain": -3360
+            },
+            {
+              "id": "never_invest",
+              "description": "Keep all money in cash",
+              "entryPrice": null,
+              "unitsPurchased": 0,
+              "finalInvestmentValue": 0,
+              "uninvestedCash": 60000,
+              "finalCombinedValue": 60000,
+              "lesson": "Cash avoided market price movements but did not participate in the fictional rise and may face inflation risk in real life."
+            }
+          ]
+        },
+        "monthlyFeedback": [
+          {
+            "month": 2,
+            "event": "Price falls from Rs. 100 to Rs. 95",
+            "effect": "The same Rs. 5,000 contribution purchases more units."
+          },
+          {
+            "month": 4,
+            "event": "Price falls to Rs. 90",
+            "effect": "The same contribution purchases 55.56 units, but the learner cannot yet know this is the year’s lowest price."
+          },
+          {
+            "month": 5,
+            "event": "Price rises to Rs. 110",
+            "effect": "A learner waiting for an even lower price must choose whether to invest or continue waiting."
+          },
+          {
+            "month": 9,
+            "event": "Only four months remain",
+            "effect": "Waiting longer reduces the time available to invest but does not remove the risk of a later decline."
+          },
+          {
+            "month": 11,
+            "event": "Price reaches Rs. 125",
+            "effect": "The learner can now see that the lowest price passed earlier, but it was not labelled at the time."
+          }
+        ],
+        "postSimulationQuestions": [
+          {
+            "id": "J4-M25-IQ1",
+            "question": "What happened when the unit price fell?",
+            "options": [
+              {
+                "id": "J4-M25-IQ1-O1",
+                "text": "Ayesha’s Rs. 5,000 purchased fewer units",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ1-O2",
+                "text": "Ayesha’s Rs. 5,000 purchased more units",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M25-IQ1-O3",
+                "text": "A profit became guaranteed",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ1-O4",
+                "text": "All previous units disappeared",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M25-IQ1-O2",
+            "explanation": "A fixed contribution buys more units when the price is lower and fewer units when it is higher."
+          },
+          {
+            "id": "J4-M25-IQ2",
+            "question": "Why is waiting for the lowest price difficult?",
+            "options": [
+              {
+                "id": "J4-M25-IQ2-O1",
+                "text": "Markets always announce the lowest price",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ2-O2",
+                "text": "Low prices can only occur in Month 1",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ2-O3",
+                "text": "The lowest point is usually clear only after prices move again",
+                "isCorrect": true
+              },
+              {
+                "id": "J4-M25-IQ2-O4",
+                "text": "Waiting guarantees a better entry",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J4-M25-IQ2-O3",
+            "explanation": "A price that appears low today could fall further—or begin rising before the investor acts."
+          },
+          {
+            "id": "J4-M25-IQ3",
+            "question": "What does the regular strategy guarantee?",
+            "options": [
+              {
+                "id": "J4-M25-IQ3-O1",
+                "text": "A profit",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ3-O2",
+                "text": "Protection from every loss",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ3-O3",
+                "text": "The lowest average price",
+                "isCorrect": false
+              },
+              {
+                "id": "J4-M25-IQ3-O4",
+                "text": "No guaranteed financial result",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswerId": "J4-M25-IQ3-O4",
+            "explanation": "Regular investing reduces dependence on one entry point, but the investment can still lose value."
+          }
+        ],
+        "causeAndEffectFeedback": [
+          {
+            "cause": "Invest the same amount regularly",
+            "effect": "Purchases occur at different prices, reducing dependence on one entry point."
+          },
+          {
+            "cause": "Wait for the lowest price",
+            "effect": "The investor may invest too early, too late, or not at all."
+          },
+          {
+            "cause": "Continue during a price decline",
+            "effect": "The same contribution purchases more units, although the price may continue falling."
+          },
+          {
+            "cause": "Stop whenever prices fall",
+            "effect": "Short-term fear may interrupt the plan, and the investor may miss part of a later recovery."
+          },
+          {
+            "cause": "Invest everything at once",
+            "effect": "The result depends heavily on one entry price and may be better or worse than regular contributions."
+          }
+        ],
+        "possibleFluctuations": [
+          "Prices may rise after a purchase.",
+          "Prices may fall after a purchase.",
+          "A recent low may not be the final low.",
+          "A high price may rise further.",
+          "Several months may pass before a decline recovers.",
+          "Regular purchases may still finish with an overall loss.",
+          "A lump-sum purchase may outperform regular purchases.",
+          "Cash may provide stability but lose purchasing power."
+        ],
+        "importantClarification": [
+          "The simulation is not designed to prove that regular investing always earns the most.",
+          "A perfectly timed lump-sum purchase performed better in this fictional year.",
+          "Identifying the perfect month required future knowledge that was unavailable at the time.",
+          "Regular investing reduced dependence on making that prediction.",
+          "Regular investing does not replace research, diversification, risk management, financial stability, or consideration of fees and goals."
+        ],
+        "correctCompletionState": {
+          "allMonthsViewed": true,
+          "finalComparisonViewed": true,
+          "lowerPriceBuysMoreUnitsUnderstood": true,
+          "lowestPointDifficultToIdentifyUnderstood": true,
+          "entryPointDependenceReducedUnderstood": true,
+          "profitNotGuaranteedUnderstood": true,
+          "requiredQuestionIds": [
+            "J4-M25-IQ1",
+            "J4-M25-IQ2",
+            "J4-M25-IQ3"
+          ]
+        },
+        "validationMethod": "Confirm that all twelve months were viewed, the learner reached a final comparison, and all three post-simulation questions were answered correctly.",
+        "retryBehavior": "Keep completed months and correct answers saved. Return only incorrect questions or unfinished months.",
+        "accessibilityAlternative": {
+          "method": "Present the months as a numbered list with Previous Month and Next Month buttons. Provide buttons for each Hamza decision and announce all updated values.",
+          "screenReaderInstruction": "Move through twelve months. Hear the current price, Ayesha’s automatic purchase, and Hamza’s available choices. Then compare both final results."
+        }
+      },
+      "feedback": {
+        "success": "Simulation complete! You invested across several prices instead of depending entirely on one perfectly timed decision.",
+        "incorrect": "Compare what was known during each month with what became obvious only after the year ended.",
+        "incomplete": "Complete all twelve months and answer the three strategy questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Strategy",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J4-M25-S07",
+      "type": "reveal",
+      "title": "A Plan Instead of a Prediction",
+      "content": "You saw how regular investing spreads purchases across several prices. The same contribution buys more units when prices are lower and fewer when prices are higher. This reduces dependence on correctly guessing one perfect entry point. It does not guarantee a profit, the lowest average price, or protection from losses. A lump-sum investment may perform better or worse. Regular investing mainly provides a consistent process that can reduce market-timing pressure and emotional decision-making.",
+      "simpleSummary": "Regular contributions reduce reliance on one perfectly timed purchase.",
+      "illustration": "Twelve smaller purchases form a path across changing prices while one large purchase waits beside an uncertain market chart.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M25-S08",
+      "type": "real_life_example",
+      "title": "Investing From Monthly Income",
+      "content": "Bilal sets aside Rs. 3,000 from each monthly salary instead of waiting for market headlines to look perfect. Some purchases occur at higher prices and others at lower prices. The approach reduces timing pressure but does not guarantee that his investment will gain value.",
+      "illustration": "Monthly salary dates connect to equal contribution cards placed along a changing price chart.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M25-S09",
+      "type": "quiz",
+      "title": "Regular Investing Check",
+      "questions": [
+        {
+          "id": "J4-M25-Q1",
+          "category": "recognition",
+          "text": "Which behaviour best represents regular investing?",
+          "options": [
+            {
+              "id": "J4-M25-Q1-O1",
+              "text": "Investing only after a large market rise",
+              "isCorrect": false,
+              "feedback": "This reacts to price movement rather than following a consistent plan."
+            },
+            {
+              "id": "J4-M25-Q1-O2",
+              "text": "Waiting indefinitely for the lowest price",
+              "isCorrect": false,
+              "feedback": "The lowest point may not be identifiable until it has already passed."
+            },
+            {
+              "id": "J4-M25-Q1-O3",
+              "text": "Contributing a planned amount at consistent intervals",
+              "isCorrect": true,
+              "feedback": "Correct. The contribution follows a schedule instead of a market prediction."
+            },
+            {
+              "id": "J4-M25-Q1-O4",
+              "text": "Investing only when online comments are positive",
+              "isCorrect": false,
+              "feedback": "Online sentiment can change quickly and does not create a consistent investment process."
+            }
+          ],
+          "correctAnswerId": "J4-M25-Q1-O3",
+          "correctExplanation": "Regular investing follows a contribution schedule rather than requiring a prediction about the perfect market entry.",
+          "misconceptionTested": "Regular investing means reacting to short-term market signals."
+        },
+        {
+          "id": "J4-M25-Q2",
+          "category": "misconception",
+          "text": "Does successful investing require predicting the market’s exact lowest point?",
+          "options": [
+            {
+              "id": "J4-M25-Q2-O1",
+              "text": "Yes, every successful investor finds the bottom",
+              "isCorrect": false,
+              "feedback": "The lowest price is usually obvious only after the market has moved away from it."
+            },
+            {
+              "id": "J4-M25-Q2-O2",
+              "text": "Yes, otherwise profit is impossible",
+              "isCorrect": false,
+              "feedback": "Investment results depend on many factors beyond choosing the lowest entry price."
+            },
+            {
+              "id": "J4-M25-Q2-O3",
+              "text": "No, regular contributions can reduce reliance on one prediction",
+              "isCorrect": true,
+              "feedback": "Correct. Purchases at several points reduce dependence on one entry."
+            },
+            {
+              "id": "J4-M25-Q2-O4",
+              "text": "No, because prices never fall",
+              "isCorrect": false,
+              "feedback": "Market prices can rise or fall, and regular investing does not prevent declines."
+            }
+          ],
+          "correctAnswerId": "J4-M25-Q2-O3",
+          "correctExplanation": "Investing at several points avoids making the entire result depend on one perfectly timed purchase.",
+          "misconceptionTested": "Successful investing requires perfect market timing."
+        },
+        {
+          "id": "J4-M25-Q3",
+          "category": "application",
+          "text": "A planned monthly contribution occurs after the unit price falls. What happens immediately?",
+          "options": [
+            {
+              "id": "J4-M25-Q3-O1",
+              "text": "A profit becomes guaranteed",
+              "isCorrect": false,
+              "feedback": "Buying at a lower price may help, but it does not guarantee the final result."
+            },
+            {
+              "id": "J4-M25-Q3-O2",
+              "text": "The same contribution purchases more units",
+              "isCorrect": true,
+              "feedback": "Correct. A lower unit price allows the same contribution to purchase more units."
+            },
+            {
+              "id": "J4-M25-Q3-O3",
+              "text": "The investment can no longer fall",
+              "isCorrect": false,
+              "feedback": "Prices may continue falling after the purchase."
+            },
+            {
+              "id": "J4-M25-Q3-O4",
+              "text": "All earlier purchases become losses",
+              "isCorrect": false,
+              "feedback": "Earlier units remain owned, and their eventual result depends on later prices and any sale."
+            }
+          ],
+          "correctAnswerId": "J4-M25-Q3-O2",
+          "correctExplanation": "When the unit price is lower, a fixed contribution buys a greater number of units. The price may still continue falling.",
+          "misconceptionTested": "An investor should automatically stop contributing whenever prices fall."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J4-M25-S10",
+      "type": "completion",
+      "headline": "Consistency Planner Unlocked!",
+      "message": "You learned how regular contributions can reduce market-timing pressure without guaranteeing investment gains.",
+      "xpReward": 50,
+      "progressMessage": "Mission 25 complete in Grow Wealth Wisely.",
+      "nextMissionTeaser": "Next, explore how investment fees can quietly change long-term results.",
+      "animation": "Twelve contribution cards land at different points on a moving price chart and combine into one completed plan.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J4-M25-S11",
+      "type": "real_life_challenge",
+      "title": "Design a Fictional Schedule",
+      "instruction": "Create a twelve-month pretend plan using any fixed monthly amount. Mark each contribution date without checking future prices or investing real money.",
+      "buttonLabel": "My Schedule Is Ready",
+      "primaryAction": {
+        "label": "My Schedule Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on using consistent contributions to reduce dependence on market timing."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission accurately calculates units, average purchase price, remaining cash, investment value, and timing outcomes."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses salary-based contributions, financial planning, investment units, emotional decisions, cash, and market uncertainty."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The simulation is fictional and does not recommend a real investment, contribution amount, or strategy for a particular person."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission repeatedly states that regular investing, lump-sum investing, and lower purchase prices cannot guarantee profit."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "All prices and market movements are fictional educational examples."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Waiting, investing regularly, investing at once, stopping, and holding cash are discussed through trade-offs without judgement."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that regular investing may underperform a well-timed lump sum and does not replace research, diversification, or risk management."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, monthly salary contributions, calendars, cash balances, and familiar adult investment decisions in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner observes purchases at twelve prices, controls a timing strategy, and compares final outcomes and decision pressure."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses perfect market timing, regular contribution schedules, price declines, unit purchases, and guaranteed-return assumptions."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The interaction requires one quick decision or observation per month, followed by three short comparison questions and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
