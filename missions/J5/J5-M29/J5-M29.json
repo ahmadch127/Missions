@@ -1,0 +1,756 @@
+{
+  "id": "J5-M29",
+  "journeyId": "J5",
+  "journeyName": "Master Money Decisions",
+  "title": "Set Financial Goals",
+  "concept": "A financial goal turns a general wish into a measurable plan by defining an amount, deadline, monthly contribution, and priority.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 5,
+  "locale": "en-PK",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Learn how to turn a vague financial wish into a measurable goal with a target amount, deadline, priority, and contribution plan.",
+  "primaryMisconception": "Motivation alone is enough to reach a financial goal.",
+  "secondaryMisconceptions": [
+    "A goal does not need a specific amount or deadline.",
+    "All financial goals should receive the same priority."
+  ],
+  "keyTakeaway": "A financial goal needs an amount, deadline, and contribution plan.",
+  "screens": [
+    {
+      "id": "J5-M29-S01",
+      "type": "hook",
+      "title": "“Save More” Means What?",
+      "content": "“I want to save more” sounds good. But how much, by when, and which goal should receive your limited money first?",
+      "illustration": "Four goal cards—laptop, emergency fund, trip, and education—surround a vague Save More note.",
+      "primaryAction": {
+        "label": "Make It Measurable",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M29-S02",
+      "type": "story",
+      "title": "Four Goals, One Budget",
+      "content": "After essential expenses, you can save Rs. 25,000 monthly. You want a laptop, emergency fund, trip, and further education.",
+      "illustration": "A Rs. 25,000 monthly savings meter appears beside four empty goal cards.",
+      "primaryAction": {
+        "label": "View the Goals",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M29-S03",
+      "type": "story",
+      "title": "The First Draft",
+      "content": "Your first plan requires Rs. 35,000 monthly. It funds every goal quickly, but it exceeds your available savings by Rs. 10,000.",
+      "illustration": "The monthly plan fills beyond the Rs. 25,000 limit and displays a Rs. 10,000 shortfall.",
+      "primaryAction": {
+        "label": "Find the Problem",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M29-S04",
+      "type": "story",
+      "title": "Something Must Change",
+      "content": "You can change deadlines, contributions, amounts, or priorities. Motivation cannot make an unaffordable plan fit the budget.",
+      "illustration": "Four adjustable controls appear beside the over-budget plan.",
+      "primaryAction": {
+        "label": "Build a Realistic Plan",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M29-S05",
+      "type": "pre_interaction",
+      "title": "Which Goal Can Be Measured?",
+      "question": "Which statement is the clearest financial goal?",
+      "options": [
+        {
+          "id": "J5-M29-PQ-O1",
+          "text": "I want to save more",
+          "isRecommended": false,
+          "response": "This shows intention, but it does not define an amount, deadline, or contribution plan."
+        },
+        {
+          "id": "J5-M29-PQ-O2",
+          "text": "I will try harder next month",
+          "isRecommended": false,
+          "response": "Effort may help, but progress cannot be measured without specific numbers and timing."
+        },
+        {
+          "id": "J5-M29-PQ-O3",
+          "text": "Save Rs. 120,000 in 12 months by contributing Rs. 10,000 monthly",
+          "isRecommended": true,
+          "response": "Correct. The amount, deadline, and monthly action are clearly defined."
+        },
+        {
+          "id": "J5-M29-PQ-O4",
+          "text": "I want several things soon",
+          "isRecommended": false,
+          "response": "The goals still need separate amounts, deadlines, contributions, and priorities."
+        }
+      ],
+      "recommendedAnswerId": "J5-M29-PQ-O3",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J5-M29-S06",
+      "type": "interaction",
+      "interactionType": "budget_builder",
+      "title": "Turn Wishes Into Plans",
+      "instruction": "Set an amount, deadline, monthly contribution, and priority for each goal. Keep the total within your Rs. 25,000 monthly savings budget.",
+      "config": {
+        "totalAvailableAmount": 25000,
+        "budgetPeriod": "monthly",
+        "protectedEssentialExpenses": {
+          "includedInBuilder": false,
+          "description": "Rent, bills, food, debt payments, and other essentials are already covered and cannot be reduced inside this activity."
+        },
+        "educationalAssumptions": [
+          "The learner has Rs. 25,000 available monthly after essential expenses.",
+          "All goals and amounts are fictional examples.",
+          "No interest or investment returns are included.",
+          "Prices remain unchanged during the activity.",
+          "Monthly contributions are made consistently.",
+          "A goal is funded when monthly contribution multiplied by deadline equals or exceeds the goal amount.",
+          "Actual costs, income, and priorities may change.",
+          "Adjusting a goal is not failure.",
+          "The activity does not provide personalised financial advice."
+        ],
+        "startingPlan": {
+          "totalMonthlyContributions": 35000,
+          "monthlyShortfall": 10000,
+          "feedback": "Each goal is measurable individually, but the combined plan exceeds the available monthly savings."
+        },
+        "categories": [
+          {
+            "id": "goal_laptop",
+            "label": "Laptop",
+            "suggestedAmount": 150000,
+            "amountInput": {
+              "minimum": 50000,
+              "maximum": 300000,
+              "step": 5000
+            },
+            "deadlineInput": {
+              "minimumMonths": 3,
+              "maximumMonths": 60,
+              "stepMonths": 1
+            },
+            "monthlyContributionInput": {
+              "minimum": 0,
+              "maximum": 25000,
+              "step": 1000
+            },
+            "priorityOptions": [
+              "high",
+              "medium",
+              "low",
+              "paused"
+            ],
+            "startingValues": {
+              "goalAmount": 150000,
+              "deadlineMonths": 15,
+              "monthlyContribution": 10000,
+              "priority": "medium"
+            }
+          },
+          {
+            "id": "goal_emergency_fund",
+            "label": "Emergency Fund",
+            "suggestedAmount": 120000,
+            "amountInput": {
+              "minimum": 30000,
+              "maximum": 500000,
+              "step": 5000
+            },
+            "deadlineInput": {
+              "minimumMonths": 3,
+              "maximumMonths": 60,
+              "stepMonths": 1
+            },
+            "monthlyContributionInput": {
+              "minimum": 0,
+              "maximum": 25000,
+              "step": 1000
+            },
+            "priorityOptions": [
+              "high",
+              "medium",
+              "low",
+              "paused"
+            ],
+            "startingValues": {
+              "goalAmount": 120000,
+              "deadlineMonths": 12,
+              "monthlyContribution": 10000,
+              "priority": "high"
+            }
+          },
+          {
+            "id": "goal_trip",
+            "label": "Trip",
+            "suggestedAmount": 90000,
+            "amountInput": {
+              "minimum": 20000,
+              "maximum": 300000,
+              "step": 5000
+            },
+            "deadlineInput": {
+              "minimumMonths": 3,
+              "maximumMonths": 60,
+              "stepMonths": 1
+            },
+            "monthlyContributionInput": {
+              "minimum": 0,
+              "maximum": 25000,
+              "step": 1000
+            },
+            "priorityOptions": [
+              "high",
+              "medium",
+              "low",
+              "paused"
+            ],
+            "startingValues": {
+              "goalAmount": 90000,
+              "deadlineMonths": 18,
+              "monthlyContribution": 5000,
+              "priority": "low"
+            }
+          },
+          {
+            "id": "goal_education",
+            "label": "Further Education",
+            "suggestedAmount": 240000,
+            "amountInput": {
+              "minimum": 50000,
+              "maximum": 1000000,
+              "step": 5000
+            },
+            "deadlineInput": {
+              "minimumMonths": 3,
+              "maximumMonths": 60,
+              "stepMonths": 1
+            },
+            "monthlyContributionInput": {
+              "minimum": 0,
+              "maximum": 25000,
+              "step": 1000
+            },
+            "priorityOptions": [
+              "high",
+              "medium",
+              "low",
+              "paused"
+            ],
+            "startingValues": {
+              "goalAmount": 240000,
+              "deadlineMonths": 24,
+              "monthlyContribution": 10000,
+              "priority": "high"
+            }
+          }
+        ],
+        "runningDisplayFields": [
+          "goal_amount",
+          "deadline_months",
+          "monthly_contribution",
+          "priority",
+          "planned_total_by_deadline",
+          "amount_still_unfunded",
+          "suggested_minimum_monthly_contribution",
+          "goal_status",
+          "total_monthly_savings_allocated",
+          "remaining_monthly_balance",
+          "high_priority_goals_on_track"
+        ],
+        "calculationRules": {
+          "plannedTotal": "monthly_contribution_multiplied_by_deadline_months",
+          "amountStillUnfunded": "maximum_of_zero_and_goal_amount_minus_planned_total",
+          "remainingMonthlyBalance": "25000_minus_total_monthly_contributions",
+          "suggestedMinimumContribution": "goal_amount_divided_by_deadline_then_rounded_up_to_next_1000"
+        },
+        "goalStatuses": [
+          {
+            "id": "on_track",
+            "condition": "planned_total_is_equal_to_or_greater_than_goal_amount",
+            "label": "On Track"
+          },
+          {
+            "id": "underfunded",
+            "condition": "planned_total_is_less_than_goal_amount",
+            "label": "Underfunded"
+          },
+          {
+            "id": "over_budget",
+            "condition": "total_monthly_contributions_exceed_25000",
+            "label": "Over Budget"
+          },
+          {
+            "id": "undefined",
+            "condition": "amount_deadline_contribution_or_priority_is_missing",
+            "label": "Undefined"
+          },
+          {
+            "id": "paused",
+            "condition": "priority_is_paused",
+            "label": "Paused"
+          }
+        ],
+        "priorityRules": [
+          "High-priority goals should be funded before lower-priority goals receive optional extra contributions.",
+          "A high priority does not guarantee immediate completion.",
+          "More than one goal may be high priority.",
+          "Lower-priority goals are not irresponsible.",
+          "A low-priority goal may receive a smaller contribution, longer deadline, or temporary pause.",
+          "The builder does not force one universal priority order."
+        ],
+        "classroomPriorityExample": {
+          "goal_emergency_fund": "high",
+          "goal_education": "high",
+          "goal_laptop": "medium",
+          "goal_trip": "low"
+        },
+        "exampleValidCompletion": {
+          "goals": [
+            {
+              "goalId": "goal_emergency_fund",
+              "goalAmount": 120000,
+              "deadlineMonths": 12,
+              "monthlyContribution": 10000,
+              "priority": "high",
+              "plannedTotal": 120000,
+              "status": "on_track"
+            },
+            {
+              "goalId": "goal_education",
+              "goalAmount": 240000,
+              "deadlineMonths": 30,
+              "monthlyContribution": 8000,
+              "priority": "high",
+              "plannedTotal": 240000,
+              "status": "on_track"
+            },
+            {
+              "goalId": "goal_laptop",
+              "goalAmount": 150000,
+              "deadlineMonths": 30,
+              "monthlyContribution": 5000,
+              "priority": "medium",
+              "plannedTotal": 150000,
+              "status": "on_track"
+            },
+            {
+              "goalId": "goal_trip",
+              "goalAmount": 90000,
+              "deadlineMonths": 45,
+              "monthlyContribution": 2000,
+              "priority": "low",
+              "plannedTotal": 90000,
+              "status": "on_track"
+            }
+          ],
+          "totalMonthlyContributions": 25000,
+          "remainingMonthlyBalance": 0,
+          "feedback": "Every goal remains measurable and funded. Lower-priority deadlines were extended so the plan fits the budget."
+        },
+        "multipleValidArrangements": true,
+        "firstDecisionCheck": {
+          "id": "J5-M29-IQ1",
+          "question": "The plan needs Rs. 35,000, but only Rs. 25,000 is available. What must happen?",
+          "options": [
+            {
+              "id": "J5-M29-IQ1-O1",
+              "text": "Motivation must increase",
+              "isCorrect": false
+            },
+            {
+              "id": "J5-M29-IQ1-O2",
+              "text": "Essential bills should be ignored",
+              "isCorrect": false
+            },
+            {
+              "id": "J5-M29-IQ1-O3",
+              "text": "At least one amount, deadline, contribution, or priority must change",
+              "isCorrect": true
+            },
+            {
+              "id": "J5-M29-IQ1-O4",
+              "text": "The budget will automatically expand",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "J5-M29-IQ1-O3",
+          "explanation": "The plan must fit the money available. Motivation cannot remove a Rs. 10,000 shortfall."
+        },
+        "planChangeScenario": {
+          "id": "J5-M29-IQ2",
+          "scenario": "Six months later, expenses increase and only Rs. 20,000 remains available for goals.",
+          "question": "What is the most useful response?",
+          "options": [
+            {
+              "id": "J5-M29-IQ2-O1",
+              "text": "Continue the Rs. 25,000 plan and ignore the shortfall",
+              "isCorrect": false
+            },
+            {
+              "id": "J5-M29-IQ2-O2",
+              "text": "Give up every goal permanently",
+              "isCorrect": false
+            },
+            {
+              "id": "J5-M29-IQ2-O3",
+              "text": "Review contributions, deadlines, amounts, and priorities",
+              "isCorrect": true
+            },
+            {
+              "id": "J5-M29-IQ2-O4",
+              "text": "Assume motivation will cover the missing Rs. 5,000",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswerId": "J5-M29-IQ2-O3",
+          "explanation": "A financial plan should change when income, expenses, prices, or priorities change."
+        },
+        "causeAndEffectFeedback": [
+          {
+            "cause": "Choose a goal without an amount",
+            "effect": "Progress cannot be measured clearly."
+          },
+          {
+            "cause": "Choose a goal without a deadline",
+            "effect": "Saving may be delayed because there is no time target."
+          },
+          {
+            "cause": "Set a contribution below the required amount",
+            "effect": "The goal remains underfunded at the selected deadline."
+          },
+          {
+            "cause": "Set an unrealistic monthly contribution",
+            "effect": "The plan may exceed available savings or interfere with essential expenses."
+          },
+          {
+            "cause": "Give every goal equal priority",
+            "effect": "Urgent goals may not receive enough money."
+          },
+          {
+            "cause": "Extend a deadline",
+            "effect": "The monthly contribution requirement falls, but the goal takes longer."
+          },
+          {
+            "cause": "Reduce the goal amount",
+            "effect": "The goal may become more affordable, but the final purchase or experience may change."
+          },
+          {
+            "cause": "Pause a goal",
+            "effect": "Money becomes available for other goals, but the paused goal is delayed."
+          },
+          {
+            "cause": "Review progress regularly",
+            "effect": "Contributions, deadlines, amounts, and priorities can be adjusted."
+          }
+        ],
+        "validationRules": [
+          "All four goals must be reviewed.",
+          "Every active goal must have an amount above zero.",
+          "Every active goal must have a deadline between 3 and 60 months.",
+          "Every active goal must have a priority.",
+          "Monthly contribution multiplied by deadline must meet or exceed the goal amount.",
+          "Total monthly contributions must not exceed Rs. 25,000.",
+          "All high-priority goals must be on track.",
+          "Both interaction questions must be answered correctly."
+        ],
+        "scoringRules": [
+          {
+            "stars": 3,
+            "label": "Complete and Prioritised",
+            "conditions": [
+              "All active goals are on track.",
+              "Monthly total is Rs. 25,000 or less.",
+              "High-priority goals are funded.",
+              "No essential-expense money is used."
+            ]
+          },
+          {
+            "stars": 2,
+            "label": "Affordable but Needs Review",
+            "conditions": [
+              "The plan fits the budget.",
+              "One lower-priority goal is underfunded or paused without a revised deadline."
+            ]
+          },
+          {
+            "stars": 1,
+            "label": "Measurable but Over Budget",
+            "conditions": [
+              "Goals have amounts and deadlines.",
+              "Total contributions exceed Rs. 25,000."
+            ]
+          }
+        ],
+        "correctCompletionState": {
+          "allGoalsReviewed": true,
+          "allActiveGoalsHaveAmounts": true,
+          "allActiveGoalsHaveDeadlines": true,
+          "allActiveGoalsHaveContributions": true,
+          "allGoalsHavePriorities": true,
+          "maximumTotalMonthlyContribution": 25000,
+          "highPriorityGoalsOnTrack": true,
+          "motivationRequiresMeasurableActionUnderstood": true,
+          "planRevisionUnderstood": true
+        },
+        "validationMethod": "Check all goal fields, funding calculations, total monthly contributions, priority rules, and both decision questions.",
+        "retryBehavior": "Keep valid goal settings. Highlight only underfunded, undefined, over-budget, or poorly prioritised goals.",
+        "accessibilityAlternative": {
+          "method": "Present each goal as a form with amount, deadline, contribution, and priority controls. Provide Previous Goal and Next Goal buttons.",
+          "screenReaderInstruction": "Set the amount, deadline, monthly contribution, and priority for each goal. Listen to the funding status and remaining balance."
+        }
+      },
+      "feedback": {
+        "success": "Goal plan complete! You turned four wishes into measurable actions that fit one monthly savings budget.",
+        "incorrect": "Check the amount, deadline, monthly contribution, and priority for each goal. Then compare the total with Rs. 25,000.",
+        "incomplete": "Complete every active goal and answer both planning questions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Goal Plan",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J5-M29-S07",
+      "type": "reveal",
+      "title": "A Wish Becomes a Plan",
+      "content": "You turned general wishes into financial goals by adding amounts, deadlines, monthly contributions, and priorities. These details make progress measurable and reveal whether the complete plan fits your budget. Motivation can help you begin, but it cannot replace the required monthly action. Goals may also need adjustment when income, expenses, prices, or priorities change. Revising a plan is not failure—it is how the plan stays realistic.",
+      "simpleSummary": "Define the target, deadline, monthly action, and priority.",
+      "illustration": "A vague wish card transforms into a goal card containing amount, deadline, monthly contribution, and priority.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M29-S08",
+      "type": "real_life_example",
+      "title": "Replacing a Motorbike",
+      "content": "Danish wants to replace his motorbike in two years. He estimates a Rs. 300,000 target and calculates a Rs. 12,500 monthly contribution. When his rent increases, he extends the deadline instead of abandoning the goal.",
+      "illustration": "A motorbike goal card changes from 24 months to a longer deadline after a rent increase.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M29-S09",
+      "type": "quiz",
+      "title": "Financial Goal Check",
+      "questions": [
+        {
+          "id": "J5-M29-Q1",
+          "category": "recognition",
+          "text": "Which plan is the most measurable?",
+          "options": [
+            {
+              "id": "J5-M29-Q1-O1",
+              "text": "Save for a laptop soon",
+              "isCorrect": false,
+              "feedback": "The amount and meaning of soon are unclear."
+            },
+            {
+              "id": "J5-M29-Q1-O2",
+              "text": "Try to spend less",
+              "isCorrect": false,
+              "feedback": "This may support a goal, but it does not define the target or contribution."
+            },
+            {
+              "id": "J5-M29-Q1-O3",
+              "text": "Save Rs. 120,000 in 12 months by contributing Rs. 10,000 monthly",
+              "isCorrect": true,
+              "feedback": "Correct. The amount, deadline, and monthly contribution are defined."
+            },
+            {
+              "id": "J5-M29-Q1-O4",
+              "text": "Stay motivated throughout the year",
+              "isCorrect": false,
+              "feedback": "Motivation is useful, but progress still needs measurable actions."
+            }
+          ],
+          "correctAnswerId": "J5-M29-Q1-O3",
+          "correctExplanation": "The plan defines the target amount, deadline, and monthly contribution.",
+          "misconceptionTested": "A financial goal does not require a specific amount or deadline."
+        },
+        {
+          "id": "J5-M29-Q2",
+          "category": "misconception",
+          "text": "Someone feels highly motivated to save Rs. 180,000 but has no deadline or monthly contribution. What is missing?",
+          "options": [
+            {
+              "id": "J5-M29-Q2-O1",
+              "text": "More motivation",
+              "isCorrect": false,
+              "feedback": "Motivation does not calculate how much must be saved each month."
+            },
+            {
+              "id": "J5-M29-Q2-O2",
+              "text": "A more expensive goal",
+              "isCorrect": false,
+              "feedback": "Increasing the amount would not make the plan more measurable."
+            },
+            {
+              "id": "J5-M29-Q2-O3",
+              "text": "A guaranteed return",
+              "isCorrect": false,
+              "feedback": "A saving goal does not require a guaranteed investment result."
+            },
+            {
+              "id": "J5-M29-Q2-O4",
+              "text": "A measurable contribution plan",
+              "isCorrect": true,
+              "feedback": "Correct. The person needs a deadline and monthly action."
+            }
+          ],
+          "correctAnswerId": "J5-M29-Q2-O4",
+          "correctExplanation": "The person needs a deadline and monthly action to measure progress towards Rs. 180,000.",
+          "misconceptionTested": "Motivation alone is enough to reach a financial goal."
+        },
+        {
+          "id": "J5-M29-Q3",
+          "category": "application",
+          "text": "A goal requires Rs. 120,000 in 12 months, but only Rs. 8,000 is saved monthly. What should be reviewed?",
+          "options": [
+            {
+              "id": "J5-M29-Q3-O1",
+              "text": "Nothing—the goal is already on track",
+              "isCorrect": false,
+              "feedback": "The planned contributions provide only Rs. 96,000."
+            },
+            {
+              "id": "J5-M29-Q3-O2",
+              "text": "The amount, deadline, or monthly contribution",
+              "isCorrect": true,
+              "feedback": "Correct. One of these must change to close the Rs. 24,000 gap."
+            },
+            {
+              "id": "J5-M29-Q3-O3",
+              "text": "Only the goal’s name",
+              "isCorrect": false,
+              "feedback": "Changing the name does not fix the funding gap."
+            },
+            {
+              "id": "J5-M29-Q3-O4",
+              "text": "Whether every goal has equal priority",
+              "isCorrect": false,
+              "feedback": "The immediate problem is that this goal is underfunded."
+            }
+          ],
+          "correctAnswerId": "J5-M29-Q3-O2",
+          "correctExplanation": "Rs. 8,000 for 12 months provides Rs. 96,000, leaving the goal Rs. 24,000 short.",
+          "misconceptionTested": "A goal remains realistic when its contribution does not match its amount and deadline."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J5-M29-S10",
+      "type": "completion",
+      "headline": "Goal Planner Unlocked!",
+      "message": "You learned to turn financial wishes into measurable plans that fit a limited monthly budget.",
+      "xpReward": 50,
+      "progressMessage": "Mission 29 complete in Master Money Decisions.",
+      "nextMissionTeaser": "Next, explore how to track progress and adjust a financial plan when real life changes.",
+      "animation": "Four vague wish cards transform into completed goal cards and fit inside the Rs. 25,000 monthly budget.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J5-M29-S11",
+      "type": "real_life_challenge",
+      "title": "Rewrite One Wish",
+      "instruction": "Choose one fictional wish and add a target amount, deadline, monthly contribution, and priority. Check the maths without moving real money.",
+      "buttonLabel": "My Goal Is Measurable",
+      "primaryAction": {
+        "label": "My Goal Is Measurable",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on turning vague financial wishes into measurable goals."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission connects amounts, deadlines, contributions, priorities, and budget limits using transparent calculations."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult savings, emergency funds, education, travel, laptops, essential expenses, rent changes, and limited income."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission teaches financial goal planning and does not recommend investments or financial products."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE",
+      "notes": "No investment returns are used in the goal calculations."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not discuss stocks or market prices."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Low-priority goals, paused goals, limited budgets, and revised deadlines are presented without judgement."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission states that income, expenses, prices, priorities, and personal circumstances may change."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, monthly savings, education, emergency expenses, laptops, trips, rent, and common adult financial decisions in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner defines and balances amounts, deadlines, monthly contributions, and priorities for four goals."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses vague goals, motivation-only plans, underfunded targets, and measurable actions."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The learner reviews four goal cards, adjusts a small set of fields, answers two interaction checks, and completes three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
