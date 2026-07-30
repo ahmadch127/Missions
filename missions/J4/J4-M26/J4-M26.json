@@ -1,0 +1,608 @@
+{
+  "id": "J4-M26",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Long-Term Investing",
+  "concept": "Long-term investing means following an investment plan over several years while accepting that prices may rise and fall during shorter periods.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 5,
+  "locale": "en-PK",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Understand why a long-term investment plan should not be judged only by its performance during one short period.",
+  "primaryMisconception": "Investing should produce significant results quickly.",
+  "secondaryMisconceptions": [
+    "A temporary decline means the long-term investment plan has failed.",
+    "Long-term investing means ignoring every change or warning sign."
+  ],
+  "keyTakeaway": "Long-term investing requires patience and the ability to tolerate uncertainty.",
+  "screens": [
+    {
+      "id": "J4-M26-S01",
+      "type": "hook",
+      "title": "One Bad Year",
+      "content": "You plan for ten years. After one bad year, your portfolio drops below its starting value. Is the whole plan already broken?",
+      "illustration": "A ten-year road continues ahead while the Year 2 marker dips below the starting line.",
+      "primaryAction": {
+        "label": "Follow the Journey",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M26-S02",
+      "type": "story",
+      "title": "A Ten-Year Goal",
+      "content": "You invest a fictional Rs. 100,000 in a diversified portfolio for a goal ten years away.",
+      "illustration": "A Rs. 100,000 portfolio card connects to a goal marker at Year 10.",
+      "primaryAction": {
+        "label": "Start the Timeline",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M26-S03",
+      "type": "story",
+      "title": "The First Drop",
+      "content": "The portfolio rises in Year 1, then falls to Rs. 92,000 in Year 2. The goal is still eight years away.",
+      "illustration": "The value line rises to Rs. 105,000 and then drops below the starting value.",
+      "primaryAction": {
+        "label": "Choose a Response",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M26-S04",
+      "type": "story",
+      "title": "Patience Needs Review",
+      "content": "You can react to every movement, ignore everything, or review whether the plan still fits before deciding.",
+      "illustration": "Three paths show emotional selling, blind holding, and thoughtful review.",
+      "primaryAction": {
+        "label": "Enter the Simulator",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M26-S05",
+      "type": "pre_interaction",
+      "title": "How Should One Year Be Judged?",
+      "question": "After the Year 2 decline, which response uses the long-term plan most effectively?",
+      "options": [
+        {
+          "id": "J4-M26-PQ-O1",
+          "text": "Sell immediately because the plan failed",
+          "isRecommended": false,
+          "response": "One difficult year may be too little information to judge a ten-year plan."
+        },
+        {
+          "id": "J4-M26-PQ-O2",
+          "text": "Ignore every warning and never review",
+          "isRecommended": false,
+          "response": "Patience matters, but long-term investing still requires thoughtful review."
+        },
+        {
+          "id": "J4-M26-PQ-O3",
+          "text": "Review the goal and investment, then decide",
+          "isRecommended": true,
+          "response": "Correct. This separates short-term emotion from genuine changes that may require action."
+        },
+        {
+          "id": "J4-M26-PQ-O4",
+          "text": "Expect a large profit next year",
+          "isRecommended": false,
+          "response": "A recovery may occur, but future returns cannot be predicted or guaranteed."
+        }
+      ],
+      "recommendedAnswerId": "J4-M26-PQ-O3",
+      "primaryAction": {
+        "label": "Test My Decision",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J4-M26-S06",
+      "type": "interaction",
+      "interactionType": "investment_simulator",
+      "title": "Ten Years, Three Review Points",
+      "instruction": "Follow the fictional portfolio through ten years. At each difficult period, choose how to respond and review the consequence.",
+      "config": {
+        "startingAmount": 100000,
+        "availableAsset": {
+          "id": "fictional_diversified_portfolio",
+          "name": "Fictional Diversified Portfolio",
+          "description": "A teaching-only portfolio containing several fictional investments."
+        },
+        "timePeriod": {
+          "unit": "year",
+          "numberOfPeriods": 10
+        },
+        "requiredDisclaimer": "This educational simulation uses fictional values. It does not predict or guarantee real investment results.",
+        "educationalAssumptions": [
+          "The portfolio begins at Rs. 100,000.",
+          "The financial goal is ten years away.",
+          "No additional contributions or withdrawals are included in the main path.",
+          "Fees, taxes, inflation, dividends, and currency changes are excluded.",
+          "If the learner sells, the simplified cash value remains unchanged for the rest of the simulation.",
+          "Real cash may earn interest and lose purchasing power.",
+          "A temporary decline may be followed by recovery, further decline, or little change.",
+          "Remaining invested does not guarantee recovery or profit.",
+          "Long-term investing does not mean holding every investment forever.",
+          "The activity does not recommend buying, selling, or holding any real investment."
+        ],
+        "portfolioValues": [
+          {
+            "year": 0,
+            "value": 100000,
+            "changeFromPrevious": null,
+            "feedback": "The ten-year plan begins."
+          },
+          {
+            "year": 1,
+            "value": 105000,
+            "changeFromPrevious": 5000,
+            "feedback": "The portfolio rises by Rs. 5,000."
+          },
+          {
+            "year": 2,
+            "value": 92000,
+            "changeFromPrevious": -13000,
+            "feedback": "The portfolio falls below its starting value, but eight years remain."
+          },
+          {
+            "year": 3,
+            "value": 110000,
+            "changeFromPrevious": 18000,
+            "feedback": "The portfolio recovers above its starting value."
+          },
+          {
+            "year": 4,
+            "value": 118000,
+            "changeFromPrevious": 8000,
+            "feedback": "Growth continues, but future declines remain possible."
+          },
+          {
+            "year": 5,
+            "value": 101000,
+            "changeFromPrevious": -17000,
+            "feedback": "A second decline leaves the portfolio only slightly above its starting value."
+          },
+          {
+            "year": 6,
+            "value": 125000,
+            "changeFromPrevious": 24000,
+            "feedback": "The portfolio rises after the Year 5 decline."
+          },
+          {
+            "year": 7,
+            "value": 138000,
+            "changeFromPrevious": 13000,
+            "feedback": "The portfolio reaches a new high."
+          },
+          {
+            "year": 8,
+            "value": 129000,
+            "changeFromPrevious": -9000,
+            "feedback": "Another decline occurs with two years remaining."
+          },
+          {
+            "year": 9,
+            "value": 150000,
+            "changeFromPrevious": 21000,
+            "feedback": "The portfolio rises again."
+          },
+          {
+            "year": 10,
+            "value": 165000,
+            "changeFromPrevious": 15000,
+            "feedback": "The fictional portfolio finishes at Rs. 165,000."
+          }
+        ],
+        "reviewPoints": [
+          {
+            "id": "review_year_2",
+            "year": 2,
+            "portfolioValue": 92000,
+            "scenario": "The portfolio has fallen to Rs. 92,000 after one difficult year. The original goal is still eight years away.",
+            "question": "What is the most balanced response?",
+            "choices": [
+              {
+                "id": "J4-M26-IQ1-O1",
+                "text": "Sell immediately",
+                "isRecommended": false,
+                "consequence": "The simplified simulation locks in a Rs. 8,000 loss and leaves Rs. 92,000 in cash."
+              },
+              {
+                "id": "J4-M26-IQ1-O2",
+                "text": "Continue without checking anything",
+                "isRecommended": false,
+                "consequence": "This avoids an emotional sale, but it ignores whether the portfolio or goal has genuinely changed."
+              },
+              {
+                "id": "J4-M26-IQ1-O3",
+                "text": "Review the goal and portfolio, then continue if suitable",
+                "isRecommended": true,
+                "consequence": "This keeps the long-term horizon in view while still checking investment quality, fees, risk, and personal circumstances."
+              },
+              {
+                "id": "J4-M26-IQ1-O4",
+                "text": "Assume recovery is guaranteed",
+                "isRecommended": false,
+                "consequence": "A recovery is possible, but the value could remain low or fall further."
+              }
+            ],
+            "recommendedChoiceId": "J4-M26-IQ1-O3",
+            "outcomeExplanation": "In this fictional path, the portfolio later rises to Rs. 110,000. This does not prove every decline will recover."
+          },
+          {
+            "id": "review_year_5",
+            "year": 5,
+            "portfolioValue": 101000,
+            "scenario": "The portfolio falls from Rs. 118,000 to Rs. 101,000. Five years remain before the goal.",
+            "question": "Which judgement uses the most relevant information?",
+            "choices": [
+              {
+                "id": "J4-M26-IQ2-O1",
+                "text": "The plan failed because one year was bad",
+                "isRecommended": false,
+                "consequence": "One year gives an incomplete picture of a ten-year plan."
+              },
+              {
+                "id": "J4-M26-IQ2-O2",
+                "text": "Compare the decline with the goal, quality, fees, and time remaining",
+                "isRecommended": true,
+                "consequence": "This reviews both price movement and the reasons for holding the investment."
+              },
+              {
+                "id": "J4-M26-IQ2-O3",
+                "text": "Buy whatever performed best last year",
+                "isRecommended": false,
+                "consequence": "Chasing recent performance can replace the plan with another short-term reaction."
+              },
+              {
+                "id": "J4-M26-IQ2-O4",
+                "text": "Ignore every future change",
+                "isRecommended": false,
+                "consequence": "Long-term investing still requires periodic review."
+              }
+            ],
+            "recommendedChoiceId": "J4-M26-IQ2-O2",
+            "outcomeExplanation": "In the fictional path, the portfolio reaches Rs. 125,000 in Year 6. The recovery was not knowable in Year 5."
+          },
+          {
+            "id": "review_year_8",
+            "year": 8,
+            "portfolioValue": 129000,
+            "scenario": "The portfolio declines from Rs. 138,000 to Rs. 129,000. The goal is now only two years away.",
+            "question": "What new factor matters more as the goal approaches?",
+            "choices": [
+              {
+                "id": "J4-M26-IQ3-O1",
+                "text": "Nothing changes because long-term means forever",
+                "isRecommended": false,
+                "consequence": "A shorter remaining horizon may change how much volatility the plan can tolerate."
+              },
+              {
+                "id": "J4-M26-IQ3-O2",
+                "text": "Review whether the portfolio still matches the closer goal",
+                "isRecommended": true,
+                "consequence": "Time horizon, need for the money, risk, quality, and fees should be reviewed as the goal approaches."
+              },
+              {
+                "id": "J4-M26-IQ3-O3",
+                "text": "Sell only because the latest year was negative",
+                "isRecommended": false,
+                "consequence": "One negative year alone does not show whether selling fits the plan."
+              },
+              {
+                "id": "J4-M26-IQ3-O4",
+                "text": "Expect two strong years because time is running out",
+                "isRecommended": false,
+                "consequence": "Markets do not adjust their results to match a personal deadline."
+              }
+            ],
+            "recommendedChoiceId": "J4-M26-IQ3-O2",
+            "outcomeExplanation": "The fictional portfolio later reaches Rs. 165,000, but a real portfolio could have followed a different path."
+          }
+        ],
+        "counterfactualOutcomes": [
+          {
+            "decision": "Sell in Year 2 and hold simplified cash",
+            "endingValueAtYear10": 92000,
+            "realisedGainOrLossFromStart": -8000,
+            "clarification": "This excludes cash interest and inflation."
+          },
+          {
+            "decision": "Sell in Year 5 and hold simplified cash",
+            "endingValueAtYear10": 101000,
+            "realisedGainOrLossFromStart": 1000,
+            "clarification": "This excludes cash interest and inflation."
+          },
+          {
+            "decision": "Sell in Year 8 and hold simplified cash",
+            "endingValueAtYear10": 129000,
+            "realisedGainOrLossFromStart": 29000,
+            "clarification": "This excludes cash interest and inflation."
+          },
+          {
+            "decision": "Remain invested through the fictional path",
+            "endingValueAtYear10": 165000,
+            "illustrativeGainFromStart": 65000,
+            "clarification": "This outcome is fictional and does not prove that remaining invested always performs better."
+          }
+        ],
+        "possibleFluctuations": [
+          "A decline may be followed by recovery.",
+          "A decline may continue for several years.",
+          "A portfolio may finish below its starting value.",
+          "Short-term gains may later disappear.",
+          "A diversified portfolio can still lose value.",
+          "A genuine change in investment quality may justify changing the plan."
+        ],
+        "thoughtfulReviewChecklist": [
+          "Does the investment still match the original goal?",
+          "Has the time horizon changed?",
+          "Has the need for the money changed?",
+          "Has the quality of the underlying investment changed?",
+          "Are fees still reasonable for the plan?",
+          "Is the level of risk still manageable?",
+          "Has the portfolio become too concentrated?",
+          "Is the decision based on evidence or short-term emotion?"
+        ],
+        "outcomeExplanation": "The fictional portfolio ends at Rs. 165,000 after several declines and recoveries. The lesson is not that holding always wins. It is that one short period may be insufficient to judge a long-term plan, and patience should be combined with regular review.",
+        "correctCompletionState": {
+          "allTenYearsViewed": true,
+          "allReviewPointsCompleted": true,
+          "shortPeriodIsIncompleteUnderstood": true,
+          "temporaryDeclineIsNotAutomaticFailureUnderstood": true,
+          "recoveryIsNotGuaranteedUnderstood": true,
+          "longTermDoesNotMeanIgnoreEverythingUnderstood": true,
+          "timeHorizonReviewUnderstood": true
+        },
+        "validationMethod": "Confirm that the learner views all ten years and selects the evidence-based review response at all three review points.",
+        "retryBehavior": "Keep completed years visible. Return only the review point that needs another attempt and show the relevant goal and time-horizon information.",
+        "accessibilityAlternative": {
+          "method": "Provide Previous Year and Next Year controls. Read the portfolio value, change, years remaining, and choices at each review point.",
+          "screenReaderInstruction": "Move through ten years, listen to each value, and choose a response at Years 2, 5, and 8."
+        }
+      },
+      "feedback": {
+        "success": "Journey complete! You judged the plan across ten years and combined patience with thoughtful review.",
+        "incorrect": "Separate one year’s price movement from changes in the goal, time horizon, investment quality, fees, and risk.",
+        "incomplete": "View all ten years and complete the three review decisions before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Decisions",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J4-M26-S07",
+      "type": "reveal",
+      "title": "Judge the Plan Over the Right Period",
+      "content": "You followed a portfolio through gains, declines, and recoveries. Long-term investing means using a multi-year plan instead of judging everything by one short period. It requires patience, but not blind holding. Goals, time horizon, fees, risk, and investment quality still need review. A temporary decline may recover, remain low, or worsen. The point is to make evidence-based decisions rather than expecting quick results or reacting only to recent price movement.",
+      "simpleSummary": "Use the full plan, not one bad year, to guide decisions.",
+      "illustration": "A ten-year chart shows declines inside a longer journey, with review checkpoints placed at Years 2, 5, and 8.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M26-S08",
+      "type": "real_life_example",
+      "title": "A Goal Still Seven Years Away",
+      "content": "Sana’s fictional retirement portfolio falls during one year, but her goal remains seven years away. She reviews its fees, diversification, and quality before deciding. She does not assume recovery, but she also does not judge the entire plan by one decline.",
+      "illustration": "A retirement goal sits seven years ahead while Sana checks a review list beside a temporary decline.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-M26-S09",
+      "type": "quiz",
+      "title": "Long-Term Plan Check",
+      "questions": [
+        {
+          "id": "J4-M26-Q1",
+          "category": "recognition",
+          "text": "Which action best reflects a long-term investment plan after one difficult year?",
+          "options": [
+            {
+              "id": "J4-M26-Q1-O1",
+              "text": "Judge the whole plan by that year",
+              "isCorrect": false,
+              "feedback": "A short period may provide an incomplete view of a multi-year goal."
+            },
+            {
+              "id": "J4-M26-Q1-O2",
+              "text": "Review the goal and investment before deciding",
+              "isCorrect": true,
+              "feedback": "Correct. The decision considers both the long horizon and any genuine changes."
+            },
+            {
+              "id": "J4-M26-Q1-O3",
+              "text": "Ignore every warning forever",
+              "isCorrect": false,
+              "feedback": "Long-term investing still requires regular review."
+            },
+            {
+              "id": "J4-M26-Q1-O4",
+              "text": "Expect a guaranteed recovery",
+              "isCorrect": false,
+              "feedback": "A decline may recover, remain low, or worsen."
+            }
+          ],
+          "correctAnswerId": "J4-M26-Q1-O2",
+          "correctExplanation": "A long-term investor considers the original goal, time remaining, investment quality, fees, and risk instead of reacting only to one year.",
+          "misconceptionTested": "A temporary decline automatically means the long-term plan has failed."
+        },
+        {
+          "id": "J4-M26-Q2",
+          "category": "misconception",
+          "text": "A ten-year investment has made little progress after its first year. What is most accurate?",
+          "options": [
+            {
+              "id": "J4-M26-Q2-O1",
+              "text": "It must produce a large result immediately",
+              "isCorrect": false,
+              "feedback": "Long-term results develop over several years and remain uncertain."
+            },
+            {
+              "id": "J4-M26-Q2-O2",
+              "text": "The plan has definitely failed",
+              "isCorrect": false,
+              "feedback": "One year may be too short to judge a ten-year plan."
+            },
+            {
+              "id": "J4-M26-Q2-O3",
+              "text": "Quick results are not guaranteed",
+              "isCorrect": true,
+              "feedback": "Correct. A long-term plan can include slow periods, declines, and recoveries."
+            },
+            {
+              "id": "J4-M26-Q2-O4",
+              "text": "The next year must be profitable",
+              "isCorrect": false,
+              "feedback": "Future performance cannot be guaranteed from the time horizon."
+            }
+          ],
+          "correctAnswerId": "J4-M26-Q2-O3",
+          "correctExplanation": "Investing over many years does not promise immediate or smooth progress.",
+          "misconceptionTested": "Investing should produce significant results quickly."
+        },
+        {
+          "id": "J4-M26-Q3",
+          "category": "application",
+          "text": "A goal is now one year away, but the portfolio remains highly volatile. What should be reviewed?",
+          "options": [
+            {
+              "id": "J4-M26-Q3-O1",
+              "text": "Only last year’s return",
+              "isCorrect": false,
+              "feedback": "Recent performance alone does not show whether the portfolio fits the approaching goal."
+            },
+            {
+              "id": "J4-M26-Q3-O2",
+              "text": "Whether the risk still fits the shorter horizon",
+              "isCorrect": true,
+              "feedback": "Correct. The ability to tolerate declines may change as the need for the money approaches."
+            },
+            {
+              "id": "J4-M26-Q3-O3",
+              "text": "Nothing, because long-term means never changing",
+              "isCorrect": false,
+              "feedback": "Long-term plans should still adapt to changing goals and time horizons."
+            },
+            {
+              "id": "J4-M26-Q3-O4",
+              "text": "Whether a recovery is guaranteed",
+              "isCorrect": false,
+              "feedback": "No review can guarantee a future recovery."
+            }
+          ],
+          "correctAnswerId": "J4-M26-Q3-O2",
+          "correctExplanation": "As a goal approaches, time horizon, access needs, risk, fees, and investment quality should be reviewed.",
+          "misconceptionTested": "Long-term investing means ignoring every change or warning sign."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J4-M26-S10",
+      "type": "completion",
+      "headline": "Long-Term Lens Unlocked!",
+      "message": "You learned to judge short-term movement within a longer plan while still reviewing genuine changes.",
+      "xpReward": 50,
+      "progressMessage": "Mission 26 complete in Grow Wealth Wisely.",
+      "nextMissionTeaser": "Next, explore how investment fees can reduce the money that remains invested and growing.",
+      "animation": "A ten-year line passes through three declines and three review gates before reaching the final goal marker.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J4-M26-S11",
+      "type": "real_life_challenge",
+      "title": "Write a Review Checklist",
+      "instruction": "Create a five-item checklist for reviewing a fictional long-term plan. Include the goal, time horizon, fees, risk, and investment quality.",
+      "buttonLabel": "My Checklist Is Ready",
+      "primaryAction": {
+        "label": "My Checklist Is Ready",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on judging a long-term plan across an appropriate time horizon."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes temporary price movement, realised loss, recovery uncertainty, time horizon, and investment review."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult goals, investment reviews, fees, risk tolerance, and ten-year planning."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "All values and decisions are fictional, and the mission does not instruct the learner to hold or sell a real investment."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "The mission states that declines may recover, remain low, or worsen."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The displayed portfolio path is fictional and is not presented as a forecast."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Emotional reactions, selling, holding, and reviewing are explained without judgement."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "Patience is balanced with review of goals, time horizon, quality, fees, risk, and changing circumstances."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, a diversified portfolio, ten-year goals, and familiar adult investment decisions in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner follows ten years of results and makes evidence-based decisions at three difficult points."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses quick results, temporary declines, guaranteed recovery, and blind holding."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The learner reviews ten short yearly values, makes three decisions, and completes three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is clear, practical, respectful, and suitable for beginner adults."
+    }
+  ]
+}
