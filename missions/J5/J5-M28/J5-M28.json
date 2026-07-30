@@ -1,0 +1,620 @@
+{
+  "id": "J5-M28",
+  "journeyId": "J5",
+  "journeyName": "Master Money Decisions",
+  "title": "Spot Financial Scams",
+  "concept": "Financial scams often use unrealistic promises, urgency, secrecy, and social pressure to make people send money before verifying an opportunity.",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 5,
+  "locale": "en-PK",
+  "currency": "PKR",
+  "currencyDisplay": "Rs.",
+  "language": "English",
+  "learningObjective": "Identify common warning signs that may indicate a financial offer or investment opportunity is a scam.",
+  "primaryMisconception": "Professional-looking messages are automatically trustworthy.",
+  "secondaryMisconceptions": [
+    "A guaranteed return means an opportunity is safer.",
+    "An offer must be genuine when a friend recommends it or shares it in a trusted group."
+  ],
+  "keyTakeaway": "Guaranteed high returns and pressure to act quickly are major warning signs.",
+  "screens": [
+    {
+      "id": "J5-M28-S01",
+      "type": "hook",
+      "title": "Polished Message, Risky Offer?",
+      "content": "A professional-looking message promises to double Rs. 20,000 next week. Is the polished design proof that the offer is genuine?",
+      "illustration": "A polished investment advertisement displays a logo, certificate, countdown timer, and 100% Guaranteed Profit badge.",
+      "primaryAction": {
+        "label": "Inspect the Offer",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M28-S02",
+      "type": "story",
+      "title": "A Trusted Group Message",
+      "content": "A financial offer appears in a group shared by friends and colleagues. The message includes a logo, website, testimonials, and profit screenshots.",
+      "illustration": "A familiar messaging group displays a polished investment advertisement with several positive replies.",
+      "primaryAction": {
+        "label": "Read the Promise",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M28-S03",
+      "type": "story",
+      "title": "Double Your Money",
+      "content": "The offer says: Send Rs. 20,000 today and receive Rs. 40,000 next week. Profit guaranteed.",
+      "illustration": "Rs. 20,000 transforms into Rs. 40,000 beside a seven-day calendar and guarantee stamp.",
+      "primaryAction": {
+        "label": "Check the Pressure",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M28-S04",
+      "type": "story",
+      "title": "Ten Minutes Remaining",
+      "content": "A countdown begins. You are told to pay a personal account, keep the offer secret, and recruit five friends.",
+      "illustration": "A ten-minute timer sits beside secrecy, personal-account, and referral icons.",
+      "primaryAction": {
+        "label": "Sort the Clues",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M28-S05",
+      "type": "pre_interaction",
+      "title": "Which Detail Deserves the Most Concern?",
+      "question": "Which detail is the clearest warning sign?",
+      "options": [
+        {
+          "id": "J5-M28-PQ-O1",
+          "text": "The message uses a professional logo",
+          "isRecommended": false,
+          "response": "A logo may look convincing, but professional design can be copied or fabricated."
+        },
+        {
+          "id": "J5-M28-PQ-O2",
+          "text": "The offer guarantees your money will double",
+          "isRecommended": true,
+          "response": "Correct. Guaranteed unusually high returns are a major warning sign because genuine investments involve risk."
+        },
+        {
+          "id": "J5-M28-PQ-O3",
+          "text": "The message uses complete sentences",
+          "isRecommended": false,
+          "response": "Good writing does not prove that an offer is genuine."
+        },
+        {
+          "id": "J5-M28-PQ-O4",
+          "text": "A friend shared the message",
+          "isRecommended": false,
+          "response": "A friend may also have received incomplete or misleading information."
+        }
+      ],
+      "recommendedAnswerId": "J5-M28-PQ-O2",
+      "primaryAction": {
+        "label": "Test My Answer",
+        "action": "submit_answer"
+      }
+    },
+    {
+      "id": "J5-M28-S06",
+      "type": "interaction",
+      "interactionType": "sort_categories",
+      "title": "Sort the Financial Messages",
+      "instruction": "Place each statement into Scam Warning Sign, Not Enough Information, or Normal Financial Information.",
+      "config": {
+        "educationalAssumptions": [
+          "Every company, offer, testimonial, and message in this activity is fictional.",
+          "A warning sign increases concern but may not independently prove fraud.",
+          "Several warning signs together should increase concern further.",
+          "A statement with too little information is not automatically safe or fraudulent.",
+          "Normal financial wording does not prove that the person or company using it is genuine.",
+          "Logos, websites, certificates, reviews, and screenshots can be copied or fabricated.",
+          "Independent verification remains necessary before sending money or personal information.",
+          "The activity does not recommend any real financial company or investment."
+        ],
+        "categories": [
+          {
+            "id": "scam_warning_sign",
+            "label": "Scam Warning Sign",
+            "description": "Unrealistic promises, urgency, secrecy, recruitment pressure, suspicious payments, or withdrawal demands."
+          },
+          {
+            "id": "not_enough_information",
+            "label": "Not Enough Information",
+            "description": "Claims that do not provide enough evidence to judge whether the opportunity is safe or fraudulent."
+          },
+          {
+            "id": "normal_financial_information",
+            "label": "Normal Financial Information",
+            "description": "Statements acknowledging risk or encouraging research, verification, and review."
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "J5-M28-ITEM-01",
+            "text": "Send Rs. 20,000 today, and we guarantee Rs. 40,000 next week.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "The message combines an unusually high guaranteed return with pressure to pay immediately.",
+            "incorrectFeedback": "A guaranteed doubling of money is a major warning sign."
+          },
+          {
+            "id": "J5-M28-ITEM-02",
+            "text": "This opportunity expires in ten minutes, so act now.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "Artificial urgency may prevent research or a second opinion.",
+            "incorrectFeedback": "A countdown designed to stop careful checking is a warning sign."
+          },
+          {
+            "id": "J5-M28-ITEM-03",
+            "text": "Do not tell your bank or family about this investment.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "Requests for secrecy may isolate the person from people who could question the payment.",
+            "incorrectFeedback": "A trustworthy provider should not require secrecy from a bank, family, or adviser."
+          },
+          {
+            "id": "J5-M28-ITEM-04",
+            "text": "You will earn more money by recruiting five friends.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "Rewards based mainly on recruitment may indicate a pyramid-style or fraudulent scheme.",
+            "incorrectFeedback": "Recruitment should not be the main source of promised financial rewards."
+          },
+          {
+            "id": "J5-M28-ITEM-05",
+            "text": "There is no risk, and your profit is guaranteed.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "Real investments involve uncertainty. Claims of no risk and guaranteed profit should increase concern.",
+            "incorrectFeedback": "A return guarantee may make the claim less believable, not safer."
+          },
+          {
+            "id": "J5-M28-ITEM-06",
+            "text": "Pay an additional fee before you can withdraw your profit.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "Repeated payment demands before releasing supposed profits are a common warning sign.",
+            "incorrectFeedback": "Unexpected withdrawal fees should be independently verified before further payment."
+          },
+          {
+            "id": "J5-M28-ITEM-07",
+            "text": "Send money to a personal account or cryptocurrency wallet immediately.",
+            "correctCategoryId": "scam_warning_sign",
+            "explanation": "The suspicious payment destination and urgency both require careful verification.",
+            "incorrectFeedback": "Immediate payment to an unrelated account or wallet is a warning sign."
+          },
+          {
+            "id": "J5-M28-ITEM-08",
+            "text": "This investment may produce returns over time.",
+            "correctCategoryId": "not_enough_information",
+            "explanation": "The statement gives no details about the investment, provider, risks, or fees.",
+            "incorrectFeedback": "This wording alone is not enough to prove safety or fraud."
+          },
+          {
+            "id": "J5-M28-ITEM-09",
+            "text": "Contact us to learn more about the opportunity.",
+            "correctCategoryId": "not_enough_information",
+            "explanation": "An invitation to ask questions provides no evidence that the offer is genuine.",
+            "incorrectFeedback": "The contact information should be verified independently."
+          },
+          {
+            "id": "J5-M28-ITEM-10",
+            "text": "The company says it invests in property.",
+            "correctCategoryId": "not_enough_information",
+            "explanation": "The statement does not prove ownership, authorisation, performance, or legitimacy.",
+            "incorrectFeedback": "A company’s description of itself must still be independently checked."
+          },
+          {
+            "id": "J5-M28-ITEM-11",
+            "text": "Past customers have reported positive results.",
+            "correctCategoryId": "not_enough_information",
+            "explanation": "Testimonials may be selective, paid, copied, or fabricated.",
+            "incorrectFeedback": "Positive stories alone are not enough to judge legitimacy."
+          },
+          {
+            "id": "J5-M28-ITEM-12",
+            "text": "Investment values can rise or fall.",
+            "correctCategoryId": "normal_financial_information",
+            "explanation": "This openly acknowledges that the investment may gain or lose value.",
+            "incorrectFeedback": "Acknowledging possible gains and losses is normal risk disclosure."
+          },
+          {
+            "id": "J5-M28-ITEM-13",
+            "text": "Returns are not guaranteed.",
+            "correctCategoryId": "normal_financial_information",
+            "explanation": "This accurately states that future investment results are uncertain.",
+            "incorrectFeedback": "The statement is normal financial information, although the provider still needs verification."
+          },
+          {
+            "id": "J5-M28-ITEM-14",
+            "text": "Read the fees, risks, and withdrawal terms before investing.",
+            "correctCategoryId": "normal_financial_information",
+            "explanation": "Reviewing costs, risks, and access conditions supports informed decision-making.",
+            "incorrectFeedback": "Transparent financial information should encourage review rather than urgency."
+          },
+          {
+            "id": "J5-M28-ITEM-15",
+            "text": "Verify that the company and adviser are properly authorised.",
+            "correctCategoryId": "normal_financial_information",
+            "explanation": "Independent verification is an important safety step.",
+            "incorrectFeedback": "Encouraging official verification is normal financial guidance."
+          },
+          {
+            "id": "J5-M28-ITEM-16",
+            "text": "Take time to research before making a decision.",
+            "correctCategoryId": "normal_financial_information",
+            "explanation": "This reduces pressure and allows the person to verify the opportunity.",
+            "incorrectFeedback": "Encouraging research is normal financial guidance."
+          }
+        ],
+        "contextDependentItems": [
+          "J5-M28-ITEM-08",
+          "J5-M28-ITEM-09",
+          "J5-M28-ITEM-10",
+          "J5-M28-ITEM-11"
+        ],
+        "ambiguityExplanation": "A genuine provider and a scammer may both use neutral or professional language. These statements require more evidence and independent verification.",
+        "followUpQuestions": [
+          {
+            "id": "J5-M28-IQ1",
+            "scenario": "A message includes a polished website, company logo, certificate image, testimonials, and a professional video.",
+            "question": "What does the professional appearance prove?",
+            "options": [
+              {
+                "id": "J5-M28-IQ1-O1",
+                "text": "The company is genuine",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ1-O2",
+                "text": "The returns are guaranteed",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ1-O3",
+                "text": "The offer is authorised",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ1-O4",
+                "text": "Nothing without independent verification",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswerId": "J5-M28-IQ1-O4",
+            "explanation": "Design elements, logos, certificates, and testimonials can be copied or fabricated."
+          },
+          {
+            "id": "J5-M28-IQ2",
+            "scenario": "A close friend shares the offer and says they have already invested.",
+            "question": "What should you conclude?",
+            "options": [
+              {
+                "id": "J5-M28-IQ2-O1",
+                "text": "The offer must be safe",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ2-O2",
+                "text": "Your friend guarantees repayment",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ2-O3",
+                "text": "Your friend may also have incomplete information",
+                "isCorrect": true
+              },
+              {
+                "id": "J5-M28-IQ2-O4",
+                "text": "Trusted groups cannot contain scams",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswerId": "J5-M28-IQ2-O3",
+            "explanation": "A trusted person may honestly share an offer without knowing that its claims are misleading."
+          },
+          {
+            "id": "J5-M28-IQ3",
+            "scenario": "A platform shows a Rs. 50,000 profit but demands another Rs. 10,000 before allowing withdrawal.",
+            "question": "What is the safest immediate response?",
+            "options": [
+              {
+                "id": "J5-M28-IQ3-O1",
+                "text": "Pay quickly before the profit disappears",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ3-O2",
+                "text": "Borrow the additional fee",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ3-O3",
+                "text": "Share your OTP to release the funds",
+                "isCorrect": false
+              },
+              {
+                "id": "J5-M28-IQ3-O4",
+                "text": "Pause and verify independently before paying anything",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswerId": "J5-M28-IQ3-O4",
+            "explanation": "Unexpected payments before withdrawal are a warning sign. Do not send more money or share private banking information."
+          }
+        ],
+        "safetyCheck": [
+          "Pause and avoid acting under pressure.",
+          "Research the company independently.",
+          "Check official registration or authorisation records.",
+          "Verify contact details using trusted sources.",
+          "Read the risks, fees, and withdrawal conditions.",
+          "Check where the money is being sent.",
+          "Avoid sharing passwords, PINs, OTPs, or private banking details.",
+          "Ask a trusted person or qualified adviser for a second opinion.",
+          "Search for complaints, impersonation warnings, or conflicting details.",
+          "Keep records of messages and payment requests."
+        ],
+        "importantClarification": [
+          "One warning sign does not always prove that an offer is fraudulent.",
+          "Several warning signs together should increase concern.",
+          "A lack of obvious warning signs does not guarantee safety.",
+          "Professional design does not prove legitimacy.",
+          "Independent verification remains necessary."
+        ],
+        "correctCompletionState": {
+          "allItemsSorted": true,
+          "allFollowUpQuestionsCorrect": true,
+          "guaranteedReturnsRecognised": true,
+          "urgencyAndSecrecyRecognised": true,
+          "professionalDesignNotProofUnderstood": true,
+          "vagueClaimsNeedVerificationUnderstood": true
+        },
+        "validationMethod": "Check all 16 sorted statements and the three follow-up safety questions.",
+        "retryBehavior": "Keep correctly sorted statements in place. Return only incorrect items and unanswered safety checks.",
+        "accessibilityAlternative": {
+          "method": "Present one statement at a time with buttons for Scam Warning Sign, Not Enough Information, and Normal Financial Information.",
+          "screenReaderInstruction": "Listen to each statement and choose the category that best describes it. Then complete the three safety checks."
+        }
+      },
+      "feedback": {
+        "success": "Excellent sorting! You separated clear warning signs from normal disclosures and claims that still require verification.",
+        "incorrect": "Ask whether the statement pressures you, promises certainty, requests secrecy, or simply lacks enough evidence.",
+        "incomplete": "Sort every statement and complete the three safety checks before finishing."
+      },
+      "primaryAction": {
+        "label": "Check My Sorting",
+        "action": "validate_interaction"
+      }
+    },
+    {
+      "id": "J5-M28-S07",
+      "type": "reveal",
+      "title": "Look Beyond the Presentation",
+      "content": "You sorted promises, pressure, secrecy, recruitment, and suspicious payment requests as financial scam warning signs. A professional message can still be false because logos, websites, certificates, and testimonials may be copied. Vague statements may simply need more information. Normal risk disclosures are useful, but they do not prove the provider is genuine. Warning signs guide you to pause and verify independently—they do not replace evidence or guarantee that an offer is safe or fraudulent.",
+      "simpleSummary": "Professional appearance is not proof; verify the offer independently.",
+      "illustration": "A polished advertisement separates into surface appearance and hidden checks for risks, fees, authorisation, contacts, and payments.",
+      "primaryAction": {
+        "label": "See Another Example",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M28-S08",
+      "type": "real_life_example",
+      "title": "The Fake Loan Representative",
+      "content": "A caller uses a bank-style logo and offers instant financing. They request an advance processing payment and an OTP. Farah ends the call and verifies the number independently. The professional branding did not prove that the caller represented the bank.",
+      "illustration": "A branded call screen is compared with an independently verified contact number and a warning beside the OTP request.",
+      "primaryAction": {
+        "label": "Test My Understanding",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-M28-S09",
+      "type": "quiz",
+      "title": "Financial Scam Check",
+      "questions": [
+        {
+          "id": "J5-M28-Q1",
+          "category": "recognition",
+          "text": "Which message contains the strongest scam warning sign?",
+          "options": [
+            {
+              "id": "J5-M28-Q1-O1",
+              "text": "Investment values may rise or fall.",
+              "isCorrect": false,
+              "feedback": "This is a normal acknowledgement of investment risk."
+            },
+            {
+              "id": "J5-M28-Q1-O2",
+              "text": "Read the withdrawal terms carefully.",
+              "isCorrect": false,
+              "feedback": "This encourages review of important conditions."
+            },
+            {
+              "id": "J5-M28-Q1-O3",
+              "text": "Guaranteed 50% profit—pay within five minutes.",
+              "isCorrect": true,
+              "feedback": "Correct. It combines an unrealistic guarantee with urgent payment pressure."
+            },
+            {
+              "id": "J5-M28-Q1-O4",
+              "text": "Research the company independently.",
+              "isCorrect": false,
+              "feedback": "Independent research reduces reliance on the seller’s claims."
+            }
+          ],
+          "correctAnswerId": "J5-M28-Q1-O3",
+          "correctExplanation": "The message combines an unrealistic guarantee with pressure to act before checking the offer.",
+          "misconceptionTested": "All professional financial statements carry the same level of risk."
+        },
+        {
+          "id": "J5-M28-Q2",
+          "category": "misconception",
+          "text": "A message has a professional website, company logo, testimonials, and certificate images. What does this prove?",
+          "options": [
+            {
+              "id": "J5-M28-Q2-O1",
+              "text": "The company is authorised",
+              "isCorrect": false,
+              "feedback": "Authorisation must be checked using independently located official records."
+            },
+            {
+              "id": "J5-M28-Q2-O2",
+              "text": "The investment is safe",
+              "isCorrect": false,
+              "feedback": "Professional presentation does not remove investment or fraud risk."
+            },
+            {
+              "id": "J5-M28-Q2-O3",
+              "text": "The testimonials are genuine",
+              "isCorrect": false,
+              "feedback": "Testimonials may be selective, paid, copied, or invented."
+            },
+            {
+              "id": "J5-M28-Q2-O4",
+              "text": "Nothing until the details are independently verified",
+              "isCorrect": true,
+              "feedback": "Correct. Professional materials can be copied, altered, or fabricated."
+            }
+          ],
+          "correctAnswerId": "J5-M28-Q2-O4",
+          "correctExplanation": "Websites, logos, certificates, and testimonials can be copied, altered, or fabricated.",
+          "misconceptionTested": "Professional-looking messages are automatically trustworthy."
+        },
+        {
+          "id": "J5-M28-Q3",
+          "category": "application",
+          "text": "A friend shares an offer that guarantees returns and asks you to pay a personal account. What should you do first?",
+          "options": [
+            {
+              "id": "J5-M28-Q3-O1",
+              "text": "Pay because your friend trusts it",
+              "isCorrect": false,
+              "feedback": "Your friend may also have received incomplete or misleading information."
+            },
+            {
+              "id": "J5-M28-Q3-O2",
+              "text": "Send a small test payment",
+              "isCorrect": false,
+              "feedback": "Even a small payment exposes money and may encourage further demands."
+            },
+            {
+              "id": "J5-M28-Q3-O3",
+              "text": "Recruit others before the deadline",
+              "isCorrect": false,
+              "feedback": "Recruitment pressure adds another warning sign and may expose other people."
+            },
+            {
+              "id": "J5-M28-Q3-O4",
+              "text": "Pause and verify the offer independently",
+              "isCorrect": true,
+              "feedback": "Correct. The guarantee and payment destination both require independent checking."
+            }
+          ],
+          "correctAnswerId": "J5-M28-Q3-O4",
+          "correctExplanation": "A friend’s recommendation does not remove the warning signs created by guaranteed returns and a suspicious payment destination.",
+          "misconceptionTested": "An offer must be genuine when recommended by a friend or trusted group."
+        }
+      ],
+      "primaryAction": {
+        "label": "Finish Quiz",
+        "action": "submit_quiz"
+      }
+    },
+    {
+      "id": "J5-M28-S10",
+      "type": "completion",
+      "headline": "Scam Signal Spotter!",
+      "message": "You learned to separate suspicious pressure and promises from normal information and claims that still need verification.",
+      "xpReward": 50,
+      "progressMessage": "Mission 28 complete in Master Money Decisions.",
+      "nextMissionTeaser": "Next, explore how fake authority and convincing social proof can influence financial decisions.",
+      "animation": "Sixteen message cards sort into three categories while warning icons appear beside guarantees, urgency, secrecy, and suspicious payments.",
+      "primaryAction": {
+        "label": "Continue Journey",
+        "action": "continue_journey"
+      }
+    },
+    {
+      "id": "J5-M28-S11",
+      "type": "real_life_challenge",
+      "title": "Inspect a Fictional Offer",
+      "instruction": "Write a pretend financial advertisement containing four warning signs. Underline the guarantee, urgency, secrecy, and suspicious payment request. Do not contact or pay anyone.",
+      "buttonLabel": "I Found Four Signs",
+      "primaryAction": {
+        "label": "I Found Four Signs",
+        "action": "complete_challenge"
+      }
+    }
+  ],
+  "reviewChecklist": [
+    {
+      "item": "Teaches one concept only",
+      "status": "PASS",
+      "notes": "The mission focuses on recognising common warning signs in financial scam messages."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "The mission distinguishes risk disclosures, vague claims, guarantees, suspicious payments, recruitment, secrecy, and independent verification."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "The mission uses adult investment offers, payment accounts, withdrawals, financial groups, banking details, and verification steps."
+    },
+    {
+      "item": "No personalized investment advice",
+      "status": "PASS",
+      "notes": "The mission does not recommend a real investment, company, adviser, or financial product."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "Guaranteed returns are presented as warning signs rather than credible financial promises."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "The mission does not predict any real investment or market price."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "People who trust friends, professional messages, or testimonials are discussed respectfully and without blame."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "The mission explains that one warning sign may not prove fraud and that an absence of warning signs does not guarantee safety."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "The mission uses PKR, personal accounts, group messages, OTPs, friends, withdrawal fees, and familiar financial communication in Pakistan."
+    },
+    {
+      "item": "Interaction reinforces the objective",
+      "status": "PASS",
+      "notes": "The learner sorts sixteen messages and completes three checks involving design, recommendations, and withdrawal demands."
+    },
+    {
+      "item": "Quiz corrects misconceptions",
+      "status": "PASS",
+      "notes": "The quiz addresses professional presentation, trusted recommendations, guaranteed returns, urgent payments, and independent verification."
+    },
+    {
+      "item": "Mission can be completed in under five minutes",
+      "status": "PASS",
+      "notes": "The learner sorts short statements, receives immediate feedback, and answers three brief safety checks and three quiz questions."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "The language is practical, clear, respectful, and suitable for beginner adults."
+    }
+  ]
+}
