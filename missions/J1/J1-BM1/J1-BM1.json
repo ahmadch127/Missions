@@ -1,0 +1,1552 @@
+{
+  "id": "J1-BM1",
+  "journeyId": "J1",
+  "journeyName": "Become Money Smart",
+  "title": "Survive the Month",
+  "bossType": "journey_boss",
+  "unlocksAfterMissionId": "J1-M7",
+  "conceptsAssessed": [
+    {
+      "missionId": "J1-M2",
+      "missionTitle": "Needs vs Wants",
+      "concept": "Distinguishing essential, optional, and context-dependent expenses.",
+      "assessedInStageIds": ["J1-BM1-ST2", "J1-BM1-ST4"]
+    },
+    {
+      "missionId": "J1-M4",
+      "missionTitle": "Saving First",
+      "concept": "Setting money aside before optional spending.",
+      "assessedInStageIds": ["J1-BM1-ST1", "J1-BM1-ST3"]
+    },
+    {
+      "missionId": "J1-M5",
+      "missionTitle": "Spending Wisely",
+      "concept": "Balancing affordability, needs, wants, and future consequences.",
+      "assessedInStageIds": ["J1-BM1-ST1", "J1-BM1-ST4"]
+    },
+    {
+      "missionId": "J1-M6",
+      "missionTitle": "Build a Budget",
+      "concept": "Allocating limited money across essentials, saving, enjoyment, and flexibility.",
+      "assessedInStageIds": ["J1-BM1-ST1", "J1-BM1-ST4"]
+    },
+    {
+      "missionId": "J1-M7",
+      "missionTitle": "Emergency Fund",
+      "concept": "Preparing for and using accessible savings for unexpected essential costs.",
+      "assessedInStageIds": ["J1-BM1-ST3", "J1-BM1-ST4"]
+    }
+  ],
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 8,
+  "simulationPeriod": "one_month",
+  "currency": "PKR",
+  "locale": "en-PK",
+  "language": "English",
+  "learningObjective": "Apply budgeting, needs-versus-wants, saving, and emergency-planning skills to manage a limited amount of money for one complete month.",
+  "primaryMisconception": "A successful monthly budget only needs to cover planned expenses and does not need savings or preparation for emergencies.",
+  "secondaryMisconceptions": [
+    "Wants must always be removed completely from a good budget.",
+    "Borrowing is always the best solution when an unexpected expense occurs.",
+    "Saving should only happen when money remains at the end of the month."
+  ],
+  "keyTakeaway": "A successful month balances needs, wants, savings, and unexpected expenses.",
+  "overview": {
+    "summary": "The learner manages Rs. 50,000 for one month, builds a budget, sorts needs and wants, assigns extra income, and handles an essential phone repair. Earlier choices affect later options. The final dashboard measures needs coverage, budget quality, saving behaviour, emergency readiness, debt pressure, and adaptability."
+  },
+  "startingState": {
+    "availableCash": 50000,
+    "monthlyIncome": 0,
+    "generalSavings": 5000,
+    "emergencyFund": 0,
+    "debtBalance": 0,
+    "monthlyDebtPayment": 0,
+    "investmentBalance": 0,
+    "goalTarget": 0,
+    "goalProgress": 0,
+    "essentialExpenseMinimum": 32000,
+    "phoneRepairCost": 8000,
+    "timeRemainingDays": 30,
+    "negativeBalancesAllowed": false,
+    "financialGoal": "Finish the month with essential needs covered, manageable spending, some savings, and as little unnecessary debt as possible."
+  },
+  "trackedStateFields": [
+    {
+      "key": "general_savings",
+      "label": "General Savings",
+      "valueType": "currency",
+      "initialValue": 5000,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "emergency_fund",
+      "label": "Emergency Fund",
+      "valueType": "currency",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_buffer",
+      "label": "Monthly Buffer",
+      "valueType": "currency",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "optional_spending_available",
+      "label": "Optional Spending Available",
+      "valueType": "currency",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "debt_balance",
+      "label": "Debt Balance",
+      "valueType": "currency",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "essential_expenses_covered",
+      "label": "Essential Needs Covered",
+      "valueType": "boolean",
+      "initialValue": false,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "wants_purchased",
+      "label": "Wants Purchased",
+      "valueType": "count",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": false
+    },
+    {
+      "key": "missed_obligations",
+      "label": "Missed Essential Payments",
+      "valueType": "currency",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "financial_confidence",
+      "label": "Financial Confidence",
+      "valueType": "score",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "displayThroughoutMission": false
+    }
+  ],
+  "screens": [
+    {
+      "id": "J1-BM1-S01",
+      "type": "hook",
+      "title": "Can Rs. 50,000 Last the Month?",
+      "content": "Rs. 50,000 must cover your month. Then your phone breaks. Can you protect your needs, savings, and freedom without unnecessary debt?",
+      "illustration": "A thirty-day calendar surrounds a Rs. 50,000 balance, essential expenses, a savings jar, and a cracked phone.",
+      "primaryAction": {
+        "label": "Accept the Challenge",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-BM1-S02",
+      "type": "scenario_setup",
+      "title": "Your Starting Position",
+      "content": "You receive Rs. 50,000 for the month and already have Rs. 5,000 in savings. You have no emergency fund and no debt.",
+      "illustration": "A dashboard showing monthly money, general savings, emergency savings, and debt.",
+      "stateSummary": {
+        "availableCash": 50000,
+        "generalSavings": 5000,
+        "emergencyFund": 0,
+        "debtBalance": 0
+      },
+      "primaryAction": {
+        "label": "View Responsibilities",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-BM1-S03",
+      "type": "scenario_setup",
+      "title": "What the Money Must Cover",
+      "content": "Your month includes food, transport, mobile data, and work expenses. You also want some enjoyment and would like to finish with savings.",
+      "illustration": "Four essential cards and two flexible cards appear beside the monthly balance.",
+      "stateSummary": {
+        "essentialExpenseMinimum": 32000,
+        "timeRemainingDays": 30
+      },
+      "primaryAction": {
+        "label": "See the Goal",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-BM1-S04",
+      "type": "scenario_setup",
+      "title": "A Month With Surprises",
+      "content": "Extra income may arrive, but an unexpected cost can appear too. Every rupee used now changes what remains later.",
+      "illustration": "A timeline hides event cards behind Week 2 and Week 3.",
+      "stateSummary": {
+        "financialGoal": "Cover needs, keep spending manageable, save something, and avoid unnecessary debt."
+      },
+      "primaryAction": {
+        "label": "Choose Your Approach",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J1-BM1-S05",
+      "type": "pre_simulation_question",
+      "title": "What Should the Budget Do?",
+      "question": "Which monthly plan sounds most balanced?",
+      "options": [
+        {
+          "id": "J1-BM1-PQ-O1",
+          "label": "Cover planned bills and spend everything else",
+          "isRecommended": false,
+          "feedback": "This may work until an unexpected cost appears."
+        },
+        {
+          "id": "J1-BM1-PQ-O2",
+          "label": "Cover needs, save something, and leave room for affordable wants",
+          "isRecommended": true,
+          "feedback": "Correct. The simulation will test whether this balance survives a changing month."
+        },
+        {
+          "id": "J1-BM1-PQ-O3",
+          "label": "Remove every want, even when affordable",
+          "isRecommended": false,
+          "feedback": "A budget can include enjoyment when needs and future priorities remain protected."
+        },
+        {
+          "id": "J1-BM1-PQ-O4",
+          "label": "Borrow whenever the month becomes difficult",
+          "isRecommended": false,
+          "feedback": "Borrowing may solve an urgent problem, but it creates a later obligation."
+        }
+      ],
+      "recommendedAnswerId": "J1-BM1-PQ-O2",
+      "connectionToSimulation": "The next four stages test whether the learner can balance essentials, enjoyment, savings, flexibility, and an emergency."
+    }
+  ],
+  "stages": [
+    {
+      "id": "J1-BM1-ST1",
+      "stageNumber": 1,
+      "title": "Build the Budget",
+      "timelineLabel": "Day 1",
+      "conceptsAssessed": [
+        "needs_versus_wants",
+        "essential_expense_priority",
+        "monthly_budget",
+        "saving_first"
+      ],
+      "interactionType": "budget_builder",
+      "situation": "Your Rs. 50,000 must last the month. Food, transport, mobile data, and work expenses have minimum costs. You also decide how much to save, spend on enjoyment, or leave as a flexible buffer.",
+      "objective": "Cover every essential minimum without exceeding Rs. 50,000.",
+      "stateBefore": {
+        "availableCash": 50000,
+        "generalSavings": 5000,
+        "emergencyFund": 0,
+        "debtBalance": 0
+      },
+      "config": {
+        "totalAvailableAmount": 50000,
+        "requiredCategories": [
+          {
+            "id": "food",
+            "label": "Food",
+            "minimum": 15000,
+            "maximum": 22000,
+            "startingAmount": 15000
+          },
+          {
+            "id": "transport",
+            "label": "Transport",
+            "minimum": 8000,
+            "maximum": 14000,
+            "startingAmount": 8000
+          },
+          {
+            "id": "mobile_data",
+            "label": "Mobile Data",
+            "minimum": 2000,
+            "maximum": 5000,
+            "startingAmount": 2000
+          },
+          {
+            "id": "work_expenses",
+            "label": "Work Expenses",
+            "minimum": 7000,
+            "maximum": 12000,
+            "startingAmount": 7000
+          }
+        ],
+        "optionalCategories": [
+          {
+            "id": "savings",
+            "label": "Savings",
+            "minimum": 0,
+            "maximum": 15000,
+            "startingAmount": 10000
+          },
+          {
+            "id": "entertainment",
+            "label": "Entertainment and Wants",
+            "minimum": 0,
+            "maximum": 12000,
+            "startingAmount": 5000
+          }
+        ],
+        "remainingBalanceLabel": "Monthly Buffer",
+        "remainingBalanceRule": "50000_minus_sum_of_allocations",
+        "overspendingBehaviour": "block_confirmation",
+        "multipleValidBudgets": true,
+        "exampleBalancedBudget": {
+          "food": 15000,
+          "transport": 8000,
+          "mobile_data": 2000,
+          "work_expenses": 7000,
+          "savings": 10000,
+          "entertainment": 5000,
+          "monthly_buffer": 3000
+        }
+      },
+      "choices": [
+        {
+          "id": "J1-BM1-ST1-C1",
+          "label": "Valid balanced budget",
+          "classification": "recommended",
+          "immediateFeedback": "Needs are covered, some money is saved, and enjoyment or flexibility remains.",
+          "shortTermConsequence": "The month begins with essential categories funded.",
+          "laterConsequence": "Savings, entertainment money, and the buffer may help with the repair.",
+          "stateChanges": {
+            "general_savings": "increase_by_savings_allocation",
+            "optional_spending_available": "set_to_entertainment_allocation",
+            "monthly_buffer": "set_to_remaining_balance",
+            "essential_expenses_covered": true
+          }
+        },
+        {
+          "id": "J1-BM1-ST1-C2",
+          "label": "Valid budget with no entertainment",
+          "classification": "reasonable",
+          "immediateFeedback": "The maths works, but the plan may feel restrictive.",
+          "shortTermConsequence": "No optional spending is available.",
+          "laterConsequence": "More money may remain for savings or emergencies.",
+          "stateChanges": {
+            "general_savings": "increase_by_savings_allocation",
+            "optional_spending_available": 0,
+            "monthly_buffer": "set_to_remaining_balance",
+            "essential_expenses_covered": true
+          }
+        },
+        {
+          "id": "J1-BM1-ST1-C3",
+          "label": "Essential category below minimum",
+          "classification": "invalid",
+          "immediateFeedback": "One essential expense is not covered.",
+          "shortTermConsequence": "The plan may not last the month.",
+          "laterConsequence": "An essential payment may be missed.",
+          "stateChanges": {}
+        },
+        {
+          "id": "J1-BM1-ST1-C4",
+          "label": "Budget above Rs. 50,000",
+          "classification": "invalid",
+          "immediateFeedback": "The plan uses more money than is available.",
+          "shortTermConsequence": "The allocation cannot be funded.",
+          "laterConsequence": "Overspending would create a shortfall.",
+          "stateChanges": {}
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Cover every essential minimum, save something, and use remaining money for affordable enjoyment or a buffer.",
+        "reasonableAlternatives": [
+          "A no-entertainment budget may be reasonable when the learner prefers faster saving.",
+          "A smaller saving amount may be reasonable when essential costs are higher."
+        ],
+        "tradeOff": "More saving increases protection but leaves less money for current enjoyment."
+      },
+      "validation": {
+        "method": "Check essential minimums, total allocations, non-negative values, and remaining balance.",
+        "invalidStateFeedback": "Cover every essential minimum and keep the total at or below Rs. 50,000.",
+        "retryBehaviour": "Keep valid values and highlight only the amount causing the error."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled plus and minus buttons.",
+        "instruction": "Adjust each category and listen to the remaining balance."
+      },
+      "stateSummary": {
+        "title": "Budget Locked",
+        "changedValues": [
+          {
+            "field": "general_savings",
+            "previousAmountSource": "general_savings_before_stage",
+            "newAmountSource": "general_savings_plus_savings_allocation",
+            "reason": "Savings are set aside before optional spending."
+          },
+          {
+            "field": "optional_spending_available",
+            "previousAmount": 0,
+            "newAmountSource": "entertainment_allocation",
+            "reason": "Enjoyment receives a defined limit."
+          },
+          {
+            "field": "monthly_buffer",
+            "previousAmount": 0,
+            "newAmountSource": "remaining_balance",
+            "reason": "Unallocated money remains flexible."
+          }
+        ],
+        "learningMessage": "A realistic budget protects needs, future priorities, and flexibility.",
+        "nextStageTeaser": "Decide which everyday expenses should be protected first."
+      }
+    },
+    {
+      "id": "J1-BM1-ST2",
+      "stageNumber": 2,
+      "title": "Need, Want, or Depends?",
+      "timelineLabel": "Week 1",
+      "conceptsAssessed": [
+        "needs_versus_wants",
+        "essential_expense_priority",
+        "context_dependent_spending"
+      ],
+      "interactionType": "sort_categories",
+      "situation": "Your budget is set, but real purchases do not always arrive with clear labels. Sort six expenses before deciding what should be protected when money becomes tight.",
+      "objective": "Classify every expense by its purpose and context.",
+      "stateBefore": {
+        "generalSavingsSource": "general_savings",
+        "optionalSpendingSource": "optional_spending_available",
+        "essentialExpensesCoveredSource": "essential_expenses_covered"
+      },
+      "config": {
+        "categories": [
+          {
+            "id": "need",
+            "label": "Need"
+          },
+          {
+            "id": "want",
+            "label": "Want"
+          },
+          {
+            "id": "depends",
+            "label": "Depends on the Situation"
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "medicine",
+            "label": "Prescribed medicine",
+            "correctCategoryId": "need",
+            "explanation": "Required medicine supports health."
+          },
+          {
+            "id": "gaming_headphones",
+            "label": "New gaming headphones",
+            "correctCategoryId": "want",
+            "explanation": "Usually optional when working audio is available."
+          },
+          {
+            "id": "bus_fare",
+            "label": "Bus fare to work",
+            "correctCategoryId": "need",
+            "explanation": "Necessary for reaching work."
+          },
+          {
+            "id": "restaurant_meal",
+            "label": "Restaurant meal",
+            "correctCategoryId": "depends",
+            "explanation": "Its role depends on circumstances and alternatives."
+          },
+          {
+            "id": "internet_package",
+            "label": "Internet package",
+            "correctCategoryId": "depends",
+            "explanation": "May be essential for work or optional as an upgrade."
+          },
+          {
+            "id": "premium_shoes",
+            "label": "Premium shoes when usable shoes are available",
+            "correctCategoryId": "want",
+            "explanation": "The premium upgrade is optional."
+          }
+        ],
+        "contextDependentItems": [
+          "restaurant_meal",
+          "internet_package"
+        ],
+        "ambiguityExplanation": "Judge the expense by its purpose, alternatives, and consequences.",
+        "completionRule": "all_items_placed"
+      },
+      "choices": [
+        {
+          "id": "J1-BM1-ST2-C1",
+          "label": "Complete all six classifications",
+          "classification": "recommended",
+          "immediateFeedback": "You separated clear needs and wants while recognising context-dependent expenses.",
+          "shortTermConsequence": "Your priorities are clearer.",
+          "laterConsequence": "The emergency stage can protect needs before flexible spending.",
+          "stateChanges": {
+            "financial_confidence": "increase_by_sort_score"
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Protect health, safety, work, and basic functioning. Treat upgrades as flexible and review context-dependent expenses.",
+        "reasonableAlternatives": [
+          "A restaurant meal may become necessary when no practical alternative exists.",
+          "Internet may be essential for work while a premium upgrade is optional."
+        ],
+        "tradeOff": "Calling every expense a need removes flexibility; calling every expense a want may leave needs unprotected."
+      },
+      "validation": {
+        "method": "Compare all six placements with their categories.",
+        "invalidStateFeedback": "Review the purpose of the item and whether an alternative exists.",
+        "retryBehaviour": "Keep correct items and retry only incorrect placements."
+      },
+      "accessibilityAlternative": {
+        "method": "Present one item at a time with three labelled buttons.",
+        "instruction": "Choose Need, Want, or Depends."
+      },
+      "stateSummary": {
+        "title": "Priorities Identified",
+        "changedValues": [
+          {
+            "field": "financial_confidence",
+            "previousAmountSource": "score_before_stage",
+            "newAmountSource": "score_plus_needs_judgement_points",
+            "reason": "The score reflects classification accuracy."
+          }
+        ],
+        "learningMessage": "Needs should be protected, wants can be managed, and some expenses depend on context.",
+        "nextStageTeaser": "An extra Rs. 5,000 is about to arrive."
+      }
+    },
+    {
+      "id": "J1-BM1-ST3",
+      "stageNumber": 3,
+      "title": "Saving First",
+      "timelineLabel": "Week 2",
+      "conceptsAssessed": [
+        "saving_first",
+        "emergency_preparation",
+        "spending_wisely"
+      ],
+      "interactionType": "decision_tree",
+      "situation": "You earn an unexpected Rs. 5,000 from a small freelance task. Your savings, emergency fund, buffer, and entertainment budget carry forward.",
+      "objective": "Decide how the extra income should support the rest of the month.",
+      "stateBefore": {
+        "extraIncome": 5000,
+        "generalSavingsSource": "general_savings",
+        "emergencyFundSource": "emergency_fund",
+        "monthlyBufferSource": "monthly_buffer",
+        "optionalSpendingSource": "optional_spending_available"
+      },
+      "config": {
+        "startingNode": {
+          "id": "J1-BM1-ST3-N1",
+          "question": "What should the extra Rs. 5,000 do?"
+        },
+        "followUpNode": {
+          "id": "J1-BM1-ST3-N2",
+          "question": "How might this affect a surprise later?"
+        },
+        "terminalOutcomes": [
+          "emergency_fund_strengthened",
+          "balanced_save_and_spend",
+          "buffer_strengthened",
+          "extra_income_fully_spent"
+        ]
+      },
+      "choices": [
+        {
+          "id": "J1-BM1-ST3-C1",
+          "label": "Save all of it for emergencies",
+          "classification": "recommended",
+          "immediateFeedback": "The full Rs. 5,000 moves into the emergency fund.",
+          "shortTermConsequence": "Emergency readiness improves.",
+          "laterConsequence": "The repair may require less savings or debt.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "increase",
+              "amount": 5000
+            },
+            "financial_confidence_points": 20
+          }
+        },
+        {
+          "id": "J1-BM1-ST3-C2",
+          "label": "Spend all of it on a want",
+          "classification": "risky",
+          "immediateFeedback": "The extra income provides immediate enjoyment.",
+          "shortTermConsequence": "No additional emergency protection is created.",
+          "laterConsequence": "The repair may place more pressure on savings or debt.",
+          "stateChanges": {
+            "optional_spending_available": {
+              "operation": "increase",
+              "amount": 5000
+            },
+            "wants_purchased": {
+              "operation": "increase",
+              "amount": 1
+            },
+            "financial_confidence_points": 6
+          }
+        },
+        {
+          "id": "J1-BM1-ST3-C3",
+          "label": "Save Rs. 3,000 and spend Rs. 2,000",
+          "classification": "reasonable",
+          "immediateFeedback": "Part of the income is protected and part supports enjoyment.",
+          "shortTermConsequence": "The emergency fund increases by Rs. 3,000.",
+          "laterConsequence": "The repair still needs another funding source.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "increase",
+              "amount": 3000
+            },
+            "optional_spending_available": {
+              "operation": "increase",
+              "amount": 2000
+            },
+            "wants_purchased": {
+              "operation": "increase",
+              "amount": 1
+            },
+            "financial_confidence_points": 18
+          }
+        },
+        {
+          "id": "J1-BM1-ST3-C4",
+          "label": "Keep all Rs. 5,000 available as a buffer",
+          "classification": "reasonable",
+          "immediateFeedback": "The extra income remains flexible.",
+          "shortTermConsequence": "The monthly buffer grows.",
+          "laterConsequence": "The money can help with the repair but is not formally protected.",
+          "stateChanges": {
+            "monthly_buffer": {
+              "operation": "increase",
+              "amount": 5000
+            },
+            "financial_confidence_points": 16
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Saving all is generally strongest because the learner begins with no emergency fund.",
+        "reasonableAlternatives": [
+          "Saving part and spending part is reasonable when existing savings are strong.",
+          "Keeping the money available is reasonable when a necessary cost is expected soon."
+        ],
+        "tradeOff": "More enjoyment now means less protection later."
+      },
+      "validation": {
+        "method": "Accept one choice and apply its state changes.",
+        "invalidStateFeedback": "No choice is invalid. Review the trade-off.",
+        "retryBehaviour": "Allow one revision before confirmation."
+      },
+      "accessibilityAlternative": {
+        "method": "Use four labelled buttons.",
+        "instruction": "Choose how to use the extra income and listen to the balance changes."
+      },
+      "stateSummary": {
+        "title": "Extra Income Assigned",
+        "changedValues": [
+          {
+            "field": "emergency_fund_or_buffer_or_optional_spending",
+            "previousAmountSource": "state_before_choice",
+            "newAmountSource": "state_after_choice",
+            "reason": "The decision changes the resources available later."
+          }
+        ],
+        "learningMessage": "Saving first turns unexpected income into future choices.",
+        "nextStageTeaser": "An essential repair will test your plan."
+      }
+    },
+    {
+      "id": "J1-BM1-ST4",
+      "stageNumber": 4,
+      "title": "The Phone Emergency",
+      "timelineLabel": "Week 3",
+      "conceptsAssessed": [
+        "emergency_fund",
+        "budget_adjustment",
+        "needs_versus_wants",
+        "responsible_borrowing"
+      ],
+      "interactionType": "decision_tree_predict_outcome",
+      "situation": "Your phone stops working. The Rs. 8,000 repair is essential for work and communication. The resources available depend on earlier choices.",
+      "objective": "Predict which response best protects needs, then choose how to pay.",
+      "stateBefore": {
+        "repairCost": 8000,
+        "generalSavingsSource": "general_savings",
+        "emergencyFundSource": "emergency_fund",
+        "monthlyBufferSource": "monthly_buffer",
+        "optionalSpendingSource": "optional_spending_available",
+        "debtSource": "debt_balance",
+        "needsCoveredSource": "essential_expenses_covered"
+      },
+      "config": {
+        "prediction": {
+          "question": "Which approach is most likely to protect essential needs and limit new debt?",
+          "options": [
+            {
+              "id": "J1-BM1-ST4-P1",
+              "label": "Use prepared emergency money and accessible savings",
+              "isPreferred": true
+            },
+            {
+              "id": "J1-BM1-ST4-P2",
+              "label": "Borrow immediately without checking resources",
+              "isPreferred": false
+            },
+            {
+              "id": "J1-BM1-ST4-P3",
+              "label": "Skip another essential payment",
+              "isPreferred": false
+            },
+            {
+              "id": "J1-BM1-ST4-P4",
+              "label": "Ignore the repair",
+              "isPreferred": false
+            }
+          ],
+          "explanation": "Prepared savings and flexible categories can reduce pressure, but the strongest choice depends on available balances."
+        },
+        "repairCost": 8000,
+        "cashValidationRule": "selected_cash_sources_must_total_at_least_8000"
+      },
+      "choices": [
+        {
+          "id": "J1-BM1-ST4-C1",
+          "label": "Use emergency money first, then accessible savings",
+          "classification": "recommended",
+          "immediateFeedback": "The repair is paid from resources prepared earlier.",
+          "shortTermConsequence": "The phone is repaired without missing another need.",
+          "laterConsequence": "Savings may need rebuilding.",
+          "stateChanges": {
+            "fundingOrder": [
+              "emergency_fund",
+              "general_savings",
+              "monthly_buffer"
+            ],
+            "totalDeduction": 8000,
+            "debtChange": 0,
+            "missedObligationsChange": 0
+          }
+        },
+        {
+          "id": "J1-BM1-ST4-C2",
+          "label": "Borrow Rs. 8,000",
+          "classification": "risky",
+          "immediateFeedback": "The repair is completed, but debt is created.",
+          "shortTermConsequence": "Savings remain available.",
+          "laterConsequence": "Future income must cover repayment.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 8000
+            }
+          }
+        },
+        {
+          "id": "J1-BM1-ST4-C3",
+          "label": "Skip transport payments",
+          "classification": "risky",
+          "immediateFeedback": "The repair is paid, but an essential obligation is left uncovered.",
+          "shortTermConsequence": "Reaching work may become difficult.",
+          "laterConsequence": "The dashboard records a missed need.",
+          "stateChanges": {
+            "missed_obligations": {
+              "operation": "increase",
+              "amount": 8000
+            },
+            "essential_expenses_covered": false
+          }
+        },
+        {
+          "id": "J1-BM1-ST4-C4",
+          "label": "Reduce optional spending and use savings for the rest",
+          "classification": "reasonable",
+          "immediateFeedback": "Flexible money is redirected to the repair.",
+          "shortTermConsequence": "The phone can be repaired without debt when enough resources exist.",
+          "laterConsequence": "The month includes less enjoyment and lower savings.",
+          "stateChanges": {
+            "fundingOrder": [
+              "optional_spending_available",
+              "monthly_buffer",
+              "general_savings"
+            ],
+            "totalDeduction": 8000,
+            "debtChange": 0,
+            "missedObligationsChange": 0
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Use emergency savings first when available, then accessible savings or buffer.",
+        "reasonableAlternatives": [
+          "Reducing optional spending is strong when emergency savings are insufficient.",
+          "Borrowing may be reasonable when the repair is essential and accessible resources are insufficient."
+        ],
+        "tradeOff": "Using savings reduces future protection; borrowing preserves cash but creates repayment pressure."
+      },
+      "validation": {
+        "method": "Confirm cash-funded sources total Rs. 8,000 or apply the borrowing or missed-obligation result.",
+        "invalidStateFeedback": "Those sources do not total Rs. 8,000.",
+        "retryBehaviour": "Risky valid choices may continue. Insufficient cash choices must be revised."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled choice buttons and announce each source used.",
+        "instruction": "Choose a repair response and listen to updated savings, debt, and needs."
+      },
+      "stateSummary": {
+        "title": "The Month's Final Test",
+        "changedValues": [
+          {
+            "field": "repair_funding",
+            "previousAmount": 0,
+            "newAmount": 8000,
+            "reason": "The repair is paid using the selected sources."
+          },
+          {
+            "field": "debt_or_savings",
+            "previousAmountSource": "state_before_choice",
+            "newAmountSource": "state_after_choice",
+            "reason": "The emergency response changes the final position."
+          }
+        ],
+        "learningMessage": "Earlier saving and flexible spending choices determine which emergency responses are available.",
+        "nextStageTeaser": "Review the final dashboard."
+      }
+    }
+  ],
+  "consequenceMap": [
+    {
+      "id": "J1-BM1-CM1",
+      "sourceStageId": "J1-BM1-ST1",
+      "sourceChoiceId": "budget_savings_allocation",
+      "affectedStateField": "general_savings",
+      "targetStageId": "J1-BM1-ST4",
+      "laterConsequence": "A larger saving allocation creates more non-debt repair options.",
+      "educationalPurpose": "Shows why saving belongs inside the budget."
+    },
+    {
+      "id": "J1-BM1-CM2",
+      "sourceStageId": "J1-BM1-ST1",
+      "sourceChoiceId": "budget_entertainment_allocation",
+      "affectedStateField": "optional_spending_available",
+      "targetStageId": "J1-BM1-ST4",
+      "laterConsequence": "Unspent optional money can be redirected to the repair.",
+      "educationalPurpose": "Shows that wants are flexible rather than automatically irresponsible."
+    },
+    {
+      "id": "J1-BM1-CM3",
+      "sourceStageId": "J1-BM1-ST3",
+      "sourceChoiceId": "J1-BM1-ST3-C1",
+      "affectedStateField": "emergency_fund",
+      "targetStageId": "J1-BM1-ST4",
+      "laterConsequence": "Saving all extra income covers most of the repair.",
+      "educationalPurpose": "Connects saving first with emergency readiness."
+    },
+    {
+      "id": "J1-BM1-CM4",
+      "sourceStageId": "J1-BM1-ST3",
+      "sourceChoiceId": "J1-BM1-ST3-C2",
+      "affectedStateField": "emergency_fund",
+      "targetStageId": "J1-BM1-ST4",
+      "laterConsequence": "Spending all extra income leaves no new emergency protection.",
+      "educationalPurpose": "Shows the delayed trade-off of immediate spending."
+    },
+    {
+      "id": "J1-BM1-CM5",
+      "sourceStageId": "J1-BM1-ST4",
+      "sourceChoiceId": "J1-BM1-ST4-C2",
+      "affectedStateField": "debt_balance",
+      "targetStageId": "J1-BM1-COMPLETE",
+      "laterConsequence": "The dashboard shows an Rs. 8,000 obligation.",
+      "educationalPurpose": "Shows that borrowing changes the ending position."
+    },
+    {
+      "id": "J1-BM1-CM6",
+      "sourceStageId": "J1-BM1-ST4",
+      "sourceChoiceId": "J1-BM1-ST4-C3",
+      "affectedStateField": "missed_obligations",
+      "targetStageId": "J1-BM1-COMPLETE",
+      "laterConsequence": "Essential needs are marked as needing attention.",
+      "educationalPurpose": "Shows that shifting money away from one need creates another problem."
+    }
+  ],
+  "midMissionCheckpoint": {
+    "id": "J1-BM1-CHECKPOINT",
+    "title": "Halfway Through the Month",
+    "currentStateSummary": {
+      "generalSavingsSource": "general_savings",
+      "emergencyFundSource": "emergency_fund",
+      "debtSource": "debt_balance",
+      "needsCoveredSource": "essential_expenses_covered",
+      "optionalSpendingSource": "optional_spending_available"
+    },
+    "positiveDecisionFeedbackRules": [
+      {
+        "condition": "needs_covered_and_savings_increased",
+        "message": "You protected your essential needs and increased savings."
+      },
+      {
+        "condition": "needs_covered",
+        "message": "Your essential monthly costs are covered."
+      }
+    ],
+    "emergingRiskFeedbackRules": [
+      {
+        "condition": "emergency_fund_zero_and_buffer_below_3000",
+        "message": "You have little protection if an unexpected expense appears."
+      },
+      {
+        "condition": "optional_spending_zero",
+        "message": "Your plan may feel restrictive if no room remains for enjoyment."
+      },
+      {
+        "condition": "general_savings_below_8000",
+        "message": "A large surprise could place pressure on your savings."
+      }
+    ],
+    "reflectionQuestion": "Continue with this plan, or review the budget before the next event?",
+    "primaryActionLabel": "Continue the Month",
+    "reviewActionLabel": "Review My Budget"
+  },
+  "finalChallenge": {
+    "id": "J1-BM1-FINAL",
+    "title": "The Phone Repair",
+    "situation": "In Week 3, the learner must cover an essential Rs. 8,000 repair using resources created by earlier budgeting and saving decisions.",
+    "conceptsCombined": [
+      "emergency_savings",
+      "needs_versus_wants",
+      "budget_adjustment",
+      "responsible_borrowing"
+    ],
+    "interactionType": "decision_tree_predict_outcome",
+    "stateBefore": {
+      "generalSavingsSource": "general_savings",
+      "emergencyFundSource": "emergency_fund",
+      "monthlyBufferSource": "monthly_buffer",
+      "optionalSpendingSource": "optional_spending_available",
+      "debtSource": "debt_balance",
+      "repairCost": 8000
+    },
+    "configSourceStageId": "J1-BM1-ST4",
+    "recommendedReasoning": "Use prepared emergency money when available. Reducing optional spending is also reasonable. Borrowing may be necessary when accessible resources are insufficient, but skipping another essential payment shifts the problem."
+  },
+  "debrief": {
+    "id": "J1-BM1-DEBRIEF",
+    "title": "A Budget Is More Than Planned Bills",
+    "content": "You managed one month by balancing essential costs, savings, enjoyment, extra income, and an unexpected repair. A successful budget also creates flexibility when real life changes. Saving before optional spending can reduce pressure later, while affordable wants may still fit. Borrowing can help when an essential cost cannot otherwise be covered, but it creates future obligations. The strongest response depends on the resources and priorities already in place.",
+    "simpleSummary": "Balance needs, wants, savings, and flexibility before the surprise arrives.",
+    "illustration": "Needs, savings, flexibility, and thoughtful decisions form a shield around the monthly calendar."
+  },
+  "scoring": {
+    "maximumScore": 100,
+    "dimensions": [
+      {
+        "id": "budget_quality",
+        "label": "Budget Quality",
+        "maximumPoints": 25,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": ["J1-BM1-ST1"],
+        "positiveRules": [
+          "25 points for essentials, saving, affordability, and enjoyment or a buffer.",
+          "20 points for essentials and saving with no optional spending.",
+          "15 points for essentials with no saving."
+        ],
+        "deductions": [
+          "Invalid budgets must be revised before continuing."
+        ],
+        "learnerExplanation": "A strong budget protects needs and remains realistic."
+      },
+      {
+        "id": "needs_judgement",
+        "label": "Needs and Wants Judgement",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": ["J1-BM1-ST2"],
+        "positiveRules": [
+          "Six correct earns 20.",
+          "Five correct earns 16.",
+          "Four correct earns 12.",
+          "Three correct earns 8.",
+          "Fewer than three earns 4 after completion."
+        ],
+        "deductions": [],
+        "learnerExplanation": "Good decisions recognise needs, wants, and context."
+      },
+      {
+        "id": "saving_behaviour",
+        "label": "Saving Behaviour",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": ["J1-BM1-ST1", "J1-BM1-ST3"],
+        "positiveRules": [
+          "Save all extra income: 20.",
+          "Save part and spend part: 18.",
+          "Keep it as a buffer: 16.",
+          "Spend all: 6."
+        ],
+        "deductions": [
+          "Up to four points for no Stage 1 saving allocation."
+        ],
+        "learnerExplanation": "Saving before optional spending creates more future choices."
+      },
+      {
+        "id": "emergency_response",
+        "label": "Emergency Response",
+        "maximumPoints": 25,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": ["J1-BM1-ST4"],
+        "positiveRules": [
+          "Use emergency money and savings: 25.",
+          "Reduce optional spending and use savings: 22.",
+          "Borrow when necessary: 10.",
+          "Skip another essential payment: 0."
+        ],
+        "deductions": [],
+        "learnerExplanation": "The strongest response protects needs while limiting new pressure."
+      },
+      {
+        "id": "financial_adaptability",
+        "label": "Financial Adaptability",
+        "maximumPoints": 10,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": ["J1-BM1-ST3", "J1-BM1-ST4"],
+        "positiveRules": [
+          "Choice fits earlier resources and no need is missed: 10.",
+          "Avoidable debt despite sufficient resources: 6.",
+          "Debt with needs covered: 3.",
+          "Essential obligation missed: 0."
+        ],
+        "deductions": [],
+        "learnerExplanation": "Adaptability means changing the plan without losing sight of needs."
+      }
+    ],
+    "outcomeBasedPointsSeparatedFromDecisionQuality": true
+  },
+  "performanceLevels": [
+    {
+      "minimumScore": 0,
+      "maximumScore": 39,
+      "label": "Financially Vulnerable",
+      "description": "The month ended with uncovered needs, little preparation, or heavy debt pressure."
+    },
+    {
+      "minimumScore": 40,
+      "maximumScore": 69,
+      "label": "Building Stability",
+      "description": "Several decisions worked, but saving, prioritisation, or emergency preparation need attention."
+    },
+    {
+      "minimumScore": 70,
+      "maximumScore": 89,
+      "label": "Financially Prepared",
+      "description": "Most needs, savings, enjoyment, and emergency trade-offs were balanced effectively."
+    },
+    {
+      "minimumScore": 90,
+      "maximumScore": 100,
+      "label": "Strong Financial Habits",
+      "description": "The learner made consistent and adaptable decisions. This does not guarantee future financial success."
+    }
+  ],
+  "resultsDashboard": [
+    {
+      "id": "result_money_remaining",
+      "label": "Money Remaining",
+      "startingValueSource": "startingState.availableCash",
+      "finalValueSource": "monthly_buffer_plus_optional_spending_available",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_5000",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_1_and_4999",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_equals_0",
+          "label": "Developing"
+        }
+      ],
+      "explanationTemplate": "Flexible money left after planned and unexpected costs."
+    },
+    {
+      "id": "result_savings",
+      "label": "Savings Balance",
+      "startingValueSource": "startingState.generalSavings",
+      "finalValueSource": "general_savings",
+      "statusRules": [
+        {
+          "condition": "value_above_starting_value",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_equals_starting_value",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_below_starting_value_and_above_zero",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_equals_zero",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Savings changed through budgeting, extra income, and the repair."
+    },
+    {
+      "id": "result_emergency_fund",
+      "label": "Emergency Fund",
+      "startingValueSource": "startingState.emergencyFund",
+      "finalValueSource": "emergency_fund",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_5000",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_1_and_4999",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_zero_after_appropriate_use",
+          "label": "Used Appropriately"
+        },
+        {
+          "condition": "value_zero_with_unnecessary_debt",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Shows whether emergency money was created and used appropriately."
+    },
+    {
+      "id": "result_debt",
+      "label": "Debt Balance",
+      "startingValueSource": "startingState.debtBalance",
+      "finalValueSource": "debt_balance",
+      "statusRules": [
+        {
+          "condition": "value_equals_zero",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_1_and_8000",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_above_8000",
+          "label": "At Risk"
+        }
+      ],
+      "explanationTemplate": "Debt appears when borrowing funds the repair."
+    },
+    {
+      "id": "result_needs",
+      "label": "Essential Needs Covered",
+      "startingValueSource": "false",
+      "finalValueSource": "essential_expenses_covered_and_no_missed_obligations",
+      "statusRules": [
+        {
+          "condition": "true",
+          "label": "Strong"
+        },
+        {
+          "condition": "false",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Shows whether the budget and emergency choice protected essentials."
+    },
+    {
+      "id": "result_wants",
+      "label": "Wants Managed",
+      "startingValueSource": "0",
+      "finalValueSource": "wants_purchased_and_optional_spending_available",
+      "statusRules": [
+        {
+          "condition": "wants_with_needs_covered",
+          "label": "Balanced"
+        },
+        {
+          "condition": "no_wants_and_positive_savings",
+          "label": "Stable"
+        },
+        {
+          "condition": "wants_with_needs_uncovered",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Enjoyment is not penalised when it fits beside needs and saving."
+    },
+    {
+      "id": "result_score",
+      "label": "Financial Confidence Score",
+      "startingValueSource": "0",
+      "finalValueSource": "final_score",
+      "statusRules": [
+        {
+          "condition": "0_to_39",
+          "label": "Financially Vulnerable"
+        },
+        {
+          "condition": "40_to_69",
+          "label": "Building Stability"
+        },
+        {
+          "condition": "70_to_89",
+          "label": "Financially Prepared"
+        },
+        {
+          "condition": "90_to_100",
+          "label": "Strong Financial Habits"
+        }
+      ],
+      "explanationTemplate": "The score rewards balanced decisions rather than simply the most money."
+    }
+  ],
+  "personalisedFeedbackRules": {
+    "strengthRules": [
+      {
+        "id": "strength_budget",
+        "condition": "budget_quality_score_at_least_20",
+        "message": "You built a budget that protected essential costs and future priorities."
+      },
+      {
+        "id": "strength_saving",
+        "condition": "saving_behaviour_score_at_least_16",
+        "message": "You used extra income to strengthen savings or flexibility."
+      },
+      {
+        "id": "strength_emergency",
+        "condition": "emergency_response_score_at_least_22",
+        "message": "You handled the phone repair without sacrificing another essential need."
+      },
+      {
+        "id": "strength_needs",
+        "condition": "needs_judgement_score_at_least_16",
+        "message": "You recognised essential, optional, and context-dependent expenses."
+      }
+    ],
+    "improvementRules": [
+      {
+        "id": "improve_buffer",
+        "condition": "emergency_fund_zero_and_general_savings_below_8000",
+        "message": "A small emergency buffer earlier would have created more options."
+      },
+      {
+        "id": "improve_debt",
+        "condition": "debt_balance_above_zero",
+        "message": "The repair created debt. Review whether savings or flexible spending could reduce future borrowing."
+      },
+      {
+        "id": "improve_needs",
+        "condition": "missed_obligations_above_zero",
+        "message": "An essential payment was missed. Protecting needs first would make the plan more stable."
+      },
+      {
+        "id": "improve_saving",
+        "condition": "saving_behaviour_score_below_12",
+        "message": "Saving part of the extra income could reduce later pressure."
+      }
+    ],
+    "tradeoffRules": [
+      {
+        "id": "tradeoff_wants",
+        "condition": "wants_purchased_and_needs_covered",
+        "message": "You kept enjoyment without losing essential coverage. The trade-off was slower saving."
+      },
+      {
+        "id": "tradeoff_saving",
+        "condition": "no_optional_spending_and_savings_increased",
+        "message": "You prioritised saving strongly. The trade-off was a more restrictive month."
+      },
+      {
+        "id": "tradeoff_borrowing",
+        "condition": "debt_balance_above_zero",
+        "message": "Borrowing solved the repair but created a repayment obligation."
+      }
+    ],
+    "practicalPrinciple": "Cover needs, save something early, and keep enough flexibility to handle a surprise.",
+    "replayMessage": "Replay with a different budget or extra-income choice to see how the repair options change."
+  },
+  "quiz": {
+    "id": "J1-BM1-QUIZ",
+    "questions": [
+      {
+        "id": "J1-BM1-Q1",
+        "questionType": "combined_recognition",
+        "question": "Which monthly plan uses budgeting and emergency preparation together?",
+        "options": [
+          {
+            "id": "J1-BM1-Q1-O1",
+            "label": "Cover planned bills and spend every remaining rupee",
+            "isCorrect": false,
+            "feedback": "This leaves no protection for surprises."
+          },
+          {
+            "id": "J1-BM1-Q1-O2",
+            "label": "Cover needs, save early, and include affordable wants",
+            "isCorrect": true,
+            "feedback": "Correct. The plan balances current life with preparation."
+          },
+          {
+            "id": "J1-BM1-Q1-O3",
+            "label": "Reduce food spending to increase savings",
+            "isCorrect": false,
+            "feedback": "Saving should not make essential needs unaffordable."
+          },
+          {
+            "id": "J1-BM1-Q1-O4",
+            "label": "Borrow whenever anything unexpected happens",
+            "isCorrect": false,
+            "feedback": "Borrowing may help but creates a future obligation."
+          }
+        ],
+        "correctAnswerId": "J1-BM1-Q1-O2",
+        "correctExplanation": "A balanced plan covers needs, saves before optional spending, and allows affordable enjoyment.",
+        "conceptsTested": [
+          "budgeting",
+          "saving_first",
+          "emergency_preparation"
+        ],
+        "misconceptionTested": "A budget only needs to cover planned expenses."
+      },
+      {
+        "id": "J1-BM1-Q2",
+        "questionType": "combined_misconception",
+        "question": "Why should a monthly budget include savings before the month ends?",
+        "options": [
+          {
+            "id": "J1-BM1-Q2-O1",
+            "label": "Every month guarantees an emergency",
+            "isCorrect": false,
+            "feedback": "An emergency is not guaranteed, but preparation creates options."
+          },
+          {
+            "id": "J1-BM1-Q2-O2",
+            "label": "Saving early protects money from being fully spent",
+            "isCorrect": true,
+            "feedback": "Correct. Saving becomes planned instead of depending on leftovers."
+          },
+          {
+            "id": "J1-BM1-Q2-O3",
+            "label": "Wants are always irresponsible",
+            "isCorrect": false,
+            "feedback": "Affordable wants may fit after needs and future priorities."
+          },
+          {
+            "id": "J1-BM1-Q2-O4",
+            "label": "Savings remove the need for a budget",
+            "isCorrect": false,
+            "feedback": "Savings work best as part of a complete budget."
+          }
+        ],
+        "correctAnswerId": "J1-BM1-Q2-O2",
+        "correctExplanation": "Saving first turns saving into a planned action.",
+        "conceptsTested": [
+          "saving_first",
+          "budgeting"
+        ],
+        "misconceptionTested": "Saving should only happen at the end of the month."
+      },
+      {
+        "id": "J1-BM1-Q3",
+        "questionType": "new_application",
+        "question": "A Rs. 6,000 medical cost appears. You have Rs. 3,000 emergency savings, Rs. 4,000 optional money, and no debt. What is the strongest response?",
+        "options": [
+          {
+            "id": "J1-BM1-Q3-O1",
+            "label": "Skip transport and keep the optional money",
+            "isCorrect": false,
+            "feedback": "This leaves another essential need uncovered."
+          },
+          {
+            "id": "J1-BM1-Q3-O2",
+            "label": "Use emergency savings and reduce optional spending",
+            "isCorrect": true,
+            "feedback": "Correct. This uses prepared savings and a flexible category."
+          },
+          {
+            "id": "J1-BM1-Q3-O3",
+            "label": "Borrow the full amount immediately",
+            "isCorrect": false,
+            "feedback": "Accessible resources can cover the cost without debt."
+          },
+          {
+            "id": "J1-BM1-Q3-O4",
+            "label": "Ignore the cost because it was not budgeted",
+            "isCorrect": false,
+            "feedback": "An essential unexpected cost still needs a response."
+          }
+        ],
+        "correctAnswerId": "J1-BM1-Q3-O2",
+        "correctExplanation": "The response combines emergency preparation and flexible spending without missing a need.",
+        "conceptsTested": [
+          "emergency_fund",
+          "needs_versus_wants",
+          "budget_adjustment"
+        ],
+        "misconceptionTested": "Borrowing is always the best emergency solution."
+      }
+    ]
+  },
+  "completion": {
+    "id": "J1-BM1-COMPLETE",
+    "headline": "Month Survived!",
+    "achievementMessage": "You managed a complete month by balancing essential needs, savings, enjoyment, extra income, and an unexpected repair.",
+    "scoreSource": "final_score",
+    "performanceLevelSource": "performance_level",
+    "conceptsMasteredSource": "dimensions_at_or_above_70_percent",
+    "conceptNeedingPracticeSource": "lowest_scoring_dimension",
+    "xpReward": 200,
+    "progressMessage": "Journey Boss complete in Become Money Smart.",
+    "nextTeaser": "Next, explore how rising prices can weaken what the same monthly budget can buy.",
+    "animation": "A thirty-day calendar completes as needs, savings, and emergency icons form a balanced shield.",
+    "replayButtonLabel": "Try Another Strategy",
+    "continueButtonLabel": "Continue Journey"
+  },
+  "realLifeChallenge": {
+    "id": "J1-BM1-CHALLENGE",
+    "title": "Plan for One Surprise",
+    "instruction": "Write one fictional weekly expense, label it Need, Want, or Depends, and note one free adjustment you could make if an emergency appeared. Do not share private financial information or move money.",
+    "buttonLabel": "My Backup Plan Is Ready"
+  },
+  "reviewChecklist": [
+    {
+      "item": "Reviews only previously taught concepts",
+      "status": "PASS"
+    },
+    {
+      "item": "Does not introduce unexplained major concepts",
+      "status": "PASS"
+    },
+    {
+      "item": "Concepts are combined accurately",
+      "status": "PASS"
+    },
+    {
+      "item": "Financial amounts are internally consistent",
+      "status": "PASS"
+    },
+    {
+      "item": "Persistent values update correctly",
+      "status": "PASS"
+    },
+    {
+      "item": "Earlier decisions affect later stages",
+      "status": "PASS"
+    },
+    {
+      "item": "Interaction choices have meaningful consequences",
+      "status": "PASS"
+    },
+    {
+      "item": "Multiple reasonable paths are allowed",
+      "status": "PASS"
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS"
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS"
+    },
+    {
+      "item": "Difficulty is Easy",
+      "status": "PASS"
+    },
+    {
+      "item": "No personalised investment advice",
+      "status": "NOT APPLICABLE"
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "NOT APPLICABLE"
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE"
+    },
+    {
+      "item": "No claims that markets always recover",
+      "status": "NOT APPLICABLE"
+    },
+    {
+      "item": "Simulated results are not forecasts",
+      "status": "PASS"
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS"
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS"
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS"
+    },
+    {
+      "item": "Interactions reinforce the objective",
+      "status": "PASS"
+    },
+    {
+      "item": "Scoring rewards decision quality rather than luck",
+      "status": "PASS"
+    },
+    {
+      "item": "Enjoyable spending is not automatically irresponsible",
+      "status": "PASS"
+    },
+    {
+      "item": "Risk-taking is not automatically rewarded",
+      "status": "NOT APPLICABLE"
+    },
+    {
+      "item": "Quiz corrects the combined misconception",
+      "status": "PASS"
+    },
+    {
+      "item": "Mission fits the specified duration",
+      "status": "PASS"
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS"
+    },
+    {
+      "item": "Accessibility alternatives are provided",
+      "status": "PASS"
+    },
+    {
+      "item": "Final dashboard matches the simulation outcomes",
+      "status": "PASS"
+    },
+    {
+      "item": "JSON matches the human-readable version",
+      "status": "PASS"
+    }
+  ]
+}
