@@ -1,0 +1,2478 @@
+{
+  "id": "J4-BM4",
+  "journeyId": "J4",
+  "journeyName": "Grow Wealth Wisely",
+  "title": "Survive a Market Crash",
+  "bossType": "journey_boss",
+  "unlocksAfterMissionId": "J4-M26",
+  "conceptsAssessed": [
+    {
+      "missionId": "J4-M21",
+      "missionTitle": "Diversification",
+      "concept": "Reduce dependence on one company, sector, or outcome.",
+      "assessedInStageIds": [
+        "J4-BM4-ST3",
+        "J4-BM4-ST5"
+      ]
+    },
+    {
+      "missionId": "J4-M23",
+      "missionTitle": "Volatility",
+      "concept": "Separate sharp price movement from permanent failure or guaranteed recovery.",
+      "assessedInStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST5"
+      ]
+    },
+    {
+      "missionId": "J4-M24",
+      "missionTitle": "Start Early",
+      "concept": "Use time as planning flexibility without assuming future growth.",
+      "assessedInStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST5"
+      ]
+    },
+    {
+      "missionId": "J4-M25",
+      "missionTitle": "Regular Investing",
+      "concept": "Follow or adjust an affordable contribution plan through changing prices.",
+      "assessedInStageIds": [
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ]
+    },
+    {
+      "missionId": "J4-M26",
+      "missionTitle": "Long-Term Investing",
+      "concept": "Review goals, investment quality, affordability, and emergency protection before reacting.",
+      "assessedInStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ]
+    }
+  ],
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 9,
+  "simulationPeriod": "five_years_after_initial_decline",
+  "currency": "PKR",
+  "locale": "en-PK",
+  "language": "English",
+  "learningObjective": "Apply volatility, diversification, regular investing, long-term planning, emergency-savings protection, and emotional control during a major market decline.",
+  "primaryMisconception": "A major market decline means every investment has permanently failed and should be sold immediately.",
+  "secondaryMisconceptions": [
+    "Market prices are guaranteed to recover after every decline.",
+    "Borrowing or using emergency savings is a good way to recover investment losses quickly.",
+    "Continuing regular investments during falling markets always guarantees a profit.",
+    "Diversification prevents all losses during a market crash."
+  ],
+  "keyTakeaway": "Review the plan, protect emergency money, and do not confuse falling prices with guaranteed failure or recovery.",
+  "overview": {
+    "summary": "The learner manages a long-term portfolio after a sudden 25% decline. Five connected stages test the first reaction, social pressure, concentration risk, monthly contributions, and a five-year simulation with a genuine emergency. Sales, borrowing, emergency-fund use, diversification, and contribution choices persist into later stages. The final dashboard measures realised losses, portfolio value, contributions, emergency protection, debt, emotional decisions, diversification, long-term discipline, and financial confidence. The experience should feel tense but controlled, with replayable trade-offs and no guaranteed market outcome."
+  },
+  "startingState": {
+    "availableCash": 30000,
+    "monthlyIncome": 0,
+    "generalSavings": 30000,
+    "emergencyFund": 100000,
+    "debtBalance": 0,
+    "monthlyDebtPayment": 0,
+    "investmentBalance": 150000,
+    "amountOriginallyInvested": 200000,
+    "additionalContributions": 0,
+    "realisedLosses": 0,
+    "unrealisedGainLoss": -50000,
+    "goalTarget": 0,
+    "goalProgress": 150000,
+    "monthlyContributionBudget": 10000,
+    "timeRemainingYears": 7,
+    "portfolioConcentrationLevel": "moderately_concentrated",
+    "diversificationScore": 55,
+    "emotionalDecisionScore": 50,
+    "longTermDisciplineScore": 50,
+    "financialConfidence": 0,
+    "negativeBalancesAllowed": false,
+    "essentialExpenseFailureRule": "Required debt payments and the Year 2 emergency must use a valid funding source before continuing."
+  },
+  "trackedStateFields": [
+    {
+      "key": "current_investment_balance",
+      "label": "Current Investment Balance",
+      "initialValue": 150000,
+      "minimumValue": 0,
+      "maximumValue": 1000000,
+      "increasesBy": [
+        "contributions",
+        "positive simulated movement"
+      ],
+      "decreasesBy": [
+        "sales",
+        "withdrawals",
+        "negative simulated movement"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "total_additional_contributions",
+      "label": "Total Additional Contributions",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 600000,
+      "increasesBy": [
+        "monthly contributions"
+      ],
+      "decreasesBy": [
+        "paused or redirected contributions"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "cash_outside_portfolio",
+      "label": "Cash Outside Portfolio",
+      "initialValue": 30000,
+      "minimumValue": 0,
+      "maximumValue": 300000,
+      "increasesBy": [
+        "sales",
+        "paused contributions"
+      ],
+      "decreasesBy": [
+        "emergencies",
+        "new investments"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "emergency_fund",
+      "label": "Emergency Fund",
+      "initialValue": 100000,
+      "minimumValue": 0,
+      "maximumValue": 150000,
+      "increasesBy": [
+        "top-ups"
+      ],
+      "decreasesBy": [
+        "genuine emergencies",
+        "investing emergency money"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "debt_balance",
+      "label": "Debt Balance",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 200000,
+      "increasesBy": [
+        "borrowing to invest",
+        "emergency borrowing"
+      ],
+      "decreasesBy": [
+        "classroom repayments"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_debt_payment",
+      "label": "Monthly Debt Payment",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 10000,
+      "increasesBy": [
+        "new borrowing"
+      ],
+      "decreasesBy": [
+        "completed repayment"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "realised_losses",
+      "label": "Realised Losses",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 200000,
+      "increasesBy": [
+        "selling below cost"
+      ],
+      "decreasesBy": [],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "unrealised_gain_loss",
+      "label": "Unrealised Gain or Loss",
+      "initialValue": -50000,
+      "minimumValue": -500000,
+      "maximumValue": 500000,
+      "increasesBy": [
+        "positive market movement"
+      ],
+      "decreasesBy": [
+        "negative market movement"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "portfolio_concentration_level",
+      "label": "Portfolio Concentration",
+      "initialValue": "moderately_concentrated",
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "greater dependence on one outcome"
+      ],
+      "decreasesBy": [
+        "spreading exposure"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST3",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "diversification_score",
+      "label": "Diversification Score",
+      "initialValue": 55,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "reducing concentration"
+      ],
+      "decreasesBy": [
+        "depending on one company or sector"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST3",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "emotional_decision_score",
+      "label": "Emotional Decision Score",
+      "initialValue": 50,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "reviewing evidence",
+        "checking goals"
+      ],
+      "decreasesBy": [
+        "panic selling",
+        "following predictions",
+        "assuming guaranteed recovery"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST2",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": false
+    },
+    {
+      "key": "long_term_discipline_score",
+      "label": "Long-Term Discipline Score",
+      "initialValue": 50,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "affordable planning",
+        "review before change"
+      ],
+      "decreasesBy": [
+        "investment debt",
+        "emergency-fund misuse",
+        "fear-only changes"
+      ],
+      "affectedByStageIds": [
+        "J4-BM4-ST1",
+        "J4-BM4-ST4",
+        "J4-BM4-ST5"
+      ],
+      "displayThroughoutMission": false
+    }
+  ],
+  "screens": [
+    {
+      "id": "J4-BM4-S01",
+      "type": "hook",
+      "title": "Your Portfolio Just Fell",
+      "content": "Rs. 200,000 becomes Rs. 150,000 overnight. Headlines shout, friends panic, and your seven-year goal remains. What do you do first?",
+      "illustration": "A portfolio card drops beside urgent headlines and a seven-year calendar.",
+      "primaryAction": {
+        "label": "Enter the Crash",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-BM4-S02",
+      "type": "scenario_setup",
+      "title": "The Starting Drop",
+      "content": "Your long-term portfolio has fallen 25%. The Rs. 50,000 decline is still unrealised because you have not sold.",
+      "illustration": "A before-and-after portfolio card.",
+      "stateSummary": {
+        "amountOriginallyInvested": 200000,
+        "investmentBalance": 150000,
+        "unrealisedGainLoss": -50000
+      },
+      "primaryAction": {
+        "label": "View Your Safety Net",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-BM4-S03",
+      "type": "scenario_setup",
+      "title": "Money Outside the Market",
+      "content": "You have Rs. 30,000 general savings and a separate Rs. 100,000 emergency fund. Neither is part of the portfolio.",
+      "illustration": "Three separate containers for investments, cash, and emergency savings.",
+      "stateSummary": {
+        "generalSavings": 30000,
+        "emergencyFund": 100000,
+        "debtBalance": 0
+      },
+      "primaryAction": {
+        "label": "Check the Plan",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-BM4-S04",
+      "type": "scenario_setup",
+      "title": "Seven Years Still Remain",
+      "content": "The goal is at least seven years away. You also planned an affordable Rs. 10,000 monthly contribution.",
+      "illustration": "A seven-year timeline beside a monthly contribution card.",
+      "stateSummary": {
+        "timeRemainingYears": 7,
+        "monthlyContributionBudget": 10000
+      },
+      "primaryAction": {
+        "label": "Choose Your First Move",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J4-BM4-S05",
+      "type": "pre_simulation_question",
+      "title": "What Should Come First?",
+      "question": "What should guide your first response to the 25% decline?",
+      "options": [
+        {
+          "id": "J4-BM4-PQ-O1",
+          "label": "The loudest headline",
+          "isRecommended": false,
+          "feedback": "Headlines cannot decide whether the portfolio still fits the goal."
+        },
+        {
+          "id": "J4-BM4-PQ-O2",
+          "label": "A review of the goal, time horizon, and investment quality",
+          "isRecommended": true,
+          "feedback": "Correct. Review creates space for evidence before fear or hope drives the decision."
+        },
+        {
+          "id": "J4-BM4-PQ-O3",
+          "label": "A guarantee that prices will recover",
+          "isRecommended": false,
+          "feedback": "No one can guarantee recovery."
+        },
+        {
+          "id": "J4-BM4-PQ-O4",
+          "label": "Borrowing enough to replace the loss",
+          "isRecommended": false,
+          "feedback": "Borrowing adds repayment pressure without reversing the existing decline."
+        }
+      ],
+      "recommendedAnswerId": "J4-BM4-PQ-O2",
+      "connectionToSimulation": "The next five stages test review, social pressure, diversification, affordability, emergency protection, and uncertainty."
+    }
+  ],
+  "stages": [
+    {
+      "id": "J4-BM4-ST1",
+      "stageNumber": 1,
+      "title": "First Market Drop",
+      "timelineLabel": "Day 1",
+      "conceptsAssessed": [
+        "volatility",
+        "long_term_planning",
+        "emotional_control"
+      ],
+      "interactionType": "decision_tree",
+      "situation": "The portfolio has fallen from Rs. 200,000 to Rs. 150,000. The goal is still at least seven years away, but frightening headlines create pressure to act immediately.",
+      "objective": "Choose the first response and understand how it changes realised losses, debt, and later options.",
+      "stateBefore": {
+        "investmentBalance": 150000,
+        "amountOriginallyInvested": 200000,
+        "realisedLosses": 0,
+        "unrealisedGainLoss": -50000,
+        "debtBalance": 0,
+        "emergencyFund": 100000
+      },
+      "config": {
+        "startingNode": {
+          "id": "J4-BM4-ST1-N1",
+          "question": "What do you do first?"
+        },
+        "followUpNodes": [
+          {
+            "id": "J4-BM4-ST1-N2",
+            "condition": "review_selected",
+            "question": "What should the review include?",
+            "preferredElements": [
+              "original_goal",
+              "time_horizon",
+              "portfolio_quality",
+              "fees",
+              "diversification",
+              "need_for_money"
+            ]
+          }
+        ],
+        "terminalOutcomes": [
+          "sold_after_decline",
+          "review_started",
+          "borrowed_to_invest",
+          "remained_invested_without_review"
+        ],
+        "tradeOffSummary": [
+          {
+            "choice": "sell_everything",
+            "benefit": "removes_future_market_exposure",
+            "risk": "realises_the_current_loss"
+          },
+          {
+            "choice": "review_plan",
+            "benefit": "supports_an_informed_decision",
+            "risk": "uncertainty_remains"
+          },
+          {
+            "choice": "borrow_to_invest",
+            "benefit": "adds_market_exposure",
+            "risk": "creates_debt"
+          },
+          {
+            "choice": "ignore_without_checking",
+            "benefit": "avoids_an_immediate_sale",
+            "risk": "may_miss_real_problems"
+          }
+        ],
+        "educationalAssumptions": [
+          "Borrowing Rs. 50,000 creates ten equal classroom repayments of Rs. 5,000.",
+          "No interest rate or fee is invented.",
+          "Selling at Rs. 150,000 realises the Rs. 50,000 decline.",
+          "Reviewing does not assume recovery."
+        ]
+      },
+      "choices": [
+        {
+          "id": "J4-BM4-ST1-C1",
+          "label": "Sell everything immediately",
+          "classification": "risky",
+          "classificationReason": "The sale happens before reviewing the goal or investment quality.",
+          "immediateFinancialEffect": "The portfolio is sold for Rs. 150,000.",
+          "immediateFeedback": "Selling removes future price uncertainty, but the Rs. 50,000 decline becomes realised.",
+          "shortTermConsequence": "Cash outside the portfolio becomes Rs. 180,000.",
+          "laterConsequence": "Later market paths affect only money invested again.",
+          "stateChanges": {
+            "current_investment_balance": 0,
+            "cash_outside_portfolio": {
+              "operation": "increase",
+              "amount": 150000
+            },
+            "realised_losses": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "unrealised_gain_loss": 0,
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 25
+            },
+            "long_term_discipline_score": {
+              "operation": "decrease",
+              "amount": 20
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST1-C2",
+          "label": "Review the investment plan",
+          "classification": "recommended",
+          "classificationReason": "It separates evidence from immediate emotional pressure.",
+          "immediateFinancialEffect": "No sale or borrowing occurs.",
+          "immediateFeedback": "Review the goal, time horizon, quality, fees, diversification, and need for the money.",
+          "shortTermConsequence": "The Rs. 50,000 decline remains unrealised.",
+          "laterConsequence": "Later choices can respond to evidence instead of fear alone.",
+          "stateChanges": {
+            "emotional_decision_score": {
+              "operation": "increase",
+              "amount": 25
+            },
+            "long_term_discipline_score": {
+              "operation": "increase",
+              "amount": 20
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST1-C3",
+          "label": "Borrow Rs. 50,000 to recover the loss",
+          "classification": "high_risk",
+          "classificationReason": "Debt and market uncertainty are combined.",
+          "immediateFinancialEffect": "Debt and the portfolio each increase by Rs. 50,000.",
+          "immediateFeedback": "Borrowing does not recover the old loss. The new money may also fall.",
+          "shortTermConsequence": "Monthly debt payments become Rs. 5,000.",
+          "laterConsequence": "Only Rs. 5,000 of the monthly contribution budget remains flexible in Stage 4.",
+          "stateChanges": {
+            "current_investment_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "monthly_debt_payment": {
+              "operation": "increase",
+              "amount": 5000
+            },
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 30
+            },
+            "long_term_discipline_score": {
+              "operation": "decrease",
+              "amount": 25
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST1-C4",
+          "label": "Ignore everything without checking",
+          "classification": "risky",
+          "classificationReason": "Patience is used without reviewing whether the portfolio still fits.",
+          "immediateFinancialEffect": "No balance changes immediately.",
+          "immediateFeedback": "Avoiding panic can help, but long-term investing does not mean ignoring quality or suitability.",
+          "shortTermConsequence": "The decline remains unrealised.",
+          "laterConsequence": "A concentration or quality problem may remain hidden.",
+          "stateChanges": {
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 5
+            },
+            "long_term_discipline_score": {
+              "operation": "decrease",
+              "amount": 10
+            }
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Review the goal, time horizon, diversification, fees, and investment quality before making a major change.",
+        "reasonableAlternatives": [
+          "Selling may be reasonable after review if the investment is unsuitable or the money is needed sooner.",
+          "Remaining invested may be reasonable when the portfolio still fits, but only after review."
+        ],
+        "tradeOff": "Selling removes future market exposure but realises the loss; staying invested preserves uncertainty and possible future movement."
+      },
+      "validation": {
+        "method": "Accept one choice and apply all state changes.",
+        "invalidStateFeedback": "No choice is blocked. Review the trade-off before confirming.",
+        "retryBehaviour": "Risky choices may continue. The learner may revise once before the decision is carried forward."
+      },
+      "accessibilityAlternative": {
+        "method": "Present four labelled buttons and a balance summary.",
+        "instruction": "Choose one response and hear the investment, cash, debt, and loss changes."
+      },
+      "stateSummary": {
+        "title": "First Response Recorded",
+        "changedValues": [
+          {
+            "field": "current_investment_balance",
+            "previousAmount": 150000,
+            "newAmountSource": "selected_choice.current_investment_balance",
+            "reason": "Selling or borrowing changes market exposure."
+          },
+          {
+            "field": "realised_losses",
+            "previousAmount": 0,
+            "newAmountSource": "selected_choice.realised_losses",
+            "reason": "A loss becomes realised only when sold below cost."
+          },
+          {
+            "field": "debt_balance",
+            "previousAmount": 0,
+            "newAmountSource": "selected_choice.debt_balance",
+            "reason": "Borrowing creates a repayment obligation."
+          }
+        ],
+        "learningMessage": "A price decline and permanent investment failure are not automatically the same.",
+        "nextStageTeaser": "A friend now sends a confident prediction."
+      }
+    },
+    {
+      "id": "J4-BM4-ST2",
+      "stageNumber": 2,
+      "title": "Social Pressure",
+      "timelineLabel": "Day 2",
+      "conceptsAssessed": [
+        "emotional_control",
+        "evidence_based_review",
+        "volatility"
+      ],
+      "interactionType": "predict_outcome_decision_tree",
+      "situation": "A friend says, “Sell now. The market will never recover. Everyone who waits will lose everything.” Your balances from Stage 1 remain in place.",
+      "objective": "Predict what the message can prove, then choose how to respond.",
+      "stateBefore": {
+        "investmentBalanceSource": "current_investment_balance",
+        "cashSource": "cash_outside_portfolio",
+        "realisedLossesSource": "realised_losses",
+        "debtSource": "debt_balance"
+      },
+      "config": {
+        "prediction": {
+          "id": "J4-BM4-ST2-P1",
+          "situation": "A friend confidently predicts permanent market failure.",
+          "question": "What does the message prove?",
+          "options": [
+            {
+              "id": "J4-BM4-ST2-P1-O1",
+              "label": "The market will never recover",
+              "isPreferred": false,
+              "feedback": "A confident statement is not proof of a future result."
+            },
+            {
+              "id": "J4-BM4-ST2-P1-O2",
+              "label": "The friend is worried",
+              "isPreferred": true,
+              "feedback": "Correct. The message reveals emotion and opinion, not certainty."
+            },
+            {
+              "id": "J4-BM4-ST2-P1-O3",
+              "label": "Every investment has failed",
+              "isPreferred": false,
+              "feedback": "Different investments can have different problems and outcomes."
+            }
+          ],
+          "likelyEducationalOutcome": "The learner separates social pressure from evidence.",
+          "explanation": "Neither a friend nor the mission can know with certainty whether prices will recover.",
+          "confidenceSelection": {
+            "enabled": true,
+            "options": [
+              "not_sure",
+              "somewhat_sure",
+              "very_sure"
+            ]
+          }
+        },
+        "startingNode": {
+          "id": "J4-BM4-ST2-N1",
+          "question": "How do you respond?"
+        },
+        "followUpNodes": [
+          {
+            "id": "J4-BM4-ST2-N2",
+            "condition": "research_or_goal_review",
+            "question": "What should you distinguish?",
+            "preferredElements": [
+              "market_wide_movement",
+              "permanent_problem",
+              "temporary_volatility",
+              "portfolio_no_longer_fits_goal"
+            ]
+          }
+        ],
+        "terminalOutcomes": [
+          "sold_from_social_pressure",
+          "researched_decline",
+          "reviewed_goal",
+          "assumed_guaranteed_recovery"
+        ]
+      },
+      "choices": [
+        {
+          "id": "J4-BM4-ST2-C1",
+          "label": "Follow the friend and sell",
+          "classification": "risky",
+          "classificationReason": "The decision relies mainly on another person’s prediction.",
+          "immediateFinancialEffect": "Any remaining portfolio is sold at its current value.",
+          "immediateFeedback": "The sale removes future market exposure, but the decision is pressure-led.",
+          "shortTermConsequence": "The remaining portfolio moves to cash.",
+          "laterConsequence": "Later paths apply only to new contributions.",
+          "stateChanges": {
+            "current_investment_balance": 0,
+            "cash_outside_portfolio": {
+              "operation": "increase_by_current_investment_balance"
+            },
+            "realised_losses": {
+              "operation": "increase_by_absolute_negative_unrealised_loss"
+            },
+            "unrealised_gain_loss": 0,
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 25
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST2-C2",
+          "label": "Research the situation",
+          "classification": "recommended",
+          "classificationReason": "It checks causes and investment quality rather than one prediction.",
+          "immediateFinancialEffect": "No automatic sale occurs.",
+          "immediateFeedback": "Review what caused the decline and whether the holdings remain suitable.",
+          "shortTermConsequence": "Balances remain unchanged.",
+          "laterConsequence": "Stage 3 uses evidence instead of the friend’s claim.",
+          "stateChanges": {
+            "emotional_decision_score": {
+              "operation": "increase",
+              "amount": 20
+            },
+            "long_term_discipline_score": {
+              "operation": "increase",
+              "amount": 10
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST2-C3",
+          "label": "Review the original goal",
+          "classification": "recommended",
+          "classificationReason": "It checks whether the time horizon and strategy still fit.",
+          "immediateFinancialEffect": "No automatic sale occurs.",
+          "immediateFeedback": "Compare the seven-year goal with the portfolio and current needs.",
+          "shortTermConsequence": "Balances remain unchanged.",
+          "laterConsequence": "Contribution and emergency decisions stay linked to the goal.",
+          "stateChanges": {
+            "emotional_decision_score": {
+              "operation": "increase",
+              "amount": 20
+            },
+            "long_term_discipline_score": {
+              "operation": "increase",
+              "amount": 15
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST2-C4",
+          "label": "Assume recovery is guaranteed",
+          "classification": "risky",
+          "classificationReason": "Hope replaces review and genuine problems may be missed.",
+          "immediateFinancialEffect": "The portfolio remains invested without review.",
+          "immediateFeedback": "Remaining invested may fit, but guaranteed recovery is not a valid reason.",
+          "shortTermConsequence": "No balance changes immediately.",
+          "laterConsequence": "A weak company or unsuitable portfolio may remain unaddressed.",
+          "stateChanges": {
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 15
+            },
+            "long_term_discipline_score": {
+              "operation": "decrease",
+              "amount": 10
+            }
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Research the decline and review the original goal before following anyone’s prediction.",
+        "reasonableAlternatives": [
+          "Research and goal review are both strong and may be combined.",
+          "Selling may become reasonable after evidence shows the investment no longer fits."
+        ],
+        "tradeOff": "Research takes time while uncertainty remains, but it reduces dependence on fear or guaranteed-recovery assumptions."
+      },
+      "validation": {
+        "method": "Record the prediction, then one response.",
+        "invalidStateFeedback": "No response is blocked. Review whether it is based on evidence or prediction.",
+        "retryBehaviour": "The learner may revise before confirmation. The outcome then carries forward."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled prediction and response buttons.",
+        "instruction": "Choose what the message proves, then choose how to respond."
+      },
+      "stateSummary": {
+        "title": "Pressure Response Recorded",
+        "changedValues": [
+          {
+            "field": "emotional_decision_score",
+            "previousAmountSource": "score_before_stage",
+            "newAmountSource": "score_after_stage",
+            "reason": "Evidence-based choices improve the score."
+          },
+          {
+            "field": "realised_losses",
+            "previousAmountSource": "realised_losses_before_stage",
+            "newAmountSource": "realised_losses_after_stage",
+            "reason": "Selling turns an unrealised decline into a realised loss."
+          }
+        ],
+        "learningMessage": "A confident prediction is not evidence of permanent failure or guaranteed recovery.",
+        "nextStageTeaser": "Compare how concentration changes one company’s impact."
+      }
+    },
+    {
+      "id": "J4-BM4-ST3",
+      "stageNumber": 3,
+      "title": "Diversification Check",
+      "timelineLabel": "Week 1",
+      "conceptsAssessed": [
+        "diversification",
+        "concentration_risk",
+        "volatility"
+      ],
+      "interactionType": "before_vs_after",
+      "situation": "Two portfolios were each worth Rs. 200,000 before the decline. One depends on a single company. The other spreads money across companies, bonds, an ETF, and cash.",
+      "objective": "Compare the declines, identify concentration risk, and decide how to handle the learner’s own concentration.",
+      "stateBefore": {
+        "portfolioConcentrationLevelSource": "portfolio_concentration_level",
+        "diversificationScoreSource": "diversification_score"
+      },
+      "config": {
+        "beforeState": [
+          {
+            "id": "J4-BM4-ST3-A-BEFORE",
+            "label": "Portfolio A — Concentrated",
+            "totalValue": 200000,
+            "allocations": {
+              "one_company": 200000,
+              "bonds": 0,
+              "etf": 0,
+              "cash": 0
+            }
+          },
+          {
+            "id": "J4-BM4-ST3-B-BEFORE",
+            "label": "Portfolio B — Diversified",
+            "totalValue": 200000,
+            "allocations": {
+              "several_companies": 70000,
+              "bonds": 40000,
+              "etf": 60000,
+              "cash": 30000
+            }
+          }
+        ],
+        "afterState": [
+          {
+            "id": "J4-BM4-ST3-A-AFTER",
+            "label": "Portfolio A After Decline",
+            "totalValue": 110000,
+            "declineAmount": 90000,
+            "declinePercent": 45
+          },
+          {
+            "id": "J4-BM4-ST3-B-AFTER",
+            "label": "Portfolio B After Decline",
+            "totalValue": 160000,
+            "declineAmount": 40000,
+            "declinePercent": 20
+          }
+        ],
+        "valuesCompared": [
+          "dependence_on_one_outcome",
+          "decline_amount",
+          "decline_percent",
+          "asset_types",
+          "cash_access"
+        ],
+        "learnerQuestions": [
+          {
+            "id": "J4-BM4-ST3-Q1",
+            "question": "Which portfolio depends more heavily on one outcome?",
+            "correctAnswer": "portfolio_a"
+          },
+          {
+            "id": "J4-BM4-ST3-Q2",
+            "question": "Which portfolio experiences the larger decline?",
+            "correctAnswer": "portfolio_a"
+          },
+          {
+            "id": "J4-BM4-ST3-Q3",
+            "question": "Did diversification prevent Portfolio B from losing money?",
+            "correctAnswer": "no"
+          }
+        ],
+        "importantHiddenDifference": "Portfolio A depends entirely on one company; Portfolio B spreads exposure across several investment types.",
+        "explanation": "Diversification reduced dependence on one outcome in this illustration, but it did not prevent loss.",
+        "importantClarification": "This is educational only. Diversification can reduce concentration risk but cannot guarantee smaller losses in every decline."
+      },
+      "choices": [
+        {
+          "id": "J4-BM4-ST3-C1",
+          "label": "Reduce concentration gradually",
+          "classification": "recommended",
+          "classificationReason": "The portfolio becomes less dependent on one outcome without assuming risk disappears.",
+          "immediateFinancialEffect": "No forced sale amount is applied; the plan is marked for gradual spreading.",
+          "immediateFeedback": "Dependence on one company or sector falls.",
+          "shortTermConsequence": "Diversification score rises.",
+          "laterConsequence": "Weak simulated paths use the broadly spread setting.",
+          "stateChanges": {
+            "portfolio_concentration_level": "broadly_spread",
+            "diversification_score": {
+              "operation": "increase",
+              "amount": 30
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST3-C2",
+          "label": "Keep the concentration after a full review",
+          "classification": "reasonable",
+          "classificationReason": "The learner knowingly accepts higher concentration risk.",
+          "immediateFinancialEffect": "No sale occurs.",
+          "immediateFeedback": "The portfolio remains more dependent on one outcome.",
+          "shortTermConsequence": "Diversification score falls.",
+          "laterConsequence": "Weak paths apply a larger concentration adjustment.",
+          "stateChanges": {
+            "portfolio_concentration_level": "highly_concentrated",
+            "diversification_score": {
+              "operation": "decrease",
+              "amount": 20
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST3-C3",
+          "label": "Sell because diversification also lost money",
+          "classification": "risky",
+          "classificationReason": "The choice treats risk reduction as failure because it did not remove all loss.",
+          "immediateFinancialEffect": "Any remaining portfolio is sold.",
+          "immediateFeedback": "Diversification does not promise zero loss.",
+          "shortTermConsequence": "Market exposure falls to zero.",
+          "laterConsequence": "Only new contributions enter later paths.",
+          "stateChanges": {
+            "cash_outside_portfolio": {
+              "operation": "increase_by_current_investment_balance"
+            },
+            "current_investment_balance": 0,
+            "realised_losses": {
+              "operation": "increase_by_absolute_negative_unrealised_loss"
+            },
+            "unrealised_gain_loss": 0,
+            "diversification_score": {
+              "operation": "decrease",
+              "amount": 10
+            },
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 10
+            }
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Reduce extreme concentration when dependence on one outcome is high and the change fits the long-term plan.",
+        "reasonableAlternatives": [
+          "Keeping concentration may be reasonable only after understanding the higher risk and ability to tolerate it."
+        ],
+        "tradeOff": "More diversification reduces dependence on one outcome but cannot remove all market risk."
+      },
+      "validation": {
+        "method": "Check all three comparison questions, then one concentration response.",
+        "invalidStateFeedback": "Review which portfolio depends on one company and whether Portfolio B still lost money.",
+        "retryBehaviour": "Keep correct answers and retry only incorrect comparisons. Risky portfolio choices may continue."
+      },
+      "accessibilityAlternative": {
+        "method": "Present both portfolios as labelled tables with Previous and Next controls.",
+        "instruction": "Compare values, answer three questions, then choose a concentration response."
+      },
+      "stateSummary": {
+        "title": "Concentration Reviewed",
+        "changedValues": [
+          {
+            "field": "portfolio_concentration_level",
+            "previousAmountSource": "concentration_before_choice",
+            "newAmountSource": "selected_choice.concentration_level",
+            "reason": "The learner chose whether to reduce or keep dependence on one outcome."
+          },
+          {
+            "field": "diversification_score",
+            "previousAmountSource": "score_before_choice",
+            "newAmountSource": "score_after_choice",
+            "reason": "Spreading exposure improves the score without guaranteeing protection."
+          }
+        ],
+        "learningMessage": "Diversification reduces concentration risk; it does not prevent every loss.",
+        "nextStageTeaser": "Decide whether the Rs. 10,000 monthly contribution still fits."
+      }
+    },
+    {
+      "id": "J4-BM4-ST4",
+      "stageNumber": 4,
+      "title": "Regular Contribution",
+      "timelineLabel": "Month 1",
+      "conceptsAssessed": [
+        "regular_investing",
+        "affordability",
+        "emergency_savings_protection",
+        "investment_debt"
+      ],
+      "interactionType": "budget_builder_decision_tree",
+      "situation": "You still have a Rs. 10,000 monthly contribution budget. Any debt repayment created earlier must come first, and emergency savings should remain separate from long-term investing.",
+      "objective": "Build a valid monthly plan and choose whether to continue, pause, misuse emergency money, or borrow.",
+      "stateBefore": {
+        "monthlyContributionBudget": 10000,
+        "monthlyDebtPaymentSource": "monthly_debt_payment",
+        "emergencyFundSource": "emergency_fund",
+        "cashSource": "cash_outside_portfolio",
+        "debtSource": "debt_balance"
+      },
+      "config": {
+        "budgetBuilder": {
+          "totalAvailableAmount": 10000,
+          "requiredCategories": [
+            {
+              "id": "J4-BM4-ST4-B1",
+              "label": "Required Debt Repayment",
+              "minimumSource": "monthly_debt_payment",
+              "maximum": 10000,
+              "requiredWhen": "debt_balance_above_zero"
+            }
+          ],
+          "optionalCategories": [
+            {
+              "id": "J4-BM4-ST4-B2",
+              "label": "Planned Investment Contribution",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "id": "J4-BM4-ST4-B3",
+              "label": "Keep as Accessible Cash",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "id": "J4-BM4-ST4-B4",
+              "label": "Emergency-Fund Top-Up",
+              "minimum": 0,
+              "maximum": 10000
+            }
+          ],
+          "remainingBalanceRule": "10000_minus_all_allocations",
+          "overspendingBehaviour": "block_confirmation",
+          "multipleValidBudgets": true,
+          "scoringRules": [
+            "Cover required debt repayment first.",
+            "Reward an affordable contribution or a clear pause reason.",
+            "Do not reward investing emergency money or borrowing."
+          ],
+          "validationRules": [
+            "Total allocations must equal Rs. 10,000.",
+            "Required debt repayment must be covered.",
+            "No category may be negative.",
+            "Emergency withdrawals are outside the budget."
+          ]
+        },
+        "startingNode": {
+          "id": "J4-BM4-ST4-N1",
+          "question": "How should the monthly plan respond to the decline?"
+        },
+        "terminalOutcomes": [
+          "affordable_regular_contribution",
+          "paused_for_clear_reason",
+          "emergency_money_invested",
+          "borrowed_more_to_invest"
+        ],
+        "educationalAssumptions": [
+          "Investing emergency money uses Rs. 50,000 once.",
+          "Borrowing Rs. 50,000 creates ten classroom repayments of Rs. 5,000.",
+          "No interest rate or fee is invented.",
+          "Lower prices do not guarantee profit."
+        ]
+      },
+      "choices": [
+        {
+          "id": "J4-BM4-ST4-C1",
+          "label": "Continue the affordable planned contribution",
+          "classification": "potentially_reasonable",
+          "classificationReason": "The plan is affordable, emergency savings are protected, and required debt payments are covered.",
+          "immediateFinancialEffect": "The valid amount after debt repayment becomes the monthly contribution.",
+          "immediateFeedback": "Regular investing reduces dependence on one perfect entry point but does not guarantee profit.",
+          "shortTermConsequence": "Contributions continue at Rs. 0–10,000.",
+          "laterConsequence": "Five-year totals use the confirmed amount.",
+          "stateChanges": {
+            "regular_monthly_contribution": "budget_planned_investment_amount",
+            "cash_outside_portfolio": {
+              "operation": "increase_by_cash_reserve_allocation"
+            },
+            "emergency_fund": {
+              "operation": "increase_by_emergency_top_up_allocation"
+            },
+            "long_term_discipline_score": {
+              "operation": "increase",
+              "amount": 20
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST4-C2",
+          "label": "Pause contributions for a clear affordability reason",
+          "classification": "depends_on_situation",
+          "classificationReason": "Pausing may fit changed expenses, debt, emergency readiness, or goals.",
+          "immediateFinancialEffect": "No new money is invested this month.",
+          "immediateFeedback": "Pausing can be reasonable when circumstances changed; fear alone is weaker reasoning.",
+          "shortTermConsequence": "Unused money stays accessible after debt payments.",
+          "laterConsequence": "Five-year contributions are lower.",
+          "stateChanges": {
+            "regular_monthly_contribution": 0,
+            "cash_outside_portfolio": {
+              "operation": "increase_by_budget_after_required_debt_payment"
+            },
+            "long_term_discipline_score": {
+              "operation": "conditional_change",
+              "clear_reason_increase": 10,
+              "fear_only_decrease": 10
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST4-C3",
+          "label": "Invest Rs. 50,000 of emergency money",
+          "classification": "high_risk",
+          "classificationReason": "Emergency protection is exchanged for uncertain market exposure.",
+          "immediateFinancialEffect": "Emergency savings fall and the portfolio rises by Rs. 50,000.",
+          "immediateFeedback": "A later surprise may force debt or an investment sale.",
+          "shortTermConsequence": "Emergency readiness weakens.",
+          "laterConsequence": "The Year 2 emergency has fewer protected options.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "decrease",
+              "amount": 50000
+            },
+            "current_investment_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "long_term_discipline_score": {
+              "operation": "decrease",
+              "amount": 25
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST4-C4",
+          "label": "Borrow Rs. 50,000 to invest",
+          "classification": "high_risk",
+          "classificationReason": "Repayment is certain while investment performance is uncertain.",
+          "immediateFinancialEffect": "Debt and the portfolio each rise by Rs. 50,000.",
+          "immediateFeedback": "Lower prices do not guarantee profit; the loan still requires repayment.",
+          "shortTermConsequence": "Monthly debt payments rise by Rs. 5,000.",
+          "laterConsequence": "The Year 2 emergency and contributions face more pressure.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "monthly_debt_payment": {
+              "operation": "increase",
+              "amount": 5000
+            },
+            "current_investment_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "long_term_discipline_score": {
+              "operation": "decrease",
+              "amount": 30
+            },
+            "emotional_decision_score": {
+              "operation": "decrease",
+              "amount": 15
+            }
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Continue an affordable contribution only after required repayments are covered and emergency savings remain protected.",
+        "reasonableAlternatives": [
+          "Pausing is reasonable when income, expenses, debt, emergency readiness, or goals changed.",
+          "Continuing at a smaller amount is reasonable when debt repayment reduces the budget."
+        ],
+        "tradeOff": "Continuing adds market exposure at several prices; pausing preserves cash but slows contributions."
+      },
+      "validation": {
+        "method": "Validate the Rs. 10,000 budget and apply the selected decision.",
+        "invalidStateFeedback": "Cover required debt repayment and keep the total at exactly Rs. 10,000.",
+        "retryBehaviour": "Invalid budgets must be revised. Risky but valid emergency-fund and borrowing choices may continue."
+      },
+      "accessibilityAlternative": {
+        "method": "Use plus and minus buttons followed by labelled decision options.",
+        "instruction": "Build the Rs. 10,000 plan, then choose the contribution response."
+      },
+      "stateSummary": {
+        "title": "Contribution Plan Updated",
+        "changedValues": [
+          {
+            "field": "regular_monthly_contribution",
+            "previousAmount": 10000,
+            "newAmountSource": "confirmed_budget.planned_investment",
+            "reason": "Debt repayment and affordability determine the contribution."
+          },
+          {
+            "field": "emergency_fund",
+            "previousAmountSource": "before_choice",
+            "newAmountSource": "after_choice",
+            "reason": "Emergency money changes only through top-up, genuine use, or misuse."
+          },
+          {
+            "field": "debt_balance",
+            "previousAmountSource": "before_choice",
+            "newAmountSource": "after_choice",
+            "reason": "Borrowing adds repayment pressure."
+          }
+        ],
+        "learningMessage": "Regular investing should remain affordable and separate from emergency money.",
+        "nextStageTeaser": "Explore three five-year paths and a real Year 2 emergency."
+      }
+    },
+    {
+      "id": "J4-BM4-ST5",
+      "stageNumber": 5,
+      "title": "Five-Year Uncertainty",
+      "timelineLabel": "Years 1–5",
+      "conceptsAssessed": [
+        "long_term_investing",
+        "regular_investing",
+        "emergency_savings_protection",
+        "diversification",
+        "emotional_control"
+      ],
+      "interactionType": "timeline_slider_investment_simulator_decision_tree",
+      "situation": "Move through three possible five-year market paths. In Year 2, a genuine Rs. 40,000 household emergency occurs. All balances reflect earlier choices.",
+      "objective": "Separate contributions from market movement, handle the emergency, and finish with a reviewed—not guaranteed—long-term plan.",
+      "stateBefore": {
+        "investmentBalanceSource": "current_investment_balance",
+        "regularMonthlyContributionSource": "regular_monthly_contribution",
+        "emergencyFundSource": "emergency_fund",
+        "cashSource": "cash_outside_portfolio",
+        "debtSource": "debt_balance",
+        "monthlyDebtPaymentSource": "monthly_debt_payment",
+        "realisedLossesSource": "realised_losses",
+        "concentrationSource": "portfolio_concentration_level"
+      },
+      "config": {
+        "timelineSlider": {
+          "startingTime": "initial_decline",
+          "endingTime": "year_5",
+          "sliderSteps": [
+            "initial_decline",
+            "year_1",
+            "year_2",
+            "year_3",
+            "year_4",
+            "year_5"
+          ],
+          "valuesShownAtEachPoint": [
+            "investment_balance",
+            "total_additional_contributions",
+            "realised_losses",
+            "unrealised_gain_loss",
+            "emergency_fund",
+            "debt_balance",
+            "portfolio_concentration_level"
+          ],
+          "milestones": [
+            {
+              "step": "initial_decline",
+              "event": "Portfolio is 25% below its original value."
+            },
+            {
+              "step": "year_2",
+              "event": "A genuine Rs. 40,000 household emergency occurs."
+            },
+            {
+              "step": "year_5",
+              "event": "Review the final range and decision dashboard."
+            }
+          ],
+          "contributions": "Monthly contributions are grouped into annual totals and added after that year’s market movement.",
+          "comparisonData": "Each path uses the same learner decisions. Only fictional market movement changes."
+        },
+        "investmentSimulator": {
+          "startingBalanceSource": "current_investment_balance",
+          "availableAssets": [
+            "fictional_long_term_portfolio"
+          ],
+          "simulationPeriodYears": 5,
+          "educationalAssumptions": [
+            "All three paths are fictional and are not forecasts.",
+            "Annual contributions equal the confirmed monthly amount multiplied by twelve.",
+            "Contributions are added after each year’s market movement for classroom simplicity.",
+            "No fees, taxes, dividends, or inflation are added.",
+            "A lucky path does not improve the decision score."
+          ],
+          "possibleFluctuations": [
+            {
+              "id": "J4-BM4-PATH-A",
+              "label": "Path A — Gradual Recovery",
+              "annualReturnPercents": [
+                5,
+                6,
+                7,
+                6,
+                5
+              ],
+              "explanation": "The portfolio improves over several years, but this is only one possibility."
+            },
+            {
+              "id": "J4-BM4-PATH-B",
+              "label": "Path B — Uneven Recovery",
+              "annualReturnPercents": [
+                -10,
+                12,
+                -5,
+                10,
+                4
+              ],
+              "explanation": "The portfolio rises, falls again, and later stabilises unevenly."
+            },
+            {
+              "id": "J4-BM4-PATH-C",
+              "label": "Path C — Continued Weakness",
+              "annualReturnPercents": [
+                -15,
+                -6,
+                5,
+                -4,
+                2
+              ],
+              "explanation": "Prices remain weak for years and some investments do not recover."
+            }
+          ],
+          "concentrationAdjustments": [
+            {
+              "level": "broadly_spread",
+              "weakPathAdjustmentPercent": 0
+            },
+            {
+              "level": "moderately_concentrated",
+              "weakPathAdjustmentPercent": -3
+            },
+            {
+              "level": "highly_concentrated",
+              "weakPathAdjustmentPercent": -8
+            }
+          ],
+          "contributions": "annual_contribution_equals_monthly_contribution_times_12",
+          "withdrawals": [
+            "year_2_emergency_investment_withdrawal",
+            "sales_from_earlier_stages"
+          ],
+          "fees": 0,
+          "outcomeExplanation": "Final value separates remaining opening balance, additional contributions, withdrawals, and fictional market movement.",
+          "requiredDisclaimer": "These paths are fictional. Long-term investing provides more time for possible growth, but recovery, profit, and lower losses are not guaranteed.",
+          "calculationRules": {
+            "annualContribution": "regular_monthly_contribution_multiplied_by_12",
+            "yearEndBalance": "opening_balance_multiplied_by_one_plus_annual_return_then_plus_annual_contribution",
+            "unrealisedGainLoss": "final_balance_minus_remaining_cost_basis",
+            "decisionScoreIndependentOfPath": true
+          }
+        },
+        "prediction": {
+          "id": "J4-BM4-ST5-P1",
+          "question": "After viewing all three paths, which conclusion is most accurate?",
+          "options": [
+            {
+              "id": "J4-BM4-ST5-P1-O1",
+              "label": "Waiting always restores every loss",
+              "isPreferred": false,
+              "feedback": "Path C shows that weakness can continue and some investments may never recover."
+            },
+            {
+              "id": "J4-BM4-ST5-P1-O2",
+              "label": "Selling always prevents worse results",
+              "isPreferred": false,
+              "feedback": "Selling may avoid later losses or miss later gains; review is still needed."
+            },
+            {
+              "id": "J4-BM4-ST5-P1-O3",
+              "label": "Several outcomes are possible, so the plan still needs review",
+              "isPreferred": true,
+              "feedback": "Correct. Time helps planning, but it does not guarantee a result."
+            }
+          ],
+          "likelyEducationalOutcome": "The learner accepts uncertainty without assuming guaranteed recovery.",
+          "explanation": "Long-term investing still requires review of quality, goals, affordability, and risk."
+        },
+        "finalEmergency": {
+          "amount": 40000,
+          "timing": "year_2",
+          "purpose": "essential_household_repair"
+        }
+      },
+      "choices": [
+        {
+          "id": "J4-BM4-ST5-C1",
+          "label": "Use the emergency fund for the repair",
+          "classification": "recommended",
+          "classificationReason": "The money was kept accessible for genuine unexpected needs.",
+          "immediateFinancialEffect": "The emergency fund falls by Rs. 40,000.",
+          "immediateFeedback": "The repair is funded without a weak-market sale or new debt.",
+          "shortTermConsequence": "Emergency savings need rebuilding.",
+          "laterConsequence": "The investment plan can continue according to affordability.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "decrease",
+              "amount": 40000
+            },
+            "long_term_discipline_score": {
+              "operation": "increase",
+              "amount": 15
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST5-C2",
+          "label": "Use Rs. 30,000 cash and pause one Rs. 10,000 contribution",
+          "classification": "reasonable",
+          "classificationReason": "Accessible money covers the emergency without debt when enough cash exists.",
+          "immediateFinancialEffect": "Cash falls and one contribution is redirected.",
+          "immediateFeedback": "The emergency is funded without debt.",
+          "shortTermConsequence": "Total contributions fall by Rs. 10,000.",
+          "laterConsequence": "The final investment value may be lower while emergency savings remain intact.",
+          "stateChanges": {
+            "condition": "cash_outside_portfolio_greater_than_or_equal_to_30000",
+            "cash_outside_portfolio": {
+              "operation": "decrease",
+              "amount": 30000
+            },
+            "total_additional_contributions": {
+              "operation": "decrease",
+              "amount": 10000
+            },
+            "long_term_discipline_score": {
+              "operation": "increase",
+              "amount": 10
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST5-C3",
+          "label": "Sell Rs. 40,000 of investments after review",
+          "classification": "depends_on_situation",
+          "classificationReason": "A reviewed sale may be necessary when accessible resources are insufficient.",
+          "immediateFinancialEffect": "Rs. 40,000 is withdrawn from the portfolio.",
+          "immediateFeedback": "The repair is funded, but part of the investment is sold during uncertainty.",
+          "shortTermConsequence": "Less money remains invested.",
+          "laterConsequence": "Any loss on the sold portion becomes realised.",
+          "stateChanges": {
+            "condition": "protected_cash_sources_below_40000",
+            "current_investment_balance": {
+              "operation": "decrease",
+              "amount": 40000
+            },
+            "realised_losses": {
+              "operation": "increase_by_proportional_loss_on_withdrawal"
+            },
+            "long_term_discipline_score": {
+              "operation": "conditional_change",
+              "reviewed": 5,
+              "panic": -10
+            }
+          }
+        },
+        {
+          "id": "J4-BM4-ST5-C4",
+          "label": "Borrow Rs. 40,000 for the repair",
+          "classification": "risky",
+          "classificationReason": "Debt adds pressure and may be avoidable if emergency savings were protected.",
+          "immediateFinancialEffect": "Debt rises by Rs. 40,000.",
+          "immediateFeedback": "Borrowing may be necessary when accessible money is insufficient.",
+          "shortTermConsequence": "Monthly debt pressure increases.",
+          "laterConsequence": "Future contributions may need to fall.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 40000
+            },
+            "monthly_debt_payment": {
+              "operation": "increase",
+              "amount": 4000
+            },
+            "long_term_discipline_score": {
+              "operation": "conditional_change",
+              "necessary_borrowing": 0,
+              "avoidable_borrowing": -15
+            }
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Use protected emergency savings for a genuine emergency when available, then rebuild them without assuming a market path.",
+        "reasonableAlternatives": [
+          "Accessible cash plus a temporary contribution pause is reasonable when enough cash exists.",
+          "A reviewed sale or necessary borrowing may be required when protected resources are insufficient."
+        ],
+        "tradeOff": "Protecting investments may reduce cash or emergency savings; protecting cash may require a sale, pause, or debt."
+      },
+      "validation": {
+        "method": "Show all paths, check the uncertainty prediction, validate the emergency funding source, and calculate market outcome separately from the score.",
+        "invalidStateFeedback": "That funding source is insufficient for the Rs. 40,000 emergency.",
+        "retryBehaviour": "Insufficient choices must be revised. Risky feasible choices may continue. Replaying a path does not change the decision score."
+      },
+      "accessibilityAlternative": {
+        "method": "Use Previous and Next buttons for years and paths, followed by labelled emergency choices.",
+        "instruction": "Hear balances, contributions, losses, emergency savings, debt, and concentration at every point."
+      },
+      "stateSummary": {
+        "title": "Five-Year Simulation Complete",
+        "changedValues": [
+          {
+            "field": "final_investment_balance",
+            "previousAmountSource": "balance_at_initial_decline",
+            "newAmountSource": "selected_path.final_balance",
+            "reason": "Market movement, contributions, sales, and concentration affect final value."
+          },
+          {
+            "field": "total_additional_contributions",
+            "previousAmount": 0,
+            "newAmountSource": "sum_of_confirmed_contributions",
+            "reason": "Contributions are separate from market movement."
+          },
+          {
+            "field": "emergency_fund",
+            "previousAmountSource": "before_year_2",
+            "newAmountSource": "after_year_2_choice",
+            "reason": "The genuine emergency uses protected money only when selected."
+          },
+          {
+            "field": "debt_balance",
+            "previousAmountSource": "before_year_2",
+            "newAmountSource": "after_year_2",
+            "reason": "Borrowing creates obligations independent of market performance."
+          }
+        ],
+        "learningMessage": "Long-term investing creates time for possible outcomes, not a guarantee of recovery.",
+        "nextStageTeaser": "Review the dashboard and see which decisions—not luck—shaped the score."
+      }
+    }
+  ],
+  "consequenceMap": [
+    {
+      "id": "J4-BM4-CM1",
+      "sourceStageId": "J4-BM4-ST1",
+      "sourceChoiceId": "J4-BM4-ST1-C1",
+      "affectedStateField": "realised_losses",
+      "targetStageId": "J4-BM4-ST5",
+      "laterConsequence": "The Rs. 50,000 decline remains realised and later paths affect only new contributions.",
+      "educationalPurpose": "Separate a sale decision from later market luck."
+    },
+    {
+      "id": "J4-BM4-CM2",
+      "sourceStageId": "J4-BM4-ST1",
+      "sourceChoiceId": "J4-BM4-ST1-C3",
+      "affectedStateField": "monthly_debt_payment",
+      "targetStageId": "J4-BM4-ST4",
+      "laterConsequence": "Rs. 5,000 of the monthly contribution budget must cover debt repayment first.",
+      "educationalPurpose": "Show that investment debt reduces future flexibility."
+    },
+    {
+      "id": "J4-BM4-CM3",
+      "sourceStageId": "J4-BM4-ST2",
+      "sourceChoiceId": "J4-BM4-ST2-C1",
+      "affectedStateField": "emotional_decision_score",
+      "targetStageId": "J4-BM4-COMPLETE",
+      "laterConsequence": "Final feedback highlights reliance on another person’s prediction.",
+      "educationalPurpose": "Connect social pressure with emotional decisions."
+    },
+    {
+      "id": "J4-BM4-CM4",
+      "sourceStageId": "J4-BM4-ST3",
+      "sourceChoiceId": "J4-BM4-ST3-C2",
+      "affectedStateField": "portfolio_concentration_level",
+      "targetStageId": "J4-BM4-ST5",
+      "laterConsequence": "Weak paths receive a larger concentration adjustment.",
+      "educationalPurpose": "Show how one-company dependence can magnify outcomes."
+    },
+    {
+      "id": "J4-BM4-CM5",
+      "sourceStageId": "J4-BM4-ST4",
+      "sourceChoiceId": "J4-BM4-ST4-C3",
+      "affectedStateField": "emergency_fund",
+      "targetStageId": "J4-BM4-ST5",
+      "laterConsequence": "The Year 2 emergency may require cash, a sale, or debt.",
+      "educationalPurpose": "Show that emergency money and long-term investments have different purposes."
+    },
+    {
+      "id": "J4-BM4-CM6",
+      "sourceStageId": "J4-BM4-ST4",
+      "sourceChoiceId": "J4-BM4-ST4-C1",
+      "affectedStateField": "total_additional_contributions",
+      "targetStageId": "J4-BM4-ST5",
+      "laterConsequence": "Affordable contributions purchase at several prices.",
+      "educationalPurpose": "Connect regular investing with contributions rather than guaranteed profit."
+    }
+  ],
+  "midMissionCheckpoint": {
+    "id": "J4-BM4-CHECKPOINT",
+    "title": "Crash Checkpoint",
+    "currentStateSummary": {
+      "investmentBalanceSource": "current_investment_balance",
+      "cashSource": "cash_outside_portfolio",
+      "realisedLossesSource": "realised_losses",
+      "unrealisedGainLossSource": "unrealised_gain_loss",
+      "debtSource": "debt_balance",
+      "concentrationSource": "portfolio_concentration_level",
+      "emotionalDecisionScoreSource": "emotional_decision_score"
+    },
+    "positiveDecisionFeedbackRules": [
+      {
+        "id": "J4-BM4-CP-S1",
+        "condition": "reviewed_before_acting",
+        "message": "You created space for evidence before making a permanent decision."
+      },
+      {
+        "id": "J4-BM4-CP-S2",
+        "condition": "social_pressure_rejected",
+        "message": "You did not treat another person’s prediction as certainty."
+      }
+    ],
+    "emergingRiskFeedbackRules": [
+      {
+        "id": "J4-BM4-CP-R1",
+        "condition": "debt_balance_above_zero",
+        "message": "Investment debt is already reducing future flexibility."
+      },
+      {
+        "id": "J4-BM4-CP-R2",
+        "condition": "portfolio_concentration_level_equals_highly_concentrated",
+        "message": "The portfolio remains heavily dependent on one outcome."
+      },
+      {
+        "id": "J4-BM4-CP-R3",
+        "condition": "current_investment_balance_equals_zero",
+        "message": "The original portfolio cannot participate in later movement."
+      }
+    ],
+    "reflectionQuestion": "Continue to the contribution decision, or review an earlier crash response?",
+    "primaryActionLabel": "Plan the Contribution",
+    "reviewActionLabel": "Review My Decisions"
+  },
+  "finalChallenge": {
+    "id": "J4-BM4-FINAL",
+    "title": "The Year 2 Emergency",
+    "situation": "During uncertain market conditions, an essential Rs. 40,000 household repair occurs. The strongest available choice depends on whether emergency savings, cash, investments, and debt were protected earlier.",
+    "conceptsCombined": [
+      "emergency_savings_protection",
+      "long_term_investing",
+      "regular_investing",
+      "responsible_debt",
+      "emotional_control"
+    ],
+    "interactionType": "timeline_slider_investment_simulator_decision_tree",
+    "stateBefore": {
+      "emergencyFundSource": "emergency_fund",
+      "cashSource": "cash_outside_portfolio",
+      "investmentBalanceSource": "current_investment_balance",
+      "debtSource": "debt_balance",
+      "regularContributionSource": "regular_monthly_contribution"
+    },
+    "config": {
+      "sourceStageId": "J4-BM4-ST5",
+      "emergencyAmount": 40000,
+      "pathCount": 3,
+      "decisionQualitySeparatedFromPath": true
+    },
+    "choicesSourceStageId": "J4-BM4-ST5",
+    "recommendedReasoning": "Use protected emergency money when available. Otherwise compare accessible cash, a temporary contribution pause, a reviewed sale, and necessary borrowing without assuming recovery."
+  },
+  "debrief": {
+    "id": "J4-BM4-DEBRIEF",
+    "title": "The Crash Did Not Decide Everything",
+    "content": "You faced a sharp decline, confident predictions, concentration risk, a contribution decision, three possible market paths, and a genuine emergency. The fall did not prove permanent failure, but it also did not guarantee recovery. Reviewing the goal and investment quality separated evidence from fear or hope. Diversification reduced dependence on one outcome without preventing loss. Affordable regular contributions added money at several prices, while emergency savings and debt changed your flexibility. Selling, pausing, or remaining invested may each be reasonable after review. The strongest behaviour was not predicting the market—it was protecting essential money and making informed decisions.",
+    "simpleSummary": "Review first, protect emergency money, and accept uncertainty without panic or guaranteed-recovery assumptions.",
+    "illustration": "A market chart branches into three paths beside a review checklist, emergency shield, and debt meter."
+  },
+  "scoring": {
+    "maximumScore": 100,
+    "dimensions": [
+      {
+        "id": "emotional_decision_making",
+        "label": "Emotional Decision-Making",
+        "maximumPoints": 25,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J4-BM4-ST1",
+          "J4-BM4-ST2",
+          "J4-BM4-ST5"
+        ],
+        "positiveRules": [
+          "25 for evidence-based review and uncertainty awareness.",
+          "18 for mostly thoughtful choices with one emotional assumption.",
+          "8 for one panic sale or guaranteed-recovery assumption.",
+          "0 for repeated prediction-led decisions."
+        ],
+        "deductions": [
+          "8 for selling solely from a friend’s prediction.",
+          "8 for assuming guaranteed recovery.",
+          "10 for borrowing mainly to recover losses."
+        ],
+        "learnerExplanation": "Measures whether evidence, fear, hope, or social pressure guided the response."
+      },
+      {
+        "id": "diversification",
+        "label": "Diversification",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J4-BM4-ST3",
+          "J4-BM4-ST5"
+        ],
+        "positiveRules": [
+          "20 for correct comparisons and reducing extreme concentration.",
+          "14 for correct understanding while knowingly keeping concentration.",
+          "6 for expecting diversification to prevent every loss.",
+          "0 for ignoring concentration."
+        ],
+        "deductions": [
+          "5 for selling solely because the diversified example also declined."
+        ],
+        "learnerExplanation": "Measures understanding of concentration reduction without treating diversification as protection from all loss."
+      },
+      {
+        "id": "emergency_savings_protection",
+        "label": "Emergency Savings Protection",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J4-BM4-ST4",
+          "J4-BM4-ST5"
+        ],
+        "positiveRules": [
+          "20 for protecting emergency money until the genuine emergency.",
+          "16 for using accessible cash and a temporary pause.",
+          "8 for a necessary reviewed investment sale.",
+          "4 for necessary borrowing.",
+          "0 for emergency-fund investing followed by avoidable debt."
+        ],
+        "deductions": [
+          "12 for investing emergency money.",
+          "8 for avoidable emergency borrowing."
+        ],
+        "learnerExplanation": "Measures whether emergency money remained accessible for its intended purpose."
+      },
+      {
+        "id": "long_term_discipline",
+        "label": "Long-Term Discipline",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J4-BM4-ST1",
+          "J4-BM4-ST4",
+          "J4-BM4-ST5"
+        ],
+        "positiveRules": [
+          "20 for reviewing and following an affordable plan.",
+          "16 for pausing or reducing for a clear reason.",
+          "8 for inconsistent decisions without emergency misuse.",
+          "0 for repeated borrowing, panic, or ignoring affordability."
+        ],
+        "deductions": [
+          "10 for abandoning the plan only because prices fell.",
+          "12 for borrowing to invest.",
+          "8 for ignoring the portfolio without review."
+        ],
+        "learnerExplanation": "Measures whether the long-term plan stayed affordable, reviewed, and adaptable."
+      },
+      {
+        "id": "financial_adaptability",
+        "label": "Financial Adaptability",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J4-BM4-ST1",
+          "J4-BM4-ST3",
+          "J4-BM4-ST4",
+          "J4-BM4-ST5"
+        ],
+        "positiveRules": [
+          "15 when later decisions fit actual cash, debt, emergency, and concentration state.",
+          "10 when one weak choice is corrected later.",
+          "5 when the plan works but creates avoidable pressure.",
+          "0 when later choices ignore the state created earlier."
+        ],
+        "deductions": [
+          "5 for an unaffordable monthly allocation.",
+          "5 for an insufficient emergency funding source."
+        ],
+        "learnerExplanation": "Measures whether the plan changed thoughtfully as conditions changed."
+      }
+    ],
+    "outcomeBasedPointsSeparatedFromDecisionQuality": true
+  },
+  "performanceLevels": [
+    {
+      "minimumScore": 0,
+      "maximumScore": 39,
+      "label": "Crash Response At Risk",
+      "description": "The plan created major emotional, debt, concentration, or emergency-fund pressure."
+    },
+    {
+      "minimumScore": 40,
+      "maximumScore": 69,
+      "label": "Building Market Discipline",
+      "description": "Some decisions were thoughtful, but important risk, emergency, or affordability habits need work."
+    },
+    {
+      "minimumScore": 70,
+      "maximumScore": 89,
+      "label": "Financially Prepared",
+      "description": "The learner balanced review, diversification, emergency protection, and long-term planning effectively."
+    },
+    {
+      "minimumScore": 90,
+      "maximumScore": 100,
+      "label": "Strong Crash Discipline",
+      "description": "The learner consistently made informed and adaptable decisions. This does not guarantee recovery or future wealth."
+    }
+  ],
+  "resultsDashboard": [
+    {
+      "id": "J4-BM4-RES1",
+      "label": "Realised Losses",
+      "startingValueSource": "startingState.realisedLosses",
+      "finalValueSource": "realised_losses",
+      "changeSource": "final_minus_starting",
+      "statusRules": [
+        {
+          "condition": "value_equals_zero",
+          "label": "No Loss Realised"
+        },
+        {
+          "condition": "value_between_1_and_50000",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_above_50000",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Shows losses locked in through sales below cost."
+    },
+    {
+      "id": "J4-BM4-RES2",
+      "label": "Remaining Portfolio Value",
+      "startingValueSource": "startingState.investmentBalance",
+      "finalValueSource": "selected_simulated_path.final_investment_balance",
+      "changeSource": "final_minus_post_decline_start",
+      "contributionValueSource": "total_additional_contributions",
+      "marketMovementSource": "final_balance_minus_remaining_opening_balance_minus_contributions_plus_withdrawals",
+      "statusRules": [
+        {
+          "condition": "decision_quality_strong_regardless_of_value",
+          "label": "Plan Followed Thoughtfully"
+        },
+        {
+          "condition": "portfolio_zero_after_reviewed_sale",
+          "label": "Exited After Review"
+        },
+        {
+          "condition": "portfolio_zero_after_panic_sale",
+          "label": "Emotionally Influenced"
+        }
+      ],
+      "explanationTemplate": "Separates contributions, withdrawals, and fictional market movement."
+    },
+    {
+      "id": "J4-BM4-RES3",
+      "label": "Total Contributions",
+      "startingValueSource": "startingState.additionalContributions",
+      "finalValueSource": "total_additional_contributions",
+      "changeSource": "final_total_contributions",
+      "statusRules": [
+        {
+          "condition": "affordable_plan_followed",
+          "label": "Consistent"
+        },
+        {
+          "condition": "paused_for_clear_reason",
+          "label": "Adapted"
+        },
+        {
+          "condition": "stopped_only_from_fear",
+          "label": "Needs Review"
+        }
+      ],
+      "explanationTemplate": "Shows new money separately from investment growth or decline."
+    },
+    {
+      "id": "J4-BM4-RES4",
+      "label": "Emergency Savings Protected",
+      "startingValueSource": "startingState.emergencyFund",
+      "finalValueSource": "emergency_fund",
+      "changeSource": "final_minus_starting",
+      "statusRules": [
+        {
+          "condition": "protected_until_genuine_emergency",
+          "label": "Fully Protected"
+        },
+        {
+          "condition": "partly_invested_or_used",
+          "label": "Partially Protected"
+        },
+        {
+          "condition": "below_40000_before_emergency",
+          "label": "At Risk"
+        },
+        {
+          "condition": "value_equals_zero",
+          "label": "Depleted"
+        }
+      ],
+      "explanationTemplate": "Shows whether emergency money stayed accessible until a genuine need."
+    },
+    {
+      "id": "J4-BM4-RES5",
+      "label": "Debt Created",
+      "startingValueSource": "startingState.debtBalance",
+      "finalValueSource": "debt_balance",
+      "changeSource": "final_minus_starting",
+      "secondaryValueSource": "monthly_debt_payment",
+      "statusRules": [
+        {
+          "condition": "value_equals_zero",
+          "label": "Strong"
+        },
+        {
+          "condition": "necessary_emergency_debt",
+          "label": "Managed"
+        },
+        {
+          "condition": "investment_debt_above_zero",
+          "label": "At Risk"
+        }
+      ],
+      "explanationTemplate": "Separates necessary emergency borrowing from debt used to chase losses."
+    },
+    {
+      "id": "J4-BM4-RES6",
+      "label": "Emotional Decision Score",
+      "startingValueSource": "startingState.emotionalDecisionScore",
+      "finalValueSource": "emotional_decision_score",
+      "changeSource": "final_minus_starting",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_80",
+          "label": "Calm and Informed"
+        },
+        {
+          "condition": "value_between_60_and_79",
+          "label": "Mostly Thoughtful"
+        },
+        {
+          "condition": "value_between_35_and_59",
+          "label": "Emotionally Influenced"
+        },
+        {
+          "condition": "value_below_35",
+          "label": "Highly Reactive"
+        }
+      ],
+      "explanationTemplate": "Measures whether evidence, fear, hope, or social pressure guided decisions."
+    },
+    {
+      "id": "J4-BM4-RES7",
+      "label": "Diversification Score",
+      "startingValueSource": "startingState.diversificationScore",
+      "finalValueSource": "diversification_score",
+      "changeSource": "final_minus_starting",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_80",
+          "label": "Broadly Spread"
+        },
+        {
+          "condition": "value_between_50_and_79",
+          "label": "Moderately Concentrated"
+        },
+        {
+          "condition": "value_below_50",
+          "label": "Highly Concentrated"
+        }
+      ],
+      "explanationTemplate": "A stronger score reduces dependence on one outcome but does not make the portfolio loss-free."
+    },
+    {
+      "id": "J4-BM4-RES8",
+      "label": "Long-Term Discipline Score",
+      "startingValueSource": "startingState.longTermDisciplineScore",
+      "finalValueSource": "long_term_discipline_score",
+      "changeSource": "final_minus_starting",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_80",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_60_and_79",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_between_35_and_59",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_below_35",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Measures affordable contributions, review, emergency protection, and avoidance of investment debt."
+    },
+    {
+      "id": "J4-BM4-RES9",
+      "label": "Financial Confidence Score",
+      "startingValueSource": "0",
+      "finalValueSource": "final_score",
+      "changeSource": "final_score",
+      "statusRules": [
+        {
+          "condition": "0_to_39",
+          "label": "Crash Response At Risk"
+        },
+        {
+          "condition": "40_to_69",
+          "label": "Building Market Discipline"
+        },
+        {
+          "condition": "70_to_89",
+          "label": "Financially Prepared"
+        },
+        {
+          "condition": "90_to_100",
+          "label": "Strong Crash Discipline"
+        }
+      ],
+      "explanationTemplate": "Rewards decision quality rather than the luckiest fictional market path."
+    }
+  ],
+  "personalisedFeedbackRules": {
+    "performanceHeadlineRules": [
+      {
+        "id": "J4-BM4-FBH1",
+        "condition": "score_90_to_100",
+        "message": "You stayed thoughtful through uncertainty."
+      },
+      {
+        "id": "J4-BM4-FBH2",
+        "condition": "score_70_to_89",
+        "message": "Your crash plan remained mostly balanced."
+      },
+      {
+        "id": "J4-BM4-FBH3",
+        "condition": "score_40_to_69",
+        "message": "Your plan has a foundation, with pressure points to improve."
+      },
+      {
+        "id": "J4-BM4-FBH4",
+        "condition": "score_0_to_39",
+        "message": "The crash exposed important planning risks."
+      }
+    ],
+    "strengthRules": [
+      {
+        "id": "J4-BM4-FBS1",
+        "condition": "reviewed_before_acting",
+        "message": "You reviewed the goal and portfolio before making a permanent change."
+      },
+      {
+        "id": "J4-BM4-FBS2",
+        "condition": "emergency_fund_protected_until_year_2",
+        "message": "You kept emergency money available for a genuine household need."
+      },
+      {
+        "id": "J4-BM4-FBS3",
+        "condition": "diversification_score_at_least_80",
+        "message": "You reduced dependence on one company or sector without assuming losses were impossible."
+      },
+      {
+        "id": "J4-BM4-FBS4",
+        "condition": "affordable_contribution_followed",
+        "message": "You adjusted contributions according to affordability rather than fear alone."
+      }
+    ],
+    "improvementRules": [
+      {
+        "id": "J4-BM4-FBI1",
+        "condition": "panic_or_social_pressure_sale",
+        "message": "A sale was driven mainly by fear or another person’s prediction. Review the goal and quality first."
+      },
+      {
+        "id": "J4-BM4-FBI2",
+        "condition": "investment_debt_above_zero",
+        "message": "Borrowing increased certain repayment pressure while market results remained uncertain."
+      },
+      {
+        "id": "J4-BM4-FBI3",
+        "condition": "emergency_money_invested",
+        "message": "Using emergency money reduced the protected options available when a real emergency arrived."
+      },
+      {
+        "id": "J4-BM4-FBI4",
+        "condition": "assumed_guaranteed_recovery",
+        "message": "Remaining invested may fit the plan, but guaranteed recovery is not a reliable reason."
+      }
+    ],
+    "tradeoffRules": [
+      {
+        "id": "J4-BM4-FBT1",
+        "condition": "sold_after_review",
+        "message": "Selling reduced future market exposure but locked in the current loss."
+      },
+      {
+        "id": "J4-BM4-FBT2",
+        "condition": "regular_contributions_continued",
+        "message": "Regular contributions purchased at several prices but increased market exposure."
+      },
+      {
+        "id": "J4-BM4-FBT3",
+        "condition": "contributions_paused_for_clear_reason",
+        "message": "Pausing protected cash and affordability but reduced long-term contributions."
+      },
+      {
+        "id": "J4-BM4-FBT4",
+        "condition": "emergency_fund_used_for_genuine_emergency",
+        "message": "The repair was funded without an investment sale, but emergency savings now need rebuilding."
+      }
+    ],
+    "practicalPrinciple": "Review first, protect emergency money, and let affordability—not fear or guaranteed recovery—shape the plan.",
+    "replayMessage": "Replay with another first response or contribution plan to compare realised losses, debt, and emergency options."
+  },
+  "quiz": {
+    "id": "J4-BM4-QUIZ",
+    "questions": [
+      {
+        "id": "J4-BM4-Q1",
+        "questionType": "combined_recognition",
+        "question": "Which response combines volatility awareness and long-term planning?",
+        "options": [
+          {
+            "id": "J4-BM4-Q1-O1",
+            "label": "Sell because the decline feels permanent",
+            "isCorrect": false,
+            "feedback": "A feeling does not prove permanent failure."
+          },
+          {
+            "id": "J4-BM4-Q1-O2",
+            "label": "Review the goal, portfolio quality, and need for the money",
+            "isCorrect": true,
+            "feedback": "Correct. The choice uses both the price movement and the original plan."
+          },
+          {
+            "id": "J4-BM4-Q1-O3",
+            "label": "Borrow because prices are lower",
+            "isCorrect": false,
+            "feedback": "Lower prices do not guarantee profit while debt still requires repayment."
+          },
+          {
+            "id": "J4-BM4-Q1-O4",
+            "label": "Assume every investment will recover",
+            "isCorrect": false,
+            "feedback": "Some investments may remain weak or permanently lose value."
+          }
+        ],
+        "correctAnswerId": "J4-BM4-Q1-O2",
+        "correctExplanation": "Reviewing connects volatility with quality, time horizon, and purpose.",
+        "conceptsTested": [
+          "volatility",
+          "long_term_investing",
+          "emotional_control"
+        ],
+        "misconceptionTested": "A major decline automatically proves permanent failure."
+      },
+      {
+        "id": "J4-BM4-Q2",
+        "questionType": "combined_misconception",
+        "question": "A diversified portfolio falls during a crash. What does this prove?",
+        "options": [
+          {
+            "id": "J4-BM4-Q2-O1",
+            "label": "Diversification failed completely",
+            "isCorrect": false,
+            "feedback": "Diversification reduces dependence on one outcome; it does not promise zero loss."
+          },
+          {
+            "id": "J4-BM4-Q2-O2",
+            "label": "The portfolio must recover",
+            "isCorrect": false,
+            "feedback": "Recovery is possible but not guaranteed."
+          },
+          {
+            "id": "J4-BM4-Q2-O3",
+            "label": "Diversification cannot remove all market risk",
+            "isCorrect": true,
+            "feedback": "Correct. Several holdings may still decline together."
+          },
+          {
+            "id": "J4-BM4-Q2-O4",
+            "label": "All holdings should be sold immediately",
+            "isCorrect": false,
+            "feedback": "Selling should follow a review of the goal and investments."
+          }
+        ],
+        "correctAnswerId": "J4-BM4-Q2-O3",
+        "correctExplanation": "Diversification may reduce concentration risk while the portfolio still loses value.",
+        "conceptsTested": [
+          "diversification",
+          "volatility",
+          "risk"
+        ],
+        "misconceptionTested": "Diversification prevents all losses during a crash."
+      },
+      {
+        "id": "J4-BM4-Q3",
+        "questionType": "new_application",
+        "question": "A long-term investment falls 20%, and a medical bill is due. The person has emergency savings and no debt. What is the strongest first response?",
+        "options": [
+          {
+            "id": "J4-BM4-Q3-O1",
+            "label": "Borrow to avoid touching emergency savings",
+            "isCorrect": false,
+            "feedback": "Emergency savings exist for genuine unexpected needs; borrowing creates repayment pressure."
+          },
+          {
+            "id": "J4-BM4-Q3-O2",
+            "label": "Use emergency savings and review the investment separately",
+            "isCorrect": true,
+            "feedback": "Correct. The urgent need and long-term investment have different purposes."
+          },
+          {
+            "id": "J4-BM4-Q3-O3",
+            "label": "Invest the emergency savings at the lower price",
+            "isCorrect": false,
+            "feedback": "This removes accessible money when a genuine emergency already exists."
+          },
+          {
+            "id": "J4-BM4-Q3-O4",
+            "label": "Sell everything because the bill appeared",
+            "isCorrect": false,
+            "feedback": "The investment can be reviewed separately when emergency money covers the bill."
+          }
+        ],
+        "correctAnswerId": "J4-BM4-Q3-O2",
+        "correctExplanation": "Emergency savings cover the urgent need while the investment remains a separate evidence-based decision.",
+        "conceptsTested": [
+          "emergency_savings",
+          "long_term_investing",
+          "emotional_control"
+        ],
+        "misconceptionTested": "Investment money and emergency money should be treated as the same resource."
+      }
+    ]
+  },
+  "completion": {
+    "id": "J4-BM4-COMPLETE",
+    "headline": "Crash Plan Completed!",
+    "achievementMessage": "You managed a major decline by balancing evidence, diversification, affordability, emergency protection, and long-term uncertainty.",
+    "scoreSource": "final_score",
+    "performanceLevelSource": "performance_level",
+    "conceptsMasteredSource": "dimensions_at_or_above_70_percent",
+    "conceptNeedingPracticeSource": "lowest_scoring_dimension",
+    "xpReward": 225,
+    "progressMessage": "Journey Boss complete in Grow Wealth Wisely.",
+    "nextTeaser": "Next, use these habits to recognise pressure, scams, and decision traps.",
+    "animation": "A falling chart branches into three paths while a checklist, emergency shield, and diversified portfolio remain visible.",
+    "replayButtonLabel": "Try Another Crash Plan",
+    "continueButtonLabel": "Continue Journey"
+  },
+  "realLifeChallenge": {
+    "id": "J4-BM4-CHALLENGE",
+    "title": "Write a Crash Checklist",
+    "instruction": "Write four questions you would ask before changing a fictional long-term investment after a price decline. Do not invest, sell, or share private financial information.",
+    "buttonLabel": "My Checklist Is Ready"
+  },
+  "reviewChecklist": [
+    {
+      "item": "Reviews only previously taught concepts",
+      "status": "PASS",
+      "notes": "Uses J4-M21, J4-M23, J4-M24, J4-M25, and J4-M26 concepts."
+    },
+    {
+      "item": "Does not introduce unexplained major concepts",
+      "status": "PASS",
+      "notes": "Realised loss, diversification, contributions, and emergency protection are explained in context."
+    },
+    {
+      "item": "Concepts are combined accurately",
+      "status": "PASS",
+      "notes": "Volatility, concentration, contributions, planning, and emergency savings affect one scenario."
+    },
+    {
+      "item": "Financial amounts are internally consistent",
+      "status": "PASS",
+      "notes": "The initial 25% decline equals Rs. 50,000; borrowing and emergency values reconcile."
+    },
+    {
+      "item": "Persistent values update correctly",
+      "status": "PASS",
+      "notes": "Investments, cash, debt, losses, concentration, and emergency money carry forward."
+    },
+    {
+      "item": "Earlier decisions affect later stages",
+      "status": "PASS",
+      "notes": "Sales, borrowing, concentration, and emergency-fund use change later options."
+    },
+    {
+      "item": "Interaction choices have meaningful consequences",
+      "status": "PASS",
+      "notes": "Each major choice changes state, scoring, or later choices."
+    },
+    {
+      "item": "Multiple reasonable paths are allowed where appropriate",
+      "status": "PASS",
+      "notes": "Reviewed selling, pausing, continuing, cash use, and necessary borrowing may be defensible."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "No recovery, profit, or loss-reduction guarantee is made."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "Uses adult savings, debt, emergencies, and long-term goals."
+    },
+    {
+      "item": "Difficulty is Easy",
+      "status": "PASS",
+      "notes": "Uses simple amounts, percentages, and direct consequences."
+    },
+    {
+      "item": "No personalised investment advice",
+      "status": "PASS",
+      "notes": "All holdings and paths are fictional educational examples."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "Regular contributions and long-term investing remain uncertain."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The three paths are fictional simulations."
+    },
+    {
+      "item": "No claims that markets always recover",
+      "status": "PASS",
+      "notes": "The continued-weakness path directly rejects guaranteed recovery."
+    },
+    {
+      "item": "Simulated results are not presented as forecasts",
+      "status": "PASS",
+      "notes": "Decision quality is separate from fictional market paths."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Risky choices receive calm feedback."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "Selling, pausing, borrowing, and staying invested are contextual."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "Uses PKR, household emergencies, debt, and long-term planning."
+    },
+    {
+      "item": "Interactions reinforce the learning objective",
+      "status": "PASS",
+      "notes": "All five stages apply crash-response skills."
+    },
+    {
+      "item": "Scoring rewards decision quality rather than luck",
+      "status": "PASS",
+      "notes": "The selected path cannot increase the decision score."
+    },
+    {
+      "item": "Enjoyable spending is not automatically treated as irresponsible",
+      "status": "NOT APPLICABLE",
+      "notes": "The scenario focuses on investment and emergency decisions."
+    },
+    {
+      "item": "Risk-taking is not automatically rewarded",
+      "status": "PASS",
+      "notes": "Borrowing and emergency-fund investing reduce the score."
+    },
+    {
+      "item": "Quiz corrects the combined misconception",
+      "status": "PASS",
+      "notes": "The quiz addresses permanent failure, diversification, and emergency-money purpose."
+    },
+    {
+      "item": "Mission can be completed within the specified duration",
+      "status": "PASS",
+      "notes": "Five compact stages, a checkpoint, dashboard, and quiz fit nine minutes."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "Uses clear adult beginner language."
+    },
+    {
+      "item": "Accessibility alternatives are provided",
+      "status": "PASS",
+      "notes": "Every interaction includes labelled non-gesture controls."
+    },
+    {
+      "item": "Final dashboard matches the simulation outcomes",
+      "status": "PASS",
+      "notes": "Every dashboard item references tracked state or formulas."
+    },
+    {
+      "item": "JSON matches the human-readable version",
+      "status": "PASS",
+      "notes": "Both artifacts are generated from the same mission data."
+    }
+  ]
+}
