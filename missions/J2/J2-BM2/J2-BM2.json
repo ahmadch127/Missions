@@ -1,0 +1,1786 @@
+{
+  "id": "J2-BM2",
+  "journeyId": "J2",
+  "journeyName": "Make Money Grow",
+  "title": "Beat Inflation",
+  "bossType": "journey_boss",
+  "unlocksAfterMissionId": "J2-M13",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 8,
+  "simulationPeriod": "one_year",
+  "currency": "PKR",
+  "locale": "en-PK",
+  "language": "English",
+  "learningObjective": "Apply inflation, saving, budgeting, interest, and asset-versus-liability concepts to protect purchasing power as prices rise.",
+  "primaryMisconception": "Keeping the same amount of money guarantees that a person will be able to afford the same things in the future.",
+  "secondaryMisconceptions": [
+    "Cash always protects money from financial risk.",
+    "Any item that may help someone earn money is automatically a good asset.",
+    "A higher savings balance always means purchasing power has increased."
+  ],
+  "keyTakeaway": "Money must grow or plans must adjust when prices rise faster than savings.",
+  "conceptsAssessed": [
+    {
+      "missionId": "J2-M8",
+      "missionTitle": "What Banks Do",
+      "concept": "Access and storage through bank accounts.",
+      "assessedInStageIds": [
+        "J2-BM2-ST2"
+      ]
+    },
+    {
+      "missionId": "J2-M9",
+      "missionTitle": "Interest",
+      "concept": "Savings may earn interest without guaranteeing purchasing-power protection.",
+      "assessedInStageIds": [
+        "J2-BM2-ST2",
+        "J2-BM2-ST3"
+      ]
+    },
+    {
+      "missionId": "J2-M10",
+      "missionTitle": "Inflation",
+      "concept": "Rising prices reduce purchasing power.",
+      "assessedInStageIds": [
+        "J2-BM2-ST1",
+        "J2-BM2-ST3",
+        "J2-BM2-ST4"
+      ]
+    },
+    {
+      "missionId": "J2-M11",
+      "missionTitle": "Compound Growth",
+      "concept": "Growth can build over time while investment outcomes remain uncertain.",
+      "assessedInStageIds": [
+        "J2-BM2-ST2"
+      ]
+    },
+    {
+      "missionId": "J2-M12",
+      "missionTitle": "Good Debt and Harmful Debt",
+      "concept": "Debt depends on purpose, affordability, and repayment pressure.",
+      "assessedInStageIds": [
+        "J2-BM2-ST4"
+      ]
+    },
+    {
+      "missionId": "J2-M13",
+      "missionTitle": "Assets and Liabilities",
+      "concept": "Value depends on actual use, cost, and affordability.",
+      "assessedInStageIds": [
+        "J2-BM2-ST4"
+      ]
+    }
+  ],
+  "overview": {
+    "summary": "Manage Rs. 100,000 across one year as a laptop rises from Rs. 100,000 to Rs. 115,000. Choose where to keep money, rebuild a monthly budget after prices rise, and judge asset and debt choices. Earlier decisions change access, goal progress, debt, and the final dashboard. The score rewards realistic decisions rather than luck."
+  },
+  "startingState": {
+    "availableCash": 100000,
+    "monthlyIncome": 40000,
+    "generalSavings": 100000,
+    "emergencyFund": 0,
+    "debtBalance": 0,
+    "monthlyDebtPayment": 0,
+    "investmentBalance": 0,
+    "goalTarget": 115000,
+    "goalProgress": 100000,
+    "originalLaptopPrice": 100000,
+    "currentLaptopPrice": 115000,
+    "negativeBalancesAllowed": false,
+    "financialGoal": "Protect enough purchasing power for the laptop while keeping the monthly budget stable and avoiding unnecessary debt."
+  },
+  "trackedStateFields": [
+    {
+      "key": "available_cash",
+      "label": "Accessible Cash",
+      "initialValue": 100000,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "general_savings",
+      "label": "Goal Savings",
+      "initialValue": 100000,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "illustrative_savings_growth",
+      "label": "Illustrative Savings Growth",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "investment_contributions",
+      "label": "Investment Contributions",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "investment_balance",
+      "label": "Illustrative Investment Value",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_savings_contribution",
+      "label": "Monthly Savings Contribution",
+      "initialValue": 7000,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "annual_savings_contributions",
+      "label": "Planned Annual Contributions",
+      "initialValue": 84000,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "purchasing_power_ratio",
+      "label": "Laptop Purchasing-Power Ratio",
+      "initialValue": 0.8696,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "essential_expenses_covered",
+      "label": "Essential Expenses Covered",
+      "initialValue": true,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_budget_stability",
+      "label": "Monthly Budget Stability",
+      "initialValue": 70,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "debt_balance",
+      "label": "Debt Balance",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_debt_payment",
+      "label": "Monthly Debt Payment",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "unnecessary_expenses",
+      "label": "Avoidable Financial Pressure",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "financial_confidence",
+      "label": "Financial Confidence",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "displayThroughoutMission": false
+    }
+  ],
+  "screens": [
+    {
+      "id": "J2-BM2-S01",
+      "type": "hook",
+      "title": "Same Savings, Higher Price",
+      "content": "Your Rs. 100,000 once bought the laptop you wanted. One year later, it costs Rs. 115,000. Can your plan catch up?",
+      "illustration": "A laptop price changes from Rs. 100,000 to Rs. 115,000 while savings remain Rs. 100,000.",
+      "primaryAction": {
+        "label": "Face the Price Rise",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-BM2-S02",
+      "type": "scenario_setup",
+      "title": "Your Starting Position",
+      "content": "You begin with Rs. 100,000 in savings, Rs. 40,000 monthly income, no debt, and no investments.",
+      "illustration": "A dashboard showing savings, income, debt, and the laptop goal.",
+      "stateSummary": {
+        "generalSavings": 100000,
+        "monthlyIncome": 40000,
+        "debtBalance": 0,
+        "goalTarget": 115000
+      },
+      "primaryAction": {
+        "label": "View the Goal",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-BM2-S03",
+      "type": "scenario_setup",
+      "title": "The Number Did Not Shrink",
+      "content": "Your balance still says Rs. 100,000. The challenge is whether that amount can still buy what it could before.",
+      "illustration": "The same balance appears beside a higher laptop price.",
+      "stateSummary": {
+        "originalLaptopPrice": 100000,
+        "currentLaptopPrice": 115000,
+        "currentGap": 15000
+      },
+      "primaryAction": {
+        "label": "Compare Before and After",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-BM2-S04",
+      "type": "scenario_setup",
+      "title": "Three Decisions Remain",
+      "content": "Choose where to keep money, rebuild the monthly budget, and judge which purchases create value or pressure.",
+      "illustration": "Three decision cards show storage, budgeting, and asset choices.",
+      "stateSummary": {
+        "simulationPeriod": "one_year",
+        "numberOfDecisionStages": 4
+      },
+      "primaryAction": {
+        "label": "Choose Your Approach",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J2-BM2-S05",
+      "type": "pre_simulation_question",
+      "title": "What Is the Main Risk?",
+      "question": "What is the biggest risk when savings stay the same but prices rise?",
+      "options": [
+        {
+          "id": "J2-BM2-PQ-O1",
+          "label": "The bank removes the money",
+          "isRecommended": false,
+          "feedback": "The scenario does not show money being removed."
+        },
+        {
+          "id": "J2-BM2-PQ-O2",
+          "label": "The money buys less than before",
+          "isRecommended": true,
+          "feedback": "Correct. The number is unchanged, but purchasing power is lower."
+        },
+        {
+          "id": "J2-BM2-PQ-O3",
+          "label": "Every investment becomes safe",
+          "isRecommended": false,
+          "feedback": "Rising prices do not remove investment risk."
+        },
+        {
+          "id": "J2-BM2-PQ-O4",
+          "label": "Debt automatically becomes useful",
+          "isRecommended": false,
+          "feedback": "Debt still depends on purpose and affordability."
+        }
+      ],
+      "recommendedAnswerId": "J2-BM2-PQ-O2",
+      "connectionToSimulation": "The mission tests how storage, budgeting, and spending choices respond to reduced purchasing power."
+    }
+  ],
+  "stages": [
+    {
+      "id": "J2-BM2-ST1",
+      "stageNumber": 1,
+      "title": "Purchasing Power",
+      "timelineLabel": "Start of Year vs One Year Later",
+      "conceptsAssessed": [
+        "inflation",
+        "purchasing_power"
+      ],
+      "interactionType": "before_vs_after",
+      "situation": "One year ago, Rs. 100,000 bought one laptop. Today, savings are still Rs. 100,000, but the laptop costs Rs. 115,000.",
+      "objective": "Identify whether purchasing power increased, decreased, or stayed the same.",
+      "stateBefore": {
+        "generalSavings": 100000,
+        "laptopPrice": 100000,
+        "laptopsAffordable": 1.0
+      },
+      "config": {
+        "beforeState": {
+          "savingsBalance": 100000,
+          "laptopPrice": 100000,
+          "laptopsAffordable": 1.0
+        },
+        "afterState": {
+          "savingsBalance": 100000,
+          "laptopPrice": 115000,
+          "laptopsAffordable": 0.8696
+        },
+        "valuesCompared": [
+          "savings_balance",
+          "laptop_price",
+          "laptops_affordable"
+        ],
+        "learnerQuestion": "Has the purchasing power of Rs. 100,000 increased, decreased, or remained the same?",
+        "importantHiddenDifference": "The balance is unchanged, but the goal price increased.",
+        "explanation": "Rs. 100,000 now covers about 87% of the laptop. Purchasing power decreased."
+      },
+      "choices": [
+        {
+          "id": "J2-BM2-ST1-C1",
+          "label": "Increased",
+          "classification": "incorrect",
+          "immediateFeedback": "The laptop became more expensive while savings did not rise.",
+          "shortTermConsequence": "The price gap is underestimated.",
+          "laterConsequence": "The plan may not adjust for inflation.",
+          "stateChanges": {
+            "awareness_points": 0
+          }
+        },
+        {
+          "id": "J2-BM2-ST1-C2",
+          "label": "Decreased",
+          "classification": "recommended",
+          "immediateFeedback": "Correct. The same money no longer buys the same laptop.",
+          "shortTermConsequence": "The Rs. 15,000 gap becomes visible.",
+          "laterConsequence": "Storage and saving decisions can address the real goal.",
+          "stateChanges": {
+            "purchasing_power_ratio": 0.8696,
+            "laptop_gap": 15000,
+            "awareness_points": 15
+          }
+        },
+        {
+          "id": "J2-BM2-ST1-C3",
+          "label": "Stayed the same",
+          "classification": "incorrect",
+          "immediateFeedback": "The number stayed the same, but what it can buy changed.",
+          "shortTermConsequence": "Balance is confused with purchasing power.",
+          "laterConsequence": "The learner may fail to adapt.",
+          "stateChanges": {
+            "awareness_points": 5
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Compare what money can buy, not only the account number.",
+        "reasonableAlternatives": [],
+        "tradeOff": "A stable number may still lose purchasing power."
+      },
+      "validation": {
+        "method": "Require one answer and reveal the comparison.",
+        "invalidStateFeedback": "Compare the higher laptop price with unchanged savings.",
+        "retryBehaviour": "Allow one retry after showing the affordability ratio."
+      },
+      "accessibilityAlternative": {
+        "method": "Use a labelled comparison table.",
+        "instruction": "Compare both rows and choose increased, decreased, or unchanged."
+      },
+      "stateSummary": {
+        "title": "Purchasing Power Changed",
+        "changedValues": [
+          {
+            "field": "laptop_price",
+            "previousAmount": 100000,
+            "newAmount": 115000,
+            "reason": "Prices increased."
+          },
+          {
+            "field": "purchasing_power_ratio",
+            "previousAmount": 1.0,
+            "newAmount": 0.8696,
+            "reason": "The same money buys less."
+          }
+        ],
+        "learningMessage": "The number can stay the same while purchasing power falls.",
+        "nextStageTeaser": "Choose where the Rs. 100,000 should have been kept."
+      }
+    },
+    {
+      "id": "J2-BM2-ST2",
+      "stageNumber": 2,
+      "title": "Choose Where to Keep Money",
+      "timelineLabel": "Start of the Year",
+      "conceptsAssessed": [
+        "bank_accounts",
+        "interest",
+        "compound_growth",
+        "basic_investment_risk",
+        "purchasing_power"
+      ],
+      "interactionType": "decision_tree",
+      "situation": "Rewind to the start of the year. The laptop may be needed within twelve months. Choose how to store Rs. 100,000 while balancing access, growth, and uncertainty.",
+      "objective": "Choose a storage approach that fits the goal date and ability to accept losses.",
+      "stateBefore": {
+        "generalSavings": 100000,
+        "availableCash": 100000,
+        "investmentBalance": 0,
+        "goalTarget": 115000
+      },
+      "config": {
+        "startingNode": {
+          "id": "J2-BM2-ST2-N1",
+          "question": "Where should the Rs. 100,000 be kept?"
+        },
+        "educationalAssumptions": [
+          "All rates and outcomes are fictional classroom assumptions.",
+          "The savings-account path uses 5% illustrative growth for one year.",
+          "The mixed path places Rs. 60,000 in savings and Rs. 40,000 in a basic investment.",
+          "The displayed investment change is +8%, but a real investment could rise or fall.",
+          "Fees and taxes are excluded.",
+          "Decision quality is scored separately from the displayed result.",
+          "No real product is recommended."
+        ],
+        "terminalOutcomes": [
+          "all_cash",
+          "savings_account",
+          "spend_everything",
+          "mixed_savings_and_investment"
+        ]
+      },
+      "choices": [
+        {
+          "id": "J2-BM2-ST2-C1",
+          "label": "Keep everything as cash",
+          "classification": "reasonable",
+          "immediateFeedback": "The amount stays accessible but earns no growth in this simulation.",
+          "shortTermConsequence": "Accessible cash remains Rs. 100,000.",
+          "laterConsequence": "The laptop gap remains Rs. 15,000 before new contributions.",
+          "stateChanges": {
+            "available_cash": 100000,
+            "general_savings": 100000,
+            "illustrative_savings_growth": 0,
+            "investment_contributions": 0,
+            "investment_balance": 0,
+            "storage_points": 12
+          }
+        },
+        {
+          "id": "J2-BM2-ST2-C2",
+          "label": "Use a savings account",
+          "classification": "recommended",
+          "immediateFeedback": "The money remains accessible and earns Rs. 5,000 of illustrative growth.",
+          "shortTermConsequence": "The goal balance becomes Rs. 105,000.",
+          "laterConsequence": "The gap becomes Rs. 10,000 before new contributions.",
+          "stateChanges": {
+            "available_cash": 105000,
+            "general_savings": 105000,
+            "illustrative_savings_growth": 5000,
+            "investment_contributions": 0,
+            "investment_balance": 0,
+            "storage_points": 20
+          }
+        },
+        {
+          "id": "J2-BM2-ST2-C3",
+          "label": "Spend everything immediately",
+          "classification": "risky",
+          "immediateFeedback": "The money is no longer available for the laptop or unexpected needs.",
+          "shortTermConsequence": "Savings fall to zero.",
+          "laterConsequence": "The full Rs. 115,000 target must be rebuilt or borrowed.",
+          "stateChanges": {
+            "available_cash": 0,
+            "general_savings": 0,
+            "illustrative_savings_growth": 0,
+            "investment_contributions": 0,
+            "investment_balance": 0,
+            "unnecessary_expenses": {
+              "operation": "increase",
+              "amount": 100000
+            },
+            "storage_points": 2
+          }
+        },
+        {
+          "id": "J2-BM2-ST2-C4",
+          "label": "Split Rs. 60,000 into savings and Rs. 40,000 into a basic investment",
+          "classification": "reasonable",
+          "immediateFeedback": "Some money stays accessible while another part accepts investment uncertainty.",
+          "shortTermConsequence": "The displayed path ends with Rs. 63,000 in savings and Rs. 43,200 invested.",
+          "laterConsequence": "The total reaches Rs. 106,200, but the invested part may not suit a near-term goal.",
+          "stateChanges": {
+            "available_cash": 63000,
+            "general_savings": 63000,
+            "illustrative_savings_growth": 3000,
+            "investment_contributions": 40000,
+            "investment_balance": 43200,
+            "storage_points": 18
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "For a goal likely needed within twelve months, a savings account is generally strong because access and lower uncertainty matter.",
+        "reasonableAlternatives": [
+          "Cash may suit very short-term access while accepting weaker growth.",
+          "A mixed approach may suit money not needed soon when losses are acceptable."
+        ],
+        "tradeOff": "More growth potential usually means more uncertainty or less immediate access."
+      },
+      "validation": {
+        "method": "Accept one path and apply its balance changes.",
+        "invalidStateFeedback": "No path is universally invalid; review the time horizon and access needs.",
+        "retryBehaviour": "Allow review of every trade-off before confirmation."
+      },
+      "accessibilityAlternative": {
+        "method": "Use four labelled choice buttons.",
+        "instruction": "Choose a storage approach and hear the access, growth, and risk effects."
+      },
+      "stateSummary": {
+        "title": "Storage Strategy Applied",
+        "changedValues": [
+          {
+            "field": "available_cash",
+            "previousAmount": 100000,
+            "newAmountSource": "selected_path.available_cash",
+            "reason": "The approach changes access."
+          },
+          {
+            "field": "illustrative_savings_growth",
+            "previousAmount": 0,
+            "newAmountSource": "selected_path.illustrative_savings_growth",
+            "reason": "The savings paths earn classroom growth."
+          },
+          {
+            "field": "investment_balance",
+            "previousAmount": 0,
+            "newAmountSource": "selected_path.investment_balance",
+            "reason": "The mixed path includes an uncertain result."
+          }
+        ],
+        "learningMessage": "Storage should fit the goal date, access needs, and risk tolerance.",
+        "nextStageTeaser": "Rising monthly costs now force the budget to change."
+      }
+    },
+    {
+      "id": "J2-BM2-ST3",
+      "stageNumber": 3,
+      "title": "Update the Budget",
+      "timelineLabel": "During the Year",
+      "conceptsAssessed": [
+        "inflation",
+        "budget_adjustment",
+        "saving_and_interest",
+        "spending_wisely"
+      ],
+      "interactionType": "budget_builder",
+      "situation": "Food, transport, and mobile data now cost more. Monthly income remains Rs. 40,000. Rebuild the budget without pretending the old prices still apply.",
+      "objective": "Cover new essential costs, continue some saving, avoid debt where possible, and keep optional spending realistic.",
+      "stateBefore": {
+        "monthlyIncome": 40000,
+        "previousBudget": {
+          "food": 15000,
+          "transport": 8000,
+          "mobile_data": 2000,
+          "savings": 7000,
+          "entertainment": 5000,
+          "other_expenses": 3000
+        }
+      },
+      "config": {
+        "totalAvailableAmount": 40000,
+        "requiredCategories": [
+          {
+            "id": "food",
+            "label": "Food",
+            "minimum": 18000,
+            "maximum": 22000,
+            "startingAmount": 18000
+          },
+          {
+            "id": "transport",
+            "label": "Transport",
+            "minimum": 9500,
+            "maximum": 13000,
+            "startingAmount": 9500
+          },
+          {
+            "id": "mobile_data",
+            "label": "Mobile Data",
+            "minimum": 2500,
+            "maximum": 5000,
+            "startingAmount": 2500
+          },
+          {
+            "id": "other_expenses",
+            "label": "Other Regular Expenses",
+            "minimum": 2000,
+            "maximum": 5000,
+            "startingAmount": 3000
+          }
+        ],
+        "optionalCategories": [
+          {
+            "id": "monthly_savings",
+            "label": "Monthly Savings",
+            "minimum": 0,
+            "maximum": 8000,
+            "startingAmount": 4000
+          },
+          {
+            "id": "entertainment",
+            "label": "Entertainment",
+            "minimum": 0,
+            "maximum": 5000,
+            "startingAmount": 3000
+          }
+        ],
+        "remainingBalanceLabel": "Unallocated Monthly Balance",
+        "remainingBalanceRule": "40000_minus_sum_of_allocations",
+        "overspendingBehaviour": "block_confirmation",
+        "multipleValidBudgets": true,
+        "exampleBalancedBudget": {
+          "food": 18000,
+          "transport": 9500,
+          "mobile_data": 2500,
+          "other_expenses": 3000,
+          "monthly_savings": 4000,
+          "entertainment": 3000,
+          "remaining_balance": 0
+        },
+        "calculationRules": {
+          "annualSavingsContributions": "monthly_savings_multiplied_by_12",
+          "projectedGoalFund": "general_savings_plus_investment_balance_plus_annual_savings_contributions",
+          "purchasingPowerRatio": "projected_goal_fund_divided_by_115000"
+        }
+      },
+      "choices": [
+        {
+          "id": "J2-BM2-ST3-C1",
+          "label": "Cover new costs, continue saving, and keep affordable enjoyment",
+          "classification": "recommended",
+          "immediateFeedback": "The budget reflects current prices and protects present and future priorities.",
+          "shortTermConsequence": "Essential costs remain covered without new debt.",
+          "laterConsequence": "Annual savings help close the laptop gap.",
+          "stateChanges": {
+            "essential_expenses_covered": true,
+            "monthly_savings_contribution": "selected_monthly_savings",
+            "annual_savings_contributions": "selected_monthly_savings_multiplied_by_12",
+            "monthly_budget_stability": 100,
+            "budget_points": 25
+          }
+        },
+        {
+          "id": "J2-BM2-ST3-C2",
+          "label": "Remove all entertainment",
+          "classification": "reasonable",
+          "immediateFeedback": "The maths may work, but the plan could become unnecessarily restrictive.",
+          "shortTermConsequence": "More money can support saving.",
+          "laterConsequence": "The plan may be harder to maintain.",
+          "stateChanges": {
+            "essential_expenses_covered": true,
+            "monthly_savings_contribution": "selected_monthly_savings",
+            "annual_savings_contributions": "selected_monthly_savings_multiplied_by_12",
+            "monthly_budget_stability": 90,
+            "budget_points": 22
+          }
+        },
+        {
+          "id": "J2-BM2-ST3-C3",
+          "label": "Stop saving completely",
+          "classification": "risky",
+          "immediateFeedback": "Current costs are covered, but future goal progress stops.",
+          "shortTermConsequence": "The monthly plan may balance.",
+          "laterConsequence": "The laptop gap depends only on the Stage 2 balance.",
+          "stateChanges": {
+            "essential_expenses_covered": true,
+            "monthly_savings_contribution": 0,
+            "annual_savings_contributions": 0,
+            "monthly_budget_stability": 70,
+            "budget_points": 12
+          }
+        },
+        {
+          "id": "J2-BM2-ST3-C4",
+          "label": "Keep the old essential amounts",
+          "classification": "invalid",
+          "immediateFeedback": "The budget appears balanced only because it ignores the new prices.",
+          "shortTermConsequence": "An essential category is underfunded.",
+          "laterConsequence": "Debt or missed needs may appear.",
+          "stateChanges": {
+            "essential_expenses_covered": false,
+            "monthly_budget_stability": 30,
+            "budget_points": 0
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Update essential costs first, then adjust optional spending and saving without removing either automatically.",
+        "reasonableAlternatives": [
+          "No entertainment may be reasonable for a short period.",
+          "A smaller saving amount may be reasonable when essential costs genuinely rise."
+        ],
+        "tradeOff": "More saving closes the goal gap faster, while some enjoyment may make the plan sustainable."
+      },
+      "validation": {
+        "method": "Check all essential minimums, total allocations at or below Rs. 40,000, and non-negative values.",
+        "invalidStateFeedback": "Use the new prices and keep the total within Rs. 40,000.",
+        "retryBehaviour": "Keep valid categories and highlight only the uncovered or overspent amount."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled plus and minus buttons.",
+        "instruction": "Adjust each category and hear the remaining balance and projected annual saving."
+      },
+      "stateSummary": {
+        "title": "Budget Updated",
+        "changedValues": [
+          {
+            "field": "monthly_savings_contribution",
+            "previousAmount": 7000,
+            "newAmountSource": "selected_monthly_savings",
+            "reason": "Higher costs change the affordable amount."
+          },
+          {
+            "field": "annual_savings_contributions",
+            "previousAmount": 84000,
+            "newAmountSource": "selected_monthly_savings_multiplied_by_12",
+            "reason": "The monthly plan determines yearly goal progress."
+          },
+          {
+            "field": "monthly_budget_stability",
+            "previousAmount": 70,
+            "newAmountSource": "budget_quality_result",
+            "reason": "Stability depends on real costs, saving, and affordability."
+          }
+        ],
+        "learningMessage": "Inflation may require the budget to change even when income does not.",
+        "nextStageTeaser": "Use the updated state to judge assets, costs, and debt."
+      }
+    },
+    {
+      "id": "J2-BM2-ST4",
+      "stageNumber": 4,
+      "title": "Asset or Cost?",
+      "timelineLabel": "End of the Year",
+      "conceptsAssessed": [
+        "assets_and_liabilities",
+        "responsible_debt",
+        "affordability",
+        "purchasing_power",
+        "budget_stability"
+      ],
+      "interactionType": "sort_categories_decision_tree",
+      "situation": "Your storage choice and monthly saving plan have created a projected goal fund. Classify four financial choices, then decide how to handle the Rs. 115,000 laptop goal.",
+      "objective": "Judge value by actual use and affordability, then choose a goal action that fits the current state.",
+      "stateBefore": {
+        "goalTarget": 115000,
+        "goalFundSource": "general_savings_plus_investment_balance_plus_annual_savings_contributions",
+        "accessibleCashSource": "available_cash_plus_annual_savings_contributions",
+        "debtSource": "debt_balance",
+        "monthlyBudgetStabilitySource": "monthly_budget_stability"
+      },
+      "config": {
+        "sortCategories": [
+          {
+            "id": "can_generate_value",
+            "label": "Can Generate Value"
+          },
+          {
+            "id": "mainly_costs_money",
+            "label": "Mainly Costs Money"
+          },
+          {
+            "id": "depends_on_use_and_affordability",
+            "label": "Depends on Use and Affordability"
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "work_laptop",
+            "label": "Laptop used for paid work",
+            "correctCategoryId": "can_generate_value",
+            "explanation": "It may support income, but price, maintenance, and actual use still matter."
+          },
+          {
+            "id": "luxury_phone_debt",
+            "label": "Luxury phone purchased with debt",
+            "correctCategoryId": "mainly_costs_money",
+            "explanation": "It creates repayments and may lose value without producing income."
+          },
+          {
+            "id": "skills_course",
+            "label": "Course that improves work skills",
+            "correctCategoryId": "depends_on_use_and_affordability",
+            "explanation": "Quality, suitability, and affordability must be checked; results are not guaranteed."
+          },
+          {
+            "id": "unused_subscription",
+            "label": "Unused subscription",
+            "correctCategoryId": "mainly_costs_money",
+            "explanation": "It creates repeated cost without meaningful use."
+          }
+        ],
+        "contextDependentItems": [
+          "skills_course"
+        ],
+        "ambiguityExplanation": "An item is not automatically an asset because it might help someone earn. Actual use, quality, cost, and affordability matter.",
+        "finalDecision": {
+          "question": "What should you do about the Rs. 115,000 laptop goal?",
+          "calculationRules": {
+            "goalFund": "general_savings_plus_investment_balance_plus_annual_savings_contributions",
+            "goalGap": "maximum_of_zero_and_115000_minus_goal_fund",
+            "surplusAfterPurchase": "maximum_of_zero_and_goal_fund_minus_115000"
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "J2-BM2-ST4-C1",
+          "label": "Buy the laptop when the goal fund covers it and the work use is clear",
+          "classification": "recommended",
+          "immediateFeedback": "The purchase is linked to a funded goal and a specific work purpose.",
+          "shortTermConsequence": "Rs. 115,000 is deducted from the goal fund.",
+          "laterConsequence": "The remaining balance stays available and no new debt is created.",
+          "stateChanges": {
+            "condition": "goal_fund_greater_than_or_equal_to_115000",
+            "goal_purchase": 115000,
+            "debt_change": 0,
+            "asset_building_points": 20
+          }
+        },
+        {
+          "id": "J2-BM2-ST4-C2",
+          "label": "Cancel the unused subscription and continue saving",
+          "classification": "reasonable",
+          "immediateFeedback": "A repeated unnecessary cost is removed and future saving improves.",
+          "shortTermConsequence": "Avoidable expenses fall by Rs. 1,500 monthly.",
+          "laterConsequence": "The laptop gap closes without new debt, but the purchase happens later.",
+          "stateChanges": {
+            "unnecessary_expenses": {
+              "operation": "decrease_to_minimum_zero",
+              "amount": 1500
+            },
+            "monthly_savings_contribution": {
+              "operation": "increase",
+              "amount": 1500
+            },
+            "asset_building_points": 18
+          }
+        },
+        {
+          "id": "J2-BM2-ST4-C3",
+          "label": "Borrow only the remaining laptop gap with a clear repayment plan",
+          "classification": "reasonable",
+          "immediateFeedback": "The debt supports a work tool, but repayments must fit the budget.",
+          "shortTermConsequence": "Borrow up to Rs. 15,000 using six equal, interest-free classroom payments.",
+          "laterConsequence": "Budget stability falls if the repayment does not fit beside essentials and saving.",
+          "stateChanges": {
+            "condition": "goal_gap_greater_than_zero_and_less_than_or_equal_to_15000",
+            "debt_balance": "increase_by_goal_gap",
+            "monthly_debt_payment": "goal_gap_divided_by_6",
+            "asset_building_points": 14
+          }
+        },
+        {
+          "id": "J2-BM2-ST4-C4",
+          "label": "Buy a luxury phone with Rs. 100,000 of debt",
+          "classification": "risky",
+          "immediateFeedback": "The purchase creates a large obligation without supporting the laptop goal.",
+          "shortTermConsequence": "Debt increases by Rs. 100,000.",
+          "laterConsequence": "Budget stability and purchasing-power protection weaken.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 100000
+            },
+            "unnecessary_expenses": {
+              "operation": "increase",
+              "amount": 100000
+            },
+            "monthly_budget_stability": {
+              "operation": "decrease",
+              "amount": 40
+            },
+            "asset_building_points": 0
+          }
+        },
+        {
+          "id": "J2-BM2-ST4-C5",
+          "label": "Spend Rs. 30,000 on a course without checking quality or affordability",
+          "classification": "risky",
+          "immediateFeedback": "A course may create value, but this decision lacks evidence and affordability checks.",
+          "shortTermConsequence": "The goal fund falls by Rs. 30,000.",
+          "laterConsequence": "The laptop may be delayed and the course benefit remains uncertain.",
+          "stateChanges": {
+            "general_savings": {
+              "operation": "decrease",
+              "amount": 30000
+            },
+            "unnecessary_expenses": {
+              "operation": "increase",
+              "amount": 30000
+            },
+            "asset_building_points": 6
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Buy the laptop when it is funded, genuinely supports paid work, and does not destabilise the budget.",
+        "reasonableAlternatives": [
+          "Continue saving after cancelling an unnecessary expense when the goal is underfunded.",
+          "Borrowing only a small gap may be reasonable when the laptop supports credible income and repayments fit."
+        ],
+        "tradeOff": "Buying sooner may support work, while waiting or borrowing changes timing, access, and monthly pressure."
+      },
+      "validation": {
+        "method": "Score all classifications, calculate the goal fund, and validate the final action.",
+        "invalidStateFeedback": "That action does not fit the current goal fund or repayment capacity.",
+        "retryBehaviour": "Keep correct classifications and allow a different final action when affordability fails."
+      },
+      "accessibilityAlternative": {
+        "method": "Use three category buttons per item, then labelled final-action choices.",
+        "instruction": "Classify each item and hear the current goal fund before choosing an action."
+      },
+      "stateSummary": {
+        "title": "Purchasing-Power Plan Completed",
+        "changedValues": [
+          {
+            "field": "goal_fund",
+            "previousAmountSource": "goal_fund_before_action",
+            "newAmountSource": "goal_fund_after_action",
+            "reason": "The purchase, saving, or debt choice changes the laptop plan."
+          },
+          {
+            "field": "debt_balance",
+            "previousAmountSource": "debt_before_action",
+            "newAmountSource": "debt_after_action",
+            "reason": "Borrowing creates a future obligation."
+          },
+          {
+            "field": "unnecessary_expenses",
+            "previousAmountSource": "pressure_before_action",
+            "newAmountSource": "pressure_after_action",
+            "reason": "Unused or unverified purchases weaken the position."
+          }
+        ],
+        "learningMessage": "An asset depends on use, affordability, and the pressure it creates.",
+        "nextStageTeaser": "Review how well the year protected purchasing power."
+      }
+    }
+  ],
+  "consequenceMap": [
+    {
+      "id": "J2-BM2-CM1",
+      "sourceStageId": "J2-BM2-ST1",
+      "sourceChoiceId": "J2-BM2-ST1-C2",
+      "affectedStateField": "purchasing_power_ratio",
+      "targetStageId": "J2-BM2-ST2",
+      "laterConsequence": "The learner evaluates storage using the real Rs. 15,000 gap.",
+      "educationalPurpose": "Connects inflation recognition to storage."
+    },
+    {
+      "id": "J2-BM2-CM2",
+      "sourceStageId": "J2-BM2-ST2",
+      "sourceChoiceId": "J2-BM2-ST2-C1",
+      "affectedStateField": "general_savings",
+      "targetStageId": "J2-BM2-ST4",
+      "laterConsequence": "The cash path needs more saving to reach the laptop price.",
+      "educationalPurpose": "Shows that access does not automatically protect purchasing power."
+    },
+    {
+      "id": "J2-BM2-CM3",
+      "sourceStageId": "J2-BM2-ST2",
+      "sourceChoiceId": "J2-BM2-ST2-C4",
+      "affectedStateField": "investment_balance",
+      "targetStageId": "J2-BM2-ST4",
+      "laterConsequence": "Part of the goal fund depends on an uncertain investment value.",
+      "educationalPurpose": "Shows growth and risk trade-offs."
+    },
+    {
+      "id": "J2-BM2-CM4",
+      "sourceStageId": "J2-BM2-ST3",
+      "sourceChoiceId": "J2-BM2-ST3-C1",
+      "affectedStateField": "annual_savings_contributions",
+      "targetStageId": "J2-BM2-ST4",
+      "laterConsequence": "Regular saving may close the gap without debt.",
+      "educationalPurpose": "Connects budgeting to purchasing-power protection."
+    },
+    {
+      "id": "J2-BM2-CM5",
+      "sourceStageId": "J2-BM2-ST3",
+      "sourceChoiceId": "J2-BM2-ST3-C3",
+      "affectedStateField": "annual_savings_contributions",
+      "targetStageId": "J2-BM2-ST4",
+      "laterConsequence": "Stopping savings leaves the goal dependent on the Stage 2 balance.",
+      "educationalPurpose": "Shows the cost of ending goal progress."
+    },
+    {
+      "id": "J2-BM2-CM6",
+      "sourceStageId": "J2-BM2-ST4",
+      "sourceChoiceId": "J2-BM2-ST4-C4",
+      "affectedStateField": "debt_balance",
+      "targetStageId": "J2-BM2-COMPLETE",
+      "laterConsequence": "The dashboard shows high debt and weaker stability.",
+      "educationalPurpose": "Connects optional debt with future pressure."
+    }
+  ],
+  "midMissionCheckpoint": {
+    "id": "J2-BM2-CHECKPOINT",
+    "title": "Halfway Through the Year",
+    "currentStateSummary": {
+      "accessibleCashSource": "available_cash",
+      "goalSavingsSource": "general_savings",
+      "savingsGrowthSource": "illustrative_savings_growth",
+      "investmentContributionSource": "investment_contributions",
+      "investmentBalanceSource": "investment_balance",
+      "laptopGapSource": "maximum_of_zero_and_115000_minus_general_savings_minus_investment_balance"
+    },
+    "positiveDecisionFeedbackRules": [
+      {
+        "id": "checkpoint_strength_awareness",
+        "condition": "awareness_points_equals_15",
+        "message": "You recognised that the unchanged balance had lost purchasing power."
+      },
+      {
+        "id": "checkpoint_strength_access",
+        "condition": "available_cash_greater_than_or_equal_to_60000",
+        "message": "You kept a meaningful amount accessible for the near-term goal."
+      }
+    ],
+    "emergingRiskFeedbackRules": [
+      {
+        "id": "checkpoint_risk_no_growth",
+        "condition": "illustrative_savings_growth_equals_zero_and_investment_balance_equals_zero",
+        "message": "The balance has no growth in this classroom path while prices are higher."
+      },
+      {
+        "id": "checkpoint_risk_low_access",
+        "condition": "available_cash_below_60000",
+        "message": "A large part of the goal money is not immediately accessible."
+      },
+      {
+        "id": "checkpoint_risk_spent",
+        "condition": "general_savings_equals_zero",
+        "message": "The laptop goal must now be rebuilt from monthly income."
+      }
+    ],
+    "reflectionQuestion": "Continue to the inflation-adjusted budget, or review the storage choice first?",
+    "primaryActionLabel": "Update the Budget",
+    "reviewActionLabel": "Review Storage Choice"
+  },
+  "finalChallenge": {
+    "id": "J2-BM2-FINAL",
+    "title": "Fund the Useful Goal",
+    "situation": "The laptop costs Rs. 115,000. Combine the current goal fund, monthly budget, asset judgement, and debt affordability before acting.",
+    "conceptsCombined": [
+      "purchasing_power",
+      "budget_adjustment",
+      "assets_and_liabilities",
+      "responsible_debt"
+    ],
+    "interactionType": "sort_categories_decision_tree",
+    "stateBefore": {
+      "goalTarget": 115000,
+      "goalFundSource": "general_savings_plus_investment_balance_plus_annual_savings_contributions",
+      "monthlyBudgetStabilitySource": "monthly_budget_stability",
+      "debtSource": "debt_balance"
+    },
+    "config": {
+      "sortItemsSourceStageId": "J2-BM2-ST4",
+      "finalDecisionSourceStageId": "J2-BM2-ST4",
+      "requiresAtLeastTwoConcepts": true
+    },
+    "choicesSourceStageId": "J2-BM2-ST4",
+    "recommendedReasoning": "An item should create useful value, fit the budget, and avoid unnecessary debt pressure. Buying, waiting, or borrowing a small gap may each be reasonable depending on the current state."
+  },
+  "debrief": {
+    "id": "J2-BM2-DEBRIEF",
+    "title": "Protect What Your Money Can Buy",
+    "content": "You saw that an unchanged balance can lose purchasing power when prices rise. Storage choices changed access, growth, and uncertainty. The updated budget determined whether new saving could close the laptop gap. Finally, you judged whether a purchase could create useful value or mainly add cost and debt. Cash may suit short-term needs, while interest or investing may offer growth without guaranteeing that prices will be beaten. The strongest plan depends on the goal date, affordability, access needs, and risk tolerance—not the highest-risk choice.",
+    "simpleSummary": "Protect purchasing power through realistic saving, budgeting, access, and careful spending.",
+    "illustration": "A savings balance, budget, laptop goal, and debt meter connect around a rising-price arrow."
+  },
+  "scoring": {
+    "maximumScore": 100,
+    "dimensions": [
+      {
+        "id": "purchasing_power_awareness",
+        "label": "Purchasing-Power Awareness",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J2-BM2-ST1"
+        ],
+        "positiveRules": [
+          "15 for recognising decreased purchasing power.",
+          "5 for choosing unchanged and correcting the reasoning.",
+          "0 for choosing increased."
+        ],
+        "deductions": [],
+        "learnerExplanation": "Measures whether you compared what money can buy, not only the account number."
+      },
+      {
+        "id": "storage_and_access",
+        "label": "Storage and Access",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J2-BM2-ST2"
+        ],
+        "positiveRules": [
+          "20 for the savings-account path for the near-term goal.",
+          "18 for a mixed path when the invested part is not needed soon.",
+          "12 for cash with clear short-term access reasoning.",
+          "2 for spending everything."
+        ],
+        "deductions": [
+          "Mixed allocation falls to 10 when all money is needed within twelve months."
+        ],
+        "learnerExplanation": "Measures how well access, possible growth, and uncertainty fit the goal."
+      },
+      {
+        "id": "budget_adjustment",
+        "label": "Budget Adjustment",
+        "maximumPoints": 25,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J2-BM2-ST3"
+        ],
+        "positiveRules": [
+          "25 for covering new costs, continuing saving, and keeping enjoyment affordable.",
+          "22 for a valid no-entertainment plan.",
+          "12 for covering costs but stopping saving.",
+          "Invalid budgets must be revised."
+        ],
+        "deductions": [],
+        "learnerExplanation": "Measures whether the budget reflects current prices and protects future goals."
+      },
+      {
+        "id": "asset_and_debt_judgement",
+        "label": "Asset and Debt Judgement",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J2-BM2-ST4"
+        ],
+        "positiveRules": [
+          "Up to 10 for correct classifications.",
+          "10 for a funded useful purchase.",
+          "9 for cancelling an unnecessary expense and continuing to save.",
+          "7 for a small affordable goal-gap loan.",
+          "0 for the luxury phone debt."
+        ],
+        "deductions": [
+          "Deduct 4 for buying an unverified course without checking affordability."
+        ],
+        "learnerExplanation": "Measures whether value, use, cost, and repayment pressure were considered together."
+      },
+      {
+        "id": "financial_adaptability",
+        "label": "Financial Adaptability",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J2-BM2-ST2",
+          "J2-BM2-ST3",
+          "J2-BM2-ST4"
+        ],
+        "positiveRules": [
+          "20 when the goal is funded or on track, essentials remain covered, and avoidable debt is not created.",
+          "15 for a realistic delayed plan.",
+          "10 for a small affordable debt gap supporting a verified work tool.",
+          "0 when essentials are uncovered or optional debt creates major pressure."
+        ],
+        "deductions": [],
+        "learnerExplanation": "Measures how well the plan changed when prices and costs changed."
+      }
+    ],
+    "outcomeBasedPointsSeparatedFromDecisionQuality": true
+  },
+  "performanceLevels": [
+    {
+      "minimumScore": 0,
+      "maximumScore": 39,
+      "label": "Purchasing Power At Risk",
+      "description": "The plan ignored rising prices, uncovered important costs, or created avoidable debt pressure."
+    },
+    {
+      "minimumScore": 40,
+      "maximumScore": 69,
+      "label": "Building Protection",
+      "description": "Some choices protected access or saving, but the budget or goal plan still needs work."
+    },
+    {
+      "minimumScore": 70,
+      "maximumScore": 89,
+      "label": "Financially Prepared",
+      "description": "The learner adjusted to higher prices while balancing access, saving, and affordability."
+    },
+    {
+      "minimumScore": 90,
+      "maximumScore": 100,
+      "label": "Strong Inflation Response",
+      "description": "The learner made consistent, informed, and adaptable decisions. This does not guarantee future wealth."
+    }
+  ],
+  "resultsDashboard": [
+    {
+      "id": "result_purchasing_power",
+      "label": "Purchasing Power Protected",
+      "startingValueSource": "startingState.goalProgress_divided_by_startingState.goalTarget",
+      "finalValueSource": "final_goal_fund_divided_by_115000",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_1",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_0_9_and_0_9999",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_between_0_75_and_0_8999",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_below_0_75",
+          "label": "At Risk"
+        }
+      ],
+      "explanationTemplate": "Shows how much of the Rs. 115,000 laptop the final goal fund can cover."
+    },
+    {
+      "id": "result_savings_growth",
+      "label": "Savings Growth",
+      "startingValueSource": "startingState.generalSavings",
+      "finalValueSource": "general_savings",
+      "contributionValueSource": "annual_savings_contributions",
+      "growthValueSource": "illustrative_savings_growth",
+      "statusRules": [
+        {
+          "condition": "final_value_above_starting_value",
+          "label": "Strong"
+        },
+        {
+          "condition": "final_value_equals_starting_value",
+          "label": "Stable"
+        },
+        {
+          "condition": "final_value_below_starting_value_and_above_zero",
+          "label": "Developing"
+        },
+        {
+          "condition": "final_value_equals_zero",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Separates new contributions from illustrative savings growth."
+    },
+    {
+      "id": "result_investment",
+      "label": "Basic Investment",
+      "startingValueSource": "startingState.investmentBalance",
+      "finalValueSource": "investment_balance",
+      "contributionValueSource": "investment_contributions",
+      "statusRules": [
+        {
+          "condition": "no_investment_selected",
+          "label": "Not Used"
+        },
+        {
+          "condition": "investment_selected_and_goal_fit_confirmed",
+          "label": "Suitable in Context"
+        },
+        {
+          "condition": "investment_selected_for_near_term_money",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Displays contributions separately from the fictional investment change."
+    },
+    {
+      "id": "result_budget_stability",
+      "label": "Monthly Budget Stability",
+      "startingValueSource": "70",
+      "finalValueSource": "monthly_budget_stability",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_90",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_70_and_89",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_between_40_and_69",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_below_40",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Measures whether the updated budget covers real costs, saving, and affordable enjoyment."
+    },
+    {
+      "id": "result_essentials",
+      "label": "Essential Expenses Covered",
+      "startingValueSource": "true",
+      "finalValueSource": "essential_expenses_covered",
+      "statusRules": [
+        {
+          "condition": "true",
+          "label": "Strong"
+        },
+        {
+          "condition": "false",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Shows whether the inflation-adjusted budget reflects actual essential costs."
+    },
+    {
+      "id": "result_unnecessary_expenses",
+      "label": "Avoidable Financial Pressure",
+      "startingValueSource": "0",
+      "finalValueSource": "unnecessary_expenses",
+      "statusRules": [
+        {
+          "condition": "value_equals_zero",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_1_and_30000",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_above_30000",
+          "label": "At Risk"
+        }
+      ],
+      "explanationTemplate": "Shows unused subscriptions, unverified courses, or unplanned luxury purchases."
+    },
+    {
+      "id": "result_debt",
+      "label": "Debt Created",
+      "startingValueSource": "startingState.debtBalance",
+      "finalValueSource": "debt_balance",
+      "secondaryValueSource": "monthly_debt_payment",
+      "statusRules": [
+        {
+          "condition": "value_equals_zero",
+          "label": "Strong"
+        },
+        {
+          "condition": "small_affordable_asset_gap",
+          "label": "Managed"
+        },
+        {
+          "condition": "value_above_30000",
+          "label": "At Risk"
+        }
+      ],
+      "explanationTemplate": "Shows whether debt supported a verified useful goal or optional consumption."
+    },
+    {
+      "id": "result_asset_building",
+      "label": "Asset-Building Decisions",
+      "startingValueSource": "0",
+      "finalValueSource": "asset_building_points",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_18",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_12_and_17",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_between_6_and_11",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_below_6",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Measures whether useful value, affordability, and actual use were checked."
+    },
+    {
+      "id": "result_score",
+      "label": "Financial Confidence Score",
+      "startingValueSource": "0",
+      "finalValueSource": "final_score",
+      "statusRules": [
+        {
+          "condition": "0_to_39",
+          "label": "Purchasing Power At Risk"
+        },
+        {
+          "condition": "40_to_69",
+          "label": "Building Protection"
+        },
+        {
+          "condition": "70_to_89",
+          "label": "Financially Prepared"
+        },
+        {
+          "condition": "90_to_100",
+          "label": "Strong Inflation Response"
+        }
+      ],
+      "explanationTemplate": "Rewards decision quality rather than a lucky simulated return."
+    }
+  ],
+  "personalisedFeedbackRules": {
+    "strengthRules": [
+      {
+        "id": "strength_inflation",
+        "condition": "purchasing_power_awareness_score_equals_15",
+        "message": "You recognised that the unchanged balance had lost purchasing power."
+      },
+      {
+        "id": "strength_budget",
+        "condition": "budget_adjustment_score_greater_than_or_equal_to_22",
+        "message": "You rebuilt the budget around current prices without abandoning every future priority."
+      },
+      {
+        "id": "strength_asset",
+        "condition": "asset_and_debt_judgement_score_greater_than_or_equal_to_16",
+        "message": "You judged value using actual use, affordability, and debt pressure."
+      },
+      {
+        "id": "strength_goal",
+        "condition": "final_purchasing_power_ratio_greater_than_or_equal_to_1",
+        "message": "Your adjusted plan restored enough purchasing power for the laptop goal."
+      }
+    ],
+    "improvementRules": [
+      {
+        "id": "improve_cash_only",
+        "condition": "storage_choice_equals_all_cash_and_final_goal_gap_above_zero",
+        "message": "Cash stayed accessible, but the goal still needed stronger saving or growth."
+      },
+      {
+        "id": "improve_no_saving",
+        "condition": "annual_savings_contributions_equals_zero",
+        "message": "Stopping all saving protected today’s budget but weakened the future goal."
+      },
+      {
+        "id": "improve_debt",
+        "condition": "debt_balance_above_30000",
+        "message": "The debt choice created more pressure than lasting value."
+      },
+      {
+        "id": "improve_asset_check",
+        "condition": "asset_building_points_below_12",
+        "message": "Check actual use, quality, and affordability before calling a purchase an asset."
+      }
+    ],
+    "tradeoffRules": [
+      {
+        "id": "tradeoff_access_growth",
+        "condition": "storage_choice_in_cash_or_savings",
+        "message": "You prioritised access and lower uncertainty, accepting limited growth."
+      },
+      {
+        "id": "tradeoff_mixed",
+        "condition": "storage_choice_equals_mixed",
+        "message": "You accepted investment uncertainty for more growth potential."
+      },
+      {
+        "id": "tradeoff_budget",
+        "condition": "entertainment_equals_zero",
+        "message": "You protected saving strongly, but the budget may be harder to maintain."
+      },
+      {
+        "id": "tradeoff_small_debt",
+        "condition": "small_asset_gap_debt_used",
+        "message": "Borrowing accelerated a useful purchase but added a monthly repayment."
+      }
+    ],
+    "practicalPrinciple": "Compare what money can buy, then adjust saving, spending, access, and risk around the real goal.",
+    "replayMessage": "Replay with another storage or budget strategy to see how the laptop gap and debt options change."
+  },
+  "quiz": {
+    "id": "J2-BM2-QUIZ",
+    "questions": [
+      {
+        "id": "J2-BM2-Q1",
+        "questionType": "combined_recognition",
+        "question": "Which plan combines inflation awareness and budget adjustment most effectively?",
+        "options": [
+          {
+            "id": "J2-BM2-Q1-O1",
+            "label": "Keep the old budget because income is unchanged",
+            "isCorrect": false,
+            "feedback": "The old budget may not cover actual essential costs."
+          },
+          {
+            "id": "J2-BM2-Q1-O2",
+            "label": "Update costs, continue some saving, and review optional spending",
+            "isCorrect": true,
+            "feedback": "Correct. The plan responds to higher prices while protecting future progress."
+          },
+          {
+            "id": "J2-BM2-Q1-O3",
+            "label": "Stop every enjoyable expense permanently",
+            "isCorrect": false,
+            "feedback": "A realistic plan may include affordable enjoyment."
+          },
+          {
+            "id": "J2-BM2-Q1-O4",
+            "label": "Borrow for every price increase",
+            "isCorrect": false,
+            "feedback": "Debt does not remove the need to adjust the budget."
+          }
+        ],
+        "correctAnswerId": "J2-BM2-Q1-O2",
+        "correctExplanation": "The plan uses current prices, maintains saving, and adjusts flexible spending.",
+        "conceptsTested": [
+          "inflation",
+          "budget_adjustment",
+          "saving"
+        ],
+        "misconceptionTested": "The same budget remains realistic when essential prices rise."
+      },
+      {
+        "id": "J2-BM2-Q2",
+        "questionType": "combined_misconception",
+        "question": "Your savings balance is higher than last year. What must be checked before saying purchasing power improved?",
+        "options": [
+          {
+            "id": "J2-BM2-Q2-O1",
+            "label": "Only the new account number",
+            "isCorrect": false,
+            "feedback": "A larger number may still buy less if prices rose faster."
+          },
+          {
+            "id": "J2-BM2-Q2-O2",
+            "label": "Whether the balance grew faster than the relevant prices",
+            "isCorrect": true,
+            "feedback": "Correct. Purchasing power depends on both money and prices."
+          },
+          {
+            "id": "J2-BM2-Q2-O3",
+            "label": "Whether all money was invested",
+            "isCorrect": false,
+            "feedback": "Investing is not required and does not guarantee protection."
+          },
+          {
+            "id": "J2-BM2-Q2-O4",
+            "label": "Whether every want was removed",
+            "isCorrect": false,
+            "feedback": "Enjoyment spending is not the measure of purchasing power."
+          }
+        ],
+        "correctAnswerId": "J2-BM2-Q2-O2",
+        "correctExplanation": "A higher balance protects purchasing power only when it keeps pace with relevant prices.",
+        "conceptsTested": [
+          "inflation",
+          "interest",
+          "purchasing_power"
+        ],
+        "misconceptionTested": "A higher savings balance always means purchasing power increased."
+      },
+      {
+        "id": "J2-BM2-Q3",
+        "questionType": "new_application",
+        "question": "A Rs. 60,000 course may improve work skills, but paying for it would stop rent payments. What is the strongest conclusion?",
+        "options": [
+          {
+            "id": "J2-BM2-Q3-O1",
+            "label": "It is automatically a good asset",
+            "isCorrect": false,
+            "feedback": "Possible value does not remove affordability concerns."
+          },
+          {
+            "id": "J2-BM2-Q3-O2",
+            "label": "Education is always profitable",
+            "isCorrect": false,
+            "feedback": "Course quality and financial results are not guaranteed."
+          },
+          {
+            "id": "J2-BM2-Q3-O3",
+            "label": "Its value depends on quality, use, affordability, and the missed rent",
+            "isCorrect": true,
+            "feedback": "Correct. Potential value can still be unaffordable now."
+          },
+          {
+            "id": "J2-BM2-Q3-O4",
+            "label": "Borrowing always makes it affordable",
+            "isCorrect": false,
+            "feedback": "Borrowing adds repayment pressure and does not guarantee value."
+          }
+        ],
+        "correctAnswerId": "J2-BM2-Q3-O3",
+        "correctExplanation": "Asset value depends on actual use and benefits as well as cost and affordability.",
+        "conceptsTested": [
+          "assets_and_liabilities",
+          "budgeting",
+          "responsible_debt"
+        ],
+        "misconceptionTested": "Anything that may improve income is automatically a good asset."
+      }
+    ]
+  },
+  "completion": {
+    "id": "J2-BM2-COMPLETE",
+    "headline": "Inflation Plan Complete!",
+    "achievementMessage": "You adjusted saving, budgeting, access, and spending decisions as prices changed.",
+    "scoreSource": "final_score",
+    "performanceLevelSource": "performance_level",
+    "conceptsMasteredSource": "dimensions_at_or_above_70_percent",
+    "conceptNeedingPracticeSource": "lowest_scoring_dimension",
+    "xpReward": 200,
+    "progressMessage": "Journey Boss complete in Make Money Grow.",
+    "nextTeaser": "Next, explore how borrowing costs and repayment choices affect long-term flexibility.",
+    "animation": "A rising price arrow is matched by a stronger savings plan, stable budget, and completed laptop goal.",
+    "replayButtonLabel": "Try Another Strategy",
+    "continueButtonLabel": "Continue Journey"
+  },
+  "realLifeChallenge": {
+    "id": "J2-BM2-CHALLENGE",
+    "title": "Compare One Price",
+    "instruction": "Choose one fictional item, write last year’s price and a higher current price, then calculate the extra amount needed. Do not buy anything or share private financial information.",
+    "buttonLabel": "My Price Comparison Is Ready"
+  },
+  "reviewChecklist": [
+    {
+      "item": "Reviews only previously taught concepts",
+      "status": "PASS",
+      "notes": "Uses J2-M8 through J2-M13."
+    },
+    {
+      "item": "Does not introduce unexplained major concepts",
+      "status": "PASS",
+      "notes": "All terms appear through decisions and feedback."
+    },
+    {
+      "item": "Concepts are combined accurately",
+      "status": "PASS",
+      "notes": "Inflation, saving, budgeting, assets, and debt affect one goal."
+    },
+    {
+      "item": "Financial amounts are internally consistent",
+      "status": "PASS",
+      "notes": "Laptop, savings, and monthly budget calculations reconcile."
+    },
+    {
+      "item": "Persistent values update correctly",
+      "status": "PASS",
+      "notes": "Balances, contributions, debt, and goal progress carry forward."
+    },
+    {
+      "item": "Earlier decisions affect later stages",
+      "status": "PASS",
+      "notes": "Storage and monthly saving change the final options."
+    },
+    {
+      "item": "Interaction choices have meaningful consequences",
+      "status": "PASS",
+      "notes": "Every major decision changes state, score, or later choices."
+    },
+    {
+      "item": "Multiple reasonable paths are allowed where appropriate",
+      "status": "PASS",
+      "notes": "Cash, savings, mixed allocation, waiting, and small goal debt may be defensible."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "Purchasing power, interest, risk, affordability, and debt are represented accurately."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "Uses salary, bills, saving goals, work tools, and debt."
+    },
+    {
+      "item": "Difficulty is Easy",
+      "status": "PASS",
+      "notes": "Uses simple percentages and visible amounts."
+    },
+    {
+      "item": "No personalised investment advice",
+      "status": "PASS",
+      "notes": "All products and results are fictional classroom examples."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "Investment outcomes are explicitly uncertain."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "NOT APPLICABLE",
+      "notes": "No real stock or market price is used."
+    },
+    {
+      "item": "No claims that markets always recover",
+      "status": "PASS",
+      "notes": "No recovery claim is made."
+    },
+    {
+      "item": "Simulated results are not presented as forecasts",
+      "status": "PASS",
+      "notes": "Rates and outcomes are labelled fictional."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Risky choices receive calm feedback."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "Every strategy includes trade-offs."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "Uses PKR, income, transport, mobile data, and a laptop goal."
+    },
+    {
+      "item": "Interactions reinforce the learning objective",
+      "status": "PASS",
+      "notes": "Every stage applies rising-price decisions."
+    },
+    {
+      "item": "Scoring rewards decision quality rather than luck",
+      "status": "PASS",
+      "notes": "The investment outcome is separated from decision scoring."
+    },
+    {
+      "item": "Enjoyable spending is not automatically irresponsible",
+      "status": "PASS",
+      "notes": "Balanced entertainment remains valid."
+    },
+    {
+      "item": "Risk-taking is not automatically rewarded",
+      "status": "PASS",
+      "notes": "The mixed path does not automatically receive the highest score."
+    },
+    {
+      "item": "Quiz corrects the combined misconception",
+      "status": "PASS",
+      "notes": "The quiz tests purchasing power, budgeting, and affordability."
+    },
+    {
+      "item": "Mission can be completed within the specified duration",
+      "status": "PASS",
+      "notes": "Four compact stages, checkpoint, dashboard, and quiz fit eight minutes."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "Uses beginner-friendly adult language."
+    },
+    {
+      "item": "Accessibility alternatives are provided",
+      "status": "PASS",
+      "notes": "Every interaction includes non-gesture controls."
+    },
+    {
+      "item": "Final dashboard matches the simulation outcomes",
+      "status": "PASS",
+      "notes": "Results use tracked state sources."
+    },
+    {
+      "item": "JSON matches the human-readable version",
+      "status": "PASS",
+      "notes": "Both outputs are generated from the same mission data."
+    }
+  ]
+}
