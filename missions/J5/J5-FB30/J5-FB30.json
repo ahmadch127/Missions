@@ -1,0 +1,2824 @@
+{
+  "id": "J5-FB30",
+  "journeyId": "J5",
+  "journeyName": "Master Money Decisions",
+  "title": "Your First Financial Year",
+  "bossType": "final_boss",
+  "unlocksAfterMissionId": "J5-M29",
+  "conceptsAssessed": [
+    {
+      "missionId": "J1-M6",
+      "missionTitle": "Build a Budget",
+      "concept": "Cover needs, allow reasonable wants, and allocate limited income.",
+      "assessedInStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST3",
+        "J5-FB30-ST5"
+      ]
+    },
+    {
+      "missionId": "J1-M7",
+      "missionTitle": "Emergency Fund",
+      "concept": "Build and protect accessible emergency savings.",
+      "assessedInStageIds": [
+        "J5-FB30-ST2",
+        "J5-FB30-ST3",
+        "J5-FB30-ST6"
+      ]
+    },
+    {
+      "missionId": "J2-M12",
+      "missionTitle": "Good Debt and Harmful Debt",
+      "concept": "Judge borrowing by purpose, affordability, and repayment pressure.",
+      "assessedInStageIds": [
+        "J5-FB30-ST3",
+        "J5-FB30-ST5",
+        "J5-FB30-ST7"
+      ]
+    },
+    {
+      "missionId": "J5-M28",
+      "missionTitle": "Spot Financial Scams",
+      "concept": "Recognise pressure, secrecy, guarantees, and unsafe requests.",
+      "assessedInStageIds": [
+        "J5-FB30-ST4"
+      ]
+    },
+    {
+      "missionId": "J5-M29",
+      "missionTitle": "Set Financial Goals",
+      "concept": "Create a measurable and affordable financial goal.",
+      "assessedInStageIds": [
+        "J5-FB30-ST5"
+      ]
+    },
+    {
+      "missionId": "J4-M26",
+      "missionTitle": "Long-Term Investing",
+      "concept": "Invest only when ready, diversify, and respond thoughtfully to volatility.",
+      "assessedInStageIds": [
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ]
+    }
+  ],
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 11,
+  "simulationPeriod": "one_year",
+  "currency": "PKR",
+  "locale": "en-PK",
+  "language": "English",
+  "learningObjective": "Apply budgeting, saving, emergency planning, debt management, scam awareness, goal-setting, and investing concepts across one simulated financial year.",
+  "primaryMisconception": "Long-term wealth comes mainly from one lucky investment rather than a series of consistent financial decisions.",
+  "secondaryMisconceptions": [
+    "Investing should always come before building emergency savings.",
+    "One financial mistake permanently ruins a person’s financial future.",
+    "A higher investment balance automatically means stronger financial health."
+  ],
+  "keyTakeaway": "Financial strength comes from consistent decisions, not one lucky investment.",
+  "overview": {
+    "summary": "Manage twelve months of salary, essentials, enjoyment, savings, an emergency, debt, a scam, a measurable goal, investment readiness, and a market decline. Earlier decisions change later options. The final dashboard rewards stability, protection, evidence-based decisions, and adaptability rather than the luckiest investment result."
+  },
+  "startingState": {
+    "availableCash": 100000,
+    "monthlyIncome": 100000,
+    "essentialExpensesCovered": false,
+    "optionalSpending": 0,
+    "generalSavings": 20000,
+    "emergencyFund": 0,
+    "debtBalance": 0,
+    "monthlyDebtPayment": 0,
+    "goalTarget": 180000,
+    "goalProgress": 0,
+    "monthlyGoalContribution": 0,
+    "monthlyInvestmentContribution": 0,
+    "investmentContributions": 0,
+    "investmentBalance": 0,
+    "scamLosses": 0,
+    "missedObligations": 0,
+    "budgetStability": 50,
+    "financialConfidence": 0
+  },
+  "trackedStateFields": [
+    {
+      "key": "monthly_income",
+      "label": "Monthly Income",
+      "initialValue": 100000,
+      "minimumValue": 100000,
+      "maximumValue": 100000,
+      "increasesBy": [],
+      "decreasesBy": [],
+      "affectedByStageIds": [],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "available_cash",
+      "label": "Available Cash",
+      "initialValue": 100000,
+      "minimumValue": 0,
+      "maximumValue": 500000,
+      "increasesBy": [
+        "unallocated money",
+        "paused contributions"
+      ],
+      "decreasesBy": [
+        "spending",
+        "goal or investment contributions"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST3",
+        "J5-FB30-ST4",
+        "J5-FB30-ST5",
+        "J5-FB30-ST6"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "essential_expenses_covered",
+      "label": "Essential Expenses Covered",
+      "initialValue": false,
+      "minimumValue": 0,
+      "maximumValue": 1,
+      "increasesBy": [
+        "valid budget"
+      ],
+      "decreasesBy": [
+        "skipped essential payment"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST3"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "optional_spending",
+      "label": "Optional Spending",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 20000,
+      "increasesBy": [
+        "budget allocation"
+      ],
+      "decreasesBy": [
+        "emergency adjustment"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST3"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "general_savings",
+      "label": "General Savings",
+      "initialValue": 20000,
+      "minimumValue": 0,
+      "maximumValue": 500000,
+      "increasesBy": [
+        "monthly saving"
+      ],
+      "decreasesBy": [
+        "repair",
+        "scam loss",
+        "goal funding"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST3",
+        "J5-FB30-ST4",
+        "J5-FB30-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "emergency_fund",
+      "label": "Emergency Fund",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 300000,
+      "increasesBy": [
+        "monthly emergency saving"
+      ],
+      "decreasesBy": [
+        "genuine emergency",
+        "investment misuse"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST2",
+        "J5-FB30-ST3",
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "debt_balance",
+      "label": "Debt Balance",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 300000,
+      "increasesBy": [
+        "borrowing"
+      ],
+      "decreasesBy": [
+        "repayments"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST3",
+        "J5-FB30-ST5",
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_debt_payment",
+      "label": "Monthly Debt Payment",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 20000,
+      "increasesBy": [
+        "new debt"
+      ],
+      "decreasesBy": [
+        "debt completion"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST3",
+        "J5-FB30-ST5",
+        "J5-FB30-ST6"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "goal_progress",
+      "label": "Goal Progress",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 180000,
+      "increasesBy": [
+        "goal contributions"
+      ],
+      "decreasesBy": [
+        "goal withdrawals"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_goal_contribution",
+      "label": "Monthly Goal Contribution",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 30000,
+      "increasesBy": [
+        "goal plan"
+      ],
+      "decreasesBy": [
+        "debt or budget pressure"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST5"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "monthly_investment_contribution",
+      "label": "Monthly Investment Contribution",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 15000,
+      "increasesBy": [
+        "readiness plan"
+      ],
+      "decreasesBy": [
+        "pause or pressure"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "investment_contributions",
+      "label": "Investment Contributions",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "monthly investing"
+      ],
+      "decreasesBy": [
+        "withdrawals shown separately"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "investment_balance",
+      "label": "Investment Balance",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 150000,
+      "increasesBy": [
+        "contributions",
+        "positive simulation"
+      ],
+      "decreasesBy": [
+        "decline",
+        "sale"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "scam_losses",
+      "label": "Scam Losses",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 25000,
+      "increasesBy": [
+        "sending scam money"
+      ],
+      "decreasesBy": [],
+      "affectedByStageIds": [
+        "J5-FB30-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "missed_obligations",
+      "label": "Missed Obligations",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "skipping essentials"
+      ],
+      "decreasesBy": [],
+      "affectedByStageIds": [
+        "J5-FB30-ST3"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "budget_stability",
+      "label": "Budget Stability",
+      "initialValue": 50,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "balanced decisions"
+      ],
+      "decreasesBy": [
+        "overspending",
+        "missed needs"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST3",
+        "J5-FB30-ST5",
+        "J5-FB30-ST6"
+      ],
+      "displayThroughoutMission": false
+    },
+    {
+      "key": "financial_confidence",
+      "label": "Financial Confidence",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "informed decisions"
+      ],
+      "decreasesBy": [
+        "avoidable debt",
+        "scam exposure"
+      ],
+      "affectedByStageIds": [
+        "J5-FB30-ST1",
+        "J5-FB30-ST2",
+        "J5-FB30-ST3",
+        "J5-FB30-ST4",
+        "J5-FB30-ST5",
+        "J5-FB30-ST6",
+        "J5-FB30-ST7"
+      ],
+      "displayThroughoutMission": false
+    }
+  ],
+  "screens": [
+    {
+      "id": "J5-FB30-S01",
+      "type": "hook",
+      "title": "Your First Financial Year",
+      "content": "Twelve salaries. One major goal. A repair, a scam, and a market drop are coming. Can your plan stay balanced?",
+      "illustration": "A twelve-month calendar with salary, bills, savings, scam, goal, and investment icons.",
+      "primaryAction": {
+        "label": "Start the Year",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-FB30-S02",
+      "type": "scenario_setup",
+      "title": "A New Monthly Income",
+      "content": "Your first full-time job pays Rs. 100,000 monthly. You begin with Rs. 20,000 savings and no debt.",
+      "illustration": "Salary, savings, emergency, debt, and goal cards.",
+      "stateSummary": {
+        "monthlyIncome": 100000,
+        "generalSavings": 20000,
+        "debtBalance": 0
+      },
+      "primaryAction": {
+        "label": "View Priorities",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-FB30-S03",
+      "type": "scenario_setup",
+      "title": "Several Jobs for One Salary",
+      "content": "Your income must cover essentials, enjoyment, emergency protection, and a Rs. 180,000 professional goal.",
+      "illustration": "Four containers labelled needs, wants, emergency, and goal.",
+      "stateSummary": {
+        "goalTarget": 180000,
+        "emergencyFund": 0
+      },
+      "primaryAction": {
+        "label": "See the Challenge",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-FB30-S04",
+      "type": "scenario_setup",
+      "title": "Choices Carry Forward",
+      "content": "Money saved early creates options later. Debt, scam losses, and missed bills reduce future flexibility.",
+      "illustration": "A timeline linking early decisions to later events.",
+      "stateSummary": {
+        "simulationMonths": 12,
+        "decisionStages": 7
+      },
+      "primaryAction": {
+        "label": "Choose an Approach",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J5-FB30-S05",
+      "type": "pre_simulation_question",
+      "title": "What Builds the Strongest Year?",
+      "question": "Which approach is most likely to create a stable financial year?",
+      "options": [
+        {
+          "id": "J5-FB30-PQ-O1",
+          "label": "Invest every spare rupee",
+          "isRecommended": false,
+          "feedback": "Bills and emergencies still require accessible money."
+        },
+        {
+          "id": "J5-FB30-PQ-O2",
+          "label": "Balance needs, enjoyment, savings, goals, and protection",
+          "isRecommended": true,
+          "feedback": "Correct. The year tests how these priorities work together."
+        },
+        {
+          "id": "J5-FB30-PQ-O3",
+          "label": "Avoid every financial decision",
+          "isRecommended": false,
+          "feedback": "Avoidance leaves goals and risks unmanaged."
+        },
+        {
+          "id": "J5-FB30-PQ-O4",
+          "label": "Use debt whenever the plan becomes difficult",
+          "isRecommended": false,
+          "feedback": "Repayment changes later months."
+        }
+      ],
+      "recommendedAnswerId": "J5-FB30-PQ-O2",
+      "connectionToSimulation": "The seven stages test present needs, protection, goals, and long-term decisions together."
+    }
+  ],
+  "stages": [
+    {
+      "id": "J5-FB30-ST1",
+      "stageNumber": 1,
+      "title": "Your First Salary",
+      "timelineLabel": "Month 1",
+      "conceptsAssessed": [
+        "needs_versus_wants",
+        "budgeting",
+        "saving_first"
+      ],
+      "interactionType": "sort_categories_budget_builder",
+      "situation": "Your first Rs. 100,000 salary arrives. Classify expenses and build a monthly plan that covers essentials while leaving room for protection, goals, and reasonable enjoyment.",
+      "objective": "Classify ten expenses and create a valid monthly budget.",
+      "stateBefore": {},
+      "config": {
+        "sortCategories": [
+          {
+            "id": "need",
+            "label": "Need"
+          },
+          {
+            "id": "want",
+            "label": "Want"
+          },
+          {
+            "id": "future_priority",
+            "label": "Future Priority"
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "rent",
+            "label": "Rent or household contribution",
+            "correctCategoryId": "need"
+          },
+          {
+            "id": "food",
+            "label": "Food",
+            "correctCategoryId": "need"
+          },
+          {
+            "id": "transport",
+            "label": "Transport",
+            "correctCategoryId": "need"
+          },
+          {
+            "id": "mobile",
+            "label": "Mobile and internet",
+            "correctCategoryId": "need"
+          },
+          {
+            "id": "medicine",
+            "label": "Medicine",
+            "correctCategoryId": "need"
+          },
+          {
+            "id": "restaurant",
+            "label": "Restaurant meals",
+            "correctCategoryId": "want"
+          },
+          {
+            "id": "streaming",
+            "label": "Streaming subscription",
+            "correctCategoryId": "want"
+          },
+          {
+            "id": "shoes",
+            "label": "New branded shoes",
+            "correctCategoryId": "want"
+          },
+          {
+            "id": "savings",
+            "label": "General savings",
+            "correctCategoryId": "future_priority"
+          },
+          {
+            "id": "emergency",
+            "label": "Emergency-fund contribution",
+            "correctCategoryId": "future_priority"
+          }
+        ],
+        "contextDependentItems": [
+          "mobile",
+          "restaurant"
+        ],
+        "ambiguityExplanation": "Mobile access may be essential for work. Restaurant food may be optional or practical when no alternative exists.",
+        "completionRule": "all_items_classified",
+        "budgetBuilder": {
+          "totalAvailableAmount": 100000,
+          "requiredCategories": [
+            {
+              "id": "housing",
+              "label": "Housing and Household",
+              "minimum": 35000,
+              "maximum": 45000
+            },
+            {
+              "id": "food_budget",
+              "label": "Food",
+              "minimum": 15000,
+              "maximum": 25000
+            },
+            {
+              "id": "transport_budget",
+              "label": "Transport",
+              "minimum": 8000,
+              "maximum": 15000
+            },
+            {
+              "id": "communication",
+              "label": "Mobile and Internet",
+              "minimum": 4000,
+              "maximum": 8000
+            }
+          ],
+          "optionalCategories": [
+            {
+              "id": "emergency_savings",
+              "label": "Emergency Savings",
+              "minimum": 0,
+              "maximum": 20000
+            },
+            {
+              "id": "goal_savings",
+              "label": "Long-Term Goal Savings",
+              "minimum": 0,
+              "maximum": 20000
+            },
+            {
+              "id": "entertainment",
+              "label": "Entertainment and Wants",
+              "minimum": 0,
+              "maximum": 15000
+            },
+            {
+              "id": "investing",
+              "label": "Investing",
+              "minimum": 0,
+              "maximum": 15000
+            }
+          ],
+          "remainingBalanceLabel": "Unallocated Money",
+          "overspendingBehaviour": "block_confirmation",
+          "multipleValidBudgets": true,
+          "exampleBalancedBudget": {
+            "housing": 35000,
+            "food_budget": 15000,
+            "transport_budget": 8000,
+            "communication": 4000,
+            "emergency_savings": 10000,
+            "goal_savings": 10000,
+            "entertainment": 10000,
+            "investing": 0,
+            "unallocated_money": 8000
+          },
+          "scoringRules": [
+            "cover essentials",
+            "stay within salary",
+            "include saving or protection",
+            "do not require zero entertainment"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST1-C1",
+          "label": "Balanced valid budget",
+          "classification": "recommended",
+          "immediateFinancialEffect": "Selected allocations become the monthly plan.",
+          "stateChanges": {
+            "essential_expenses_covered": true,
+            "optional_spending": "selected_entertainment",
+            "available_cash": "unallocated_money",
+            "budget_stability": 100
+          },
+          "shortTermConsequence": "Needs and future priorities receive clear limits.",
+          "laterConsequence": "Later emergency and goal options use these allocations.",
+          "immediateFeedback": "The budget protects current needs while creating future options.",
+          "classificationReason": "Essentials, saving, protection, and affordable enjoyment all fit."
+        },
+        {
+          "id": "J5-FB30-ST1-C2",
+          "label": "Valid budget with no entertainment",
+          "classification": "reasonable",
+          "immediateFinancialEffect": "Optional enjoyment is redirected to saving or cash.",
+          "stateChanges": {
+            "essential_expenses_covered": true,
+            "optional_spending": 0,
+            "budget_stability": 85
+          },
+          "shortTermConsequence": "More money supports future priorities.",
+          "laterConsequence": "The plan may be harder to maintain.",
+          "immediateFeedback": "A no-entertainment plan can work temporarily.",
+          "classificationReason": "It is affordable but restrictive."
+        },
+        {
+          "id": "J5-FB30-ST1-C3",
+          "label": "Essentials underfunded",
+          "classification": "invalid",
+          "immediateFinancialEffect": "A required category is below its minimum.",
+          "stateChanges": {},
+          "shortTermConsequence": "The budget cannot continue.",
+          "laterConsequence": "Missed obligations would follow.",
+          "immediateFeedback": "Cover essential minimums before confirming.",
+          "classificationReason": "The plan cannot reliably cover needs."
+        },
+        {
+          "id": "J5-FB30-ST1-C4",
+          "label": "Budget above Rs. 100,000",
+          "classification": "invalid",
+          "immediateFinancialEffect": "The plan has a shortfall.",
+          "stateChanges": {},
+          "shortTermConsequence": "The budget cannot continue.",
+          "laterConsequence": "Debt or missed payments would otherwise appear.",
+          "immediateFeedback": "Reduce flexible categories.",
+          "classificationReason": "The plan uses more than the salary."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Cover every essential minimum, save something, and leave affordable room for enjoyment or flexibility.",
+        "reasonableAlternatives": [
+          "A no-entertainment month may be reasonable temporarily.",
+          "Investing may stay at zero while emergency savings are built."
+        ],
+        "tradeOff": "More saving improves protection; reasonable enjoyment may improve sustainability."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Keep correct classifications and valid amounts. Highlight only the unresolved issue."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "Month 1 Plan Set",
+        "changedValues": [
+          {
+            "field": "essential_expenses_covered",
+            "previousAmount": false,
+            "newAmount": true,
+            "reason": "Required minimums were covered."
+          },
+          {
+            "field": "optional_spending",
+            "previousAmount": 0,
+            "newAmountSource": "selected_entertainment",
+            "reason": "The learner set a limit for enjoyment."
+          },
+          {
+            "field": "budget_stability",
+            "previousAmount": 50,
+            "newAmountSource": "budget_quality_result",
+            "reason": "The plan is scored for affordability and balance."
+          }
+        ],
+        "learningMessage": "A strong budget gives needs, enjoyment, protection, and future plans clear limits.",
+        "nextStageTeaser": "Build emergency protection during Months 2 and 3."
+      }
+    },
+    {
+      "id": "J5-FB30-ST2",
+      "stageNumber": 2,
+      "title": "Build Emergency Savings",
+      "timelineLabel": "Months 2–3",
+      "conceptsAssessed": [
+        "emergency_fund",
+        "saving_consistency",
+        "budget_sustainability"
+      ],
+      "interactionType": "decision_tree",
+      "situation": "Two months pass. Choose how much of the monthly plan should build emergency savings before the first surprise.",
+      "objective": "Choose an emergency-saving approach that remains affordable.",
+      "stateBefore": {},
+      "config": {
+        "startingNode": {
+          "id": "J5-FB30-ST2-N1",
+          "question": "How will you build emergency savings?"
+        },
+        "terminalOutcomes": [
+          "none",
+          "small",
+          "extreme",
+          "realistic"
+        ]
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST2-C1",
+          "label": "Save nothing",
+          "classification": "risky",
+          "immediateFinancialEffect": "Emergency fund remains Rs. 0.",
+          "stateChanges": {
+            "emergency_fund": 0
+          },
+          "shortTermConsequence": "More cash remains for wants.",
+          "laterConsequence": "The repair may require savings or debt.",
+          "immediateFeedback": "Unexpected costs may create pressure.",
+          "classificationReason": "Protection is not built."
+        },
+        {
+          "id": "J5-FB30-ST2-C2",
+          "label": "Save Rs. 5,000 monthly",
+          "classification": "reasonable",
+          "immediateFinancialEffect": "Emergency fund reaches Rs. 10,000.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "increase",
+              "amount": 10000
+            }
+          },
+          "shortTermConsequence": "Partial protection is created.",
+          "laterConsequence": "Less borrowing may be needed.",
+          "immediateFeedback": "The amount is manageable but incomplete.",
+          "classificationReason": "Protection grows gradually."
+        },
+        {
+          "id": "J5-FB30-ST2-C3",
+          "label": "Save Rs. 25,000 monthly",
+          "classification": "depends_on_situation",
+          "immediateFinancialEffect": "Emergency fund may reach Rs. 50,000.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "budget_stability": {
+              "operation": "conditional_change",
+              "affordable": 5,
+              "unaffordable": -25
+            }
+          },
+          "shortTermConsequence": "Other categories must shrink.",
+          "laterConsequence": "The plan may become restrictive or invalid.",
+          "immediateFeedback": "Fast saving helps only when the full budget still works.",
+          "classificationReason": "The amount may be too large."
+        },
+        {
+          "id": "J5-FB30-ST2-C4",
+          "label": "Save a realistic Rs. 10,000 monthly",
+          "classification": "recommended",
+          "immediateFinancialEffect": "Emergency fund reaches Rs. 20,000.",
+          "stateChanges": {
+            "emergency_fund": {
+              "operation": "increase",
+              "amount": 20000
+            }
+          },
+          "shortTermConsequence": "Half the repair is covered.",
+          "laterConsequence": "The remainder can use flexible savings.",
+          "immediateFeedback": "Meaningful protection grows without breaking the example budget.",
+          "classificationReason": "The target balances protection and affordability."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Build emergency savings consistently without making the monthly budget impossible to maintain.",
+        "reasonableAlternatives": [
+          "A smaller amount fits higher essential costs.",
+          "A larger amount fits only when the full plan remains affordable."
+        ],
+        "tradeOff": "More protection leaves less money for wants and other goals."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Allow one revision before the two-month result carries forward."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "Emergency Protection Updated",
+        "changedValues": [
+          {
+            "field": "emergency_fund",
+            "previousAmount": 0,
+            "newAmountSource": "selected_choice.emergency_fund",
+            "reason": "Two months of contributions were added."
+          }
+        ],
+        "learningMessage": "Emergency savings should grow consistently without breaking the budget.",
+        "nextStageTeaser": "An appliance needs a Rs. 40,000 repair in Month 4."
+      }
+    },
+    {
+      "id": "J5-FB30-ST3",
+      "stageNumber": 3,
+      "title": "Handle a Surprise Expense",
+      "timelineLabel": "Month 4",
+      "conceptsAssessed": [
+        "emergency_fund",
+        "debt_management",
+        "needs_versus_wants",
+        "budget_adjustment"
+      ],
+      "interactionType": "predict_outcome_decision_tree",
+      "situation": "An essential appliance breaks. The repair costs Rs. 40,000. Earlier emergency, savings, wants, and debt choices determine the available responses.",
+      "objective": "Predict the intended resource and choose a complete repair plan.",
+      "stateBefore": {},
+      "config": {
+        "prediction": {
+          "id": "J5-FB30-ST3-P1",
+          "question": "Which resource was designed for this kind of expense?",
+          "options": [
+            {
+              "id": "J5-FB30-ST3-P1-O1",
+              "label": "Emergency savings",
+              "isPreferred": true
+            },
+            {
+              "id": "J5-FB30-ST3-P1-O2",
+              "label": "Next month’s rent",
+              "isPreferred": false
+            },
+            {
+              "id": "J5-FB30-ST3-P1-O3",
+              "label": "Borrowed investment money",
+              "isPreferred": false
+            }
+          ],
+          "explanation": "Emergency savings protect the normal budget from genuine surprises."
+        },
+        "startingNode": {
+          "id": "J5-FB30-ST3-N1",
+          "question": "How will you fund the repair?"
+        },
+        "repairCost": 40000,
+        "educationalAssumptions": [
+          "Borrowing Rs. 40,000 creates ten equal classroom repayments of Rs. 4,000.",
+          "No interest or lender fee is invented."
+        ]
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST3-C1",
+          "label": "Use the emergency fund",
+          "classification": "recommended",
+          "immediateFinancialEffect": "Up to Rs. 40,000 is deducted from emergency savings.",
+          "stateChanges": {
+            "condition": "emergency_fund_at_least_40000",
+            "emergency_fund": {
+              "operation": "decrease",
+              "amount": 40000
+            }
+          },
+          "shortTermConsequence": "The repair is completed without debt.",
+          "laterConsequence": "Emergency savings need rebuilding.",
+          "immediateFeedback": "The fund performs its intended purpose.",
+          "classificationReason": "Enough emergency money must exist."
+        },
+        {
+          "id": "J5-FB30-ST3-C2",
+          "label": "Use general savings",
+          "classification": "reasonable",
+          "immediateFinancialEffect": "General savings fall by Rs. 40,000.",
+          "stateChanges": {
+            "condition": "general_savings_at_least_40000",
+            "general_savings": {
+              "operation": "decrease",
+              "amount": 40000
+            }
+          },
+          "shortTermConsequence": "No debt is created.",
+          "laterConsequence": "Goal progress becomes harder.",
+          "immediateFeedback": "The repair is covered, but another priority slows.",
+          "classificationReason": "Accessible savings can solve the problem."
+        },
+        {
+          "id": "J5-FB30-ST3-C3",
+          "label": "Borrow the full amount",
+          "classification": "risky",
+          "immediateFinancialEffect": "Debt rises by Rs. 40,000 and monthly repayment becomes Rs. 4,000.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 40000
+            },
+            "monthly_debt_payment": {
+              "operation": "increase",
+              "amount": 4000
+            }
+          },
+          "shortTermConsequence": "The appliance is repaired.",
+          "laterConsequence": "Future goal and investment capacity fall.",
+          "immediateFeedback": "Borrowing may be necessary when savings are insufficient.",
+          "classificationReason": "Repayment creates future pressure."
+        },
+        {
+          "id": "J5-FB30-ST3-C4",
+          "label": "Skip an essential payment",
+          "classification": "risky",
+          "immediateFinancialEffect": "Missed obligations increase by Rs. 40,000.",
+          "stateChanges": {
+            "missed_obligations": {
+              "operation": "increase",
+              "amount": 40000
+            },
+            "essential_expenses_covered": false,
+            "budget_stability": {
+              "operation": "decrease",
+              "amount": 35
+            }
+          },
+          "shortTermConsequence": "Another need becomes overdue.",
+          "laterConsequence": "Investment readiness decreases.",
+          "immediateFeedback": "This moves the problem rather than solving it.",
+          "classificationReason": "An essential obligation remains uncovered."
+        },
+        {
+          "id": "J5-FB30-ST3-C5",
+          "label": "Combine savings and reduced wants",
+          "classification": "reasonable",
+          "immediateFinancialEffect": "Emergency savings, optional spending, then general savings fund Rs. 40,000.",
+          "stateChanges": {
+            "fundingOrder": [
+              "emergency_fund",
+              "optional_spending",
+              "general_savings"
+            ],
+            "totalDeduction": 40000
+          },
+          "shortTermConsequence": "The repair is completed without new debt.",
+          "laterConsequence": "Savings fall and enjoyment is reduced.",
+          "immediateFeedback": "This works when the emergency fund is still small.",
+          "classificationReason": "Several flexible sources share the cost."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Use sufficient emergency savings; otherwise combine accessible savings and flexible spending before avoidable debt.",
+        "reasonableAlternatives": [
+          "General savings may be used when emergency savings are small.",
+          "Borrowing may be necessary when accessible resources are insufficient."
+        ],
+        "tradeOff": "Savings reduce future protection; debt preserves cash but creates repayment pressure."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Insufficient cash choices must be revised. Risky but feasible choices may continue."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "Repair Decision Applied",
+        "changedValues": [
+          {
+            "field": "emergency_fund",
+            "previousAmountSource": "before_repair",
+            "newAmountSource": "after_repair",
+            "reason": "Protected savings may cover the repair."
+          },
+          {
+            "field": "debt_balance",
+            "previousAmount": 0,
+            "newAmountSource": "debt_after_repair",
+            "reason": "Borrowing creates a future obligation."
+          },
+          {
+            "field": "goal_capacity",
+            "previousAmountSource": "before_repair",
+            "newAmountSource": "after_repair",
+            "reason": "Debt or lower savings reduces flexibility."
+          }
+        ],
+        "learningMessage": "A prepared emergency fund protects later goals and reduces borrowing pressure.",
+        "nextStageTeaser": "A guaranteed-return message arrives in Month 6."
+      }
+    },
+    {
+      "id": "J5-FB30-ST4",
+      "stageNumber": 4,
+      "title": "Avoid a Financial Scam",
+      "timelineLabel": "Month 6",
+      "conceptsAssessed": [
+        "scam_awareness",
+        "verification",
+        "pressure_resistance"
+      ],
+      "interactionType": "sort_categories_decision_tree",
+      "situation": "A message guarantees that Rs. 25,000 will become Rs. 50,000 next week and demands secrecy.",
+      "objective": "Identify warning signs and choose a safe or risky response.",
+      "stateBefore": {},
+      "config": {
+        "message": "Invest Rs. 25,000 today and receive Rs. 50,000 next week. Returns are guaranteed. Keep this private.",
+        "sortCategories": [
+          {
+            "id": "warning_sign",
+            "label": "Warning Sign"
+          },
+          {
+            "id": "not_proof",
+            "label": "Not Proof of Safety"
+          },
+          {
+            "id": "useful_verification",
+            "label": "Useful Verification"
+          }
+        ],
+        "sortableItems": [
+          {
+            "id": "guarantee",
+            "label": "Guaranteed high return",
+            "correctCategoryId": "warning_sign"
+          },
+          {
+            "id": "urgency",
+            "label": "Pressure to act immediately",
+            "correctCategoryId": "warning_sign"
+          },
+          {
+            "id": "secrecy",
+            "label": "Request for secrecy",
+            "correctCategoryId": "warning_sign"
+          },
+          {
+            "id": "website",
+            "label": "Professional-looking website",
+            "correctCategoryId": "not_proof"
+          },
+          {
+            "id": "referral",
+            "label": "Referral rewards",
+            "correctCategoryId": "not_proof"
+          },
+          {
+            "id": "personal_account",
+            "label": "Send money to a personal account",
+            "correctCategoryId": "warning_sign"
+          },
+          {
+            "id": "risks",
+            "label": "Clear explanation of risks",
+            "correctCategoryId": "useful_verification"
+          },
+          {
+            "id": "registration",
+            "label": "Independent registration information",
+            "correctCategoryId": "useful_verification"
+          }
+        ],
+        "contextDependentItems": [
+          "referral"
+        ],
+        "ambiguityExplanation": "Referral rewards are not proof of fraud or safety.",
+        "completionRule": "all_items_classified",
+        "startingNode": {
+          "id": "J5-FB30-ST4-N1",
+          "question": "What do you do next?"
+        }
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST4-C1",
+          "label": "Send Rs. 25,000 immediately",
+          "classification": "high_risk",
+          "immediateFinancialEffect": "Rs. 25,000 is lost in the fictional scam.",
+          "stateChanges": {
+            "general_savings": {
+              "operation": "decrease",
+              "amount": 25000
+            },
+            "scam_losses": {
+              "operation": "increase",
+              "amount": 25000
+            }
+          },
+          "shortTermConsequence": "Savings fall.",
+          "laterConsequence": "Goal and emergency capacity weaken.",
+          "immediateFeedback": "Professional design did not prove safety.",
+          "classificationReason": "Guarantees, urgency, and secrecy were accepted."
+        },
+        {
+          "id": "J5-FB30-ST4-C2",
+          "label": "Ask for more testimonials",
+          "classification": "risky",
+          "immediateFinancialEffect": "No money moves yet.",
+          "stateChanges": {},
+          "shortTermConsequence": "Pressure continues.",
+          "laterConsequence": "Independent verification is still needed.",
+          "immediateFeedback": "Testimonials may be selected or false.",
+          "classificationReason": "The promoter controls the evidence."
+        },
+        {
+          "id": "J5-FB30-ST4-C3",
+          "label": "Verify independently",
+          "classification": "recommended",
+          "immediateFinancialEffect": "No money is sent.",
+          "stateChanges": {},
+          "shortTermConsequence": "Savings remain protected.",
+          "laterConsequence": "Later goals are unaffected by scam loss.",
+          "immediateFeedback": "Independent checks are stronger than appearance.",
+          "classificationReason": "Information is checked outside the promoter’s control."
+        },
+        {
+          "id": "J5-FB30-ST4-C4",
+          "label": "Refuse to act under pressure",
+          "classification": "recommended",
+          "immediateFinancialEffect": "No money is sent.",
+          "stateChanges": {},
+          "shortTermConsequence": "Control remains with the learner.",
+          "laterConsequence": "The offer may be checked later or ignored.",
+          "immediateFeedback": "A genuine opportunity should allow time for review.",
+          "classificationReason": "Urgency is rejected."
+        },
+        {
+          "id": "J5-FB30-ST4-C5",
+          "label": "Share banking passwords",
+          "classification": "invalid",
+          "immediateFinancialEffect": "The action is blocked.",
+          "stateChanges": {},
+          "shortTermConsequence": "Credentials remain protected.",
+          "laterConsequence": "The learner must choose another response.",
+          "immediateFeedback": "Never share passwords or security codes.",
+          "classificationReason": "Sensitive credentials cannot be used for verification."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Refuse pressure and verify the company, payment destination, risks, and claims independently.",
+        "reasonableAlternatives": [
+          "Ignoring the message is reasonable when the learner does not wish to investigate."
+        ],
+        "tradeOff": "Verification takes time but protects savings and control."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Keep correct classifications. Credential sharing must be revised; other outcomes carry forward."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "Scam Decision Recorded",
+        "changedValues": [
+          {
+            "field": "scam_losses",
+            "previousAmount": 0,
+            "newAmountSource": "after_decision",
+            "reason": "Sending money creates a visible loss."
+          },
+          {
+            "field": "general_savings",
+            "previousAmountSource": "before_offer",
+            "newAmountSource": "after_offer",
+            "reason": "Savings remain protected unless money is sent."
+          }
+        ],
+        "learningMessage": "Urgency, secrecy, and guarantees should trigger independent verification.",
+        "nextStageTeaser": "Turn the Rs. 180,000 goal into a realistic plan."
+      }
+    },
+    {
+      "id": "J5-FB30-ST5",
+      "stageNumber": 5,
+      "title": "Set and Fund a Long-Term Goal",
+      "timelineLabel": "Months 7–8",
+      "conceptsAssessed": [
+        "goal_setting",
+        "budgeting",
+        "debt_management",
+        "financial_adaptability"
+      ],
+      "interactionType": "budget_builder",
+      "situation": "Build a Rs. 180,000 laptop or education goal. Debt repayments, scam losses, emergency savings, and the monthly budget now determine what is realistic.",
+      "objective": "Create a measurable goal that fits the current state.",
+      "stateBefore": {},
+      "config": {
+        "goalBuilder": {
+          "goalAmount": {
+            "minimum": 120000,
+            "maximum": 240000,
+            "startingValue": 180000,
+            "step": 5000
+          },
+          "deadlineMonths": {
+            "minimum": 6,
+            "maximum": 24,
+            "startingValue": 12,
+            "step": 1
+          },
+          "monthlyContribution": {
+            "minimum": 0,
+            "maximum": 30000,
+            "startingValue": 15000,
+            "step": 1000
+          },
+          "priorityOptions": [
+            "high",
+            "medium",
+            "low",
+            "paused"
+          ],
+          "reducibleOptionalExpenses": [
+            "entertainment",
+            "unallocated_money",
+            "future_investing"
+          ],
+          "calculationRules": {
+            "plannedTotal": "monthly_contribution_times_deadline",
+            "goalGap": "max_zero_goal_minus_progress_minus_planned_total",
+            "availableMonthlyCapacity": "flexible_capacity_minus_debt_payment_minus_emergency_rebuild"
+          },
+          "validationRules": [
+            "define amount",
+            "set deadline",
+            "fit monthly capacity",
+            "cover essentials",
+            "preserve some emergency protection",
+            "include debt repayment"
+          ],
+          "multipleValidPlans": true,
+          "exampleBalancedPlan": {
+            "goalAmount": 180000,
+            "deadlineMonths": 18,
+            "monthlyContribution": 10000,
+            "priority": "high"
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST5-C1",
+          "label": "Create an affordable measurable plan",
+          "classification": "recommended",
+          "immediateFinancialEffect": "The selected monthly contribution starts in Month 7.",
+          "stateChanges": {
+            "monthly_goal_contribution": "selected_amount",
+            "goal_progress": {
+              "operation": "increase_by_two_monthly_contributions"
+            }
+          },
+          "shortTermConsequence": "Goal progress increases.",
+          "laterConsequence": "Investing capacity falls by the goal contribution.",
+          "immediateFeedback": "The goal becomes measurable and connected to the budget.",
+          "classificationReason": "Amount, deadline, contribution, and priority fit."
+        },
+        {
+          "id": "J5-FB30-ST5-C2",
+          "label": "Extend the deadline",
+          "classification": "reasonable",
+          "immediateFinancialEffect": "The required monthly contribution falls.",
+          "stateChanges": {
+            "monthly_goal_contribution": "recalculated_lower_amount"
+          },
+          "shortTermConsequence": "More monthly flexibility remains.",
+          "laterConsequence": "The goal may finish after the simulated year.",
+          "immediateFeedback": "A delayed realistic goal is stronger than an unaffordable deadline.",
+          "classificationReason": "Time is traded for affordability."
+        },
+        {
+          "id": "J5-FB30-ST5-C3",
+          "label": "Borrow the missing goal amount",
+          "classification": "risky",
+          "immediateFinancialEffect": "Debt rises by the goal gap.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase_by_goal_gap"
+            },
+            "monthly_debt_payment": {
+              "operation": "set_to_goal_gap_divided_by_12"
+            },
+            "goal_progress": 180000
+          },
+          "shortTermConsequence": "The goal appears complete.",
+          "laterConsequence": "Investment readiness decreases.",
+          "immediateFeedback": "Borrowing may accelerate the goal but creates repayment pressure.",
+          "classificationReason": "The deadline is forced with debt."
+        },
+        {
+          "id": "J5-FB30-ST5-C4",
+          "label": "Remove emergency savings for the goal",
+          "classification": "risky",
+          "immediateFinancialEffect": "Emergency savings move into goal progress.",
+          "stateChanges": {
+            "goal_progress": {
+              "operation": "increase_by_emergency_fund"
+            },
+            "emergency_fund": 0
+          },
+          "shortTermConsequence": "Goal progress rises.",
+          "laterConsequence": "Future surprises become harder.",
+          "immediateFeedback": "The goal advances by weakening protection.",
+          "classificationReason": "A long-term goal replaces emergency readiness."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Set an amount, deadline, contribution, and priority that fit debt, emergency needs, and the real budget.",
+        "reasonableAlternatives": [
+          "Extend the deadline when the original contribution is unaffordable.",
+          "Reduce the amount when the goal itself can change."
+        ],
+        "tradeOff": "A faster goal uses more monthly capacity; a longer deadline preserves flexibility."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Keep valid fields and highlight only the unaffordable or underfunded part."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "Goal Plan Created",
+        "changedValues": [
+          {
+            "field": "monthly_goal_contribution",
+            "previousAmount": 0,
+            "newAmountSource": "selected_plan",
+            "reason": "The plan defines the monthly action."
+          },
+          {
+            "field": "goal_progress",
+            "previousAmount": 0,
+            "newAmountSource": "after_month_8",
+            "reason": "Two contributions were added."
+          },
+          {
+            "field": "investment_capacity",
+            "previousAmountSource": "before_goal",
+            "newAmountSource": "after_goal_and_debt",
+            "reason": "Goals and repayments reduce available capacity."
+          }
+        ],
+        "learningMessage": "A strong goal fits the budget and can be adjusted when circumstances change.",
+        "nextStageTeaser": "Decide whether the foundation is ready for investing."
+      }
+    },
+    {
+      "id": "J5-FB30-ST6",
+      "stageNumber": 6,
+      "title": "Decide Whether to Invest",
+      "timelineLabel": "Month 9",
+      "conceptsAssessed": [
+        "investment_readiness",
+        "diversification",
+        "regular_investing",
+        "emergency_protection"
+      ],
+      "interactionType": "decision_tree_investment_simulator",
+      "situation": "Consider a regular monthly investment. Essentials, emergency savings, debt, goal contributions, and available cash determine whether it fits.",
+      "objective": "Complete the readiness check and choose an affordable investment or delay plan.",
+      "stateBefore": {},
+      "config": {
+        "readinessChecks": [
+          "essentials covered",
+          "some emergency savings available",
+          "debt repayments affordable",
+          "money can stay invested for years",
+          "learner accepts possible losses"
+        ],
+        "availableAssets": [
+          {
+            "id": "diversified_fund",
+            "label": "Fictional Diversified Fund"
+          },
+          {
+            "id": "etf",
+            "label": "Fictional ETF"
+          },
+          {
+            "id": "bonds",
+            "label": "Fictional Bonds"
+          },
+          {
+            "id": "cash",
+            "label": "Cash Outside Portfolio"
+          }
+        ],
+        "allocationRules": [
+          "do not exceed capacity",
+          "preserve accessible money",
+          "no real product recommendation",
+          "diversification reduces concentration risk, not all risk"
+        ],
+        "educationalAssumptions": [
+          "Three monthly contributions occur before the decline.",
+          "No fees, taxes, or guaranteed returns are included."
+        ],
+        "possibleFluctuations": [
+          -15,
+          0,
+          8
+        ],
+        "requiredDisclaimer": "These values are fictional. Investments may rise or fall, and no recovery or profit is guaranteed."
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST6-C1",
+          "label": "Invest all available savings",
+          "classification": "risky",
+          "immediateFinancialEffect": "General savings move into investments.",
+          "stateChanges": {
+            "investment_balance": {
+              "operation": "increase_by_general_savings"
+            },
+            "investment_contributions": {
+              "operation": "increase_by_general_savings"
+            },
+            "general_savings": 0
+          },
+          "shortTermConsequence": "Accessible protection weakens.",
+          "laterConsequence": "A decline may force a sale for short-term needs.",
+          "immediateFeedback": "A larger investment balance does not prove stronger health.",
+          "classificationReason": "Too much accessible money is exposed."
+        },
+        {
+          "id": "J5-FB30-ST6-C2",
+          "label": "Invest next month’s bill money",
+          "classification": "invalid",
+          "immediateFinancialEffect": "The action is blocked.",
+          "stateChanges": {},
+          "shortTermConsequence": "Bills remain protected.",
+          "laterConsequence": "The learner must choose another plan.",
+          "immediateFeedback": "Money needed soon should remain accessible.",
+          "classificationReason": "The time horizon does not fit."
+        },
+        {
+          "id": "J5-FB30-ST6-C3",
+          "label": "Begin an affordable diversified contribution",
+          "classification": "recommended",
+          "immediateFinancialEffect": "Three monthly contributions enter fictional diversified assets.",
+          "stateChanges": {
+            "monthly_investment_contribution": "selected_affordable_amount",
+            "investment_contributions": {
+              "operation": "increase_by_three_monthly_contributions"
+            },
+            "investment_balance": {
+              "operation": "increase_by_three_monthly_contributions"
+            }
+          },
+          "shortTermConsequence": "The plan begins gradually.",
+          "laterConsequence": "The balance faces the Stage 7 decline.",
+          "immediateFeedback": "Regular investing reduces dependence on one entry point without guaranteeing profit.",
+          "classificationReason": "The foundation and contribution fit."
+        },
+        {
+          "id": "J5-FB30-ST6-C4",
+          "label": "Avoid investing forever",
+          "classification": "depends_on_situation",
+          "immediateFinancialEffect": "No money is invested.",
+          "stateChanges": {
+            "monthly_investment_contribution": 0
+          },
+          "shortTermConsequence": "Cash remains accessible.",
+          "laterConsequence": "Future opportunities are rejected without review.",
+          "immediateFeedback": "Investing is optional, but suitability can change.",
+          "classificationReason": "Permanent refusal may ignore future goals."
+        },
+        {
+          "id": "J5-FB30-ST6-C5",
+          "label": "Delay while rebuilding emergency savings",
+          "classification": "reasonable",
+          "immediateFinancialEffect": "No investment begins and spare capacity supports the emergency fund.",
+          "stateChanges": {
+            "monthly_investment_contribution": 0,
+            "emergency_fund": {
+              "operation": "increase_by_available_investment_capacity"
+            }
+          },
+          "shortTermConsequence": "Protection improves.",
+          "laterConsequence": "Investing may begin later.",
+          "immediateFeedback": "Delaying may be stronger than investing before readiness.",
+          "classificationReason": "Foundation comes before market exposure."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Invest affordably only after needs, emergency protection, debt, and near-term goals are covered.",
+        "reasonableAlternatives": [
+          "Delay when emergency savings or debt management remains weak.",
+          "Stay in cash for near-term goals."
+        ],
+        "tradeOff": "Investing offers uncertain growth; cash offers access and lower short-term uncertainty."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Invalid short-term investing must be revised. Risky but feasible choices may continue."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "Investment Readiness Recorded",
+        "changedValues": [
+          {
+            "field": "monthly_investment_contribution",
+            "previousAmount": 0,
+            "newAmountSource": "selected_plan",
+            "reason": "The amount reflects remaining capacity."
+          },
+          {
+            "field": "investment_balance",
+            "previousAmount": 0,
+            "newAmountSource": "after_three_contributions",
+            "reason": "Three contributions were added."
+          },
+          {
+            "field": "emergency_fund",
+            "previousAmountSource": "before_decision",
+            "newAmountSource": "after_decision",
+            "reason": "Delaying may redirect money toward protection."
+          }
+        ],
+        "learningMessage": "Investment readiness depends on the complete financial plan, not only available cash.",
+        "nextStageTeaser": "A 15% market decline tests the full year."
+      }
+    },
+    {
+      "id": "J5-FB30-ST7",
+      "stageNumber": 7,
+      "title": "Respond to a Market Decline",
+      "timelineLabel": "Months 10–12",
+      "conceptsAssessed": [
+        "volatility",
+        "long_term_planning",
+        "emotional_control",
+        "emergency_protection",
+        "diversification"
+      ],
+      "interactionType": "timeline_slider_investment_simulator",
+      "situation": "Any investment created in Month 9 falls 15%. Explore three possible paths and decide how to respond without assuming recovery or permanent failure.",
+      "objective": "Respond to uncertainty using the complete financial state.",
+      "stateBefore": {},
+      "config": {
+        "timeline": {
+          "startingTime": "month_9_before_decline",
+          "endingTime": "month_12",
+          "sliderSteps": [
+            "before_decline",
+            "after_15_percent_decline",
+            "month_11",
+            "month_12"
+          ],
+          "valuesShownAtEachPoint": [
+            "investment_contributions",
+            "investment_balance",
+            "simulated_gain_or_loss",
+            "emergency_fund",
+            "debt_balance",
+            "goal_progress"
+          ],
+          "milestones": [
+            {
+              "step": "after_15_percent_decline",
+              "event": "Portfolio falls 15%."
+            },
+            {
+              "step": "month_12",
+              "event": "Final dashboard opens."
+            }
+          ],
+          "contributionsRule": "Continued affordable contributions are added after monthly simulated movement.",
+          "comparisonData": "All paths use the same learner decisions."
+        },
+        "investmentSimulator": {
+          "startingBalanceSource": "investment_balance",
+          "simulationPeriodMonths": 3,
+          "possiblePaths": [
+            {
+              "id": "partial_recovery",
+              "label": "Partial Recovery",
+              "monthlyMovementPercents": [
+                -15,
+                6,
+                4
+              ]
+            },
+            {
+              "id": "continued_volatility",
+              "label": "Continued Volatility",
+              "monthlyMovementPercents": [
+                -15,
+                -5,
+                7
+              ]
+            },
+            {
+              "id": "further_decline",
+              "label": "Further Decline",
+              "monthlyMovementPercents": [
+                -15,
+                -8,
+                -4
+              ]
+            }
+          ],
+          "calculationRules": {
+            "monthEndBalance": "opening_times_one_plus_movement_plus_contribution",
+            "simulatedGainLoss": "final_minus_contributions",
+            "decisionScoreIndependentOfPath": true
+          },
+          "requiredDisclaimer": "These paths are fictional and are not forecasts. Markets may recover, remain weak, or fall further."
+        }
+      },
+      "choices": [
+        {
+          "id": "J5-FB30-ST7-C1",
+          "label": "Sell everything immediately",
+          "classification": "risky",
+          "immediateFinancialEffect": "The portfolio moves to cash and the current result becomes realised.",
+          "stateChanges": {
+            "available_cash": {
+              "operation": "increase_by_current_investment_balance"
+            },
+            "investment_balance": 0
+          },
+          "shortTermConsequence": "Market exposure ends.",
+          "laterConsequence": "Later movement does not affect the sold amount.",
+          "immediateFeedback": "Selling removes uncertainty but may be emotion-led.",
+          "classificationReason": "The choice is based only on the fall."
+        },
+        {
+          "id": "J5-FB30-ST7-C2",
+          "label": "Review the goal and investment quality",
+          "classification": "recommended",
+          "immediateFinancialEffect": "No automatic sale or purchase occurs.",
+          "stateChanges": {},
+          "shortTermConsequence": "The portfolio remains exposed during review.",
+          "laterConsequence": "The learner may continue, pause, reduce, or sell after evidence.",
+          "immediateFeedback": "Review prevents fear or hope from being the only reason.",
+          "classificationReason": "Time horizon, fees, diversification, and quality are checked."
+        },
+        {
+          "id": "J5-FB30-ST7-C3",
+          "label": "Continue the affordable contribution",
+          "classification": "potentially_reasonable",
+          "immediateFinancialEffect": "The planned monthly amount continues.",
+          "stateChanges": {
+            "investment_contributions": {
+              "operation": "increase_by_remaining_contributions"
+            },
+            "investment_balance": {
+              "operation": "increase_by_remaining_contributions_before_path"
+            }
+          },
+          "shortTermConsequence": "Contributions increase.",
+          "laterConsequence": "The final value depends on the fictional path.",
+          "immediateFeedback": "Regular contributions do not guarantee recovery.",
+          "classificationReason": "The amount still fits after review."
+        },
+        {
+          "id": "J5-FB30-ST7-C4",
+          "label": "Borrow to recover the loss",
+          "classification": "high_risk",
+          "immediateFinancialEffect": "Debt and investment exposure each rise by Rs. 50,000.",
+          "stateChanges": {
+            "debt_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "monthly_debt_payment": {
+              "operation": "increase",
+              "amount": 5000
+            },
+            "investment_balance": {
+              "operation": "increase",
+              "amount": 50000
+            },
+            "investment_contributions": {
+              "operation": "increase",
+              "amount": 50000
+            }
+          },
+          "shortTermConsequence": "Monthly flexibility falls.",
+          "laterConsequence": "Debt pressure remains regardless of market result.",
+          "immediateFeedback": "Borrowing does not reverse the existing decline.",
+          "classificationReason": "Certain repayment is added to uncertain performance."
+        },
+        {
+          "id": "J5-FB30-ST7-C5",
+          "label": "Invest emergency savings",
+          "classification": "high_risk",
+          "immediateFinancialEffect": "Emergency savings move into investments.",
+          "stateChanges": {
+            "investment_balance": {
+              "operation": "increase_by_emergency_fund"
+            },
+            "investment_contributions": {
+              "operation": "increase_by_emergency_fund"
+            },
+            "emergency_fund": 0
+          },
+          "shortTermConsequence": "Emergency readiness weakens.",
+          "laterConsequence": "A later emergency may require debt or sale.",
+          "immediateFeedback": "Lower prices do not guarantee profit.",
+          "classificationReason": "Protection is exchanged for uncertainty."
+        },
+        {
+          "id": "J5-FB30-ST7-C6",
+          "label": "Ignore everything",
+          "classification": "risky",
+          "immediateFinancialEffect": "No immediate balance changes.",
+          "stateChanges": {},
+          "shortTermConsequence": "The portfolio remains invested.",
+          "laterConsequence": "Genuine problems may be missed.",
+          "immediateFeedback": "Avoiding panic does not replace review.",
+          "classificationReason": "Long-term investing still needs monitoring."
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Review the goal, quality, diversification, and affordability before a major change.",
+        "reasonableAlternatives": [
+          "Continue affordably after review.",
+          "Sell when the investment no longer fits the goal or quality requirements."
+        ],
+        "tradeOff": "Staying invested keeps uncertainty; selling realises the current result and ends exposure."
+      },
+      "validation": {
+        "method": "Validate all required values and apply the selected state changes.",
+        "invalidStateFeedback": "Review the highlighted amount, funding source, or missing requirement.",
+        "retryBehaviour": "Risky choices may continue. Replay market paths without changing the decision score."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled buttons, form controls, and Previous or Next controls instead of gestures.",
+        "instruction": "Announce every changed balance and consequence to screen readers."
+      },
+      "stateSummary": {
+        "title": "The Financial Year Is Complete",
+        "changedValues": [
+          {
+            "field": "investment_balance",
+            "previousAmountSource": "before_decline",
+            "newAmountSource": "selected_path.final_balance",
+            "reason": "Contributions and fictional movement determine the result."
+          },
+          {
+            "field": "debt_balance",
+            "previousAmountSource": "before_response",
+            "newAmountSource": "after_response",
+            "reason": "Borrowing creates obligations independent of returns."
+          },
+          {
+            "field": "emergency_fund",
+            "previousAmountSource": "before_response",
+            "newAmountSource": "after_response",
+            "reason": "Protection remains unless misused."
+          }
+        ],
+        "learningMessage": "Financial strength comes from the complete system of decisions, not one investment result.",
+        "nextStageTeaser": "Open the final dashboard."
+      }
+    }
+  ],
+  "consequenceMap": [
+    {
+      "id": "J5-FB30-CM1",
+      "sourceStageId": "J5-FB30-ST1",
+      "sourceChoiceId": "J5-FB30-ST1-C3",
+      "affectedStateField": "essential_expenses_covered",
+      "targetStageId": "J5-FB30-ST6",
+      "laterConsequence": "Investment readiness decreases when essentials are not covered.",
+      "educationalPurpose": "Shows investing depends on the wider foundation."
+    },
+    {
+      "id": "J5-FB30-CM2",
+      "sourceStageId": "J5-FB30-ST2",
+      "sourceChoiceId": "J5-FB30-ST2-C1",
+      "affectedStateField": "emergency_fund",
+      "targetStageId": "J5-FB30-ST3",
+      "laterConsequence": "The repair may require general savings or debt.",
+      "educationalPurpose": "Connects early saving with later flexibility."
+    },
+    {
+      "id": "J5-FB30-CM3",
+      "sourceStageId": "J5-FB30-ST3",
+      "sourceChoiceId": "J5-FB30-ST3-C3",
+      "affectedStateField": "monthly_debt_payment",
+      "targetStageId": "J5-FB30-ST5",
+      "laterConsequence": "Debt repayment reduces goal capacity.",
+      "educationalPurpose": "Shows borrowing changes future goals."
+    },
+    {
+      "id": "J5-FB30-CM4",
+      "sourceStageId": "J5-FB30-ST4",
+      "sourceChoiceId": "J5-FB30-ST4-C1",
+      "affectedStateField": "general_savings",
+      "targetStageId": "J5-FB30-ST5",
+      "laterConsequence": "The scam loss makes the goal harder to fund.",
+      "educationalPurpose": "Connects verification with progress."
+    },
+    {
+      "id": "J5-FB30-CM5",
+      "sourceStageId": "J5-FB30-ST5",
+      "sourceChoiceId": "J5-FB30-ST5-C3",
+      "affectedStateField": "debt_balance",
+      "targetStageId": "J5-FB30-ST6",
+      "laterConsequence": "Goal debt reduces investment readiness.",
+      "educationalPurpose": "Shows goal completion alone does not prove strength."
+    },
+    {
+      "id": "J5-FB30-CM6",
+      "sourceStageId": "J5-FB30-ST6",
+      "sourceChoiceId": "J5-FB30-ST6-C3",
+      "affectedStateField": "investment_contributions",
+      "targetStageId": "J5-FB30-ST7",
+      "laterConsequence": "The decline applies to accumulated contributions.",
+      "educationalPurpose": "Connects regular investing with uncertainty."
+    }
+  ],
+  "midMissionCheckpoint": {
+    "id": "J5-FB30-CHECKPOINT",
+    "title": "Mid-Year Financial Check",
+    "currentStateSummary": {
+      "generalSavingsSource": "general_savings",
+      "emergencyFundSource": "emergency_fund",
+      "debtSource": "debt_balance",
+      "monthlyDebtPaymentSource": "monthly_debt_payment",
+      "scamLossesSource": "scam_losses",
+      "essentialCoverageSource": "essential_expenses_covered"
+    },
+    "positiveDecisionFeedbackRules": [
+      {
+        "id": "J5-FB30-CP-S1",
+        "condition": "essentials_covered_and_emergency_fund_positive",
+        "message": "You covered essentials and created some emergency protection."
+      },
+      {
+        "id": "J5-FB30-CP-S2",
+        "condition": "scam_losses_zero",
+        "message": "You kept the suspicious offer from reducing savings."
+      }
+    ],
+    "emergingRiskFeedbackRules": [
+      {
+        "id": "J5-FB30-CP-R1",
+        "condition": "debt_balance_positive",
+        "message": "Debt repayment is reducing goal and investment capacity."
+      },
+      {
+        "id": "J5-FB30-CP-R2",
+        "condition": "emergency_fund_zero",
+        "message": "The year still has little protection against another surprise."
+      },
+      {
+        "id": "J5-FB30-CP-R3",
+        "condition": "missed_obligations_positive",
+        "message": "An essential obligation remains unresolved."
+      }
+    ],
+    "reflectionQuestion": "Continue to the long-term goal, or review an earlier decision?",
+    "primaryActionLabel": "Build the Goal",
+    "reviewActionLabel": "Review My Year"
+  },
+  "finalChallenge": {
+    "id": "J5-FB30-FINAL",
+    "title": "The Market Decline",
+    "situation": "A 15% decline tests whether the investment plan fits the emergency fund, debt, goal, and time horizon created earlier.",
+    "conceptsCombined": [
+      "investment_readiness",
+      "volatility",
+      "emergency_savings",
+      "debt_management",
+      "long_term_planning"
+    ],
+    "interactionType": "timeline_slider_investment_simulator",
+    "stateBefore": {
+      "investmentBalanceSource": "investment_balance",
+      "investmentContributionsSource": "investment_contributions",
+      "emergencyFundSource": "emergency_fund",
+      "debtSource": "debt_balance",
+      "goalProgressSource": "goal_progress"
+    },
+    "config": {
+      "sourceStageId": "J5-FB30-ST7",
+      "declinePercent": 15,
+      "pathCount": 3,
+      "decisionQualitySeparatedFromPath": true
+    },
+    "choicesSourceStageId": "J5-FB30-ST7",
+    "recommendedReasoning": "Review the goal, quality, diversification, and affordability before selling, continuing, pausing, or changing the plan."
+  },
+  "debrief": {
+    "id": "J5-FB30-DEBRIEF",
+    "title": "The Year Was Built One Decision at a Time",
+    "content": "You managed salary, needs, enjoyment, savings, an emergency, debt, a scam, a measurable goal, investment readiness, and a market decline. No single choice created the result. Early budgeting changed emergency options. Debt and scam losses changed goal capacity. Emergency protection and the goal changed whether investing was suitable. The final investment balance mattered, but it did not replace needs coverage, debt control, scam awareness, or accessible savings. One weak choice also did not end the year; later adjustments could improve the plan. Financial strength came from repeated, connected, and realistic decisions—not one lucky investment.",
+    "simpleSummary": "Strong finances come from connected decisions repeated and adjusted over time.",
+    "illustration": "A completed twelve-month calendar links budget, emergency, scam shield, goal, debt, and investment icons."
+  },
+  "scoring": {
+    "maximumScore": 100,
+    "dimensions": [
+      {
+        "id": "budget_quality",
+        "label": "Budget Quality",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST1",
+          "J5-FB30-ST3"
+        ],
+        "positiveRules": [
+          "20 for covered essentials, reasonable wants, saving, and adjustment.",
+          "16 for covered essentials with no enjoyment.",
+          "10 for a valid but weakly protected plan."
+        ],
+        "deductions": [
+          "Deduct 10 for a missed essential obligation."
+        ],
+        "learnerExplanation": "Measures whether salary covered needs and remained adaptable."
+      },
+      {
+        "id": "emergency_readiness",
+        "label": "Emergency Readiness",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST2",
+          "J5-FB30-ST3",
+          "J5-FB30-ST6",
+          "J5-FB30-ST7"
+        ],
+        "positiveRules": [
+          "15 for building and appropriately using protection.",
+          "10 for partial preparation and a debt-free mixed repair.",
+          "5 for limited protection."
+        ],
+        "deductions": [
+          "Deduct 10 for investing emergency savings.",
+          "Deduct 8 for avoidable borrowing caused by no preparation."
+        ],
+        "learnerExplanation": "Measures whether emergency money stayed accessible."
+      },
+      {
+        "id": "debt_management",
+        "label": "Debt Management",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST3",
+          "J5-FB30-ST5",
+          "J5-FB30-ST7"
+        ],
+        "positiveRules": [
+          "15 for avoiding unnecessary debt.",
+          "10 for manageable necessary debt.",
+          "5 for rising pressure with a plan."
+        ],
+        "deductions": [
+          "Deduct 10 for borrowing to invest.",
+          "Deduct 8 for forcing a goal deadline with debt."
+        ],
+        "learnerExplanation": "Measures purpose, affordability, and repayment pressure."
+      },
+      {
+        "id": "scam_awareness",
+        "label": "Scam Awareness",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST4"
+        ],
+        "positiveRules": [
+          "15 for identifying signs, verifying independently, and protecting credentials.",
+          "10 for refusing pressure with minor errors.",
+          "5 for seeking testimonials without sending money."
+        ],
+        "deductions": [
+          "Deduct 15 for sending money."
+        ],
+        "learnerExplanation": "Measures pressure resistance and verification."
+      },
+      {
+        "id": "goal_planning",
+        "label": "Goal Planning",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST5"
+        ],
+        "positiveRules": [
+          "15 for an affordable measurable goal.",
+          "12 for a responsibly extended deadline.",
+          "8 for realistic partial funding."
+        ],
+        "deductions": [
+          "Deduct 8 for removing all emergency savings.",
+          "Deduct 6 for unaffordable goal debt."
+        ],
+        "learnerExplanation": "Measures whether amount, deadline, contribution, and priority fit."
+      },
+      {
+        "id": "investment_readiness",
+        "label": "Investment Readiness and Diversification",
+        "maximumPoints": 10,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST6",
+          "J5-FB30-ST7"
+        ],
+        "positiveRules": [
+          "10 for affordable diversified investing.",
+          "8 for delaying to strengthen protection.",
+          "5 for cash held for a clear near-term reason."
+        ],
+        "deductions": [
+          "Deduct 8 for bill money invested.",
+          "Deduct 6 for investing all accessible savings."
+        ],
+        "learnerExplanation": "Measures suitability, access, and diversification."
+      },
+      {
+        "id": "long_term_decision_making",
+        "label": "Emotional and Long-Term Decision-Making",
+        "maximumPoints": 10,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J5-FB30-ST7"
+        ],
+        "positiveRules": [
+          "10 for review and acceptance of multiple outcomes.",
+          "8 for affordable continuation or pause after review.",
+          "4 for one reactive decision."
+        ],
+        "deductions": [
+          "Deduct 8 for borrowing to recover losses.",
+          "Deduct 6 for selling only because prices fell.",
+          "Deduct 4 for ignoring the portfolio."
+        ],
+        "learnerExplanation": "Measures evidence-based behaviour during volatility."
+      }
+    ],
+    "outcomeBasedPointsSeparatedFromDecisionQuality": true
+  },
+  "performanceLevels": [
+    {
+      "minimumScore": 0,
+      "maximumScore": 39,
+      "label": "Financially Vulnerable",
+      "description": "Important expenses, emergency preparation, debt, or scam exposure created significant pressure."
+    },
+    {
+      "minimumScore": 40,
+      "maximumScore": 69,
+      "label": "Building Stability",
+      "description": "Several decisions were responsible, but important protection, debt, goal, or investing habits need improvement."
+    },
+    {
+      "minimumScore": 70,
+      "maximumScore": 89,
+      "label": "Financially Prepared",
+      "description": "Present needs, protection, goals, and long-term decisions were balanced effectively."
+    },
+    {
+      "minimumScore": 90,
+      "maximumScore": 100,
+      "label": "Strong Financial Habits",
+      "description": "Decisions were consistently thoughtful and adaptable. Future wealth is not guaranteed."
+    }
+  ],
+  "resultsDashboard": [
+    {
+      "id": "J5-FB30-R1",
+      "label": "Savings Balance",
+      "startingValueSource": "startingState.generalSavings",
+      "finalValueSource": "general_savings",
+      "changeSource": "final_minus_20000",
+      "statusRules": [
+        {
+          "condition": "above_start",
+          "label": "Strong"
+        },
+        {
+          "condition": "equals_start",
+          "label": "Stable"
+        },
+        {
+          "condition": "between_1_and_start",
+          "label": "Developing"
+        },
+        {
+          "condition": "zero",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Shows savings after emergencies, goals, and scam effects."
+    },
+    {
+      "id": "J5-FB30-R2",
+      "label": "Debt Balance",
+      "startingValueSource": "startingState.debtBalance",
+      "finalValueSource": "debt_balance",
+      "changeSource": "final_debt",
+      "statusRules": [
+        {
+          "condition": "zero",
+          "label": "Debt-Free"
+        },
+        {
+          "condition": "manageable",
+          "label": "Manageable"
+        },
+        {
+          "condition": "pressure_rising",
+          "label": "Increasing Pressure"
+        },
+        {
+          "condition": "above_100000",
+          "label": "High Pressure"
+        }
+      ],
+      "explanationTemplate": "Shows borrowing and repayment pressure.",
+      "secondaryValueSource": "monthly_debt_payment"
+    },
+    {
+      "id": "J5-FB30-R3",
+      "label": "Emergency Readiness",
+      "startingValueSource": "startingState.emergencyFund",
+      "finalValueSource": "emergency_fund",
+      "changeSource": "final_emergency_fund",
+      "statusRules": [
+        {
+          "condition": "built_and_used_well",
+          "label": "Well Prepared"
+        },
+        {
+          "condition": "some_remaining",
+          "label": "Partly Prepared"
+        },
+        {
+          "condition": "small_or_misused",
+          "label": "Vulnerable"
+        },
+        {
+          "condition": "zero_no_plan",
+          "label": "Unprotected"
+        }
+      ],
+      "explanationTemplate": "Measures creation, protection, and appropriate use."
+    },
+    {
+      "id": "J5-FB30-R4",
+      "label": "Investment Balance",
+      "startingValueSource": "startingState.investmentBalance",
+      "finalValueSource": "selected_path.final_balance",
+      "changeSource": "final_investment",
+      "statusRules": [
+        {
+          "condition": "ready_and_diversified",
+          "label": "Suitable in Context"
+        },
+        {
+          "condition": "delayed_for_protection",
+          "label": "Foundation First"
+        },
+        {
+          "condition": "short_term_money_invested",
+          "label": "At Risk"
+        }
+      ],
+      "explanationTemplate": "Separates contributions from fictional market movement.",
+      "contributionValueSource": "investment_contributions",
+      "marketMovementSource": "final_balance_minus_contributions"
+    },
+    {
+      "id": "J5-FB30-R5",
+      "label": "Goal Progress",
+      "startingValueSource": "startingState.goalProgress",
+      "finalValueSource": "goal_progress",
+      "changeSource": "final_goal_progress",
+      "statusRules": [
+        {
+          "condition": "at_least_180000",
+          "label": "Completed"
+        },
+        {
+          "condition": "funded_by_deadline",
+          "label": "On Track"
+        },
+        {
+          "condition": "positive",
+          "label": "Partially Funded"
+        },
+        {
+          "condition": "deadline_extended",
+          "label": "Delayed"
+        }
+      ],
+      "explanationTemplate": "Shows target, deadline, contributions, and adjustment.",
+      "secondaryValueSource": "goal_deadline"
+    },
+    {
+      "id": "J5-FB30-R6",
+      "label": "Scam Awareness",
+      "startingValueSource": "0",
+      "finalValueSource": "scam_awareness_score",
+      "changeSource": "final_scam_score",
+      "statusRules": [
+        {
+          "condition": "13_to_15",
+          "label": "Scam Aware"
+        },
+        {
+          "condition": "9_to_12",
+          "label": "Mostly Cautious"
+        },
+        {
+          "condition": "4_to_8",
+          "label": "Needs More Verification"
+        },
+        {
+          "condition": "below_4",
+          "label": "High Exposure"
+        }
+      ],
+      "explanationTemplate": "Measures warning signs, verification, and credential protection."
+    },
+    {
+      "id": "J5-FB30-R7",
+      "label": "Budget Stability",
+      "startingValueSource": "startingState.budgetStability",
+      "finalValueSource": "budget_stability",
+      "changeSource": "final_minus_50",
+      "statusRules": [
+        {
+          "condition": "85_plus",
+          "label": "Strong"
+        },
+        {
+          "condition": "65_to_84",
+          "label": "Stable"
+        },
+        {
+          "condition": "40_to_64",
+          "label": "Developing"
+        },
+        {
+          "condition": "below_40",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Measures needs coverage, wants, saving, and adjustment."
+    },
+    {
+      "id": "J5-FB30-R8",
+      "label": "Needs and Wants Balance",
+      "startingValueSource": "not_set",
+      "finalValueSource": "needs_wants_balance_score",
+      "changeSource": "final_balance_score",
+      "statusRules": [
+        {
+          "condition": "needs_and_wants_balanced",
+          "label": "Balanced"
+        },
+        {
+          "condition": "needs_covered_no_wants",
+          "label": "Stable"
+        },
+        {
+          "condition": "wants_with_missed_needs",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Does not require removing all enjoyment."
+    },
+    {
+      "id": "J5-FB30-R9",
+      "label": "Long-Term Discipline",
+      "startingValueSource": "0",
+      "finalValueSource": "long_term_discipline_score",
+      "changeSource": "final_discipline",
+      "statusRules": [
+        {
+          "condition": "85_plus",
+          "label": "Strong"
+        },
+        {
+          "condition": "65_to_84",
+          "label": "Stable"
+        },
+        {
+          "condition": "40_to_64",
+          "label": "Developing"
+        },
+        {
+          "condition": "below_40",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Measures saving, goals, protection, and market behaviour."
+    },
+    {
+      "id": "J5-FB30-R10",
+      "label": "Financial Confidence Score",
+      "startingValueSource": "0",
+      "finalValueSource": "final_score",
+      "changeSource": "final_score",
+      "statusRules": [
+        {
+          "condition": "0_to_39",
+          "label": "Financially Vulnerable"
+        },
+        {
+          "condition": "40_to_69",
+          "label": "Building Stability"
+        },
+        {
+          "condition": "70_to_89",
+          "label": "Financially Prepared"
+        },
+        {
+          "condition": "90_to_100",
+          "label": "Strong Financial Habits"
+        }
+      ],
+      "explanationTemplate": "Rewards decision quality rather than lucky returns."
+    }
+  ],
+  "personalisedFeedbackRules": {
+    "performanceHeadlineRules": [
+      {
+        "id": "J5-FB30-FB-H1",
+        "condition": "score_90_to_100",
+        "message": "You built a strong and adaptable financial year."
+      },
+      {
+        "id": "J5-FB30-FB-H2",
+        "condition": "score_70_to_89",
+        "message": "Your year remained mostly balanced and prepared."
+      },
+      {
+        "id": "J5-FB30-FB-H3",
+        "condition": "score_40_to_69",
+        "message": "Your foundation is growing, with important areas to strengthen."
+      },
+      {
+        "id": "J5-FB30-FB-H4",
+        "condition": "score_below_40",
+        "message": "The year revealed pressure points that can be improved."
+      }
+    ],
+    "strengthRules": [
+      {
+        "id": "J5-FB30-FB-S1",
+        "condition": "budget_score_16_plus",
+        "message": "You covered essential costs while keeping the monthly plan realistic."
+      },
+      {
+        "id": "J5-FB30-FB-S2",
+        "condition": "emergency_score_10_plus",
+        "message": "You built or used emergency savings in a way that reduced debt pressure."
+      },
+      {
+        "id": "J5-FB30-FB-S3",
+        "condition": "scam_score_12_plus",
+        "message": "You recognised pressure and protected savings and credentials."
+      },
+      {
+        "id": "J5-FB30-FB-S4",
+        "condition": "goal_score_12_plus",
+        "message": "You created a measurable goal that reflected current obligations."
+      },
+      {
+        "id": "J5-FB30-FB-S5",
+        "condition": "investment_score_8_plus",
+        "message": "You matched investing to protection, time horizon, and affordability."
+      }
+    ],
+    "improvementRules": [
+      {
+        "id": "J5-FB30-FB-I1",
+        "condition": "weak_emergency_positive_investing",
+        "message": "Investing moved ahead while emergency protection remained weak."
+      },
+      {
+        "id": "J5-FB30-FB-I2",
+        "condition": "high_debt_pressure",
+        "message": "Debt repayments reduced goal and future flexibility."
+      },
+      {
+        "id": "J5-FB30-FB-I3",
+        "condition": "scam_losses_positive",
+        "message": "The guaranteed-return offer reduced savings for protection or goals."
+      },
+      {
+        "id": "J5-FB30-FB-I4",
+        "condition": "unaffordable_goal",
+        "message": "The goal needed a more realistic deadline or contribution."
+      },
+      {
+        "id": "J5-FB30-FB-I5",
+        "condition": "reactive_market_response",
+        "message": "The market decision relied too heavily on price movement instead of review."
+      }
+    ],
+    "tradeoffRules": [
+      {
+        "id": "J5-FB30-FB-T1",
+        "condition": "entertainment_positive_needs_covered",
+        "message": "You kept affordable enjoyment, accepting slightly slower saving."
+      },
+      {
+        "id": "J5-FB30-FB-T2",
+        "condition": "deadline_extended",
+        "message": "You delayed the goal to preserve monthly stability."
+      },
+      {
+        "id": "J5-FB30-FB-T3",
+        "condition": "investing_delayed",
+        "message": "You delayed market exposure to strengthen accessible protection."
+      },
+      {
+        "id": "J5-FB30-FB-T4",
+        "condition": "necessary_debt",
+        "message": "Borrowing solved an essential problem but reduced future flexibility."
+      }
+    ],
+    "practicalPrinciple": "Cover needs, protect emergencies, set realistic goals, and invest only when the complete plan is ready.",
+    "replayMessage": "Replay with another emergency, goal, or investment strategy to compare the dashboard."
+  },
+  "quiz": {
+    "id": "J5-FB30-QUIZ",
+    "questions": [
+      {
+        "id": "J5-FB30-Q1",
+        "questionType": "combined_recognition",
+        "question": "Which plan shows budgeting, emergency preparation, and goal-setting working together?",
+        "options": [
+          {
+            "id": "J5-FB30-Q1-O1",
+            "label": "Cover bills, build emergency savings, and fund a measurable goal",
+            "isCorrect": true,
+            "feedback": "Correct. Each priority has a clear place."
+          },
+          {
+            "id": "J5-FB30-Q1-O2",
+            "label": "Invest every spare rupee and borrow for surprises",
+            "isCorrect": false,
+            "feedback": "This weakens emergency readiness and creates repayment pressure."
+          },
+          {
+            "id": "J5-FB30-Q1-O3",
+            "label": "Remove every want and avoid future planning",
+            "isCorrect": false,
+            "feedback": "Affordable enjoyment and future goals can coexist."
+          },
+          {
+            "id": "J5-FB30-Q1-O4",
+            "label": "Wait until year end for leftovers",
+            "isCorrect": false,
+            "feedback": "Saving and goal progress become uncertain."
+          }
+        ],
+        "correctAnswerId": "J5-FB30-Q1-O1",
+        "correctExplanation": "The plan connects present needs, protection, and measurable future action.",
+        "conceptsTested": [
+          "budgeting",
+          "emergency_savings",
+          "goal_setting"
+        ],
+        "misconceptionTested": "Financial priorities can be managed separately without one complete plan."
+      },
+      {
+        "id": "J5-FB30-Q2",
+        "questionType": "combined_misconception",
+        "question": "Which result best shows long-term financial strength?",
+        "options": [
+          {
+            "id": "J5-FB30-Q2-O1",
+            "label": "One investment rises while bills depend on debt",
+            "isCorrect": false,
+            "feedback": "A gain does not replace needs, emergency savings, or debt control."
+          },
+          {
+            "id": "J5-FB30-Q2-O2",
+            "label": "Consistent budgeting, saving, protection, and informed investing",
+            "isCorrect": true,
+            "feedback": "Correct. Several habits work together."
+          },
+          {
+            "id": "J5-FB30-Q2-O3",
+            "label": "The largest investment balance regardless of risk",
+            "isCorrect": false,
+            "feedback": "A large balance can coexist with weak cash access or high debt."
+          },
+          {
+            "id": "J5-FB30-Q2-O4",
+            "label": "Never making a financial mistake",
+            "isCorrect": false,
+            "feedback": "Mistakes can be reviewed and followed by stronger decisions."
+          }
+        ],
+        "correctAnswerId": "J5-FB30-Q2-O2",
+        "correctExplanation": "Financial strength develops through connected and repeated decisions, not one lucky outcome.",
+        "conceptsTested": [
+          "budgeting",
+          "saving",
+          "emergency_planning",
+          "investing"
+        ],
+        "misconceptionTested": "Long-term wealth comes mainly from one lucky investment."
+      },
+      {
+        "id": "J5-FB30-Q3",
+        "questionType": "new_application",
+        "question": "Someone has rent due, no emergency savings, Rs. 30,000 debt, and a new investment offer. What should be reviewed first?",
+        "options": [
+          {
+            "id": "J5-FB30-Q3-O1",
+            "label": "Possible investment profit",
+            "isCorrect": false,
+            "feedback": "Possible profit does not solve immediate needs."
+          },
+          {
+            "id": "J5-FB30-Q3-O2",
+            "label": "Bills, emergency protection, debt repayment, and cash needed soon",
+            "isCorrect": true,
+            "feedback": "Correct. Readiness depends on the full situation."
+          },
+          {
+            "id": "J5-FB30-Q3-O3",
+            "label": "Whether friends are investing",
+            "isCorrect": false,
+            "feedback": "Other people do not determine affordability."
+          },
+          {
+            "id": "J5-FB30-Q3-O4",
+            "label": "How to borrow more to invest",
+            "isCorrect": false,
+            "feedback": "More debt adds pressure while returns remain uncertain."
+          }
+        ],
+        "correctAnswerId": "J5-FB30-Q3-O2",
+        "correctExplanation": "Essentials, emergency access, debt, and time horizon should be reviewed before investing.",
+        "conceptsTested": [
+          "investment_readiness",
+          "debt_management",
+          "emergency_savings",
+          "budgeting"
+        ],
+        "misconceptionTested": "Investing should always come before emergency savings and debt management."
+      }
+    ]
+  },
+  "completion": {
+    "id": "J5-FB30-COMPLETE",
+    "headline": "Your First Financial Year Is Complete!",
+    "achievementMessage": "You managed income, expenses, emergencies, goals, scams, and investments across one complete simulated year.",
+    "scoreSource": "final_score",
+    "performanceLevelSource": "performance_level",
+    "conceptsMasteredSource": "strongest_scoring_categories",
+    "conceptNeedingPracticeSource": "lowest_scoring_category",
+    "xpReward": 400,
+    "progressMessage": "You completed the Money Quest curriculum and applied its major lessons in one connected financial simulation.",
+    "nextTeaser": "Replay the year to test how different early choices change later options.",
+    "animation": "A twelve-month calendar completes as savings, emergency protection, goal progress, and confidence badges appear.",
+    "replayButtonLabel": "Try Another Strategy",
+    "continueButtonLabel": "View Final Results"
+  },
+  "realLifeChallenge": {
+    "id": "J5-FB30-CHALLENGE",
+    "title": "Write Your Five-Part Plan",
+    "instruction": "Create a fictional monthly plan with five headings: needs, wants, emergency savings, one goal, and long-term money. Use no real account details and make no transaction.",
+    "buttonLabel": "My Plan Is Ready"
+  },
+  "reviewChecklist": [
+    {
+      "item": "Reviews only previously taught concepts",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Does not introduce unexplained major concepts",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Concepts are combined accurately",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Financial amounts are internally consistent",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Persistent values update correctly",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Earlier decisions affect later stages",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Interaction choices have meaningful consequences",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Multiple reasonable paths are allowed where appropriate",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Difficulty is Easy",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "No personalised investment advice",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "No claims that markets always recover",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Simulated results are not presented as forecasts",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Interactions reinforce the learning objective",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Scoring rewards decision quality rather than luck",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Enjoyable spending is not automatically treated as irresponsible",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Risk-taking is not automatically rewarded",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Quiz corrects the combined misconception",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Mission can be completed within the specified duration",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Accessibility alternatives are provided",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "Final dashboard matches the simulation outcomes",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    },
+    {
+      "item": "JSON matches the human-readable version",
+      "status": "PASS",
+      "notes": "Verified in the generated mission design."
+    }
+  ]
+}
