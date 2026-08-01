@@ -1,0 +1,2190 @@
+{
+  "id": "J3-BM3",
+  "journeyId": "J3",
+  "journeyName": "Become an Investor",
+  "title": "Build a Portfolio",
+  "bossType": "journey_boss",
+  "unlocksAfterMissionId": "J3-M20",
+  "audience": "adults_18_plus",
+  "difficulty": "easy",
+  "estimatedDurationMinutes": 8,
+  "simulationPeriod": "five_year_plan",
+  "currency": "PKR",
+  "locale": "en-PK",
+  "language": "English",
+  "learningObjective": "Apply ownership, lending, pooled investing, risk, time horizon, and cash-access concepts to build a portfolio suited to a long-term goal.",
+  "primaryMisconception": "A strong portfolio is simply the one with the highest possible growth potential.",
+  "secondaryMisconceptions": [
+    "Every investor should choose the same portfolio.",
+    "Holding several individual stocks always creates a diversified portfolio.",
+    "Cash has no useful role because it does not usually offer high growth.",
+    "A company that does not pay dividends is automatically a poor investment."
+  ],
+  "keyTakeaway": "A strong portfolio fits the goal, timeline, cash needs, diversification, and ability to accept risk.",
+  "conceptsAssessed": [
+    {
+      "missionId": "J3-M14",
+      "missionTitle": "What Is Investing?",
+      "concept": "Investing for a longer-term goal while accepting uncertainty.",
+      "assessedInStageIds": [
+        "J3-BM3-ST1",
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ]
+    },
+    {
+      "missionId": "J3-M15",
+      "missionTitle": "Stocks",
+      "concept": "Stocks represent partial ownership in companies.",
+      "assessedInStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST3",
+        "J3-BM3-ST4"
+      ]
+    },
+    {
+      "missionId": "J3-M16",
+      "missionTitle": "The Stock Market",
+      "concept": "Market prices may move and concentrated stock exposure can be difficult to tolerate.",
+      "assessedInStageIds": [
+        "J3-BM3-ST1",
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ]
+    },
+    {
+      "missionId": "J3-M17",
+      "missionTitle": "Mutual Funds",
+      "concept": "Mutual funds pool money into professionally managed investments.",
+      "assessedInStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST3"
+      ]
+    },
+    {
+      "missionId": "J3-M18",
+      "missionTitle": "ETFs",
+      "concept": "ETFs are tradeable baskets that may hold many investments.",
+      "assessedInStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST3"
+      ]
+    },
+    {
+      "missionId": "J3-M19",
+      "missionTitle": "Bonds",
+      "concept": "Bonds generally represent lending rather than ownership.",
+      "assessedInStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST3"
+      ]
+    },
+    {
+      "missionId": "J3-M20",
+      "missionTitle": "Dividends",
+      "concept": "Companies may pay dividends or use profit in other reasonable ways.",
+      "assessedInStageIds": [
+        "J3-BM3-ST4"
+      ]
+    }
+  ],
+  "overview": {
+    "summary": "The learner builds a Rs. 100,000 portfolio for a five-year goal. First, they describe the goal timeline, reaction to a possible decline, and need for accessible cash. Next, they allocate money across stocks, bonds, a mutual fund, an ETF, and cash. They then explain each asset’s role and predict how a company may use profit. The final portfolio check responds to the learner’s earlier profile and allocation. Results measure concentration, access, risk, alignment, understanding, and decision quality—not luck."
+  },
+  "startingState": {
+    "availableCash": 100000,
+    "monthlyIncome": 0,
+    "generalSavings": 100000,
+    "emergencyFund": 0,
+    "emergencySavingsHeldSeparately": true,
+    "debtBalance": 0,
+    "monthlyDebtPayment": 0,
+    "investmentBalance": 0,
+    "goalTarget": 100000,
+    "goalProgress": 0,
+    "unallocatedCash": 100000,
+    "individualStockAllocation": 0,
+    "bondAllocation": 0,
+    "mutualFundAllocation": 0,
+    "etfAllocation": 0,
+    "cashAllocation": 0,
+    "timeRemainingYears": 5,
+    "negativeBalancesAllowed": false,
+    "financialGoal": "Build a portfolio for a long-term goal while balancing growth potential, risk, diversification, and access to cash."
+  },
+  "trackedStateFields": [
+    {
+      "key": "unallocated_cash",
+      "label": "Unallocated Cash",
+      "initialValue": 100000,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "reducing allocations"
+      ],
+      "decreasesBy": [
+        "portfolio allocations"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "individual_stock_allocation",
+      "label": "Individual Stock Allocation",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "portfolio allocation",
+        "final adjustment"
+      ],
+      "decreasesBy": [
+        "portfolio adjustment"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "bond_allocation",
+      "label": "Bond Allocation",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "portfolio allocation",
+        "final adjustment"
+      ],
+      "decreasesBy": [
+        "portfolio adjustment"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "mutual_fund_allocation",
+      "label": "Mutual Fund Allocation",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "portfolio allocation",
+        "final adjustment"
+      ],
+      "decreasesBy": [
+        "portfolio adjustment"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "etf_allocation",
+      "label": "ETF Allocation",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "portfolio allocation",
+        "final adjustment"
+      ],
+      "decreasesBy": [
+        "portfolio adjustment"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "cash_allocation",
+      "label": "Cash Allocation",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100000,
+      "increasesBy": [
+        "portfolio allocation",
+        "final adjustment"
+      ],
+      "decreasesBy": [
+        "portfolio adjustment"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "asset_type_count",
+      "label": "Number of Asset Types",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 5,
+      "increasesBy": [
+        "using an additional meaningful asset type"
+      ],
+      "decreasesBy": [
+        "removing an allocation"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "maximum_allocation_percent",
+      "label": "Largest Allocation",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "concentrating more money in one type"
+      ],
+      "decreasesBy": [
+        "spreading the largest allocation"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "concentration_score",
+      "label": "Concentration Score",
+      "initialValue": 100,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "larger single-type exposure"
+      ],
+      "decreasesBy": [
+        "spreading across suitable types"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "cash_availability_score",
+      "label": "Cash Availability",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "higher cash allocation"
+      ],
+      "decreasesBy": [
+        "lower cash allocation"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "illustrative_growth_potential",
+      "label": "Illustrative Growth Potential",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "more stock and pooled equity exposure"
+      ],
+      "decreasesBy": [
+        "more cash or bonds"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "illustrative_risk_level",
+      "label": "Illustrative Risk Level",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "stock exposure and concentration"
+      ],
+      "decreasesBy": [
+        "cash, bonds, and broader spread"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "time_horizon_alignment",
+      "label": "Time-Horizon Alignment",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "allocation matching the selected timeline"
+      ],
+      "decreasesBy": [
+        "near-term money exposed to high movement"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST1",
+        "J3-BM3-ST2",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": true
+    },
+    {
+      "key": "portfolio_understanding_score",
+      "label": "Portfolio Understanding",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "correct role matches and profit predictions"
+      ],
+      "decreasesBy": [
+        "incorrect explanations"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST3",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": false
+    },
+    {
+      "key": "financial_confidence",
+      "label": "Financial Confidence",
+      "initialValue": 0,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "increasesBy": [
+        "goal-based and evidence-based choices"
+      ],
+      "decreasesBy": [
+        "mismatches and unexplained concentration"
+      ],
+      "affectedByStageIds": [
+        "J3-BM3-ST1",
+        "J3-BM3-ST2",
+        "J3-BM3-ST3",
+        "J3-BM3-ST4"
+      ],
+      "displayThroughoutMission": false
+    }
+  ],
+  "screens": [
+    {
+      "id": "J3-BM3-S01",
+      "type": "hook",
+      "title": "One Goal, Five Choices",
+      "content": "You have Rs. 100,000 for a long-term goal. How will you balance growth, price movement, diversification, and accessible cash?",
+      "illustration": "Five empty portfolio sections surround a Rs. 100,000 allocation meter.",
+      "primaryAction": {
+        "label": "Build the Portfolio",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-BM3-S02",
+      "type": "scenario_setup",
+      "title": "The Goal Is Five Years Away",
+      "content": "Your Rs. 100,000 is for a goal expected in about five years. Basic emergency savings are held separately.",
+      "illustration": "A five-year goal marker appears beside a separate emergency-savings shield.",
+      "stateSummary": {
+        "availableCash": 100000,
+        "timeRemainingYears": 5,
+        "emergencySavingsHeldSeparately": true
+      },
+      "primaryAction": {
+        "label": "Check the Timeline",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-BM3-S03",
+      "type": "scenario_setup",
+      "title": "Prices May Move",
+      "content": "The portfolio may rise or fall during the five years. You must decide how much movement you could realistically tolerate.",
+      "illustration": "A portfolio line moves up and down before reaching a five-year goal marker.",
+      "stateSummary": {
+        "investmentOutcomeGuaranteed": false,
+        "possibleLosses": true
+      },
+      "primaryAction": {
+        "label": "Consider the Risk",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-BM3-S04",
+      "type": "scenario_setup",
+      "title": "Access Still Matters",
+      "content": "Part of the money may need to stay easy to reach. Cash can provide access even when it offers less growth potential.",
+      "illustration": "A cash pocket sits beside investment baskets and a five-year goal.",
+      "stateSummary": {
+        "cashAllocation": 0,
+        "unallocatedCash": 100000
+      },
+      "primaryAction": {
+        "label": "Choose a General Approach",
+        "action": "next"
+      }
+    },
+    {
+      "id": "J3-BM3-S05",
+      "type": "pre_simulation_question",
+      "title": "What Makes a Portfolio Strong?",
+      "question": "Which approach sounds most balanced before you know the exact allocation?",
+      "options": [
+        {
+          "id": "J3-BM3-PQ-O1",
+          "label": "Choose only the assets with the highest growth potential",
+          "isRecommended": false,
+          "feedback": "Higher growth potential usually brings more uncertainty and may not fit the goal or cash needs."
+        },
+        {
+          "id": "J3-BM3-PQ-O2",
+          "label": "Match the portfolio to the goal, timeline, risk, and cash needs",
+          "isRecommended": true,
+          "feedback": "Correct. A strong portfolio is judged by fit, not by one growth number."
+        },
+        {
+          "id": "J3-BM3-PQ-O3",
+          "label": "Use every asset type equally",
+          "isRecommended": false,
+          "feedback": "Using every category equally may ignore the goal and the reason each asset is included."
+        },
+        {
+          "id": "J3-BM3-PQ-O4",
+          "label": "Keep everything in cash for every goal",
+          "isRecommended": false,
+          "feedback": "Cash supports access, but a large long-term cash position may limit growth and lose purchasing power."
+        }
+      ],
+      "recommendedAnswerId": "J3-BM3-PQ-O2",
+      "connectionToSimulation": "The next stages test how the portfolio fits the learner’s own selected timeline, reaction, and access needs."
+    }
+  ],
+  "stages": [
+    {
+      "id": "J3-BM3-ST1",
+      "stageNumber": 1,
+      "title": "Investor Profile",
+      "timelineLabel": "Before Allocation",
+      "conceptsAssessed": [
+        "long_term_goal",
+        "time_horizon",
+        "risk_reaction",
+        "cash_access"
+      ],
+      "interactionType": "decision_tree",
+      "situation": "Before allocating the Rs. 100,000, answer three simple questions about when the money may be needed, how a 20% decline might feel, and how much should remain accessible.",
+      "objective": "Create an educational profile that guides later feedback without producing a formal suitability label.",
+      "stateBefore": {
+        "availableCash": 100000,
+        "timeRemainingYears": 5,
+        "emergencySavingsHeldSeparately": true
+      },
+      "config": {
+        "startingNodeId": "J3-BM3-ST1-N1",
+        "nodes": [
+          {
+            "id": "J3-BM3-ST1-N1",
+            "type": "choice",
+            "question": "When might the portfolio money be needed?",
+            "choices": [
+              {
+                "id": "J3-BM3-ST1-Q1-O1",
+                "label": "Within one year",
+                "value": "within_one_year",
+                "nextNodeId": "J3-BM3-ST1-N2"
+              },
+              {
+                "id": "J3-BM3-ST1-Q1-O2",
+                "label": "In two to five years",
+                "value": "two_to_five_years",
+                "nextNodeId": "J3-BM3-ST1-N2"
+              },
+              {
+                "id": "J3-BM3-ST1-Q1-O3",
+                "label": "More than five years from now",
+                "value": "more_than_five_years",
+                "nextNodeId": "J3-BM3-ST1-N2"
+              },
+              {
+                "id": "J3-BM3-ST1-Q1-O4",
+                "label": "I am not sure",
+                "value": "unsure",
+                "nextNodeId": "J3-BM3-ST1-N2"
+              }
+            ]
+          },
+          {
+            "id": "J3-BM3-ST1-N2",
+            "type": "choice",
+            "question": "How might you react if the portfolio fell 20%?",
+            "choices": [
+              {
+                "id": "J3-BM3-ST1-Q2-O1",
+                "label": "Sell everything immediately",
+                "value": "sell_immediately",
+                "nextNodeId": "J3-BM3-ST1-N3"
+              },
+              {
+                "id": "J3-BM3-ST1-Q2-O2",
+                "label": "Feel worried but review the plan",
+                "value": "review_plan",
+                "nextNodeId": "J3-BM3-ST1-N3"
+              },
+              {
+                "id": "J3-BM3-ST1-Q2-O3",
+                "label": "Accept it as long-term uncertainty",
+                "value": "accept_uncertainty",
+                "nextNodeId": "J3-BM3-ST1-N3"
+              },
+              {
+                "id": "J3-BM3-ST1-Q2-O4",
+                "label": "I do not know",
+                "value": "unsure",
+                "nextNodeId": "J3-BM3-ST1-N3"
+              }
+            ]
+          },
+          {
+            "id": "J3-BM3-ST1-N3",
+            "type": "choice",
+            "question": "Do you need quick access to some of the Rs. 100,000?",
+            "choices": [
+              {
+                "id": "J3-BM3-ST1-Q3-O1",
+                "label": "Yes, a large part may be needed soon",
+                "value": "large_access_need",
+                "nextNodeId": "J3-BM3-ST1-OUTCOME"
+              },
+              {
+                "id": "J3-BM3-ST1-Q3-O2",
+                "label": "Yes, a small amount should stay accessible",
+                "value": "small_access_need",
+                "nextNodeId": "J3-BM3-ST1-OUTCOME"
+              },
+              {
+                "id": "J3-BM3-ST1-Q3-O3",
+                "label": "No, most can remain invested",
+                "value": "low_access_need",
+                "nextNodeId": "J3-BM3-ST1-OUTCOME"
+              },
+              {
+                "id": "J3-BM3-ST1-Q3-O4",
+                "label": "I am not sure",
+                "value": "unsure",
+                "nextNodeId": "J3-BM3-ST1-OUTCOME"
+              }
+            ]
+          },
+          {
+            "id": "J3-BM3-ST1-OUTCOME",
+            "type": "terminal_outcome",
+            "title": "Profile Considerations Ready",
+            "content": "These answers guide educational feedback. They are not a professional risk label or personalised recommendation."
+          }
+        ],
+        "feedbackRules": [
+          {
+            "id": "J3-BM3-ST1-F1",
+            "condition": "time_horizon_equals_within_one_year",
+            "message": "More money may need to remain accessible and less exposed to sharp price movement."
+          },
+          {
+            "id": "J3-BM3-ST1-F2",
+            "condition": "time_horizon_equals_more_than_five_years",
+            "message": "A longer timeline may allow more time for price changes, but losses remain possible."
+          },
+          {
+            "id": "J3-BM3-ST1-F3",
+            "condition": "decline_reaction_equals_sell_immediately",
+            "message": "A concentrated stock portfolio may be emotionally difficult to maintain during declines."
+          },
+          {
+            "id": "J3-BM3-ST1-F4",
+            "condition": "access_need_equals_large_access_need",
+            "message": "A meaningful cash allocation may be useful because selling investments at the wrong time can create pressure."
+          },
+          {
+            "id": "J3-BM3-ST1-F5",
+            "condition": "any_profile_answer_equals_unsure",
+            "message": "Uncertainty is useful information. A more moderate starting allocation may be easier to review."
+          }
+        ],
+        "stateChanges": {
+          "time_horizon": "selected_question_1_value",
+          "decline_reaction": "selected_question_2_value",
+          "access_need": "selected_question_3_value",
+          "profile_completed": true
+        }
+      },
+      "choices": [
+        {
+          "id": "J3-BM3-ST1-C1",
+          "label": "Complete all three profile questions honestly",
+          "classification": "recommended",
+          "immediateFeedback": "The portfolio builder can now compare the allocation with the selected timeline, reaction, and cash needs.",
+          "shortTermConsequence": "Profile considerations appear beside the builder.",
+          "laterConsequence": "Alignment, access, and concentration feedback becomes context-sensitive.",
+          "stateChanges": {
+            "profile_completed": true,
+            "profile_awareness_points": 20
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Choose the answers that best describe the fictional situation rather than choosing the option that sounds most adventurous.",
+        "reasonableAlternatives": [
+          "A shorter timeline may justify more cash or lower-movement holdings.",
+          "A longer timeline may support more growth exposure when possible losses are acceptable.",
+          "An unsure learner may reasonably begin with a moderate spread and review it later."
+        ],
+        "tradeOff": "More growth exposure may increase price movement, while more cash improves access but usually lowers growth potential."
+      },
+      "validation": {
+        "method": "Require one response for each of the three questions.",
+        "invalidStateFeedback": "Complete all three profile questions before building the portfolio.",
+        "retryBehaviour": "Allow answers to be revised until the portfolio allocation is confirmed."
+      },
+      "accessibilityAlternative": {
+        "method": "Present one labelled question at a time with Previous and Next controls.",
+        "instruction": "Choose one response for the timeline, decline reaction, and access need."
+      },
+      "stateSummary": {
+        "title": "Profile Considerations Saved",
+        "changedValues": [
+          {
+            "field": "time_horizon",
+            "previousAmount": "Not selected",
+            "newAmountSource": "selected_time_horizon",
+            "reason": "The goal date affects suitable access and price movement."
+          },
+          {
+            "field": "decline_reaction",
+            "previousAmount": "Not selected",
+            "newAmountSource": "selected_decline_reaction",
+            "reason": "The reaction helps identify emotionally difficult allocations."
+          },
+          {
+            "field": "access_need",
+            "previousAmount": "Not selected",
+            "newAmountSource": "selected_access_need",
+            "reason": "The need for cash affects the minimum useful cash allocation."
+          }
+        ],
+        "learningMessage": "Portfolio choices should begin with the goal and the person using the money.",
+        "nextStageTeaser": "Allocate the full Rs. 100,000 across five portfolio categories."
+      }
+    },
+    {
+      "id": "J3-BM3-ST2",
+      "stageNumber": 2,
+      "title": "Portfolio Builder",
+      "timelineLabel": "Allocation Day",
+      "conceptsAssessed": [
+        "stocks",
+        "bonds",
+        "mutual_funds",
+        "etfs",
+        "cash",
+        "diversification",
+        "time_horizon_alignment"
+      ],
+      "interactionType": "budget_builder",
+      "situation": "Your profile answers are now visible. Divide the full Rs. 100,000 between individual stocks, bonds, a mutual fund, an ETF, and cash. Every allocation changes access, concentration, growth potential, and illustrative risk.",
+      "objective": "Create a complete portfolio and review how well it fits the selected profile considerations.",
+      "stateBefore": {
+        "unallocatedCash": 100000,
+        "individualStockAllocation": 0,
+        "bondAllocation": 0,
+        "mutualFundAllocation": 0,
+        "etfAllocation": 0,
+        "cashAllocation": 0,
+        "timeHorizonSource": "selected_time_horizon",
+        "declineReactionSource": "selected_decline_reaction",
+        "accessNeedSource": "selected_access_need"
+      },
+      "config": {
+        "totalAvailableAmount": 100000,
+        "allocationStep": 5000,
+        "requiredCategories": [],
+        "optionalCategories": [
+          {
+            "id": "individual_stocks",
+            "label": "Individual Stocks",
+            "minimum": 0,
+            "maximum": 100000,
+            "startingAmount": 20000
+          },
+          {
+            "id": "bonds",
+            "label": "Bonds",
+            "minimum": 0,
+            "maximum": 100000,
+            "startingAmount": 20000
+          },
+          {
+            "id": "mutual_fund",
+            "label": "Mutual Fund",
+            "minimum": 0,
+            "maximum": 100000,
+            "startingAmount": 20000
+          },
+          {
+            "id": "etf",
+            "label": "ETF",
+            "minimum": 0,
+            "maximum": 100000,
+            "startingAmount": 30000
+          },
+          {
+            "id": "cash",
+            "label": "Cash",
+            "minimum": 0,
+            "maximum": 100000,
+            "startingAmount": 10000
+          }
+        ],
+        "remainingBalanceLabel": "Unallocated Cash",
+        "remainingBalanceRule": "100000_minus_sum_of_allocations",
+        "overspendingBehaviour": "block_confirmation",
+        "completionRule": "allocations_equal_100000",
+        "multipleValidPortfolios": true,
+        "educationalAssumptions": [
+          "Emergency savings are held separately from the Rs. 100,000 portfolio amount.",
+          "No real stock, bond, mutual fund, ETF, or provider is named.",
+          "Growth potential and risk are educational estimates, not predictions.",
+          "Diversification may reduce dependence on one outcome but cannot eliminate loss.",
+          "Cash is accessible but may lose purchasing power over time.",
+          "Using every category is not automatically better.",
+          "The portfolio is judged against the learner’s Stage 1 answers."
+        ],
+        "calculationRules": {
+          "assetTypeCount": "count_of_allocations_greater_than_zero",
+          "maximumAllocationPercent": "largest_allocation_divided_by_100000_multiplied_by_100",
+          "concentrationLabel": {
+            "highly_concentrated": "maximum_allocation_percent_greater_than_or_equal_to_70",
+            "moderately_concentrated": "maximum_allocation_percent_between_50_and_69",
+            "broadly_spread": "maximum_allocation_percent_below_50_and_asset_type_count_greater_than_or_equal_to_3"
+          },
+          "growthPotentialScore": "stocks_percent_times_0_9_plus_etf_percent_times_0_7_plus_mutual_fund_percent_times_0_65_plus_bonds_percent_times_0_3_plus_cash_percent_times_0_05",
+          "riskScore": "stocks_percent_times_0_9_plus_etf_percent_times_0_55_plus_mutual_fund_percent_times_0_5_plus_bonds_percent_times_0_2_plus_cash_percent_times_0_05_plus_concentration_penalty",
+          "cashAvailabilityScore": "cash_percent",
+          "accessAlignment": {
+            "large_access_need": "cash_percent_greater_than_or_equal_to_40",
+            "small_access_need": "cash_percent_greater_than_or_equal_to_10",
+            "low_access_need": "cash_percent_between_5_and_30",
+            "unsure": "cash_percent_greater_than_or_equal_to_15"
+          },
+          "timeHorizonAlignment": {
+            "within_one_year": "cash_plus_bonds_percent_greater_than_or_equal_to_70_and_stocks_percent_less_than_or_equal_to_20",
+            "two_to_five_years": "maximum_allocation_percent_less_than_60_and_cash_percent_greater_than_or_equal_to_10",
+            "more_than_five_years": "maximum_allocation_percent_less_than_60_and_growth_assets_percent_greater_than_or_equal_to_40",
+            "unsure": "maximum_allocation_percent_less_than_55_and_cash_percent_greater_than_or_equal_to_15"
+          }
+        },
+        "examplePortfolios": [
+          {
+            "id": "J3-BM3-EX-A",
+            "label": "Highly Concentrated",
+            "allocations": {
+              "individual_stocks": 80000,
+              "bonds": 0,
+              "mutual_fund": 0,
+              "etf": 10000,
+              "cash": 10000
+            },
+            "feedback": "Most money depends on individual stocks. Growth potential may be high, but concentration and price-movement risk are also high."
+          },
+          {
+            "id": "J3-BM3-EX-B",
+            "label": "More Spread Out",
+            "allocations": {
+              "individual_stocks": 20000,
+              "bonds": 20000,
+              "mutual_fund": 20000,
+              "etf": 30000,
+              "cash": 10000
+            },
+            "feedback": "The money is spread across several types. This reduces dependence on one outcome but does not eliminate loss."
+          },
+          {
+            "id": "J3-BM3-EX-C",
+            "label": "High Cash Position",
+            "allocations": {
+              "individual_stocks": 5000,
+              "bonds": 15000,
+              "mutual_fund": 10000,
+              "etf": 10000,
+              "cash": 60000
+            },
+            "feedback": "A large amount remains accessible and less exposed to market movement, but long-term growth potential may be limited."
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "J3-BM3-ST2-C1",
+          "label": "Confirm a portfolio that matches the selected timeline and access needs",
+          "classification": "recommended",
+          "immediateFeedback": "The allocation is evaluated by fit, not by the highest growth score.",
+          "shortTermConsequence": "Portfolio metrics and context warnings are calculated.",
+          "laterConsequence": "The final stage may recommend keeping or adjusting the portfolio.",
+          "stateChanges": {
+            "unallocated_cash": 0,
+            "individual_stock_allocation": "selected_individual_stock_amount",
+            "bond_allocation": "selected_bond_amount",
+            "mutual_fund_allocation": "selected_mutual_fund_amount",
+            "etf_allocation": "selected_etf_amount",
+            "cash_allocation": "selected_cash_amount",
+            "asset_type_count": "calculated_asset_type_count",
+            "maximum_allocation_percent": "calculated_maximum_allocation_percent",
+            "concentration_score": "calculated_concentration_score",
+            "cash_availability_score": "selected_cash_percent",
+            "illustrative_growth_potential": "calculated_growth_potential_score",
+            "illustrative_risk_level": "calculated_risk_score",
+            "time_horizon_alignment": "calculated_alignment_score"
+          }
+        },
+        {
+          "id": "J3-BM3-ST2-C2",
+          "label": "Try to confirm with money still unallocated",
+          "classification": "invalid",
+          "immediateFeedback": "The full Rs. 100,000 must be assigned before the portfolio can be reviewed.",
+          "shortTermConsequence": "The builder remains open.",
+          "laterConsequence": "No portfolio metrics are saved yet.",
+          "stateChanges": {}
+        },
+        {
+          "id": "J3-BM3-ST2-C3",
+          "label": "Use a concentrated portfolio that conflicts with the profile",
+          "classification": "risky",
+          "immediateFeedback": "The allocation is valid, but the concentration or cash-access mismatch creates a warning.",
+          "shortTermConsequence": "Illustrative risk and concentration rise.",
+          "laterConsequence": "The final stage offers a targeted adjustment.",
+          "stateChanges": {
+            "alignment_warning": true,
+            "financial_confidence_adjustment": -8
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Build a portfolio that matches the selected timeline, cash need, and ability to tolerate declines while avoiding extreme dependence on one type.",
+        "reasonableAlternatives": [
+          "A higher cash position may be reasonable when a large part may be needed soon.",
+          "A higher growth allocation may be reasonable for a longer horizon when losses can be tolerated.",
+          "A moderate mix may be reasonable when the learner is unsure or uncomfortable with declines."
+        ],
+        "tradeOff": "More cash improves access, while more growth exposure increases uncertainty; broader spread reduces concentration without removing risk."
+      },
+      "validation": {
+        "method": "Require non-negative allocations totalling exactly Rs. 100,000, then calculate context-sensitive metrics.",
+        "invalidStateFeedback": "Allocate the remaining amount and keep the total exactly at Rs. 100,000.",
+        "retryBehaviour": "Keep all valid category amounts and highlight only the missing or excess amount. Risky valid portfolios may continue."
+      },
+      "accessibilityAlternative": {
+        "method": "Use plus and minus buttons with Rs. 5,000 steps and a spoken remaining-balance summary.",
+        "instruction": "Adjust each allocation until the total reaches Rs. 100,000, then review the profile warnings."
+      },
+      "stateSummary": {
+        "title": "Portfolio Allocated",
+        "changedValues": [
+          {
+            "field": "unallocated_cash",
+            "previousAmount": 100000,
+            "newAmount": 0,
+            "reason": "The full amount was allocated."
+          },
+          {
+            "field": "asset_type_count",
+            "previousAmount": 0,
+            "newAmountSource": "calculated_asset_type_count",
+            "reason": "Only categories with positive allocations count."
+          },
+          {
+            "field": "maximum_allocation_percent",
+            "previousAmount": 0,
+            "newAmountSource": "calculated_largest_allocation_percent",
+            "reason": "The largest category determines concentration pressure."
+          },
+          {
+            "field": "cash_availability_score",
+            "previousAmount": 0,
+            "newAmountSource": "selected_cash_percent",
+            "reason": "Cash provides immediate access."
+          },
+          {
+            "field": "time_horizon_alignment",
+            "previousAmount": 0,
+            "newAmountSource": "calculated_alignment_score",
+            "reason": "The allocation is compared with the Stage 1 timeline and access need."
+          }
+        ],
+        "learningMessage": "Diversification is about reducing dependence, not simply counting categories.",
+        "nextStageTeaser": "Explain what each portfolio holding actually represents."
+      }
+    },
+    {
+      "id": "J3-BM3-ST3",
+      "stageNumber": 3,
+      "title": "Explain the Portfolio",
+      "timelineLabel": "After Allocation",
+      "conceptsAssessed": [
+        "stock_ownership",
+        "bond_lending",
+        "mutual_funds",
+        "etfs",
+        "cash_role"
+      ],
+      "interactionType": "match_pairs",
+      "situation": "Your portfolio is built. Before judging it, match each holding to its financial role. Understanding the contents matters more than using every category.",
+      "objective": "Match all five asset types to the role they play inside a portfolio.",
+      "stateBefore": {
+        "assetTypeCountSource": "asset_type_count",
+        "portfolioAllocationsSource": "saved_portfolio_allocations",
+        "portfolioUnderstandingScore": 0
+      },
+      "config": {
+        "leftSideItems": [
+          {
+            "id": "J3-BM3-ST3-L1",
+            "label": "Stock"
+          },
+          {
+            "id": "J3-BM3-ST3-L2",
+            "label": "Bond"
+          },
+          {
+            "id": "J3-BM3-ST3-L3",
+            "label": "Mutual Fund"
+          },
+          {
+            "id": "J3-BM3-ST3-L4",
+            "label": "ETF"
+          },
+          {
+            "id": "J3-BM3-ST3-L5",
+            "label": "Cash"
+          }
+        ],
+        "rightSideItems": [
+          {
+            "id": "J3-BM3-ST3-R1",
+            "label": "Partial ownership in a company"
+          },
+          {
+            "id": "J3-BM3-ST3-R2",
+            "label": "Money lent to a company or government"
+          },
+          {
+            "id": "J3-BM3-ST3-R3",
+            "label": "A professionally managed pool of investments"
+          },
+          {
+            "id": "J3-BM3-ST3-R4",
+            "label": "A tradeable basket of investments"
+          },
+          {
+            "id": "J3-BM3-ST3-R5",
+            "label": "Accessible money that may lose purchasing power"
+          }
+        ],
+        "correctPairs": [
+          {
+            "leftId": "J3-BM3-ST3-L1",
+            "rightId": "J3-BM3-ST3-R1"
+          },
+          {
+            "leftId": "J3-BM3-ST3-L2",
+            "rightId": "J3-BM3-ST3-R2"
+          },
+          {
+            "leftId": "J3-BM3-ST3-L3",
+            "rightId": "J3-BM3-ST3-R3"
+          },
+          {
+            "leftId": "J3-BM3-ST3-L4",
+            "rightId": "J3-BM3-ST3-R4"
+          },
+          {
+            "leftId": "J3-BM3-ST3-L5",
+            "rightId": "J3-BM3-ST3-R5"
+          }
+        ],
+        "incorrectMatchFeedback": [
+          {
+            "id": "J3-BM3-ST3-F1",
+            "condition": "stock_matched_with_lending",
+            "message": "Buying a stock generally makes you a partial owner, not a lender."
+          },
+          {
+            "id": "J3-BM3-ST3-F2",
+            "condition": "bond_matched_with_ownership",
+            "message": "Buying a bond generally means lending money rather than owning part of the borrower."
+          },
+          {
+            "id": "J3-BM3-ST3-F3",
+            "condition": "mutual_fund_matched_with_one_company",
+            "message": "A mutual fund may hold many investments using money pooled from several investors."
+          },
+          {
+            "id": "J3-BM3-ST3-F4",
+            "condition": "etf_matched_with_one_stock",
+            "message": "An ETF is usually a basket containing several investments."
+          },
+          {
+            "id": "J3-BM3-ST3-F5",
+            "condition": "cash_matched_with_guaranteed_growth",
+            "message": "Cash is accessible, but its purchasing power may fall when prices rise."
+          }
+        ],
+        "completionRule": "all_five_pairs_matched",
+        "scoreRule": "four_points_per_correct_pair"
+      },
+      "choices": [
+        {
+          "id": "J3-BM3-ST3-C1",
+          "label": "Complete all five matches",
+          "classification": "recommended",
+          "immediateFeedback": "Understanding what each asset represents helps explain why it was included.",
+          "shortTermConsequence": "The portfolio understanding score increases by up to 20 points.",
+          "laterConsequence": "The final dashboard separates allocation from understanding.",
+          "stateChanges": {
+            "portfolio_understanding_score": "increase_by_match_score"
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Match each asset by its financial role rather than by whether its price may rise.",
+        "reasonableAlternatives": [],
+        "tradeOff": "Two assets may both support a portfolio while creating different ownership, lending, access, and management relationships."
+      },
+      "validation": {
+        "method": "Require all five pairs and award four points for each correct match.",
+        "invalidStateFeedback": "Review whether the asset represents ownership, lending, pooled investing, a tradeable basket, or accessible cash.",
+        "retryBehaviour": "Keep correct pairs locked and return only incorrect matches with one teaching hint."
+      },
+      "accessibilityAlternative": {
+        "method": "Select an asset, then choose its role from five labelled options.",
+        "instruction": "Match each asset to one role without dragging."
+      },
+      "stateSummary": {
+        "title": "Portfolio Roles Explained",
+        "changedValues": [
+          {
+            "field": "portfolio_understanding_score",
+            "previousAmount": 0,
+            "newAmountSource": "match_pair_score",
+            "reason": "Each correct role match adds understanding points."
+          }
+        ],
+        "learningMessage": "A portfolio should contain assets for clear reasons, not just familiar names.",
+        "nextStageTeaser": "Predict how a company may use profit, then complete the final portfolio check."
+      }
+    },
+    {
+      "id": "J3-BM3-ST4",
+      "stageNumber": 4,
+      "title": "Company Profit Decision",
+      "timelineLabel": "Year One Review",
+      "conceptsAssessed": [
+        "dividends",
+        "company_profit_decisions",
+        "portfolio_alignment",
+        "diversification",
+        "cash_access"
+      ],
+      "interactionType": "predict_outcome_decision_tree",
+      "situation": "A company held directly or inside a fund earns a profit. Predict the trade-offs of four profit choices. Then use your profile and current allocation to decide whether the portfolio needs one final adjustment.",
+      "objective": "Understand that dividends are optional and complete a context-sensitive final portfolio check.",
+      "stateBefore": {
+        "portfolioAllocationsSource": "saved_portfolio_allocations",
+        "timeHorizonSource": "selected_time_horizon",
+        "declineReactionSource": "selected_decline_reaction",
+        "accessNeedSource": "selected_access_need",
+        "concentrationSource": "maximum_allocation_percent",
+        "cashAllocationSource": "cash_allocation",
+        "timeHorizonAlignmentSource": "time_horizon_alignment"
+      },
+      "config": {
+        "predictionCards": [
+          {
+            "id": "J3-BM3-ST4-P1",
+            "companyDecision": "Pay a dividend",
+            "predictionOptions": [
+              {
+                "id": "J3-BM3-ST4-P1-O1",
+                "label": "Eligible shareholders may receive cash, while the company keeps less for other uses",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-BM3-ST4-P1-O2",
+                "label": "The company guarantees future growth",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-BM3-ST4-P1-O3",
+                "label": "Every shareholder avoids all losses",
+                "isCorrect": false
+              }
+            ],
+            "explanation": "A dividend may provide shareholder cash, but it leaves less money for expansion, debt repayment, or reserves."
+          },
+          {
+            "id": "J3-BM3-ST4-P2",
+            "companyDecision": "Reinvest in growth",
+            "predictionOptions": [
+              {
+                "id": "J3-BM3-ST4-P2-O1",
+                "label": "The company may expand, but the growth result is uncertain",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-BM3-ST4-P2-O2",
+                "label": "Shareholders must receive an immediate payment",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-BM3-ST4-P2-O3",
+                "label": "The company can no longer lose money",
+                "isCorrect": false
+              }
+            ],
+            "explanation": "Reinvestment may support products, workers, or expansion, but useful growth and future returns are not guaranteed."
+          },
+          {
+            "id": "J3-BM3-ST4-P3",
+            "companyDecision": "Repay debt",
+            "predictionOptions": [
+              {
+                "id": "J3-BM3-ST4-P3-O1",
+                "label": "The company may lower what it owes, leaving less for dividends or expansion",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-BM3-ST4-P3-O2",
+                "label": "The company automatically becomes risk-free",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-BM3-ST4-P3-O3",
+                "label": "Shareholders immediately own a larger percentage",
+                "isCorrect": false
+              }
+            ],
+            "explanation": "Debt repayment may strengthen the company, but other uses of profit receive less money."
+          },
+          {
+            "id": "J3-BM3-ST4-P4",
+            "companyDecision": "Keep cash available",
+            "predictionOptions": [
+              {
+                "id": "J3-BM3-ST4-P4-O1",
+                "label": "The company gains flexibility, but too much unused cash may limit growth",
+                "isCorrect": true
+              },
+              {
+                "id": "J3-BM3-ST4-P4-O2",
+                "label": "The cash guarantees a dividend later",
+                "isCorrect": false
+              },
+              {
+                "id": "J3-BM3-ST4-P4-O3",
+                "label": "The cash cannot lose purchasing power",
+                "isCorrect": false
+              }
+            ],
+            "explanation": "Cash reserves can support emergencies or opportunities, but holding too much unused cash can have a trade-off."
+          }
+        ],
+        "predictionScoreRule": "two_and_a_half_points_per_correct_prediction",
+        "importantClarification": "There is no single correct use of company profit. The strongest choice depends on debt, growth opportunities, cash needs, risks, and strategy.",
+        "finalPortfolioCheck": {
+          "id": "J3-BM3-ST4-FINAL-CHECK",
+          "question": "What should happen before the portfolio begins its five-year journey?",
+          "dynamicConditions": [
+            {
+              "id": "J3-BM3-ST4-DC1",
+              "condition": "maximum_allocation_percent_greater_than_or_equal_to_70",
+              "recommendedAction": "reduce_concentration"
+            },
+            {
+              "id": "J3-BM3-ST4-DC2",
+              "condition": "access_need_large_and_cash_percent_below_40",
+              "recommendedAction": "increase_cash"
+            },
+            {
+              "id": "J3-BM3-ST4-DC3",
+              "condition": "access_need_small_and_cash_percent_below_10",
+              "recommendedAction": "increase_cash"
+            },
+            {
+              "id": "J3-BM3-ST4-DC4",
+              "condition": "time_horizon_within_one_year_and_growth_assets_percent_above_30",
+              "recommendedAction": "reduce_short_term_risk"
+            },
+            {
+              "id": "J3-BM3-ST4-DC5",
+              "condition": "no_major_mismatch",
+              "recommendedAction": "keep_and_review"
+            }
+          ],
+          "adjustmentAmount": 10000,
+          "recalculationRule": "recalculate_allocation_metrics_after_adjustment"
+        }
+      },
+      "choices": [
+        {
+          "id": "J3-BM3-ST4-C1",
+          "label": "Keep the portfolio and schedule a later review",
+          "classification": "reasonable",
+          "immediateFeedback": "Keeping the allocation may be reasonable when it already matches the timeline, access needs, and concentration limits.",
+          "shortTermConsequence": "Allocations stay unchanged.",
+          "laterConsequence": "The learner must still accept that values can rise or fall.",
+          "stateChanges": {
+            "portfolio_adjusted": false,
+            "final_adjustment_points": "10_if_no_major_mismatch_else_4"
+          }
+        },
+        {
+          "id": "J3-BM3-ST4-C2",
+          "label": "Reduce the largest allocation by Rs. 10,000 and spread it elsewhere",
+          "classification": "reasonable",
+          "immediateFeedback": "This reduces dependence on the largest category when concentration is high.",
+          "shortTermConsequence": "The largest allocation falls and another suitable category increases.",
+          "laterConsequence": "Concentration may improve, but losses remain possible.",
+          "stateChanges": {
+            "largest_allocation": {
+              "operation": "decrease",
+              "amount": 10000
+            },
+            "selected_underused_allocation": {
+              "operation": "increase",
+              "amount": 10000
+            },
+            "recalculate_metrics": true,
+            "final_adjustment_points": "10_if_concentration_warning_else_7"
+          }
+        },
+        {
+          "id": "J3-BM3-ST4-C3",
+          "label": "Move Rs. 10,000 from investments to cash",
+          "classification": "reasonable",
+          "immediateFeedback": "This improves access when the current cash allocation does not match the selected need.",
+          "shortTermConsequence": "Cash rises by Rs. 10,000 and growth exposure falls.",
+          "laterConsequence": "The portfolio may be easier to use for a near-term need but may have lower growth potential.",
+          "stateChanges": {
+            "selected_non_cash_allocation": {
+              "operation": "decrease",
+              "amount": 10000
+            },
+            "cash_allocation": {
+              "operation": "increase",
+              "amount": 10000
+            },
+            "recalculate_metrics": true,
+            "final_adjustment_points": "10_if_cash_access_warning_else_7"
+          }
+        },
+        {
+          "id": "J3-BM3-ST4-C4",
+          "label": "Move all bonds and cash into individual stocks for maximum growth potential",
+          "classification": "risky",
+          "immediateFeedback": "The portfolio chases growth by increasing concentration and reducing accessible money.",
+          "shortTermConsequence": "Individual-stock exposure rises sharply.",
+          "laterConsequence": "A decline may be harder to tolerate and cash may be unavailable when needed.",
+          "stateChanges": {
+            "individual_stock_allocation": "increase_by_bond_plus_cash_allocations",
+            "bond_allocation": 0,
+            "cash_allocation": 0,
+            "recalculate_metrics": true,
+            "final_adjustment_points": 0
+          }
+        }
+      ],
+      "recommendedDecisionLogic": {
+        "strongestApproach": "Use the portfolio’s actual mismatch: reduce concentration, improve cash access, or keep the allocation when it already fits.",
+        "reasonableAlternatives": [
+          "Keeping the portfolio is reasonable when no major mismatch appears.",
+          "Reducing concentration is reasonable when one category dominates.",
+          "Increasing cash is reasonable when the learner expects to need money soon."
+        ],
+        "tradeOff": "Improving access or reducing concentration may lower growth potential, while chasing growth may create a harder portfolio to maintain."
+      },
+      "validation": {
+        "method": "Score all four predictions, apply one final portfolio action, and recalculate concentration, cash, growth, risk, and alignment.",
+        "invalidStateFeedback": "That adjustment cannot be completed because the selected source allocation is below Rs. 10,000.",
+        "retryBehaviour": "Keep correct predictions. Allow another final adjustment when the chosen source does not contain Rs. 10,000."
+      },
+      "accessibilityAlternative": {
+        "method": "Use labelled prediction buttons, then present final adjustment choices with current portfolio metrics.",
+        "instruction": "Choose one likely effect for each company decision, then select one portfolio action."
+      },
+      "stateSummary": {
+        "title": "Portfolio Ready for Review",
+        "changedValues": [
+          {
+            "field": "portfolio_understanding_score",
+            "previousAmountSource": "score_after_stage_3",
+            "newAmountSource": "score_plus_profit_prediction_points",
+            "reason": "Correct predictions show that dividends are only one possible use of profit."
+          },
+          {
+            "field": "concentration_score",
+            "previousAmountSource": "score_before_final_adjustment",
+            "newAmountSource": "recalculated_concentration_score",
+            "reason": "The final action may spread or concentrate the portfolio."
+          },
+          {
+            "field": "cash_availability_score",
+            "previousAmountSource": "cash_percent_before_adjustment",
+            "newAmountSource": "cash_percent_after_adjustment",
+            "reason": "The final action may change accessible cash."
+          },
+          {
+            "field": "time_horizon_alignment",
+            "previousAmountSource": "alignment_before_adjustment",
+            "newAmountSource": "alignment_after_adjustment",
+            "reason": "The final allocation is compared again with the selected profile."
+          }
+        ],
+        "learningMessage": "A portfolio is strong when its parts have clear roles and fit the person’s goal.",
+        "nextStageTeaser": "Review the final portfolio dashboard and personalised feedback."
+      }
+    }
+  ],
+  "consequenceMap": [
+    {
+      "id": "J3-BM3-CM1",
+      "sourceStageId": "J3-BM3-ST1",
+      "sourceChoiceId": "J3-BM3-ST1-Q1-O1",
+      "affectedStateField": "time_horizon_alignment",
+      "targetStageId": "J3-BM3-ST2",
+      "laterConsequence": "A portfolio with heavy stock exposure receives a near-term alignment warning.",
+      "educationalPurpose": "Shows that time horizon changes the meaning of the same allocation."
+    },
+    {
+      "id": "J3-BM3-CM2",
+      "sourceStageId": "J3-BM3-ST1",
+      "sourceChoiceId": "J3-BM3-ST1-Q2-O1",
+      "affectedStateField": "illustrative_risk_level",
+      "targetStageId": "J3-BM3-ST2",
+      "laterConsequence": "A concentrated stock portfolio triggers an emotional-difficulty warning.",
+      "educationalPurpose": "Connects price movement with the learner’s likely reaction."
+    },
+    {
+      "id": "J3-BM3-CM3",
+      "sourceStageId": "J3-BM3-ST1",
+      "sourceChoiceId": "J3-BM3-ST1-Q3-O1",
+      "affectedStateField": "cash_availability_score",
+      "targetStageId": "J3-BM3-ST2",
+      "laterConsequence": "A low cash allocation creates an access warning.",
+      "educationalPurpose": "Shows why cash can have a useful portfolio role."
+    },
+    {
+      "id": "J3-BM3-CM4",
+      "sourceStageId": "J3-BM3-ST2",
+      "sourceChoiceId": "J3-BM3-ST2-C3",
+      "affectedStateField": "concentration_score",
+      "targetStageId": "J3-BM3-ST4",
+      "laterConsequence": "The final portfolio check recommends reducing the largest allocation.",
+      "educationalPurpose": "Shows that several stocks or one dominant type may still create concentration."
+    },
+    {
+      "id": "J3-BM3-CM5",
+      "sourceStageId": "J3-BM3-ST3",
+      "sourceChoiceId": "J3-BM3-ST3-C1",
+      "affectedStateField": "portfolio_understanding_score",
+      "targetStageId": "J3-BM3-ST4",
+      "laterConsequence": "The final score rewards knowing why each holding is included.",
+      "educationalPurpose": "Prevents the score from rewarding category-counting without understanding."
+    },
+    {
+      "id": "J3-BM3-CM6",
+      "sourceStageId": "J3-BM3-ST4",
+      "sourceChoiceId": "J3-BM3-ST4-C4",
+      "affectedStateField": "illustrative_risk_level",
+      "targetStageId": "J3-BM3-COMPLETE",
+      "laterConsequence": "The final dashboard shows higher risk, lower cash access, and weaker alignment when applicable.",
+      "educationalPurpose": "Shows why chasing maximum growth is not automatically a strong portfolio decision."
+    }
+  ],
+  "midMissionCheckpoint": {
+    "id": "J3-BM3-CHECKPOINT",
+    "title": "Portfolio Checkpoint",
+    "currentStateSummary": {
+      "timeHorizonSource": "selected_time_horizon",
+      "declineReactionSource": "selected_decline_reaction",
+      "accessNeedSource": "selected_access_need",
+      "largestAllocationSource": "maximum_allocation_percent",
+      "cashAllocationSource": "cash_allocation",
+      "assetTypeCountSource": "asset_type_count",
+      "timeHorizonAlignmentSource": "time_horizon_alignment"
+    },
+    "positiveDecisionFeedbackRules": [
+      {
+        "id": "J3-BM3-CP-F1",
+        "condition": "time_horizon_alignment_greater_than_or_equal_to_80",
+        "message": "Your allocation broadly matches the selected timeline and access needs."
+      },
+      {
+        "id": "J3-BM3-CP-F2",
+        "condition": "maximum_allocation_percent_below_50_and_asset_type_count_greater_than_or_equal_to_3",
+        "message": "Your portfolio is not heavily dependent on one investment type."
+      }
+    ],
+    "emergingRiskFeedbackRules": [
+      {
+        "id": "J3-BM3-CP-R1",
+        "condition": "maximum_allocation_percent_greater_than_or_equal_to_70",
+        "message": "One category controls most of the portfolio."
+      },
+      {
+        "id": "J3-BM3-CP-R2",
+        "condition": "access_need_large_and_cash_percent_below_40",
+        "message": "The current cash allocation may not support the selected access need."
+      },
+      {
+        "id": "J3-BM3-CP-R3",
+        "condition": "time_horizon_within_one_year_and_growth_assets_percent_above_30",
+        "message": "Money needed soon is exposed to meaningful price movement."
+      },
+      {
+        "id": "J3-BM3-CP-R4",
+        "condition": "long_horizon_and_cash_percent_above_60",
+        "message": "Access is strong, but long-term growth potential may be limited."
+      }
+    ],
+    "reflectionQuestion": "Continue to explain the portfolio, or review the allocation first?",
+    "primaryActionLabel": "Explain My Portfolio",
+    "reviewActionLabel": "Review Allocation"
+  },
+  "finalChallenge": {
+    "id": "J3-BM3-FINAL",
+    "title": "Final Portfolio Check",
+    "situation": "After explaining the holdings and predicting company profit choices, the learner must keep or adjust the portfolio using the actual timeline, cash need, and concentration metrics.",
+    "conceptsCombined": [
+      "time_horizon",
+      "cash_access",
+      "diversification",
+      "risk",
+      "dividends"
+    ],
+    "interactionType": "predict_outcome_decision_tree",
+    "stateBefore": {
+      "portfolioAllocationsSource": "saved_portfolio_allocations",
+      "profileSource": "stage_1_profile",
+      "portfolioUnderstandingSource": "portfolio_understanding_score",
+      "concentrationSource": "maximum_allocation_percent",
+      "cashAvailabilitySource": "cash_availability_score"
+    },
+    "config": {
+      "predictionSourceStageId": "J3-BM3-ST4",
+      "adjustmentSourceStageId": "J3-BM3-ST4",
+      "resultDependsOnEarlierChoices": true
+    },
+    "choicesSourceStageId": "J3-BM3-ST4",
+    "recommendedReasoning": "Use the actual mismatch rather than chasing one ideal allocation. Keep a fitting portfolio, reduce concentration, or improve cash access as the situation requires."
+  },
+  "debrief": {
+    "id": "J3-BM3-DEBRIEF",
+    "title": "Fit Matters More Than Maximum Growth",
+    "content": "You built a portfolio by connecting the goal timeline, possible price movement, cash access, diversification, and the role of each holding. Individual stocks represent ownership, bonds represent lending, and funds or ETFs may spread money across many investments. Cash can support access even when its growth potential is lower. You also saw that companies may pay dividends, reinvest, repay debt, or keep cash; no single choice is always best. A strong portfolio is not the one with the highest possible growth. It is the one whose risks, access, and structure fit the goal and can be understood and reviewed.",
+    "simpleSummary": "Build for the goal, understand every holding, and avoid unnecessary concentration.",
+    "illustration": "A goal, timeline, cash pocket, and five asset cards connect into one balanced portfolio map."
+  },
+  "scoring": {
+    "maximumScore": 100,
+    "dimensions": [
+      {
+        "id": "profile_awareness",
+        "label": "Profile Awareness",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J3-BM3-ST1"
+        ],
+        "positiveRules": [
+          "15 points for completing all three questions and using the answers during allocation review.",
+          "10 points when one or more answers are unsure but the final portfolio uses moderate assumptions.",
+          "5 points when the learner ignores the selected profile during later choices."
+        ],
+        "deductions": [
+          "Deduct 5 when the final action directly conflicts with both timeline and access need."
+        ],
+        "learnerExplanation": "This measures whether the portfolio begins with the goal, timeline, reaction, and cash needs."
+      },
+      {
+        "id": "portfolio_alignment",
+        "label": "Time-Horizon and Cash Alignment",
+        "maximumPoints": 25,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J3-BM3-ST1",
+          "J3-BM3-ST2",
+          "J3-BM3-ST4"
+        ],
+        "positiveRules": [
+          "25 points for strong timeline and access alignment after the final adjustment.",
+          "18 points for partial alignment with one manageable mismatch.",
+          "10 points for a valid portfolio with a major timeline or access warning.",
+          "0 points for increasing the mismatch during the final adjustment."
+        ],
+        "deductions": [],
+        "learnerExplanation": "This measures whether the money is invested in a way that fits when it may be needed."
+      },
+      {
+        "id": "diversification_and_concentration",
+        "label": "Diversification and Concentration",
+        "maximumPoints": 25,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J3-BM3-ST2",
+          "J3-BM3-ST4"
+        ],
+        "positiveRules": [
+          "25 points for a broadly spread, context-appropriate portfolio.",
+          "18 points for moderate concentration with a clear reason.",
+          "10 points for a highly concentrated portfolio that is later improved.",
+          "0 points for deliberately increasing extreme concentration to chase growth."
+        ],
+        "deductions": [
+          "Do not award extra points only for using every category."
+        ],
+        "learnerExplanation": "This measures dependence on one investment type, not simply the number of categories."
+      },
+      {
+        "id": "asset_role_understanding",
+        "label": "Asset-Role Understanding",
+        "maximumPoints": 20,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J3-BM3-ST3"
+        ],
+        "positiveRules": [
+          "Four points for each correct asset-role match."
+        ],
+        "deductions": [],
+        "learnerExplanation": "This measures whether the learner understands ownership, lending, pooled investing, baskets, and cash."
+      },
+      {
+        "id": "profit_and_tradeoff_understanding",
+        "label": "Profit and Trade-Off Understanding",
+        "maximumPoints": 15,
+        "minimumPoints": 0,
+        "decisionsAffectingScore": [
+          "J3-BM3-ST4"
+        ],
+        "positiveRules": [
+          "Ten points for all four correct company-profit predictions.",
+          "Five points for choosing a final portfolio action that responds to the actual mismatch."
+        ],
+        "deductions": [
+          "Deduct 5 for treating dividends as required or guaranteed."
+        ],
+        "learnerExplanation": "This measures whether company profit choices and portfolio adjustments are judged by context."
+      }
+    ],
+    "outcomeBasedPointsSeparatedFromDecisionQuality": true
+  },
+  "performanceLevels": [
+    {
+      "minimumScore": 0,
+      "maximumScore": 39,
+      "label": "Portfolio Needs Attention",
+      "description": "The portfolio has major alignment, concentration, access, or understanding gaps."
+    },
+    {
+      "minimumScore": 40,
+      "maximumScore": 69,
+      "label": "Building Investor Skills",
+      "description": "Several choices are useful, but the portfolio still needs clearer roles or better fit."
+    },
+    {
+      "minimumScore": 70,
+      "maximumScore": 89,
+      "label": "Portfolio Prepared",
+      "description": "The portfolio broadly balances the goal, access, risk, and diversification."
+    },
+    {
+      "minimumScore": 90,
+      "maximumScore": 100,
+      "label": "Strong Portfolio Habits",
+      "description": "The learner consistently made informed and context-sensitive portfolio decisions. Future results are not guaranteed."
+    }
+  ],
+  "resultsDashboard": [
+    {
+      "id": "J3-BM3-RESULT-1",
+      "label": "Concentration Level",
+      "startingValueSource": "100_percent_unallocated_cash",
+      "finalValueSource": "maximum_allocation_percent",
+      "changeSource": "100_minus_maximum_allocation_percent",
+      "statusRules": [
+        {
+          "condition": "maximum_allocation_percent_greater_than_or_equal_to_70",
+          "label": "Highly Concentrated"
+        },
+        {
+          "condition": "maximum_allocation_percent_between_50_and_69",
+          "label": "Moderately Concentrated"
+        },
+        {
+          "condition": "maximum_allocation_percent_below_50_and_asset_type_count_greater_than_or_equal_to_3",
+          "label": "Broadly Spread"
+        }
+      ],
+      "explanationTemplate": "Shows how much the portfolio depends on its largest investment type. Broadly spread does not mean risk-free."
+    },
+    {
+      "id": "J3-BM3-RESULT-2",
+      "label": "Number of Asset Types",
+      "startingValueSource": "0",
+      "finalValueSource": "asset_type_count",
+      "changeSource": "asset_type_count",
+      "statusRules": [
+        {
+          "condition": "value_equals_1",
+          "label": "Limited Mix"
+        },
+        {
+          "condition": "value_between_2_and_3",
+          "label": "Developing Mix"
+        },
+        {
+          "condition": "value_between_4_and_5",
+          "label": "Broad Mix"
+        }
+      ],
+      "explanationTemplate": "Counts positive allocations without assuming that every category must be used."
+    },
+    {
+      "id": "J3-BM3-RESULT-3",
+      "label": "Cash Availability",
+      "startingValueSource": "0",
+      "finalValueSource": "cash_allocation",
+      "changeSource": "cash_allocation",
+      "statusRules": [
+        {
+          "condition": "cash_matches_selected_access_need_strongly",
+          "label": "Strong Access"
+        },
+        {
+          "condition": "cash_partly_matches_selected_access_need",
+          "label": "Adequate Access"
+        },
+        {
+          "condition": "cash_below_selected_access_need",
+          "label": "Limited Access"
+        },
+        {
+          "condition": "cash_zero_and_access_need_is_large",
+          "label": "Access Risk"
+        }
+      ],
+      "explanationTemplate": "Measures accessible money against the Stage 1 access need."
+    },
+    {
+      "id": "J3-BM3-RESULT-4",
+      "label": "Growth Potential",
+      "startingValueSource": "0",
+      "finalValueSource": "illustrative_growth_potential",
+      "changeSource": "illustrative_growth_potential",
+      "statusRules": [
+        {
+          "condition": "value_below_35",
+          "label": "Lower"
+        },
+        {
+          "condition": "value_between_35_and_64",
+          "label": "Moderate"
+        },
+        {
+          "condition": "value_greater_than_or_equal_to_65",
+          "label": "Higher"
+        }
+      ],
+      "explanationTemplate": "An educational estimate only. Higher potential usually comes with more uncertainty."
+    },
+    {
+      "id": "J3-BM3-RESULT-5",
+      "label": "Illustrative Risk Level",
+      "startingValueSource": "0",
+      "finalValueSource": "illustrative_risk_level",
+      "changeSource": "illustrative_risk_level",
+      "statusRules": [
+        {
+          "condition": "value_below_35",
+          "label": "Lower Illustrative Risk"
+        },
+        {
+          "condition": "value_between_35_and_64",
+          "label": "Moderate Illustrative Risk"
+        },
+        {
+          "condition": "value_greater_than_or_equal_to_65",
+          "label": "Higher Illustrative Risk"
+        }
+      ],
+      "explanationTemplate": "Uses concentration, stock exposure, pooled investments, bonds, cash, timeline, and decline reaction. No level is guaranteed safe."
+    },
+    {
+      "id": "J3-BM3-RESULT-6",
+      "label": "Time-Horizon Alignment",
+      "startingValueSource": "0",
+      "finalValueSource": "time_horizon_alignment",
+      "changeSource": "time_horizon_alignment",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_80",
+          "label": "Well Aligned"
+        },
+        {
+          "condition": "value_between_50_and_79",
+          "label": "Partially Aligned"
+        },
+        {
+          "condition": "value_below_50",
+          "label": "Poorly Aligned"
+        }
+      ],
+      "explanationTemplate": "Compares the final allocation with when the learner expects to need the money."
+    },
+    {
+      "id": "J3-BM3-RESULT-7",
+      "label": "Portfolio Understanding",
+      "startingValueSource": "0",
+      "finalValueSource": "portfolio_understanding_score",
+      "changeSource": "portfolio_understanding_score",
+      "statusRules": [
+        {
+          "condition": "value_greater_than_or_equal_to_26",
+          "label": "Strong"
+        },
+        {
+          "condition": "value_between_18_and_25",
+          "label": "Stable"
+        },
+        {
+          "condition": "value_between_10_and_17",
+          "label": "Developing"
+        },
+        {
+          "condition": "value_below_10",
+          "label": "Needs Attention"
+        }
+      ],
+      "explanationTemplate": "Rewards correct asset roles and understanding that dividends are only one possible use of profit."
+    },
+    {
+      "id": "J3-BM3-RESULT-8",
+      "label": "Financial Confidence Score",
+      "startingValueSource": "0",
+      "finalValueSource": "final_score",
+      "changeSource": "final_score",
+      "statusRules": [
+        {
+          "condition": "0_to_39",
+          "label": "Portfolio Needs Attention"
+        },
+        {
+          "condition": "40_to_69",
+          "label": "Building Investor Skills"
+        },
+        {
+          "condition": "70_to_89",
+          "label": "Portfolio Prepared"
+        },
+        {
+          "condition": "90_to_100",
+          "label": "Strong Portfolio Habits"
+        }
+      ],
+      "explanationTemplate": "Rewards fit, understanding, and informed trade-offs rather than maximum growth or a lucky outcome."
+    }
+  ],
+  "personalisedFeedbackRules": {
+    "strengthRules": [
+      {
+        "id": "J3-BM3-PF-S1",
+        "condition": "time_horizon_alignment_greater_than_or_equal_to_80",
+        "message": "You matched the final allocation well to the selected timeline and cash need."
+      },
+      {
+        "id": "J3-BM3-PF-S2",
+        "condition": "maximum_allocation_percent_below_50_and_asset_type_count_greater_than_or_equal_to_3",
+        "message": "You reduced dependence on one investment type without treating diversification as risk-free."
+      },
+      {
+        "id": "J3-BM3-PF-S3",
+        "condition": "portfolio_understanding_score_greater_than_or_equal_to_26",
+        "message": "You explained ownership, lending, pooled investing, cash, and company profit decisions clearly."
+      },
+      {
+        "id": "J3-BM3-PF-S4",
+        "condition": "cash_matches_selected_access_need_strongly",
+        "message": "You kept an amount of cash that fits the selected access need."
+      }
+    ],
+    "improvementRules": [
+      {
+        "id": "J3-BM3-PF-I1",
+        "condition": "maximum_allocation_percent_greater_than_or_equal_to_70",
+        "message": "Most of the portfolio still depends on one type. Review whether that concentration is necessary."
+      },
+      {
+        "id": "J3-BM3-PF-I2",
+        "condition": "cash_below_selected_access_need",
+        "message": "The cash allocation may be too low for the amount that could be needed soon."
+      },
+      {
+        "id": "J3-BM3-PF-I3",
+        "condition": "time_horizon_alignment_below_50",
+        "message": "The portfolio’s price movement does not fit well with when the money may be needed."
+      },
+      {
+        "id": "J3-BM3-PF-I4",
+        "condition": "portfolio_understanding_score_below_18",
+        "message": "Review what each holding represents before deciding how much belongs in it."
+      }
+    ],
+    "tradeoffRules": [
+      {
+        "id": "J3-BM3-PF-T1",
+        "condition": "cash_percent_greater_than_or_equal_to_50",
+        "message": "You prioritised access and lower price movement, accepting lower long-term growth potential."
+      },
+      {
+        "id": "J3-BM3-PF-T2",
+        "condition": "growth_potential_high_and_risk_level_high",
+        "message": "You accepted greater uncertainty for higher growth potential."
+      },
+      {
+        "id": "J3-BM3-PF-T3",
+        "condition": "portfolio_broadly_spread",
+        "message": "You reduced concentration, but every investment type can still lose value."
+      },
+      {
+        "id": "J3-BM3-PF-T4",
+        "condition": "final_action_increased_cash",
+        "message": "You improved access by reducing some growth exposure."
+      }
+    ],
+    "practicalPrinciple": "Choose each holding for a clear role, then check whether the whole portfolio fits the goal.",
+    "replayMessage": "Replay with a different timeline or cash need to see why another allocation may become reasonable."
+  },
+  "quiz": {
+    "id": "J3-BM3-QUIZ",
+    "questions": [
+      {
+        "id": "J3-BM3-Q1",
+        "questionType": "combined_recognition",
+        "question": "Which portfolio decision combines time horizon, diversification, and cash access?",
+        "options": [
+          {
+            "id": "J3-BM3-Q1-O1",
+            "label": "Choose the assets with the highest growth score",
+            "isCorrect": false,
+            "feedback": "Growth potential alone does not show whether money is accessible or overly concentrated."
+          },
+          {
+            "id": "J3-BM3-Q1-O2",
+            "label": "Spread money for clear roles while keeping suitable cash for the goal",
+            "isCorrect": true,
+            "feedback": "Correct. The decision considers the whole portfolio and the goal."
+          },
+          {
+            "id": "J3-BM3-Q1-O3",
+            "label": "Use every asset category equally",
+            "isCorrect": false,
+            "feedback": "Equal allocations may ignore the timeline and why each category is included."
+          },
+          {
+            "id": "J3-BM3-Q1-O4",
+            "label": "Keep no cash because it grows slowly",
+            "isCorrect": false,
+            "feedback": "Cash may be useful when some money must remain accessible."
+          }
+        ],
+        "correctAnswerId": "J3-BM3-Q1-O2",
+        "correctExplanation": "A strong portfolio connects the asset mix with the goal, timeline, concentration, and access need.",
+        "conceptsTested": [
+          "time_horizon",
+          "diversification",
+          "cash_access"
+        ],
+        "misconceptionTested": "A strong portfolio is simply the one with the highest possible growth potential."
+      },
+      {
+        "id": "J3-BM3-Q2",
+        "questionType": "combined_misconception",
+        "question": "A portfolio contains shares in five technology companies. What can be concluded?",
+        "options": [
+          {
+            "id": "J3-BM3-Q2-O1",
+            "label": "It is automatically well diversified",
+            "isCorrect": false,
+            "feedback": "Several companies may still depend on the same industry and similar risks."
+          },
+          {
+            "id": "J3-BM3-Q2-O2",
+            "label": "It may still be concentrated in one industry",
+            "isCorrect": true,
+            "feedback": "Correct. The number of stocks does not fully describe diversification."
+          },
+          {
+            "id": "J3-BM3-Q2-O3",
+            "label": "It cannot lose value because the companies are different",
+            "isCorrect": false,
+            "feedback": "Different companies can still fall together or face similar pressures."
+          },
+          {
+            "id": "J3-BM3-Q2-O4",
+            "label": "It must pay five dividends",
+            "isCorrect": false,
+            "feedback": "Companies are not required to pay dividends."
+          }
+        ],
+        "correctAnswerId": "J3-BM3-Q2-O2",
+        "correctExplanation": "Diversification considers industries, asset types, and dependence on shared outcomes—not just the number of names.",
+        "conceptsTested": [
+          "stocks",
+          "concentration",
+          "diversification"
+        ],
+        "misconceptionTested": "Holding several individual stocks always creates a diversified portfolio."
+      },
+      {
+        "id": "J3-BM3-Q3",
+        "questionType": "new_application",
+        "question": "A goal is two years away, and part of the money may be needed suddenly. Which review matters most?",
+        "options": [
+          {
+            "id": "J3-BM3-Q3-O1",
+            "label": "Whether the portfolio has the highest growth potential",
+            "isCorrect": false,
+            "feedback": "The near-term goal and access need may make high price movement difficult."
+          },
+          {
+            "id": "J3-BM3-Q3-O2",
+            "label": "Whether enough cash is accessible and price movement fits the timeline",
+            "isCorrect": true,
+            "feedback": "Correct. Access and time-horizon alignment matter together."
+          },
+          {
+            "id": "J3-BM3-Q3-O3",
+            "label": "Whether every company pays a dividend",
+            "isCorrect": false,
+            "feedback": "Dividends are optional and do not solve every access or risk issue."
+          },
+          {
+            "id": "J3-BM3-Q3-O4",
+            "label": "Whether all money is kept in individual stocks",
+            "isCorrect": false,
+            "feedback": "A single high-movement category may create a mismatch for money needed soon."
+          }
+        ],
+        "correctAnswerId": "J3-BM3-Q3-O2",
+        "correctExplanation": "Money needed within a shorter period should be reviewed for access and possible price movement.",
+        "conceptsTested": [
+          "cash_access",
+          "time_horizon",
+          "risk"
+        ],
+        "misconceptionTested": "Cash has no useful portfolio role."
+      }
+    ]
+  },
+  "completion": {
+    "id": "J3-BM3-COMPLETE",
+    "headline": "Portfolio Built!",
+    "achievementMessage": "You connected the goal, timeline, cash needs, diversification, asset roles, and company profit choices.",
+    "scoreSource": "final_score",
+    "performanceLevelSource": "performance_level",
+    "conceptsMasteredSource": "dimensions_at_or_above_70_percent",
+    "conceptNeedingPracticeSource": "lowest_scoring_dimension",
+    "xpReward": 200,
+    "progressMessage": "Journey Boss complete in Become an Investor.",
+    "nextTeaser": "Next, explore how fees, market movement, and long-term behaviour can change a portfolio over time.",
+    "animation": "Five portfolio cards connect to a goal while concentration, cash, and understanding meters settle into place.",
+    "replayButtonLabel": "Build Another Portfolio",
+    "continueButtonLabel": "Continue Journey"
+  },
+  "realLifeChallenge": {
+    "id": "J3-BM3-CHALLENGE",
+    "title": "Name Each Role",
+    "instruction": "Write five fictional portfolio categories and one reason each could be included. Do not choose real products or move money.",
+    "buttonLabel": "My Portfolio Roles Are Ready"
+  },
+  "reviewChecklist": [
+    {
+      "item": "Reviews only previously taught concepts",
+      "status": "PASS",
+      "notes": "Uses only J3-M14 through J3-M20 concepts."
+    },
+    {
+      "item": "Does not introduce unexplained major concepts",
+      "status": "PASS",
+      "notes": "All portfolio roles and trade-offs were taught in previous missions."
+    },
+    {
+      "item": "Concepts are combined accurately",
+      "status": "PASS",
+      "notes": "Timeline, access, asset roles, diversification, and dividends affect one portfolio."
+    },
+    {
+      "item": "Financial amounts are internally consistent",
+      "status": "PASS",
+      "notes": "All portfolio allocations total Rs. 100,000 and use numeric values."
+    },
+    {
+      "item": "Persistent values update correctly",
+      "status": "PASS",
+      "notes": "Allocations and derived metrics carry through the final review."
+    },
+    {
+      "item": "Earlier decisions affect later stages",
+      "status": "PASS",
+      "notes": "Profile choices change builder warnings and final adjustment logic."
+    },
+    {
+      "item": "Interaction choices have meaningful consequences",
+      "status": "PASS",
+      "notes": "Every major action changes metrics, feedback, score, or the final allocation."
+    },
+    {
+      "item": "Multiple reasonable paths are allowed where appropriate",
+      "status": "PASS",
+      "notes": "Different allocations can be suitable for different timelines and access needs."
+    },
+    {
+      "item": "Financially accurate",
+      "status": "PASS",
+      "notes": "Ownership, lending, pooled investing, cash, concentration, and dividends are represented accurately."
+    },
+    {
+      "item": "Appropriate for the target age",
+      "status": "PASS",
+      "notes": "Uses adult long-term goals and beginner-friendly investment decisions."
+    },
+    {
+      "item": "Difficulty is Easy",
+      "status": "PASS",
+      "notes": "Uses Rs. 5,000 allocation steps and qualitative growth and risk labels."
+    },
+    {
+      "item": "No personalised investment advice",
+      "status": "PASS",
+      "notes": "The activity is fictional and does not name or recommend real products."
+    },
+    {
+      "item": "No guaranteed return claims",
+      "status": "PASS",
+      "notes": "No portfolio return is calculated or promised."
+    },
+    {
+      "item": "No stock-price predictions",
+      "status": "PASS",
+      "notes": "The 20% decline is a hypothetical profile question, not a forecast."
+    },
+    {
+      "item": "No claims that markets always recover",
+      "status": "PASS",
+      "notes": "The mission states that losses remain possible."
+    },
+    {
+      "item": "Simulated results are not presented as forecasts",
+      "status": "PASS",
+      "notes": "Growth and risk are educational estimates only."
+    },
+    {
+      "item": "No shaming around money",
+      "status": "PASS",
+      "notes": "Risky choices receive calm, explanatory feedback."
+    },
+    {
+      "item": "No misleading oversimplification",
+      "status": "PASS",
+      "notes": "Diversification reduces dependence but does not eliminate risk."
+    },
+    {
+      "item": "Scenario is culturally understandable",
+      "status": "PASS",
+      "notes": "Uses PKR and a familiar long-term savings goal."
+    },
+    {
+      "item": "Interactions reinforce the learning objective",
+      "status": "PASS",
+      "notes": "The profile, builder, matching, and final check all assess portfolio fit."
+    },
+    {
+      "item": "Scoring rewards decision quality rather than luck",
+      "status": "PASS",
+      "notes": "No random return affects the score."
+    },
+    {
+      "item": "Enjoyable spending is not automatically treated as irresponsible",
+      "status": "NOT APPLICABLE",
+      "notes": "The scenario allocates a dedicated portfolio amount."
+    },
+    {
+      "item": "Risk-taking is not automatically rewarded",
+      "status": "PASS",
+      "notes": "Maximum growth and stock concentration do not receive automatic high scores."
+    },
+    {
+      "item": "Quiz corrects the combined misconception",
+      "status": "PASS",
+      "notes": "Questions test fit, concentration, and cash access."
+    },
+    {
+      "item": "Mission can be completed within the specified duration",
+      "status": "PASS",
+      "notes": "Four compact stages, one checkpoint, dashboard, and quiz fit eight minutes."
+    },
+    {
+      "item": "Language matches the target reading level",
+      "status": "PASS",
+      "notes": "Uses clear, beginner-friendly adult language."
+    },
+    {
+      "item": "Accessibility alternatives are provided",
+      "status": "PASS",
+      "notes": "Every interaction includes non-drag controls."
+    },
+    {
+      "item": "Final dashboard matches the simulation outcomes",
+      "status": "PASS",
+      "notes": "Dashboard fields use final tracked allocations and metrics."
+    },
+    {
+      "item": "JSON matches the human-readable version",
+      "status": "PASS",
+      "notes": "Both files are generated from the same mission object."
+    }
+  ]
+}
